@@ -1,0 +1,194 @@
+/** MILLDONE
+ * Compare Listings Styles for WpResidence Theme
+ * src: scss\pages\_compare_listing_page.scss
+ * This file contains styles for the compare listings functionality in WpResidence.
+ * It handles both the comparison widget (fixed position sidebar) and the main
+ * comparison page layout with property details grid.
+ *
+ * File: compare_listings.scss
+ * Package: WpResidence
+ * Version: 2.0
+ * Dependencies: None (standalone SCSS)
+ */
+
+// Main comparison wrapper container
+.compare_wrapper {
+
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    .compare_legend_head_wrapper{
+        // Property header items (images, titles, prices)
+        display: flex;
+        gap:10px;
+        .compare_item_head {
+            
+            margin-bottom: 30px;
+            flex: 1;
+            img {
+                border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            h4 {
+                margin-top: 13px;
+                margin-bottom: 8px;
+            }
+
+            .property_price {
+                line-height: 22px;
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    // Individual comparison rows
+    .compare_item {
+        display: flex;
+        gap: 10px;
+
+        &:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        &:nth-child(even) {
+            background-color: #F5F5F5;
+        }
+    }
+
+    // Feature indicators
+    .compare_yes {
+        font-size: 18px;
+        color: #1ABC9C;
+        margin-top: -2px;
+    }
+
+    .compare_no {
+        font-size: 18px;
+        color: #ED5565;
+        margin-top: -2px;
+    }
+
+    // Labels and values
+    .compare_legend_head {
+        width: 120px;
+        margin-top: 9px;
+        margin-bottom: 9px;
+    }
+
+
+    .prop_value {
+      
+        padding-right: 10px;
+        font-size: 12px;
+        margin-top: 9px;
+        margin-bottom: 9px;
+        flex: 1;
+    
+    }
+}
+
+
+// Fixed position comparison widget
+.prop-compare {
+    position: fixed;
+    top: 167px;
+    right: -240px;
+    width: 239px;
+    background: #fff;
+    color: #222;
+    font-size: 14px;
+    padding: 13px 0px 13px 13px;
+    box-shadow: 0 4px 16px -2px rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .02);
+    z-index: 99;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    min-height: 133px;
+
+    #compare_close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border-bottom-left-radius: 4px;
+    }
+
+    .title_compare {
+        margin-bottom: 10px;
+    }
+
+    .items_compare {
+        width: 100px;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-right: 10px;
+
+        img {
+            margin-bottom: 10px;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        }
+    }
+
+    #submit_compare {
+        cursor: pointer;
+        height: 58px;
+        padding: 0 21px;
+        min-width: 1px;
+        margin-bottom: 0px;
+    }
+}
+
+// Elements not found in the provided markup but retained for compatibility
+.nocomapare {
+    width: 400px;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.compare_ajax_wrapper {
+    margin: 0px 15px;
+}
+
+.half_map_body .prop-compare {
+    z-index: 9999;
+}
+
+#compare_close_modal {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#google_map_prop_list_sidebar .prop-compare {
+    padding-left: 0px;
+    margin: 15px 20px 0px 31px;
+    border-bottom: none;
+}
+
+.compare_agent {
+    margin: 0 15px;
+    max-width: 805px;
+    margin-bottom: 30px;
+}

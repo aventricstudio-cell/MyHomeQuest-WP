@@ -1,0 +1,152 @@
+// MILLDONE
+// components/_header_type1.scss
+// This file contains styles for the header component of the website.
+// It includes styles for the main header, navigation, and related elements.
+
+
+// ==========================================================================
+// Main Header
+// ==========================================================================
+
+.master_header {
+    background-color: var(--wp-estate-header-color-option, var(--wp-estate-header-color)); // Set header background color with CSS variable fallback.
+    width: 100%; // Full width header.
+    z-index: 9999; // Ensure the header is above other elements.
+    @include transition(all 0.3s ease); // Apply transition effect for smooth changes.
+    position: relative; // Relative positioning for header.
+    //float: left; // Float header to the left.
+    border-bottom: var(--wp_estate_border_bottom_header-option, var(--wp_estate_border_bottom_header)) solid var(--wp_estate_border_bottom_header_color-option, var(--wp_estate_border_bottom_header_color)); // Border at the bottom of the header with CSS variable fallback.
+
+    // Header wrapper to contain inner elements.
+    .header_wrapper {
+        height: var(--wp-estate-header-height-option, var(--wp-estate-header-height)); // Set header height with CSS variable fallback.
+    }
+}
+
+// Styles for when the header becomes sticky.
+.master_header_sticky {
+    background-color: var(--wp-estate-header-color-option, var(--wp-estate-header-color)); // Maintain header background color.
+    opacity: 0.95; // Slight transparency for the sticky header.
+    @include main-box-shadow(); // Include box-shadow for sticky header.
+    border-bottom: var(--wp_estate_sticky_border_bottom_header-option, var(--wp_estate_sticky_border_bottom_header)) solid var(--wp_estate_border_bottom_header_sticky_color-option, var(--wp_estate_border_bottom_header_sticky_color)); // Border for sticky header with CSS variable fallback.
+
+    &:hover {
+        opacity: 1; // Remove transparency on hover.
+    }
+
+    &.master_header {
+        position: sticky; // Sticky positioning for header.
+        top: 0px; // Stick to the top of the viewport.
+    }
+    .header_wrapper {
+        height: var(--wp-estate-sticky-header-height-option, var(--wp-estate-sticky-header-height)); // Height for sticky header with CSS variable fallback.
+    }
+
+    .sub-menu>li a {
+        padding: 13px; // Padding for sub-menu items.
+    }
+}
+
+.admin-bar .master_header_sticky {
+    top: 32px; // Adjust top position for sticky header when admin bar is present.
+}
+
+
+
+// Styles for a boxed header layout.
+.wpresidence_boxed_header {
+    .header_wrapper {
+        justify-content: center; // Center align the header wrapper.
+        
+        .header_wrapper_inside {
+            max-width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width)); // Maximum width for the inner header content with CSS variable fallback.
+            margin: 0px auto !important; // Center align the inner header content.
+            padding: 0px 15px;
+        }
+    }
+}
+
+// ==========================================================================
+// Logo
+// ==========================================================================
+
+.logo {
+    a {
+        display: inline-block; // Display logo link as inline-block.
+    }
+    img {
+        max-width: var(--wp-estate-logo-max-width-option, var(--wp-estate-logo-max-width)); // Maximum width for the logo with CSS variable fallback.
+        max-height: var(--wp-estate-logo-max-height-option, var(--wp-estate-logo-max-height)); // Maximum height for the logo with CSS variable fallback.
+        margin-top: var(--wp-estate-logo-margin-option, var(--wp-estate-logo-margin)); // Top margin for the logo with CSS variable fallback.
+    }
+}
+
+.master_header_sticky .logo img {
+    max-height: 60px;
+}
+
+// Styles for when there is a property menu.
+.master_header_sticky.sticky_property_menu {
+    top: -100px; // Adjust top position for sticky property menu.
+}
+
+// Styles for when the logo is aligned to the right for header type 1.
+.wpresidence_header_logo_align_right {
+    .header_type1 {
+        .logo {
+            order: 6; // Change the order of the logo element.
+        }
+
+        .user_menu_wrapper {
+            order: -1; // Change the order of the user menu wrapper.
+        }
+
+        #user_menu_open {
+            right: -7px; // Adjust the right position of the user menu.
+        }
+    }
+}
+
+// Main menu alignment for Header Type 1 with menu left and logo left.
+.wpresidence_header_menu_type1_align_left.wpresidence_header_logo_align_left {
+    .header_wrapper_inside {
+        .user_menu_wrapper {
+            margin-left: auto; // Push the user menu wrapper to the left.
+        }
+    }    
+}
+
+// Main menu alignment for Header Type 1 with menu left and logo right.
+.wpresidence_header_menu_type1_align_left.wpresidence_header_logo_align_right {
+    .header_wrapper_inside {
+        .logo {
+            margin-left: auto; // Push the logo to the left.
+        }
+    }  
+}
+
+// Main menu alignment for Header Type 1 with menu right and logo left.
+.wpresidence_header_menu_type1_align_right{
+    .header_wrapper_inside {
+        .logo {
+            margin-right: auto; // Push the logo to the right.
+        }
+    }    
+}
+
+// Main menu alignment for Header Type 1 with menu right and logo right.
+.wpresidence_header_menu_type1_align_right.wpresidence_header_logo_align_right {
+    .header_wrapper_inside {
+        .user_menu_wrapper {
+            margin-right: auto; // Push the user menu wrapper to the right.
+        }
+    }    
+}
+
+
+.wpresidence_header_menu_type1_align_abscenter .header_type1 {
+    .logo,
+    .user_menu_wrapper{
+        flex: 1;
+    }
+}

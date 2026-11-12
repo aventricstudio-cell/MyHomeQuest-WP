@@ -1,0 +1,56 @@
+/* MILLDONE
+ * Mortgage Calculator Widget Styles 
+ * src: mortgage_calculator_widget.scss
+ * Package: WpResidence
+ * 
+ * Purpose: Styles for the mortgage calculator widget used on sidebar widget areas in the WpResidence theme.
+ * 
+ * Dependencies:
+ * - Requires the WpResidence theme structure and base styles
+ * 
+ * Usage:
+ * This file should be included in the main theme stylesheet or loaded specifically 
+ * on pages featuring the mortgage calculator widget. It styles the widget's layout,
+ * input fields, and results display.
+ */
+
+/* Main widget container */
+.widget-container.mortgage_calculator_li.boxed_widget {
+    /* Results container */
+    #morg_results {
+      float: left;
+      margin: 0;
+      font-size: 14px;
+      display: none; /* Hidden by default, likely shown via JavaScript */
+      
+      /* Result spans */
+      span {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: stretch;
+        gap: 5px;
+        margin-bottom: 10px;
+      }
+    }
+}
+
+#colophon {
+  .widget-container.mortgage_calculator_li.boxed_widget {
+    background-color: #fff;
+    padding: 30px;
+
+    label{
+      margin: 10px 0 5px 0;
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    }
+
+    #morg_compute {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+  }
+}

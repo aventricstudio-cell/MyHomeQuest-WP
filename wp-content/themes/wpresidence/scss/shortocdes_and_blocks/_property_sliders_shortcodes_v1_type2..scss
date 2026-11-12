@@ -1,0 +1,174 @@
+/** MILLDONE
+ * WPEstate Property Slider 2 Styles
+ * src: scss/shortcodes_and_blocks/_property_sliders_shortcodes_v1_type2.scss
+ * This file contains the styles for the Property Slider 2 component in the WPResidence theme.
+ *
+ * @package WPEstate
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - Owl Carousel (for slider functionality)
+ *
+ * Usage:
+ * These styles are applied to the property slider with the class 'property_slider2_wrapper'.
+ */
+
+ .property_slider2_wrapper {
+    // Owl Carousel overrides
+    &.owl-carousel .owl-item .item {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        padding: 0px;
+    }
+
+    // Navigation styles
+    &.owl-theme .owl-nav {
+        margin-top: -22px;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        float: left;
+        width: 6%;
+        height: 370px;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+        div {
+            color: #ffffff;
+            margin: 0px;
+            padding: 0px 0px;
+            font-size: 37px;
+            filter: Alpha(Opacity=95);
+            opacity: 0.95;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            line-height: 185px;
+            background: #d8d8d8;
+            border-radius: 0px;
+
+            &:hover {
+                background: #ccc;
+            }
+
+            i {
+                width: 100%;
+                font-size: 33px;
+            }
+        }
+    }
+
+    &.owl-carousel .owl-nav button {
+        &.owl-prev, &.owl-next {
+            height: 50%;
+            margin: 0px;
+            width: 100%;
+            background: #d8d8d8;
+            @include smooth-transition-shorter;
+            border-radius: 0px;
+        }
+    }
+
+    // Image styles
+    .image_div { 
+        height: 370px;
+        @include background-cover; 
+        width: 59%;
+        float: left;
+        margin-top: 35px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        position: relative;
+        z-index: 1;
+    }
+
+    .featured_gradient{
+        background-image: none;
+        background-color: #1D293E;
+        opacity: 0.15;
+    }
+    // Featured and status styles
+    .featured_div {
+        z-index: 10;
+        position: relative;
+        left: 20px;
+        top: 20px;
+    }
+
+    .status-wrapper {
+        z-index: 10;
+        position: relative;
+        top: 5px;
+        right: 20px;
+        margin: 0px;
+    }
+
+    // Agent info styles
+    .agent_face {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid #a6b3bb;
+        background-size: cover;
+    }
+
+    .featured_secondline {
+        position: absolute;
+        background: transparent;
+        display: flex;
+        bottom: 20px;
+        left: 20px;
+        gap:10px;
+        align-items: center;
+        a {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    // Property info styles
+    .property_slider2_info_wrapper {
+        width: 35%;
+        height: 440px;
+        background-color: #fff;
+        float: left;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        padding: 80px 40px;
+        z-index: 10;
+        position: relative;
+
+        h2 {
+            text-transform: capitalize;
+        }
+
+        .property_slider2_info_price {
+            z-index: 1;
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            font-size: 19px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .property_slider_sec_row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .property_slider2_content {
+            margin-top: 30px;
+            line-height: 1.65em;
+        }
+    }
+
+    // Hover effects
+    a:hover h2 {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+}
+
+// Classes not found in the provided markup (moved to the end)
+// [No unused classes found in this case]

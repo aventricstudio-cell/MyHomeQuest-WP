@@ -1,0 +1,92 @@
+
+/*=adv-search-geolocation
+------------------------------------------------*/
+
+// this is the location input
+.radius_wrap {
+    position: relative;
+    &:after {
+        font-size: 22px;
+        font-family: "font awesome 5 free";
+        content: "\f3c5";
+        position: absolute;
+        right: 15px;
+        color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 30%, transparent);
+        font-weight: 700;
+        line-height: 40px;
+        top: 0;
+    }
+}
+
+//this is the radius slider
+
+.slider_radius_wrap {
+    font-size: 13px;
+    height: 38px;
+    position: relative;
+    padding-top: 10px;
+    .label_radius{
+        margin-top: -7px;
+    }
+}
+
+.adv_search_geo_radius_wrapper,
+.slider_radius_wrap {
+    .ui-widget-content{
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        background: #efefef;
+        background-image: none;
+        border: 0px solid #efefef;
+    }
+
+    label {
+        font-weight: normal;
+        float: none;
+        margin-bottom: 10px;
+        padding-top: 4px;
+    }
+   
+    #wpestate_slider_radius {
+        margin-left: 8px;
+        margin-top: 3px;
+        height: 4px;
+        max-width: 100%;
+    
+        .ui-slider-handle {
+            margin-top: -3px;
+            width: 18px;
+            height: 18px;
+            background-image: none;
+            background-color: #fff;
+        }
+    }
+}
+
+.single-content p.label_radius_wrapper_p,
+.label_radius_wrapper_p {
+    margin-bottom: 0px;
+}
+
+.search_wr_elementor .label_radius_wrapper_p{
+    margin-bottom: 5px;
+}
+
+p.label_radius_wrapper_p {
+    line-height: 15px !important;
+}
+
+.search_wr_elementor .adv_search_geo_radius_wrapper,
+.search_wr_elementor .adv_search_slider {
+    height: auto;
+    width: 100%;
+}
+
+.adv_search_geo_radius_wrapper .wpestate_slider_radius_search .ui-slider-handle.ui-corner-all.ui-state-default, 
+.adv_search_geo_radius_wrapper .wpestate_slider_radius_search .ui-slider-handle{
+    margin-left: 0px;
+}
+
+.search_wr_elementor .wpresidece-reset-btn{
+    top: 50%;
+    margin-top:-8px;
+}

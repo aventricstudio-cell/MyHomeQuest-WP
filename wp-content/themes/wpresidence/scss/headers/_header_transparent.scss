@@ -1,0 +1,116 @@
+// MILLDONE
+// components/_header_transparent.scss
+
+// This file contains styles for the transparent header option.
+// It includes styles for the main header, navigation, and related elements.
+
+// When using a full-width Elementor template, adjust the margin for the content wrapper within a transparent header.
+.elementor-template-full-width .header_transparent .container.content_wrapper {
+    margin-top: 0px; // Remove the top margin to align the content wrapper correctly within the transparent header.
+}
+
+// If the top bar is present, adjust the positioning of the transparent header.
+.wpresidece_has_top_bar {
+    .header_transparent {  
+        .master_header {
+            top: 40px; // Position the header 40px from the top when a top bar is present.
+        }
+    }
+}
+
+.page-template-splash_page{
+        .header_transparent {  
+            .master_header {
+                top: 0px; // Position the header 0px from the top when a top bar is present for splash page.
+            }
+    }
+}
+
+// Default transparent header styles.
+.header_transparent {
+    border-bottom: none; // Remove the bottom border for a seamless transparent effect.
+
+    .top_bar_wrapper {
+        position: absolute; // Position the top bar absolutely within the header.
+        top: 0px; // Align the top bar to the top of the header.
+    }
+
+    .master_header {
+        background: transparent; // Make the header background transparent.
+        position: absolute; // Position the header absolutely at the top.
+        top: 0px; // Align the header to the top of the viewport.
+    }
+
+    .master_header_sticky.master_header {
+        position: sticky; // Make the header sticky to the top of the viewport.
+    }
+
+    #shopping-cart_icon path {
+        fill: var(--wp-estate-transparent-menu-font-color-option, var(--wp-estate-transparent-menu-font-color)); // Set the shopping cart icon color to white.
+    }
+
+    .submit_action:hover svg {
+        fill: #fff; // Set the fill color to white on hover for submit action SVGs.
+        opacity: 0.7; // Reduce opacity to 70% on hover for a visual effect.
+    }
+
+    .navicon,
+    .navicon:before,
+    .navicon:after {
+        background: var(--wp-estate-transparent-menu-font-color-option, var(--wp-estate-transparent-menu-font-color)); // Set the navigation icon and its pseudo-elements' background to white.
+    }
+
+    .header_phone a,
+    .header_phone svg,
+    .submit_action svg {
+        fill: var(--wp-estate-transparent-menu-font-color-option, var(--wp-estate-transparent-menu-font-color)); // Set the fill color to white for phone icons and submit action SVGs.
+        color: var(--wp-estate-transparent-menu-font-color-option, var(--wp-estate-transparent-menu-font-color)); // Set the text color to white for phone links.
+    }
+
+    .wpresidence-navigation-menu {
+        .menu-mega-menu-updated-container {
+            &>ul {
+                &>li {
+                    &>a {
+                        color: var(--wp-estate-transparent-menu-font-color-option, var(--wp-estate-transparent-menu-font-color)); // Set the menu item color with a CSS variable fallback.
+                    }
+                }
+
+                &>li:hover {
+                    &>a {
+                        color: var(--wp-estate-transparent-menu-hover-font-color-option, var(--wp-estate-transparent-menu-hover-font-color)); // Set the menu item hover color with a CSS variable fallback.
+                    }
+                }
+            }
+        }
+    }
+}
+
+.admin-bar{
+
+    .master_header_sticky {
+        top: 32px ;
+    }
+}
+
+.wpresidece_has_top_bar .header_transparent{
+    .master_header_sticky {
+        top: 0px ;
+        
+    }
+}
+
+.admin-bar.wpresidece_has_top_bar .header_transparent{
+    .master_header_sticky {
+        top: 32px ;
+    }
+}
+
+
+.header_transparent{
+    .master_header_sticky {
+        #shopping-cart_icon path {
+            fill: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color));// Set the shopping cart icon color to dark on sticky.
+        }
+    }
+}

@@ -1,0 +1,96 @@
+/** MILLDONE
+ * WPResidence Carousels Styling
+ *
+ * This SCSS file defines the styles for carousel controls and indicators
+ * used in the WPResidence theme. It's designed to work with Bootstrap's
+ * carousel component while providing custom styling.
+ *
+ * Key Components:
+ * 1. Carousel Controls (prev/next buttons)
+ * 2. Carousel Indicators (dots at the bottom)
+ *
+ * 
+ */
+
+/* Carousel Control Styling
+   These styles apply to the previous and next buttons on the carousel. */
+   .wpresidence-carousel-control {
+    /* Basic dimensions and positioning */
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin: -20px 0 0 0;
+
+    /* Visual styling */
+    opacity: 0.66;
+    background: #222;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    z-index: 10;
+    /* Smooth transition for hover effect */
+    @include smooth-transition-shorter;
+    
+    /* Hover state */
+    &:hover {
+        opacity: 1;
+    }
+
+    /* Positioning for left (previous) and right (next) controls */
+    &.carousel-control-prev,
+    &.left {
+        left: 10px;
+    }
+    
+    &.carousel-control-next,
+    &.right {
+        right: 10px;
+    }
+
+    /* Styling for the icon inside the control */
+    i {
+        font-size: 20px;
+        text-shadow: none;
+        line-height: 40px;
+        margin: 0;
+    }
+}
+
+/* Post Carousel Specific Styling
+   These styles are specific to carousels used in post displays. */
+.post-carusel {
+    /* Carousel Indicators (dots at the bottom) */
+    .carousel-indicators {
+        /* Layout */
+        display: flex;
+        gap: 3px;
+
+        /* Individual indicator styling */
+        button {
+            /* Basic styling */
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 1px;
+            
+            /* Hide text for accessibility */
+            text-indent: -999px;
+            
+            /* Visual styling */
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            opacity: 1;
+            
+            /* Cursor styling for interactivity */
+            cursor: pointer;
+
+            /* Active state styling */
+            &.active {
+                width: 11px;
+                height: 11px;
+                background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                border-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+    }
+}
+

@@ -1,0 +1,132 @@
+//scss\widgets\_social_sidebar.scss
+
+.header_social {
+    float: right;
+    padding: 25px 45px 0 0; 
+}
+
+.social_sidebar_internal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+
+    a {
+        display: flex;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        @include smooth-transition-shorter;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #f3f3f3;
+        width: 41px;
+        height: 41px;
+        color: #8795ab;
+        font-size: 15px!important;
+
+        &:hover {
+            background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            color: #fff;
+
+            i {
+                color: #fff; 
+            }
+        }
+    }
+}
+
+#colophon {
+    .social_sidebar_internal {
+        a {
+            background-color: var(--wp-estate-footer-social-widget-back-color-option, var(--wp_estate_footer_social_widget_back_color));
+            color: var(--wp-estate-footer-social-widget-color-option, var(--wp_estate_footer_social_widget_color));
+
+            &:hover {
+                color: #fff;
+                background-color:var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+    }
+}
+
+.social-rss,
+.social-facebook,
+.social-twitter,
+.social-dribbble,
+.social-google,
+.social-linkedIn,
+.social-blogger,
+.social-tumblr,
+.social-pinterest,
+.social-yahoo,
+.social-youtube,
+.social-vimeo,
+.social-instagram,
+.social-foursquare {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free"; 
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 15px;
+}
+
+// Font Awesome icon content
+.social-rss:before {
+    content: "\f09e";
+}
+
+.social-facebook:before {
+    content: "\f09a";
+}
+
+.social-twitter:before {
+    content: "\e61b";
+}
+
+.social-dribbble:before {
+    content: "\f17d";
+}
+
+.social-google:before {
+    content: "\f0d5";
+}
+
+.social-linkedIn:before {
+    content: "\f0e1";
+}
+
+.social-tumblr:before {
+    content: "\f173";
+}
+
+.social-pinterest:before {
+    content: "\f0d2";
+}
+
+.social-youtube:before {
+    content: "\f167";
+}
+
+.social-vimeo:before {
+    content: "\f194";
+}
+
+.social-foursquare:before {
+    content: "\f180";
+}
+
+.social-instagram:before {
+    content: "\f16d";
+}
+
+// Additional font smoothing for icons
+.social_sidebar_internal i {
+    -moz-osx-font-smoothing: grayscale;
+}

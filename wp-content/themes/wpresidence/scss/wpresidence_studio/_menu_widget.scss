@@ -1,0 +1,275 @@
+
+.elementor-widget-wpresidence_navigation_menu{
+    position: static!important; 
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li{
+        line-height: normal;
+    }
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container>ul>li:hover>ul,
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li.with-megamenu > ul {
+        top:unset;
+    }
+} 
+
+.wpestate_elementor_header_custom{
+    position: relative;
+    z-index: 999;
+}
+
+
+
+[data-elementor-device-mode=desktop] .wpestate-show-menu-desktop, 
+[data-elementor-device-mode=mobile] .wpestate-show-menu-desktop{
+  display: block;
+}
+
+
+[data-elementor-device-mode=mobile] .wpestate-show-menu-mobile, 
+[data-elementor-device-mode=mobile] .wpestate-show-menu-tablet, 
+[data-elementor-device-mode=tablet] .wpestate-show-menu-desktop, 
+[data-elementor-device-mode=tablet] .wpestate-show-menu-tablet {
+  display: block;
+}
+
+[data-elementor-device-mode=mobile] .wpestate-hide-menu-mobile, 
+[data-elementor-device-mode=mobile] .wpestate-hide-menu-tablet, 
+[data-elementor-device-mode=tablet] .wpestate-hide-menu-mobile,
+[data-elementor-device-mode=tablet] .wpestate-hide-menu-tablet {
+    display: none;
+}
+
+
+// addons for studio menu widget
+.elementor-widget-wpresidence_navigation_menu{
+    
+    .menu-mega-menu-updated-container>ul>li:after {
+        content: " ";
+        top: 50%;
+        transform: translate(50%, -50%);
+        position: absolute;
+        right: 0px;
+    }
+
+    .wpresidence-navigation-menu ul.menu> li:not(:last-child):after {
+        content: " ";
+        border-left-width: 0px;
+        border-left-style: solid;
+        height: 30%;
+        border-color: #000;
+        align-items: center;
+        display: flex;
+    
+    }
+    
+}
+
+
+// studio header icon angle
+.wpestate_submenu_icon_angle {
+    .menu-item-has-children > a:after,
+    .sub-menu .menu-item-has-children > a:after {
+        content: "\f105";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        float: right;
+    }
+
+    > .menu-item-has-children > a:after {
+        margin-left: 15px;
+        transform: rotate(90deg);
+    }
+}
+
+
+//studio header caret icon
+.wpestate_submenu_icon_carret {
+    // Common styles for all carets
+    .menu-item-has-children > a:after,
+    .sub-menu .menu-item-has-children > a:after {
+        content: "\f0d7";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        float: right;
+    }
+    
+    // Top level menu items
+    > .menu-item-has-children > a:after {
+        margin-left: 15px;
+    }
+    
+    // Submenu items
+    .sub-menu .menu-item-has-children > a:after {
+        transform: rotate(-90deg);
+    }
+}
+
+
+//studio header icon caret with circle
+.wpestate_submenu_icon_circle-carret {
+    .menu-item-has-children > a:after,
+    .sub-menu .menu-item-has-children > a:after {
+        content: "\f13a";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        float: right;
+    }
+
+    > .menu-item-has-children > a:after {
+        margin-left: 15px;
+    }
+
+    .sub-menu .menu-item-has-children > a:after {
+        transform: rotate(-90deg);
+    }
+}
+
+
+//studio header arrow icon
+.wpestate_submenu_icon_arrow {
+    .menu-item-has-children > a:after,
+    .sub-menu .menu-item-has-children > a:after {
+        content: "\f063";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        float: right;
+    }
+
+    > .menu-item-has-children > a:after {
+        margin-left: 15px;
+    }
+
+    .sub-menu .menu-item-has-children > a:after {
+        transform: rotate(-90deg);
+    }
+}
+
+//studio header plus icon
+.wpestate_submenu_icon_plus {
+    .menu-item-has-children > a:after,
+    .sub-menu .menu-item-has-children > a:after {
+        content: "\2b";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        float: right;
+    }
+
+    > .menu-item-has-children > a:after {
+        margin-left: 15px;
+    }
+}
+
+//mobile menu
+.wpestate-elementor-menu-mobile-container {
+    display: none;
+    
+    .wpestate_mobile_menu_trigger_close, .wpestate_mobile_menu_trigger {
+        padding: 15px;
+        font-size: 15px;
+        cursor: pointer;
+        background-color: #fff;
+        display: flex;
+        justify-content: start;
+        float: left;
+    }
+    .wpestate_mobile_menu_trigger_close {
+      display: none;
+    }
+
+    svg {
+        max-width: 100px;
+        width: 25px;
+        height: 25px;
+    }
+
+    //mobile menu
+    .mobilex-menu {
+        background-color: #fff;
+        position: absolute;
+        z-index: 99;
+        top: 60px;
+        display: none;
+        width: 100vw;
+        min-width: 250px;
+        margin: 0px;
+        left:0px;
+        right: 0px;
+        li a {
+            color: #5c727d;
+            padding: 15px;
+            @include smooth-transition;
+        }
+    }
+
+
+}
+
+
+
+//social icons widget
+
+.wpresidence_elementor_social_sidebar_internal {
+    min-width: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    a {
+        position: relative;
+        padding: 0px 0px;
+        background-color: transparent;
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        display: inline-block;
+        width: 41px;
+        height: 41px;
+        line-height: 41px;
+        
+        &:hover{
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+   
+}
+
+/*=language switch elementor 
+--------------------------------------------------------------------*/
+.wpestate_language_drop_wrapper {
+    .dropdown-menu {
+        border: none;
+        background: transparent;
+        min-width: 110px;
+            a {
+
+                display: block;
+                width: 100%; /* Ensures the full width of the container */
+                padding: 5px 10px; /* Optional: Adjust padding as needed */
+            
+            }
+            
+        
+    }
+}
+ 
+
+/*=submit button elementor
+--------------------------------------------------------------------*/
+
+.wpresidence_submit_button_wrapper{
+    display: flex;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/*=user menu elementor
+--------------------------------------------------------------------*/
+.wpresidence_header_elementor_user_wrap{
+    position: relative;
+} 
+.elementor-element-edit-mode .wpresidence-studio-show-menu #user_menu_open{
+    display: block;
+}
+
+.wpresidence_header_elementor_user_wrap  #user_menu_open{
+    right: auto;
+    left: -175px;
+}

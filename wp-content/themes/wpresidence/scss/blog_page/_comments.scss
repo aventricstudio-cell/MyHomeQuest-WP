@@ -1,0 +1,185 @@
+/* MILLDONE
+ * Comments Styling
+ * 
+ * This SCSS file defines the styles for the comments section of a WpEesidence theme.
+ *
+ * The structure includes styles for:
+ * - Overall comments container
+ * - Comment lists and individual comments
+ * - Author images
+ * - Comment meta information 
+ * - Comment content
+ * - Reply links 
+ * - Comment form
+ *
+ * NOTE: This styling assumes the use of nested comments (threaded comments).
+ */
+
+ 
+
+ #comments {
+    font-size: 13px;
+    line-height: 22px;
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+
+    // Comments title
+    li {
+        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: 15px;
+        &:last-child {
+            border: 0px;
+        }
+    }
+
+    // List of comments
+    .commentlist {
+        list-style: none;
+        margin: 0px;
+
+        // Individual comment
+        .comment {
+            min-height: 115px;
+
+            // Author image
+            .blog_author_image {
+                width: 55px;
+                height: 55px;
+                display: inline;
+                float: left;
+                margin: 0px 15px 15px 0px;
+                border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+                // Reply link within author image container
+                .comment-reply-link {
+                    margin-top: 67px;
+                    float: left;
+                    background-color: #222;
+                    color: #ffffff;
+                    padding: 0px;
+                    text-align: center;
+                    font-size: 13px;
+                    width: 55px;
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: #687373;
+                    }
+                }
+            }
+
+            // Comment content container
+            .comment {
+                // Edit link
+                .edit-link {
+                    margin-left: 5px;
+                    float: right;
+                }
+
+                // Comment meta information
+                .comment-meta {
+                    .comment-author {
+                        .comment_name {
+                            font-size: 16px;
+                            color: #222;
+                            line-height: 1.3em;
+
+                            a {
+                                font-size: 16px;
+                                color: #222;
+                                line-height: 1.3em;
+                            }
+                        }
+
+                        .comment_date {
+                            color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                // Actual comment content
+                .comment-content {
+                    padding-left: 65px;
+
+                    p {
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+
+        // Nested comments (children)
+        .children {
+            padding: 17px 0px 0px 37px;
+            margin-left: 0px;
+            padding-left: 67px;
+        }
+    }
+}
+
+// Comment form
+
+.comment-form-comment{
+    label{
+        display: none;
+    }
+}
+.comment-respond {
+    float: left;
+    width: 100%;
+
+    // Form fields
+    .comment-form-url,
+    .comment-form-email,
+    .comment-form-author {
+        width: 32%;
+        margin-right: 13px;
+        float: left;
+    }
+
+    .comment-form-url {
+        margin-right: 0px;
+    }
+
+    #comment {
+        padding-left: 10px;
+    }
+}
+
+// Additional global styles
+.form-allowed-tags {
+    white-space: normal;
+}
+
+.comment-notes {
+    margin-bottom: 5px;
+}
+
+/* Integrated wp-comment-cookies-consent styles */
+.comment-form-cookies-consent {
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    label {
+        line-height: 15px;
+        vertical-align: top;
+        font-weight: normal;
+    }
+}
+
+h3#reply-title{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}

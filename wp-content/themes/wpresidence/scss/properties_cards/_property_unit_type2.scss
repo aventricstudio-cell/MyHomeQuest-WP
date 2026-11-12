@@ -1,0 +1,211 @@
+// MILLDONE
+// _property_unit_type2.scss
+// src: scss\properties_cards\_property_unit_type2.scss
+// This file contains styles specific to Property Unit Type 2 in the WpResidence theme.
+// It defines the layout and appearance of Type 2 property cards displayed in various views.
+
+.property_unit_type2 {
+    // Featured property star icon
+    .featured_div {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: transparent;
+        color: transparent;
+        padding: 0;
+        font-size: 0;
+
+        &:before {
+            content: "\f005"; // Star icon
+            font-family: "Font Awesome 5 Free";
+            color: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    // Property title
+    h4 {
+        font-size: 20px;
+    }
+
+    // Property details layout
+    .property_listing .property-unit-information-wrapper .property_listing_details{
+        font-weight: 500;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    }
+
+    // Property details icons
+    .inforoom_unit_type2:before {
+        content: "\f236"; // Bed icon
+        font-family: "Font Awesome 5 Free";
+        margin-right: 4px;
+        font-weight: 600;
+    }
+
+    .infobath_unit_type2:before {
+        content: "\f043"; // Bath icon
+        font-family: "Font Awesome 5 Free";
+        margin-right: 4px;
+        font-weight: 600;
+    }
+
+    .infosize_unit_type2:before {
+        content: "\f279"; // Map icon
+        font-family: "Font Awesome 5 Free";
+        margin-right: 4px;
+        font-weight: 600;
+    }
+
+    .infogarage_unit_type2:before {
+        content: "\f1b9"; // Car icon
+        font-family: "Font Awesome 5 Free";
+        margin-right: 4px;
+        font-weight: 600;
+    }
+
+    // Agent image
+    .property_agent_image {
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+
+    }
+
+    // Agent wrapper
+    .property_agent_wrapper {
+        margin-left: 20px;
+        line-height: 40px;
+    }
+
+    // Property location
+    .property_location {
+        width: 100%;
+        padding: 5px 0;
+        margin: 0;
+        height: 51px;
+        margin-top: auto;
+    }
+
+    // Share unit
+    .share_unit {
+        left: 0px;
+    }
+
+    // Share list
+    .share_list {
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        border: 0;
+ 
+        &:before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            display: block;
+            background-color: currentColor;
+            -webkit-mask: url('../../templates/svg_icons/share.svg') center / contain no-repeat;
+            mask: url('../../templates/svg_icons/share.svg') center / contain no-repeat;
+        }
+
+        &:hover{
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+
+    // Compare action
+    .compare-action {
+        border: none;
+        margin-right: 20px;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        width: auto;
+
+        &:before {
+            font-size: 16px;
+        }
+
+        &:hover{
+            border:none;
+        }
+    }
+
+    // Media styles
+    .property_media {
+        color: #fff;
+        position: absolute;
+        z-index: 9;
+        opacity: .9;
+        right: auto;
+        left: 15px;
+        bottom: 15px;
+    
+
+        .fa {
+            font-size: 17px;
+        }
+    }
+
+    // Price wrapper
+    .listing_unit_price_wrapper {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.property_unit_type2 {
+    // Favorite icon
+    .icon-fav {
+        position: absolute;
+        border: 0;
+        float: right;
+        right: 20px;
+        bottom: 15px;
+        width: auto;
+        height: auto;
+        padding-top: 0;
+        z-index: 9;
+        color: #fff;
+
+        &:before,
+        &.icon-fav-on:before {
+            display: none;
+        }
+    }
+}
+
+// Property details styles
+.property_listing_details_v2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: var(--wp-estate-card-details-alignment-option,var( --wp_estate_card_details_alignment));
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    column-gap: var(--wp-estate-card-details-gap-option, var(--wp_estate_card_details_gap));
+}
+
+.property_listing_details_v2_item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size:  var(--wp-estate-card-details-font-size-option,var(--wp-estate-card-unit-font-size));
+    font-weight:var(--wp-estate-card-details-font-weight-option,var(--wp-estate-card-unit-font-weight));
+    line-height: var(--wp-estate-card-details-line-height-option,var( --wp-estate-card-unit-line-height));
+    font-family: var(--wp-estate-card-details-font-family-option, var( --wp-estate-card-unit-font-family));
+    color :var(--wp-estate-card-details-font-color-option,var(--wp-estate-card-unit-font-color));
+    flex-direction: var(--wp-estate-card-details-image-position-option,var(--wp_estate_card_details_image_position));
+    
+    img {
+        max-height: var(--wp-estate-card-details-image_icon-size-option,var(--wp_estate_card_details_image_icon_size));
+        max-width: var(--wp-estate-card-details-image_icon-size-option,17px);
+    }
+
+    i{
+        font-size: var(--wp-estate-card-details-font-awsome-size-option, var(--wp_estate_card_details_font_awsome_size));
+        color: var(--wp-estate-card-details-image-color-option,var(--wp_estate_card_details_image_color));
+    }
+}
+

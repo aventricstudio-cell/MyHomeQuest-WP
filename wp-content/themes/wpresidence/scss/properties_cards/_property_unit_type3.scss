@@ -1,0 +1,248 @@
+// MILLDONE
+// _property_unit_type3.scss
+// src: scss\properties_cards\_property_unit_type3.scss
+// This file contains styles specific to Property Unit Type 3 in the WpResidence theme.
+// It defines the layout and appearance of Type 3 property cards displayed in various views.
+
+// Hide agent icon by default (overridden for type 3)
+.unit3agent {
+    display: none;
+}
+
+// Base styles for property unit type 3
+.property_unit_type3 {
+
+    // Show agent icon for type 3
+    .unit3agent {
+        display: inline-block;
+    }
+
+    // Agent wrapper icon styles
+    .property_agent_wrapper_type1 i {
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        margin-right: 3px;
+    }
+
+    // SVG styles
+    svg {
+        height: auto;
+
+        path {
+            fill: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        }
+    }
+
+    // Specific SVG size adjustments
+    .inforoom_unit_type3 svg {
+        width: 22px;
+    }
+
+    .infosize_unit_type3 svg {
+        width: 11px;
+    }
+
+    // Property listing details styles
+    .property_listing .property-unit-information-wrapper .property_listing_details {
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        gap: 15px;
+    }
+
+    // Property listing details item styles
+    .property_listing_details_v3_item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        line-height: 17px;
+    }
+
+    // Price wrapper styles
+    .property_listing .property-unit-information-wrapper .listing_unit_price_wrapper {
+        padding: 0 20px;
+        font-size: 18px;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        font-weight: 500;
+        line-height: 1.5em;
+        a{
+            color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color)); 
+            &:hover{
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+    }
+
+    // Price label styles
+    .price_label {
+        font-size: 18px;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        font-weight: 500;
+    }
+
+    .property_card_categories_wrapper{
+        margin-bottom: 15px;
+    }
+
+    // Agent wrapper styles
+    .property_agent_wrapper {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    // Property location styles
+    .property_location {
+        span {
+            display: none;
+        }
+    }
+
+    // Unit details button styles
+    .unit_type3_details {
+        width: auto;
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        float: right;
+        padding: 2px 15px;
+        line-height: 22px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+        &:hover {
+            background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+
+        a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    // Property agent link styles
+    .property_agent_wrapper a {
+        font-weight: 500;
+    }
+    }
+
+    // Property location styles
+    .property_location {
+       // height: 47px;      
+        padding:8px 0px;
+
+    }
+
+    // Carousel control styles
+    .carousel-control {
+        width: 50px;
+    }
+
+// Property categories wrapper styles
+.property_card_categories_wrapper {
+    padding: 0 20px;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+// Listing actions styles for property unit types 3 and 7
+// Common styles for property unit types 3, 4, and 7
+$property-types: 3, 4, 7;
+
+@mixin property-unit-types {
+    @each $type in $property-types {
+        &.property_unit_type#{$type} {
+            @content;
+        }
+    }
+}
+
+.property_listing {
+    @include property-unit-types {
+        // Listing actions
+        .listing_actions {
+            position: absolute;
+            left: 20px;
+            bottom: 15px;
+            top: auto;
+            z-index: 10;
+        }
+
+        // Icon styles
+        .icon-fav,
+        .compare-action,
+        .share_list {
+            border: none;
+            color: #fff;
+            width: 23px;
+            height: 23px;
+            margin: 0;
+            padding: 0;
+            line-height: 23px;
+            text-align: center;
+            background-color: rgba(51, 51, 51, 0.45);
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(51, 51, 51, 0.65);
+            }
+        }
+
+        // Favorite icon
+        .icon-fav {
+            &:before {
+                content: "\f004";
+                font-size: 13px;
+                color: #fff;
+                font-weight: 500;
+            
+            }
+
+            &.icon-fav-on:before {
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)) !important;
+            }
+        }
+
+        .share_unit{
+            left: -5px;
+        }
+
+        // Share list
+        .share_list {
+            background-image: none;
+
+            &:before {
+                content: "";
+                width: 15px;
+                height: 15px;
+                display: block;
+                background-color: currentColor;
+                -webkit-mask: url('../../templates/svg_icons/share.svg') center / contain no-repeat;
+                mask: url('../../templates/svg_icons/share.svg') center / contain no-repeat;
+            }
+        }
+
+        // Compare action
+        .compare-action:before {
+            font-family: "Font Awesome 5 Free";
+            font-size: 13px;
+            color: #fff;
+            line-height: 23px;
+        }
+
+        
+    }
+}
+
+// Specific styles for property unit type 3 and 7
+.property_listing.property_unit_type3,
+.property_listing.property_unit_type7 {
+    .listing_actions {
+        position: absolute;
+        left: 20px;
+        bottom: 15px;
+        top: auto;
+        z-index: 10;
+    }
+}

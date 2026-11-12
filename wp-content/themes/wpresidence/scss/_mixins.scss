@@ -1,0 +1,412 @@
+// _mixins.scss
+
+// This file contains reusable SCSS mixins that can be used throughout the project.
+// These mixins are general-purpose and not tied to specific components.
+
+// ==========================================================================
+// Flexbox Mixins
+// ==========================================================================
+
+@mixin flexbox {
+  display: flex;
+}
+
+@mixin flex-direction($direction) {
+  flex-direction: $direction;
+}
+
+@mixin justify-content($justify) {
+  justify-content: $justify;
+}
+
+@mixin align-items($align) {
+  align-items: $align;
+}
+
+// ==========================================================================
+// Typography Mixins
+// ==========================================================================
+
+@mixin font-size($size, $line-height: null) {
+  font-size: $size;
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ==========================================================================
+// Positioning Mixins
+// ==========================================================================
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// ==========================================================================
+// Box Model Mixins
+// ==========================================================================
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}
+
+// ==========================================================================
+// Border Mixins
+// examples: @include border-radius(4px, 8px, 12px, 16px);
+// @include border-radius(4px);
+// @include border-radius-small;
+//
+// ==========================================================================
+@mixin border-radius($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0) {
+  border-top-left-radius: $top-left;
+  border-top-right-radius: $top-right;
+  border-bottom-right-radius: $bottom-right;
+  border-bottom-left-radius: $bottom-left;
+}
+
+@mixin border-radius-small {
+  border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner)); // Define the small radius once here
+}
+ 
+// ==========================================================================
+// backgorund Mixins
+// @include background-cover;
+// ==========================================================================
+@mixin background-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+// ==========================================================================
+//  hover zoom Mixins
+// @include image-hover-zoom ;
+// ==========================================================================
+@mixin image-hover-zoom {
+    opacity: 0.9; 
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand')";
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand');
+  
+}
+
+// ==========================================================================
+// Box Shadow Mixins
+// ==========================================================================
+//@include box-shadow(card);
+@mixin box-shadow($level: card) {
+  @if $level == card {
+    box-shadow: var(--wp-estate-cssbox-shadow-elementor-option,var(--wp_estate_cssbox_shadow));   
+    //box-shadow: 0 10px 31px 0 rgba(7, 152, 255, 0.09); // Adjust for lighter shadow needs
+
+  } @else if $level == medium {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); // Adjust for moderate shadow
+  } @else if $level == heavy {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); // Adjust for heavier shadow
+  } @else {
+    box-shadow: $level; // Custom shadow if a specific value is needed
+  }
+} 
+
+ 
+
+//  @include main-box-shadow(); // Include main box shadow.
+@mixin main-box-shadow() {
+  -webkit-box-shadow: 3px 1px 20px 0 rgba(0, 110, 225, 0.08);
+  -moz-box-shadow: 3px 1px 20px 0 rgba(0, 110, 225, 0.08);
+  box-shadow: 3px 1px 20px 0 rgba(0, 110, 225, 0.08);
+}
+//  @include main-box-shadow-v2(); 
+@mixin main-box-shadow-v2() {
+  -webkit-box-shadow: 3px 1px 20px 0 rgba(0, 110, 225, 0.18);
+  -moz-box-shadow: 3px 1px 20px 0 rgba(0, 110, 225, 0.18);
+  box-shadow: 3px 1px 20px 0 rgba(0, 110, 225, 0.18);
+}
+@mixin woocomerce-box-shadow-v2() {
+  -webkit-box-shadow:rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;;
+  -moz-box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;;
+}
+ 
+
+
+@mixin absolute-background($properties...) {
+    position: absolute;
+    z-index: 1;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+
+} 
+
+
+ 
+// ==========================================================================
+// Transition Mixins
+// @include smooth-transition;
+// @include smooth-transition(opacity);
+// @include smooth-transition-shorter;
+// @include smooth-transition-short;
+// @include no-transition;
+//  @include mixins.smooth-transition-short;
+// ==========================================================================
+@mixin smooth-transition($properties...) {
+  transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease; 
+  -o-transition: all 0.7s ease;
+
+} 
+
+@mixin smooth-transition-shorter($properties...) {
+  transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+
+}
+
+
+@mixin smooth-transition-short($properties...) {
+  transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1 ease;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+
+}
+
+@mixin no-transition() {
+  transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+
+@mixin transition($properties...) {
+  -webkit-transition: $properties;
+  -moz-transition: $properties;
+  -ms-transition: $properties;
+  -o-transition: $properties;
+  transition: $properties;
+}
+
+// ==========================================================================
+// Transform Mixins
+//7 @import 'card-base';
+//  ==========================================================================
+@mixin card-base {
+  position: relative;
+  height: 100%;
+  border: var(--wp-estate-unit-border-size-option, --wp_estate_unit_border_size ) solid var(--wp-estate-unit-border-color-option,--wp-estate-unit-border-color);
+  font-size:  var(--wp-estate-card-details-font-size-option,var(--wp-estate-card-unit-font-size));
+  font-weight:var(--wp-estate-card-details-font-weight-option,var(--wp-estate-card-unit-font-weight));
+  background-color: var(--wp-estate-property-unit-color-option, var(--wp_estate_property_unit_color));
+  max-width: 525px;
+  transition: 0.3s ease-out;
+  float: left;
+  padding-top: var(--wp-estate-propertyunit-internal-padding-top-option,var(--wp_estate_propertyunit_internal_padding_top));
+  padding-left:var(--wp-estate-propertyunit-internal-padding-left-option,var(--wp_estate_propertyunit_internal_padding_left));
+  padding-bottom:var(--wp-estate-propertyunit-internal-padding-bottom-option,var(--wp_estate_propertyunit_internal_padding_bottom));
+  padding-right:var(--wp-estate-propertyunit-internal-padding-right-option,var(--wp_estate_propertyunit_internal_padding_right));
+}
+
+
+// ==========================================================================
+// Transform Mixins
+// ==========================================================================
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+@mixin color-transition($property, $duration, $timing-function) {
+    transition: $property $duration $timing-function;
+    -moz-transition: $property $duration $timing-function;
+    -webkit-transition: $property $duration $timing-function;
+    -o-transition: $property $duration $timing-function;
+}
+
+// ==========================================================================
+// Gradient Mixins
+// ==========================================================================
+@mixin overlay-gradient($direction: to top, $start-color: rgba(0, 0, 0, 0.75), $end-color: transparent, $opacity: 0.5) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient($direction, $start-color, $end-color);
+  opacity: $opacity;
+  pointer-events: none;
+  z-index: 1;
+}
+
+// ==========================================================================
+// Media Query Mixins
+// ==========================================================================
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $breakpoint == "medium" {
+    @media (min-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $breakpoint == "large" {
+    @media (min-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $breakpoint == "xlarge" {
+    @media (min-width: $breakpoint-xlarge) {
+      @content;
+    }
+  }
+}
+
+// ==========================================================================
+// Utility Mixins
+// ==========================================================================
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+}
+
+// ==========================================================================
+// Animation Mixins
+// ==========================================================================
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+// ==========================================================================
+// Accessibility Mixins
+// ==========================================================================
+
+@mixin visually-hidden {
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+// ==========================================================================
+// Performance Mixins
+// ==========================================================================
+
+@mixin hardware-acceleration {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+
+// ==========================================================================
+// Cross-browser Mixins
+// ==========================================================================
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+// Use these mixins throughout your SCSS files by calling @include mixin-name(parameters);

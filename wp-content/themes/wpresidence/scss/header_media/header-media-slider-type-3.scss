@@ -1,0 +1,195 @@
+// MILLDONE
+// file scss/components/header-media/header-media-slider-type-3.scss
+// Main container for the third variation of the theme slider
+.theme_slider_3 {
+  
+  // Gradient overlay for each slide
+  // Used in: <div class="theme_slider_3_gradient"></div>
+  .theme_slider_3_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #222;
+    opacity: 0.5;
+  }
+
+  .owl-nav{
+    margin-top: 0;
+  }
+
+  // Container for the main content of each slide
+  // Used in: <div class="slide_cont_block">
+  .slide_cont_block {
+    position: absolute;
+    bottom: auto;
+    width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+    max-width: 100%;
+    margin: 0px auto !important;
+    left: 0;
+    right: 0;
+    padding: 0px 15px;
+
+  
+    z-index: 2;
+    top: 33%;
+
+    // Property title styling
+    // Used in: <h2>Property Title</h2>
+    h2 {
+      color: #fff;
+      font-size: 55px;
+      line-height: 1em;
+      margin-bottom: 20px;
+      max-width: 550px;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    // Property price styling
+    // Used in: <div class="theme_slider_3_price">
+    .theme_slider_3_price {
+      z-index: 1;
+      color: #fff;
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+
+    // Container for property details (bedrooms, bathrooms, size)
+    // Used in: <div class="theme_slider_3_sec_row">
+    .theme_slider_3_sec_row {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 16px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 15px;
+
+      // Individual property detail item
+      // Used in: <div class="inforoom_unit_type5">
+      .inforoom_unit_type5 {
+        position: relative;
+        // Adds a separator between detail items
+        &:after {
+          content: " ";
+          width: 2px;
+          height: 12px;
+          background: #c3c1c1;
+          position: absolute;
+          right: -8px;
+          top: 50%;
+          margin-top: -6px;
+        }
+        // Removes separator after the last item
+        &:last-of-type:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Styling for Owl Carousel navigation arrows
+  // Used in: <button type="button" class="owl-prev">/<button type="button" class="owl-next">
+  .owl-prev,
+  .owl-next {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    background-color: #222;
+    bottom: 0;
+    top: auto;
+    line-height: 100px;
+    text-align: center;
+    @include smooth-transition-shorter;
+    border: none;
+  }
+
+  // Positioning for the "previous" arrow
+  .owl-prev {
+    right: 90px;
+    margin-top: 120px;
+  }
+
+  // Positioning for the "next" arrow
+  .owl-next {
+    right: 0px;
+  }
+
+  // Additional styling for Owl Carousel navigation buttons
+  &.owl-carousel .owl-nav button.owl-prev,
+  &.owl-carousel .owl-nav button.owl-next {
+    background-color: #222;
+    margin: 0px;
+    border-radius: 0px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // Styling for the contact wrapper (not visible in provided HTML)
+  // May be used for a contact form or button added dynamically
+  .theme_slider_contact_wrapper {
+    top: 0px;
+    position: relative;
+    left: 0px;
+  }
+
+  // Adjusts slide content position for full-screen mode
+  // Class 'full_screen_yes' may be added dynamically based on settings
+  &.full_screen_yes .slide_cont_block {
+    bottom: 30%;
+  }
+}
+
+// Styling for carousel indicators (thumbnails)
+// Note: This exact class is not in the provided HTML, might be added dynamically
+.theme_slider_3_carousel-indicators {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  bottom: 90px;
+  z-index: 15;
+  position: absolute;
+  width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+  padding: 0 15px;
+  max-width: 100%;
+  margin: 0px auto !important;
+  left: 0;
+  right: 0;
+
+  // Individual indicator/thumbnail
+  a {
+    display: inline-flex;
+    gap: 10px; /* Adjust the gap between items */
+
+    // Thumbnail image
+    img {
+      width: 90px;
+      border: 2px solid #fff;
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+      @include smooth-transition-shorter;
+    }
+
+    // Active state for thumbnail
+    &.active img {
+      border: 2px solid #222;
+    }
+  }
+}
+
+// Removes padding from Owl Carousel items
+// Used in: <div class="owl-item">
+.theme_slider_3.owl-carousel .owl-item .item {
+    padding: 0px;
+}
+
+// Ensures images fill the entire slide height
+// Applied to background images of slides
+.theme_slider_3.owl-carousel .owl-item img {
+    display: block;
+    height: 100%;
+    width: auto;
+}

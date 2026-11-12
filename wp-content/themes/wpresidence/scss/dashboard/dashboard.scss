@@ -1,0 +1,1553 @@
+
+@use '../variables' as vars; // Load variables with namespace `vars`
+@use '../mixins' as mixins;  // Load mixins with namespace `mixins`
+
+
+
+
+.wpresidence_dashboard_body {
+    .master_header {
+        border-bottom: 0px solid #f0f0f0;
+        box-shadow: 3px 5px 10px 0 #E3E6EC;
+    }
+    .dropdown-menu{
+      li{
+        font-weight: 400;
+        padding: 2px 0px;
+      }
+    }
+}
+
+
+/* =User Menu new design
+-----------------------------------------------  */
+.wpresidence_dashboard_body .content_wrapper{
+    font-family: var(--wp-estate-paragraph-font-family-option, 'Poppins', sans-serif);
+  }  
+  
+  .pack-listing,
+  .package_label,
+  .property_wrapper_dash,
+  .wpestate_dashboard_section_title, .user_details_row, .change_pass,
+  .property_dashboard_location a,
+  .dashbard_unit_title,
+  .wpestate_dashboard_content_wrapper input[type=text],
+  .wpestate_dashboard_content_wrapper input[type=password],
+  .wpestate_dashboard_content_wrapper input[type=email],
+  .wpestate_dashboard_content_wrapper input[type=url],
+  .wpestate_dashboard_content_wrapper input[type=number],
+  .wpestate_dashboard_content_wrapper textarea,
+  .wpestate_dashboard_content_wrapper .wpresidence_button,
+  .wpestate_dashboard_content_wrapper label,
+  .col-md-3.user_menu_wrapper {
+    font-family: var(--wp-estate-paragraph-font-family-option, 'Inter', sans-serif);
+  } 
+  
+  .pack-listing-title,
+  .wpresidence_dashboard_body h1,
+  .wpresidence_dashboard_body h2,
+  .wpresidence_dashboard_body h3,
+  .wpresidence_dashboard_body h4,
+  .wpresidence_dashboard_body h5,
+  .wpresidence_dashboard_body h6,
+  .wpresidence_dashboard_body h1 a,
+  .wpresidence_dashboard_body h2 a,
+  .wpresidence_dashboard_body h3 a,
+  .wpresidence_dashboard_body h4 a,
+  .wpresidence_dashboard_body h5 a,
+  .wpresidence_dashboard_body h6 a {
+    font-family: var(--wp-estate-h1-font-family-option, 'Poppins', sans-serif);
+  }
+  
+  a{
+      color: #222;
+  }
+  
+  a:hover, a:focus {
+    color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+  }
+  
+  body {
+    color: var(--wp-estate-user-dashboard-content-color-option, #11142d80);
+  }
+
+  .wpresidence_dashboard_body{
+    
+    .wpresidence_main_wrapper_class  {
+      margin-bottom: 0px!important; // overwrite fixed footer
+    } 
+
+    .wpresidence_button{
+      padding: 12px;
+      display: inline-block;
+      width: auto;
+      border-color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+      color: #ffffff;
+      background-color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back))));
+      background-image: linear-gradient(to right, transparent 50%, var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back)) 50%);
+  
+
+      
+      &:hover{
+        background-color: #222222;
+        border-color: #222222;
+        color: #ffffff;
+      }
+    }
+
+  
+  }
+
+  
+  .wpresidence_dashboard_body .alert-message,
+  .wpresidence_dashboard_body .login-alert {
+    font-size: 12px;
+        background: #ff754c;
+        margin: 0px 0px 30px 0px;
+        color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        line-height: 1.5em;
+    }
+  
+  .dashboard_title_wrapper {
+    width: 100%;
+    float: left;
+    margin: 0px 0px 30px 0px;
+    display: block;
+    padding: 15px;
+  }
+  
+  .dashboard_title_wrapper_color {
+    background-color: #6C5DD3;
+    width: 100%;
+    color: #fff;
+    border-radius: 24px;
+    padding: 30px;
+    float: left;
+    position: relative;
+  }
+  
+  .dashboard_title_wrapper_color .single-content {
+    z-index: 20;
+    position: relative;
+  }
+  
+  .dashboard_title_wrapper_colorimage {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    border-radius: 24px;
+    z-index: 10;
+    background-position: 0px 17px;
+  }
+  
+  .dashboard_hello_section {
+    padding-left: 50px;
+   margin: 45px 0px 30px 0px;
+   position: relative;
+  }
+  
+  .wpestate_bell_note {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 9px;
+    right: 95px;
+    background-color: #fff;
+    box-shadow: 0px 3px 23px #E3E6EC;
+    border-radius: 50px;
+    line-height: 65px;
+    text-align: center;
+    @include mixins.smooth-transition-shorter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+  }
+
+  .wpestate_bell_note:hover{
+    box-shadow: 0px 3px 23px #bfc1c5;
+  }
+  
+  .wpestate_bell_note_unread {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    background-color: var(--wp-estate-user-dashboard-menu-color-option, #FF754C);
+    border-radius: 50%;
+    top: -8px;
+    right: 0px;
+    font-size: 12px;
+  }
+  
+  .dashboard_hi_text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #11142D;
+    text-transform: capitalize;
+  }
+  
+  .dashboard_hello_section h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -1px;
+    line-height: 1.3em;
+    text-transform: capitalize;
+  }
+  
+  .dashboard-margin .entry-title {
+    margin: 15px 0px;
+    font-weight: 600;
+    font-size: 33px;
+    color: #fff;
+    letter-spacing: -1px;
+    z-index: 20;
+    position: relative;
+  }
+  
+  .user_menu_wrapper {
+    width: 260px;
+    padding-right: 0px;
+    padding-left: 0px;
+    z-index: 12;
+    border-right: 1px solid #E4E4E4;
+    background-color: var(--wp-estate-user-dashboard-menu-background-option, var(--wp_estate_user_dashboard_menu_back));
+  }
+
+  .header_wrapper {  
+    .user_menu_wrapper {
+      border-right: 0px;
+      background-color: transparent;
+    }
+  }
+  
+  .dashboard_username {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6em;
+    color:  var(--wp-estate-user-dashboard-menu-color-option, var(--wp_estate_user_dashboard_menu_color));
+  }
+  
+  .dashboard_menu_user_image .menu_user_picture {
+    margin: 0px auto;
+    float: none;
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    background-size: cover;
+    border: none;
+    box-shadow: 0px 3px 23px #E3E6EC;
+  }
+  
+  .user_dashboard_links {
+    background-color: transparent !important;
+    margin-bottom: 0px;
+    float: left;
+    list-style-type: none;
+    margin: 0px;
+    width: 86%;
+    margin: 0px 7%;
+  }
+  
+  .user_dashboard_links li {
+    width: 100%;
+    margin: 0px 0px;
+    float: left;
+  }
+  
+  .user_dashboard_links .user_tab_active,
+  .user_dashboard_links a:hover {
+      text-decoration: none;
+      position: relative;
+      border-radius: 12px;
+      color: #fff;
+  }
+
+  .user_dashboard_links .user_tab_active{
+    background: var(--wp-estate-user-dashboard-menu-color-hover-option, var(--wp_estate_user_dashboard_menu_color_hover));
+  }
+
+
+  .user_dashboard_links .user_tab_active svg g,
+  .user_dashboard_links a:hover svg g,
+  .user_dashboard_links .user_tab_active svg,
+  .user_dashboard_links a:hover svg {
+    opacity: 1;
+  }
+  
+  .user_dashboard_links i {
+    margin-right: 6px;
+    width: 15px;
+  }
+  
+  .user_dashboard_links a {
+    color: var(--wp-estate-user-dashboard-menu-color-option, #808191);
+    width: 100%;
+    padding: 15px 15px;
+    margin: 0px;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+    font-size: 14px;
+    @include mixins.no-transition;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .mobilex-menu .secondary_menu_sidebar {
+      margin: 0px 0px 0px 0px;
+  }
+  
+  
+  .secondary_menu_sidebar {
+    list-style: none;
+    margin: 0px 0px 15px 31px;
+    display: inline-block;
+    display: none;
+  }
+  
+  .user_tab_active_list .secondary_menu_sidebar  {
+    display: block;
+  }
+  
+  .secondary_menu_sidebar a{
+    padding: 5px 15px;
+    font-size: 13px;
+  }
+  
+  .secondary_menu_sidebar a.secondary_select {
+    color: var(--wp-estate-user-dashboard-menu-color-hover-option, var(--wp_estate_user_dashboard_menu_color_hover));
+
+  }
+  
+  .unread_mess {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: var(--wp-estate-user-dashboard-menu-color-option, #FF754C);
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    float: right;
+    color: #fff;
+  }
+  
+  .user_dashboard_links a:last-of-type {
+    border-top: 0px solid #89929E;
+  }
+  
+  .user_dashboard_links a:hover {
+    text-decoration: none;
+    color: var(--wp-estate-user-dashboard-menu-hover-color-option, var(--wp_estate_user_dashboard_menu_hover_color));
+    background-color: var(--wp-estate-user-dashboard-menu-background-option, #fff);
+  }
+  
+  .user_dashboard_links svg {
+    margin-right: 15px;
+    height: 20px;
+  }
+  
+  
+  .user_dashboard_links a svg path,
+  .user_dashboard_links a svg circle {
+    stroke: var(--wp-estate-user-dashboard-menu-color-option, #b3b3b3);
+  } 
+
+  .user_dashboard_links a:hover svg path,
+  .user_dashboard_links a:hover svg circle {
+    stroke: var(--wp-estate-user-dashboard-menu-hover-color-option, var(--wp_estate_user_dashboard_menu_hover_color));
+  
+  }
+  
+  .user_dashboard_links .user_tab_active svg path,
+  .user_dashboard_links .user_tab_active svg circle {
+    stroke: #fff;
+  }
+  
+  
+  
+  .wpestate_dashboard_content_wrapper {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 15px;
+    padding: 30px;
+    margin-bottom: 45px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 22px 86px rgba(227, 230, 236, 0.91);
+
+    .profile-onprofile {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .floor_plan_unit_wrapper {
+    position: relative;
+  }
+
+
+  .dashboard-wrapper-form{
+    padding: 0px 50px;
+  }
+  
+  .wpestate_dash_history_unit{
+    font-size: 14px;
+    color: #222;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    padding-left: 45px;
+    position: relative;;
+  }
+  .wpestate_dash_history_unit:before{
+    content: " ";
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    left: 0px;
+    height: 1px;
+    background-color: #f5f5f5;
+  }
+  
+  
+  .wpestat_dash_history_date{
+    font-size: 13px;
+      color: #808191;
+  }
+  
+
+  
+  .dashboard_history_wrapper{
+      position: relative;
+  }
+  
+  .dashboard_history_wrapper:before{
+      content:" ";
+      position: absolute;
+      top:10px;
+      bottom: 10px;
+      left:0px;
+      width: 1px;
+      background-color:#f5f5f5;
+  }
+
+  
+  .dashboard_widget_unit{
+      width: 100%;
+      float: left;
+      margin-bottom: 15px;
+  }
+  
+  .dashboard_widget_unit .dashbard_unit_image img{
+    width: 80px;
+    height: auto;
+    border-radius:var(--wp-estate-border-radius-corner--dashboard-option,var(--wp_estate_border_radius_dashboard_corner));
+  }
+  
+  .dashboard_widget_unit .dashbard_unit_image:after{
+    display: none;
+  }
+  
+  .dashboard_widget_unit .property_dashboard_location_wrapper{
+    padding-top: 5px;
+    width: calc(100% - 80px);
+  }
+  
+  .wpestate_widget_wrapper h3{
+     font-size: 18px;
+     line-height: 1.3em;
+     margin-bottom: 15px;
+     font-weight: 500;
+  }
+  
+  .dasboard_widget_row{
+    font-size: 14px;
+    color: #222;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+      float: left;
+  }
+  
+  .wpestate_dashboard_account_summary .dasboard_widget_row{
+    width: 30%;
+    margin-right:2%;
+  }
+  
+  .wpestate_dashboard_content_wrapper .pagination{
+      margin-top: 15px;
+      margin-bottom:0px;
+      border-radius: 3px;
+  }
+  
+  .pagination .roundright a,
+  .pagination .roundright span {
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+  }
+  
+  .pagination > .active > a, .pagination > .active > span,
+  .pagination > .active > a:hover, .pagination > .active > span:hover,
+  .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+  }
+  
+  .pagination>li>a, .pagination>li>span{
+     color: var(--wp-estate-user-dashboard-content-color-option, var(--wp_estate_user_dashboard_content_color));
+     border: 1px solid #f6f4f4;
+  }
+  
+  
+
+  
+
+  .property_wrapper_dash.search_unit_wrapper:first-of-type{
+    border:none;
+  }
+  .search_unit_wrapper h4{
+    text-transform: capitalize;
+  }
+  
+
+  
+  .profile-onprofile.row:last-of-type {
+    margin-bottom: 0px;
+  }
+  
+  .wpestate_dashboard_table_list_header,
+  .wpestate_dashboard_content_wrapper label {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--wp-estate-user-dashboard-content-color-option, #808191);
+    line-height: 1.6em;
+
+  }
+  
+  .wpestate_dashboard_content_wrapper label.wpestate_check_label{
+    width: auto;
+  }
+  
+  .wpestate_dashboard_content_wrapper label.features_amm_label {
+    width: auto;
+  }
+  
+  .wpestate_dashboard_content_wrapper .feature_chapter_name {
+    width: 100%;
+    padding-left: 15px;
+  }
+  
+  .wpestate_dashboard_content_wrapper input[type="checkbox"] {
+    margin-top: 4px
+  }
+  
+  .message_listing input[type=text],
+  .message_listing input[type=password],
+  .message_listing input[type=email],
+  .message_listing input[type=url],
+  .message_listing input[type=number],
+  .message_listing textarea,
+  .wpestate_dashboard_content_wrapper input[type=text],
+  .wpestate_dashboard_content_wrapper input[type=password],
+  .wpestate_dashboard_content_wrapper input[type=email],
+  .wpestate_dashboard_content_wrapper input[type=url],
+  .wpestate_dashboard_content_wrapper input[type=number],
+  .wpestate_dashboard_content_wrapper textarea {
+    font-size: 14px;
+    padding: 15px 9px 15px 9px;
+    color: #11142D;
+    border: 1px solid #eee;
+    box-shadow: none;
+    background: #E4E4E4;
+    opacity: 0.5;
+    height: 56px;
+    border-radius: 8px;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .wpestate_dashboard_content_wrapper input[type=number]::-webkit-outer-spin-button, 
+  .wpestate_dashboard_content_wrapper input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button !important;
+    width: 20px;
+    position: absolute;
+    top: 20%;
+    right: 9px;
+    height: 60%;
+  }
+  
+  
+  .wpestate_dashboard_add_images{
+    margin: 0px;
+    #imagelist .uploaded_images{
+      width: 30%;
+      margin: 5px;
+      max-width: 120px;
+      border-radius:var(--wp-estate-border-radius-corner--dashboard-option,var(--wp_estate_border_radius_dashboard_corner));
+    }
+  }
+
+  .wpestate_dashboard_content_wrapper #agent_phone {
+      margin-right: 0px;
+      width: 100%;
+  }
+  
+  .wpestate_dashboard_content_wrapper input[type=text]:focus,
+  .wpestate_dashboard_content_wrapper input[type=password]:focus,
+  .wpestate_dashboard_content_wrapper input[type=email]:focus,
+  .wpestate_dashboard_content_wrapper input[type=url]:focus,
+  .wpestate_dashboard_content_wrapper input[type=number]:focus,
+  .wpestate_dashboard_content_wrapper textarea:focus {
+    background: #fff;
+    border: 2px solid var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back)) !important;
+    opacity: 1;
+  
+  }
+  
+  
+  
+  
+  
+  
+  #google_capture{
+      width: 100%;
+  }
+  
+
+  .fullp-button{
+      margin: 0px;
+  }
+  
+  
+  #profile-div {
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    #aaiu-uploader{
+      width: 100%;
+    }
+
+  }
+  
+
+  #profile_pass {
+      margin-left: 15px;
+      float: left;
+      width: 96%;
+  }
+  
+  .wpestate_dashboard_list_header {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap:15px;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .wpestate_dashhboard_filter{
+    height: 56px;
+    border: 2px solid transparent;
+    background: rgba(228, 228, 228, 0.3);
+    border-radius: 8px;
+    font-weight: 600;
+    max-width: 300px;
+  }
+  
+  .wpestate_dashhboard_filter .property_dashboard_actions_button {
+    box-shadow: none;
+    padding: 0px 15px;
+    text-shadow: none;
+    background-image: none;
+    background-color: transparent;
+    color: #8593a9;
+    text-transform: none;
+    border: none;
+    line-height: 52px;
+    position: unset;
+    width: 100%;
+    text-align: left;
+    font-weight: normal;
+    @include mixins.smooth-transition-short;
+     
+  }
+    
+
+    .wpestate_dashhboard_filter.wpresidence_dropdown {
+      .dropdown-toggle.show{
+        background-color: transparent!important;
+        border: 0px;
+
+      }
+    }
+
+    .wpestate_dashhboard_filter button{
+      background-color: transparent;
+      &:focus,
+      &:focus-visible {
+        background-color: transparent;
+        border: 0px;
+      }
+      .active{
+        background-color: transparent;
+        border: 0px;
+        &:focus,
+        &:focus-visible {
+          background-color: transparent;
+          border: 0px;
+        }
+      }
+    }
+
+
+
+  
+  .dropdown-menu{
+      top: 0px;
+      margin: 0px;
+      inset: 0px auto auto 0px;
+      padding: 15px 0px;
+      border: 1px solid #E4E4E4;
+      background: #ffffff;
+      border-radius: 8px;
+      -webkit-box-shadow: 0 20px 16px rgba(227, 230, 236, 0.6);
+      box-shadow: 0 20px 16px rgba(227, 230, 236, 0.6);
+      @include mixins.smooth-transition-short;
+      li {
+        a{
+          color: #222;
+          padding: 7px 15px;
+      
+          font-size: 14px;
+          cursor: pointer;
+          white-space: initial;
+          display: inline-block;
+
+          &:hover{
+      
+            background-image: none;
+            color: var(--wp-estate-user-dashboard-menu-hover-color-option, #5F75EE );
+          }
+        }
+      }
+  }
+
+  
+  .wpestate_dashboard_list_header .btn-group .dropdown-toggle{
+      color: #8593a9;
+      box-shadow:none;
+      background-color: transparent;
+      @include mixins.smooth-transition-short;
+  }
+  
+  .wpestate_dashhboard_filter  .property_dashboard_actions_button:hover{
+    background-color: transparent;
+    color: #1B1D21;
+  }
+  
+  .page-template-user_dashboard_add select:open,
+  .btn-group.wpestate_dashhboard_filter.open,
+  .btn-group.wpestate_dashhboard_filter.visited,
+  .btn-group.wpestate_dashhboard_filter.active,
+  .btn-group.wpestate_dashhboard_filter:focus,
+  .btn-group.wpestate_dashhboard_filter:active,
+  .btn-group.wpestate_dashhboard_filter.focus,
+  .btn-group.wpestate_dashhboard_filter:hover {
+      border: 2px solid var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+      background: #ffffff;
+      color: #222;
+  }
+  
+  .wpestate_dashboard_list_header .btn-group.open .dropdown-toggle,
+  .wpestate_dashboard_list_header .btn-group.open .dropdown-toggle:visited
+  .wpestate_dashboard_list_header .btn-group.open .dropdown-toggle.active,
+  .wpestate_dashboard_list_header .btn-group.open .dropdown-toggle:focus,
+  .wpestate_dashboard_list_header .btn-group.open .dropdown-toggle:active,
+  .wpestate_dashboard_list_header .btn-group.open .dropdown-toggle.focus,
+  .wpestate_dashboard_list_header .btn-group.open .dropdown-toggle:hover{
+      background: transparent;
+      color: #222;
+  }
+  
+  .wpestate_dashboard_list_header form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: auto;
+  }
+  
+  .col-md-12.add-estate.profile-page.profile-onprofile.row {
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .pack_description_row {
+
+    float: left;
+    display: none;
+  }
+  
+  .wrapper_packages .fa,
+  .wrapper_packages {
+    font-size: 14px;
+    color: var(--wp-estate-user-dashboard-package-color-option, #222);
+    font-weight: 500;
+  }
+  
+  #open_packages {
+    cursor: pointer;
+  }
+  
+  .open_pack_on,
+  #open_packages:hover .fa,
+  #open_packages:hover {
+    color: var(--wp-estate-user-dashboard-menu-color-hover-option, #5F75EE);
+  }
+  
+ 
+  .buypackage input[type="checkbox"] {
+    float: none;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    top: 0px;
+    background-color: var(--wp-estate-user-dashboard-package-select-option, var(--wp_estate_user_dashboard_package_select));
+    border: 1px solid rgb(255 255 255 / 0.7);
+  }
+  
+  .buypackage {
+    cursor: pointer;
+    background-color: #334249;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 21px;
+    padding-bottom: 0px;
+    bottom: 0px;
+    position: absolute;
+    font-size: 13px;
+    color: rgb(255 255 255 / 0.7);
+    text-transform: uppercase;
+    left: 0px;
+    right: 0px;
+    min-height: 75px;
+    line-height: 2.4em;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  
+  .submit-price {
+    font-size: 14px;
+    color: var(--wp-estate-user-dashboard-package-color-option, var(--wp_estate_user_dashboard_package_color));
+    margin: 15px 0px;
+    font-weight: 600;
+  }
+  
+  .pack_description_unit_head {
+    float: left;
+    width: 100%;
+      padding-top: 20px;
+  }
+  
+  .user_profile_explain {
+    font-size: 14px;
+    line-height: 1.4em;
+
+  }
+  
+  .submit_mandatory {
+    font-size: 12px;
+    background: #ff754c;
+    margin: 0px 0px 30px 0px;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.5em;
+  }
+  
+  .col-md-8.dashboard_password {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  
+  .col-md-4.profile_label {
+    padding-right: 15px;
+    padding-left: 0px;
+  }
+
+  .dashboard_menu_user_image {
+    padding: 30px 0px;
+    text-align: center;
+  }
+  
+  
+  #new_post select,
+  .page-template-user_dashboard_add_agent select,
+  .page-template-user_dashboard_profile select,
+  .page-template-user_dashboard_add #embed_video_type,
+  .page-template-user_dashboard_add #prop_category_submit,
+  .page-template-user_dashboard_add #property_country,
+  .page-template-user_dashboard_add select,
+  .page-template-front_property_submit select {
+    height: 56px;
+    background-color: #fff;
+    padding: 0px 9px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: rgb(228 228 228 / 0.5);
+    color: rgb(17 20 45 / 0.5);
+  }
+  
+  select#property_subunits_list {
+      padding: 10px;
+      font-size: 13px;
+  }
+  
+  .ll-skin-melon .ui-datepicker-month,
+  .ll-skin-melon .ui-datepicker-year {
+    height: auto;
+    color: #fff;
+    background-color: #222;
+  }
+  
+  .user_dashboard select {
+    font-size: 13px;
+  }
+  
+  .full_form-nob {
+    font-size: 13px;
+  }
+  
+  .dashboard_package_row {
+    border-bottom: 1px solid #E4E4E4;
+    background-color: var(--wp-estate-user-dashboard-package-background-option, var(--wp_estate_user_dashboard_package_back));
+    padding-left: 50px;
+    box-shadow: 9px 8px 47px 9px rgba(241, 241, 241, 0.3);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+  }
+  
+  .row_user_dashboard .breadcrumb_container {
+    padding-right: 0px;
+    padding-left: 60px;
+    margin-bottom: 0px;
+  }
+  
+  .row_user_dashboard .breadcrumb {
+    margin-top: 19px;
+    margin-bottom: 19px;
+  }
+  
+
+
+
+  
+  
+
+
+
+  
+  .top_bar #list_sidebar_measure_unit,
+  .top_bar #list_sidebar_curr {
+      width: 100%;
+      margin-left: 0px;
+      padding: 0px 0px;
+      top: 24px;
+      background-color: #fff;
+      color: #8593a9;
+      border-radius: 3px;
+      border-color: #f0f0f0;
+      box-shadow:none;
+  }
+  
+  .remove_parameter_button.wpresidence_button {
+      margin-top: 27px;
+  }
+  
+  .pack_description_row .add-estate.profile-page.profile-onprofile.row {
+    float: left;
+    width: 100%;
+    margin:0px;
+  }
+  
+  .wp-editor-container textarea.wp-editor-area,
+  .dashboard-margin textarea {
+    border-radius: 8px;
+    height: auto;
+  }
+  
+  .quicktags-toolbar {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  
+  .wp-editor-container {
+    border: none !important;
+  }
+  
+  #aaiu-upload-container .full_form.full_form_image {
+    padding: 0px;
+    font-size: 12px;
+    color: var(--wp-estate-user-dashboard-content-color-option,#11142d80);
+  }
+  
+  #image_warn {
+      font-size: 12px;
+      margin-bottom: 5px;
+      color: #ff754c;
+  }
+  
+  .page-template-user_dashboard_profile-php #aaiu-upload-imagelist,
+  .page-template-user_dashboard_profile-php #image_warn{
+      word-break: break-word;
+      max-width: 240px;
+  }
+  
+  
+  
+  .col-md-9.user_dashboard {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  
+  .featurescol label {
+    width: auto !important;
+  }
+  
+  .featurescol checkbox,
+  .featurescol label {
+    display: inline;
+  }
+  
+  .page-template-user_dashboard_add label.checklabel {
+    width: auto;
+  }
+  
+  .col-md-3.user_dashboard {
+    padding-right: 60px;
+    padding-left: 15px;
+  }
+  
+  .user_dashboard_box {
+    background-color: #fff;
+    padding: 14px 13px 14px 13px;
+    margin-bottom: 30px;
+  }
+  
+  .user_dashboard_box .submit-price {
+    font-size: 13px;
+    line-height: 22px;
+    border-bottom: 0px solid transparent;
+    color: #8593a9;
+  }
+  
+
+  
+
+  .pack_description_row.add-estate.profile-page.profile-onprofile.row {
+    border-top: 1px solid #384850;
+    padding-top: 30px;
+    margin-bottom: 0px;
+  }
+  
+  .package_label {
+    font-size: 13px;
+    margin-top: 5px;
+    color: var(--wp-estate-user-dashboard-package-color-option, #808191);
+  }
+  
+ 
+  
+
+  .wpresidence_dashboard_body #colophon {
+    display: none;
+  }
+  
+  
+  
+ 
+  .wpresidence_dashboard_body .container {
+      margin-bottom: 0px !important;
+      overflow: hidden;
+  }
+  
+  /*=== Agency profile*/
+  
+  .agency_map_wrapper #googleMapsubmit{
+      width: calc(100% - 30px);
+      margin: 30px 0px 30px 15px;
+  }
+  
+
+  
+  /*=stripe card*/
+  
+  
+  
+  /*= analytics*/
+  .statistics_wrapper_dashboard {
+      float: left;
+      width: 100%;
+  }
+  
+  .my_chart_dash,
+  #myChart{
+      height:400px!important;
+      width: 100%!important;
+  }
+  
+  .my_chart_dash {
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+  
+  #myChart_widget_total{
+      height: 300px;
+  }
+  
+  
+  
+  
+  
+  .statistics_wrapper_total_views{
+    float: left;
+    margin: 0px 30px;
+  }
+  
+  .back_prop_list{
+    float:left;
+  }
+  
+  .not_allow_submit{
+    float: left;
+  }
+  
+  
+  
+
+
+/*=Dashboard
+-------------------------------------------------------------------------------------*/
+
+.listing_upgrade,
+.listing_submit_normal,
+#pick_pack {
+    background-image: url('images/paypal_button.png');
+    width: 169px;
+    height: 69px;
+    cursor: pointer;
+    float: left;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    background-position: 50%;
+}
+
+.stripe-button-el {
+    background-image: url('images/stripe_button.jpg') !important;
+    width: 169px;
+    height: 69px;
+    cursor: pointer !important;
+    border-radius: 0px !important;
+    float: left !important;
+    margin-right: 15px !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0) !important;
+}
+
+.stripe-button-el span {
+    display: none !important;
+}
+
+.payment-container .listing_upgrade,
+.payment-container .listing_submit_normal {
+    background-image: url('img/paypal_button.jpg');
+    width: 169px;
+    height: 69px;
+    cursor: pointer;
+    font-size: 0px;
+    margin: 10px 10px;
+    float: left;
+    background-color: transparent;
+    color: transparent;
+    border-radius:var(--wp-estate-border-radius-corner--dashboard-option,var(--wp_estate_border_radius_dashboard_corner));
+}
+
+
+#direct_pay_modal {
+    top: 100px;
+}
+
+#send_direct_bill {
+    width: 225px;
+    height: 40px;
+    background-color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+    color: #fff;
+    margin: 6px 20px 5px 0px;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-weight: normal;
+    font-size: 16px;
+    border-radius:var(--wp-estate-border-radius-corner--dashboard-option,var(--wp_estate_border_radius_dashboard_corner));
+    margin: 0px auto;
+    margin-top: 13px;
+}
+
+#direct_pay_modal .listing-submit {
+    font-size: 15px;
+    padding: 22px;
+    line-height: 1.4em;
+    margin-bottom: 0px;
+    height: auto;
+}
+
+#direct_pay_modal .to_be_paid {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+#direct_pay_modal .modal-title {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#direct_pay_modal .close {
+    margin: 10px;
+}
+
+
+#profile-image {
+    border-radius:var(--wp-estate-border-radius-corner--dashboard-option,var(--wp_estate_border_radius_dashboard_corner));
+    margin-bottom: 15px;
+}
+
+#google_developer_location,
+#google_agency_location {
+   
+    margin-bottom: 15px;
+}
+
+#package_pick label {
+    width: auto;
+    float: left;
+}
+
+.fullp {
+    width: 100%;
+    float: left;
+    margin: 26px 0px;
+}
+
+
+
+.profile-page input[type=text],
+.profile-page input[type=password],
+.profile-page input[type=email],
+.profile-page input[type=url],
+.profile-page input[type=number],
+.profile-page textarea {
+    margin: 0px 0px 15px 0px;
+}
+
+.submit_container select {
+    margin-bottom: 14px;
+    border-radius:var(--wp-estate-border-radius-corner--dashboard-option,var(--wp_estate_border_radius_dashboard_corner));
+    color: #8593a9;
+}
+
+.submit_form_row {
+    float: left;
+    width: 100%;
+    margin-left: 12px;
+}
+
+.upload_explain {
+    font-size: 11px;
+    float: left;
+}
+
+
+.change_pass {
+    margin-top: 0px;
+}
+
+
+#about_me {
+    width: 100%;
+    height: 262px;
+}
+
+#floor_submit:hover,
+#register_agent:hover,
+#update_profile_agency:hover,
+#update_profile_developer:hover,
+.wpresidence_success:hover,
+#update_profile:hover,
+#search_form_submit_1:hover,
+.view_public_profile:hover,
+#google_developer_location:hover,
+#delete_profile:hover,
+#aaiu-uploader:hover{
+    background-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+    border-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+    color: #ffffff;
+}
+
+.dasboard-prop-listing {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 26px;
+    min-height: 163px;
+    border: 1px solid #dce1e4;
+    overflow: hidden;
+    @include mixins.smooth-transition-short;
+    background: #fff;
+    position: relative;
+}
+
+
+.dashboard_unit_author_info {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: .4em .6em .4em;
+    font-weight: normal;
+    margin-left: 13px;
+    background: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+    color: #fff;
+    font-size: 12px;
+}
+
+.dasboard-prop-listing .blog_listing_image {
+    width: 200px;
+}
+
+.dasboard-prop-listing .blog_listing_image img {
+    max-width: 265px;
+}
+
+.property_wrapper_dash:nth-child(odd) .dasboard-prop-listing:hover,
+.dasboard-prop-listing:hover {
+    box-shadow: 0px 0px 5px 1px rgba(60, 144, 190, 0.13);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(60, 144, 190, 0.13);
+    background-color: #fff;
+}
+
+.blog_listing_image .featured_div {
+
+    left: 10px;
+    position: absolute;
+    top:10px;
+    bottom: auto;
+}
+
+.prop-info {
+    float: left;
+    display: inline;
+    width: 650px;
+    height: 155px;
+    position: relative;
+    left: 70px;
+}
+
+.listing_title {
+    padding-left: 26px;
+    margin-bottom: 10px;
+    max-width: 430px;
+    margin-top: 13px;
+}
+
+.user_dashboard_listed {
+    padding-left: 26px;
+    margin-bottom: 7px;
+    line-height: 1.3em;
+    font-size: 13px;
+}
+
+.user_dashboard_listed .price_label {
+    font-size: 13px;
+}
+
+.user_dashboard_listed a {
+    color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back))
+}
+
+.listing_submit,
+.listing_submit .submit-price-no,
+.listing_submit .submit-price {
+    font-size: 17px;
+    line-height: 1em;
+    font-weight: 500;
+    color: #222;
+}
+
+.listing_submit {
+    width: 100%;
+    padding: 15px 0;
+    text-align: left;
+}
+
+.extra_featured {
+    width: 13px;
+    height: 15px;
+    float: left;
+    margin-right: 5px !important;
+}
+
+.info-container {
+    position: absolute;
+    bottom: 0px;
+    width: 545px;
+    padding-left: 26px;
+    padding-bottom: 5px;
+}
+
+.payment-container {
+    float: left;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    padding: 0px 5px;
+}
+
+.payment-container:empty {
+    display: none;
+}
+
+.no_payment {
+    display: none;
+}
+
+.featured_label {
+    padding: 10px 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    float: left;
+    font-size: 13px;
+}
+
+.info-container i {
+    font-size: 13px;
+    background-color: #5A7684;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 22px;
+    height: 23px;
+}
+
+.info-container i:hover {
+    background-color: #333;
+}
+
+.deleteprop {
+    padding: 5px 5px 5px 6px !important;
+}
+
+.dashboad-tooltip.featured_exp {
+    color: #fff;
+    font-size: 13px;
+    background-color: #ED5565;
+    margin-bottom: 13px;
+    padding: 1px 5px;
+}
+
+.user_dashboard_status {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+}
+
+.user_dashboard_app {
+  color: #fff;
+  background-color: #6c5dd3;
+  width: 85%;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  line-height: 1.6em;
+}
+
+.add-estate.profile-page.profile-onprofile .user_dashboard_app {
+  width: 100%;
+}
+
+.wpestate_dashboard_content_wrapper .wpresidence_button:hover, 
+.wpresidence_button.mess_send_reply_button:hover, 
+.wpresidence_button.mess_send_reply_button2:hover, 
+#floor_submit:hover, 
+#register_agent:hover, 
+#update_profile_agency:hover, 
+#update_profile_developer:hover, 
+.wpresidence_success:hover, 
+#update_profile:hover, 
+#search_form_submit_1:hover, 
+.view_public_profile:hover, 
+#google_developer_location:hover, 
+#delete_profile:hover, 
+#aaiu-uploader:hover, 
+.wpresidence_button.add_custom_parameter:hover, 
+.wpresidence_button.remove_parameter_button:hover, 
+.wpresidence_button.view_public_profile:hover {
+  background-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+  border-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+  color: #ffffff;
+} 
+
+.wpestate_crm_lead_actions,
+.property_dashboard_action {
+  .btn {
+    margin-top: 15px;
+    height: 42px;
+    &:hover{
+      background-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+      border-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+      color: #ffffff;
+    }
+  }
+  .btn-check:checked + .btn, :not(.btn-check) + .btn:active, 
+  .btn:first-child:active, 
+  .btn.active, .btn.show,
+  .btn:not(:disabled):not(.disabled):focus-visible,
+  .btn:not(:disabled):not(.disabled):active, 
+  .btn:not(:disabled):not(.disabled).active {
+    background-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+    border-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+    color: #ffffff;
+  }
+}
+
+
+.wpresidence_dashboard_disabled_link{
+    cursor: not-allowed;
+    opacity: 0.75;
+}

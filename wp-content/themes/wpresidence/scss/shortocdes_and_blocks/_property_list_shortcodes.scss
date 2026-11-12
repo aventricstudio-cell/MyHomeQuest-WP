@@ -1,0 +1,280 @@
+
+.elementor-widget-WpResidence_Items_List{
+    width: 100%;
+}
+
+// Items list block
+
+.wpresidence_shortcode_listings_wrapper,
+.wpestate_latest_listings_sh {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 100%;
+}
+
+.items_shortcode_wrapper,
+.wpestate_list_items_by_id_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 100%;
+}
+// Control Tax Wrapper Component in Items list block
+// This component is used for displaying and managing tax-related controls,
+// typically in a horizontal layout with clickable elements.
+
+.control_tax_wrapper {
+    // Base layout styles
+    float: left;
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+  
+    // Flexbox layout for child elements
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    // Styles for individual tax control elements
+    .control_tax_sh {
+      // Layout and positioning
+      float: left;
+      width: auto;
+      margin: 0 15px 20px;
+      padding: 2px 15px;
+  
+      // Flexbox settings for content alignment
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  
+      // Visual styles
+      cursor: pointer;
+      color: #222;
+      font-size: 14px;
+      line-height: 1.65em;
+      font-weight: 500;
+      background-color: #f3f3f3;
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        gap:5px;
+      // Hover effect with transition
+      &:hover {
+        color: #fff;
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        @include smooth-transition-shorter;
+      }
+  
+      // Styles for icons (both i and svg elements)
+   
+  
+      // Specific styles for SVG icons
+      svg {
+        height: 18px;
+        max-width: 20px;
+        z-index: 10;
+      }
+    }
+  }
+
+
+
+
+
+
+
+.article_container.places_list_1.multiple_rows {
+    display: block;
+}
+
+.elementor_places_wrapper h4,
+.elementor_places_wrapper h4 a,
+.places_list_1 h4,
+.places_list_1 h4 a {
+    color: #fff;
+}
+
+.elementor_places_wrapper,
+.listing_wrapper.col-md-12 {
+    width: 100%;
+}
+
+.elementor_places_wrapper,
+.elementor_places_wrapper .property_listing {
+    max-width: 100%;
+    float: left;
+}
+
+.property_listing.places_listing .property_location {
+    color: #f7f7f7;
+    line-height: 30px;
+    font-size: 14px;
+    border: 0px;
+}
+
+.elementor_places_wrapper .property_listing.places_listing {
+    min-height: 100px;
+    border: none;
+}
+
+
+.elementor_residence_grid {
+    min-height: 150px;
+}
+
+.places_listing .listing-unit-img-wrapper {
+    overflow: hidden;
+}
+
+.wpestate_listing_sh_loader {
+    display: none;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 23px;
+    height: 80px;
+    margin: 20px 0px 50px 0px;
+}
+
+#wpestate_sh_loading {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    color: #222;
+    font-weight: 300;
+    float: left;
+}
+
+#wpestate_sh_loading .spinner map_loader {
+    margin-top: 0px;
+}
+
+.tax_active:hover,
+.tax_active {
+    background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    color: #fff;
+    background-image: none;
+}
+
+.listinglink-wrapper {
+    float: left;
+    clear: both;
+    display: flex;
+    justify-content: flex-start;
+    grid-column: 1 / -1;
+}
+
+.listinglink-wrapper_sh_listings {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    height: 40px;
+}
+
+.wpestate_grid_view_wrapper {
+    .listinglink-wrapper_sh_listings {
+        margin: 30px 0px;
+    }
+}
+
+
+.listinglink-wrapper button a,
+.listinglink-wrapper button {
+    color: #fff;
+    bottom: 0px;
+}
+
+
+
+.items_shortcode_wrapper_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 390px));
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 10px;
+    min-width: 100%;
+    margin: 0px;
+    justify-content: start;
+}
+.shortcode_wrapper_grid_item{
+    max-width: 525px;
+}
+
+
+
+.items_shortcode_wrapper.items_shortcode_wrapper_grid{
+    margin: 0px;
+}
+
+.items_shortcode_wrapper_category_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+}
+
+.places_wrapper_grid{
+    width: 100%;
+}
+.items_shortcode_wrapper_category_grid .places_wrapper_design_2_wrapper{
+    width: 100%;
+}
+
+
+/* spiner Loader
+--------------------------------------------------------------------*/
+.spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+}
+
+#gmap-loading .spinner {
+    margin: 5px auto;
+}
+
+
+.wpb_column>.wpb_wrapper *:last-child,
+.wpb_column>.wpb_wrapper>.vc-element:last-child>.wpb_content_element,
+.wpb_column>.wpb_wrapper>.vc-element:last-child>.wpb_row {
+    margin-bottom: auto;
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: auto;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tiktok-embed iframe {
+    border: none;
+    position: relative;
+}
+
+.wpb_video_widget .wpb_wrapper .wpb_video_wrapper {
+    height: 0px;
+}
+
+.wpb_video_widget .wpb_wrapper .wpb_video_wrapper {
+    height: 0px;
+    overflow: hidden;
+}

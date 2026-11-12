@@ -1,0 +1,257 @@
+/** MILLDONE
+ * WpEstate Tabs Styles
+ * src: scss\property_page\_property_page_tabs.scss
+ * This file contains the styles for the tab component in the WpResidence theme.
+ * It defines the layout and appearance of tabs used in the Elementor widget.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - None (standalone SCSS file)
+ *
+ * Usage:
+ * This SCSS should be compiled and included in the theme's main stylesheet.
+ * It styles the #tab_prpg element and its child components.
+ */
+
+ #tab_prpg {
+    // Tab navigation styles
+    float: left;
+    width: 100%;
+    line-height: 1.65em;
+    margin-bottom: 30px;
+
+    &>ul{
+        margin: 0px;
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        border: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        
+        // Individual tab styles
+        li {
+            background: transparent;
+            border: none;
+            background: transparent;
+            color: #fff;
+            border: none;
+            border-radius: 0px;
+            margin-bottom: 0px;
+            border-right: 1px solid #fdfdfd69;
+            width: 20%;
+            &:first-of-type {
+                border-top-left-radius: 4px;
+            }
+
+            button {
+                @include no-transition;
+                color: #ffffff;
+                border-radius: 0px 0px 0px 0px;
+                @include smooth-transition-shorter;
+                width: 100%;
+                border: none;
+                line-height: 30px;
+
+                &:hover {
+                    background-color: #fff;
+                    border-radius: 0px;
+                    @include smooth-transition-short;
+                    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+                    border: none;
+                }
+
+                &.active {
+                    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+                    border: none;
+                    }
+                }
+            }   
+
+    }
+ 
+    // Tab content styles
+    .tab-content {
+        .tab-pane {
+            float: left;
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 30px;
+            padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+            padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+            padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+            padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+    
+
+            border-radius: 0 0 4px 4px;
+            background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+            box-shadow: none;
+            margin: 0 auto;
+            float: none;
+        }
+    }
+
+    // Icon styles within tabs
+    .wpestate_tab_icon_elementor {
+        height: 17px;
+        width: auto;
+        margin-right: 15px;
+    }
+
+    svg {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        width: 20px;
+        height: 20px;
+        fill: #1a1a1a;
+        margin: 0 10px 0 0;
+        line-height: 26px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    li.active svg {
+        fill: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+}
+
+.wpestate-elementor-nav-tabs {
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    background: #fff;
+
+    ul {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        background-color: #fff;
+        border:none; 
+    }
+
+    a{
+        padding: 30px 30px;
+        border-radius: 0px 0px 0px 0px;
+    }
+}
+
+
+.elementor-widget-container #tab_prpg {
+    float: none;
+    display: inline-block;
+}
+
+
+
+// Styles for elements not present in the provided markup
+// These are kept at the end as per instructions
+.wpestate_tab_class_vertical {
+    .wpestate-elementor-nav-tabs {
+        border: 1px solid #eaeaea;
+        border-right-width: 0;
+    }
+}
+
+#tab_prpg.wpestate_elementor_tabs{
+    
+    a{
+        border: none;
+
+        &.active {
+            border-bottom: 3px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            
+            svg {
+                fill: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+    }
+}
+
+
+#tab_prpg.wpestate_elementor_tabs.wpestate_tab_class_vertical {
+    .wpestate-elementor-nav-tabs {
+        width: 30%;
+        display: inline-block;
+        line-height: 1px;
+
+        ul {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .nav-tabs > li {
+        width: 100%;
+        border-bottom: 1px solid #eaeaea;
+
+        a {
+            text-align: left;
+        }
+    }
+
+    .tab-content {
+        width: 70%;
+        float: right;
+        border: 1px solid #eaeaea;
+    }
+
+    .tab-pane {
+        padding-top: 30px;
+    }
+}
+
+.wpestate-elementor-nav-accordions h4 svg {
+    width: 20px;
+    height: 20px;
+    fill: #1a1a1a;
+    margin: 0 10px 0 0;
+    line-height: 26px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+#wpestate_sidebar_property_contact_tabs {
+    &>ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        border:none;
+        li {
+            width: 50%;
+            text-align: center;
+            button{
+                font-size: 14px;
+                font-weight: 500;
+                border: none;
+                background-color: var(--wp-estate-sidebar-widget-color-option, #f8f8f8);
+                margin: 0px;
+                color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+                padding: 13px 0px;
+                text-align: center;
+                width: 100%;
+                border-top-right-radius: var(--wp-estate-border-radius-corner-option, var(--wp_estate_border_radius_corner));
+                border-top-left-radius: var(--wp-estate-border-radius-corner-option, var(--wp_estate_border_radius_corner));
+            
+                &.hover{            
+                    color: #555;
+                    cursor: default;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    border-bottom-color: transparent;
+                }
+
+
+                &.active {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

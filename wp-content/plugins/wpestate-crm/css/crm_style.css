@@ -1,0 +1,176 @@
+.crm_admin_wrapper{
+    display:flex;
+}
+
+.crm_leads_wrapper,
+.crm_contacts_wrapper{
+    width:50%;
+    float:left;
+    padding:20px 30px;
+    display:inline-block;
+    background-color: #efefef;
+}
+
+.crm_leads_wrapper{
+      background-color: #f5f5f5;
+}
+
+.crm_contacts_wrapper label{
+    width: 100%;
+    font-weight: 600;
+    font-size: 15px;
+    float: left;
+    margin-bottom:3px;
+}
+
+#crm_new_commnet,
+.crm_contacts_wrapper input,
+.half-content select,
+.crm_contacts_wrapper textarea{
+    width:100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    min-height: 40px;
+}
+
+.crm_contacts_wrapper textarea{
+    height:70px;
+}
+
+
+ #poststuff .add_comments_wrapper h2{
+    font-size: 19px;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+
+#crm_new_commnet{
+    width:100%;
+    height:100px;
+}
+
+
+.half-content{
+  margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+#show_notes_wrapper{
+    width:100%;
+    margin-top:50px;        
+}
+
+#crm_insert_comment{
+    background-color: #0073e1;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-weight: 700;
+}
+
+
+.comment_item{
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position:relative;
+}
+.comment_item:nth-child(odd){
+    background-color: #eee;
+}
+
+.comment_name{
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.comment_date{
+    position: absolute;
+    top:20px;
+    right:20px;
+    font-weight: 600;
+}
+
+.comment_content{
+    margin-top: 10px;
+}
+
+.comment_item i{
+    position: absolute;
+    cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+}
+
+.crm_lead_date{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.crm_lead_content {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.crm_contact_status{
+       font-weight: 700;
+    font-size: 15px;
+    float: left;
+    margin-left: 20px;
+}
+.lead_section .crm_contact_status{
+    width: 100%;
+    margin: 0px 0px 15px 0px;
+}
+
+.crm_contacts_wrapper img{
+    float:left;
+    margin-bottom: 20px;
+}
+
+.crm_contacts_wrapper span{
+     float: left;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 17px;
+}
+
+.contact_crm_detail{
+    margin-left: 20px;
+    float: left;
+    display: inline-block;
+    width:54%;
+    margin-bottom: 3px;
+    
+}
+
+.contact_full_details{
+   text-decoration: none;
+    background-color: #0073e1;
+    padding: 4px 20px;
+    color: #fff;
+    margin-top: 10px;
+    float: left;
+    font-size: 12px;
+}
+
+.contact_full_details:hover{
+    background-color: #085096;
+    color: #fff;
+}
+
+.lead_content{
+    border:1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+#poststuff .lead_content h2{
+    font-size: 19px;
+    font-weight: 700;
+    padding: 0px 0px 10px 0px;
+}

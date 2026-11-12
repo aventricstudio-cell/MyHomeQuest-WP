@@ -1,0 +1,338 @@
+# Copyright (C) 2025 wpestate
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: WpEstate CRM 5.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpestate-crm\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-14T06:48:33+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: wpestate-crm\n"
+
+#. Plugin Name of the plugin
+#: wpestate-crm.php
+msgid "WpEstate CRM"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: wpestate-crm.php
+msgid "https://wpestate.org"
+msgstr ""
+
+#. Description of the plugin
+#: wpestate-crm.php
+msgid "WpEstate Customer Relationship Management"
+msgstr ""
+
+#. Author of the plugin
+#: wpestate-crm.php
+msgid "wpestate"
+msgstr ""
+
+#: libs/hubspot/hubspot.php:18
+msgid "Message sent from "
+msgstr ""
+
+#: libs/metaboxes.php:196
+msgid "added manually"
+msgstr ""
+
+#: libs/metaboxes.php:337
+msgid "Add a new comment"
+msgstr ""
+
+#: libs/metaboxes.php:344
+msgid "Add Comment"
+msgstr ""
+
+#: libs/metaboxes.php:379
+#: post-types/leads.php:12
+msgid "Lead"
+msgstr ""
+
+#: libs/metaboxes.php:417
+msgid "from"
+msgstr ""
+
+#: libs/metaboxes.php:422
+msgid "on"
+msgstr ""
+
+#: libs/metaboxes.php:460
+#: libs/metaboxes.php:526
+msgid "Authentication required"
+msgstr ""
+
+#: libs/metaboxes.php:467
+msgid "Missing required parameters"
+msgstr ""
+
+#: libs/metaboxes.php:479
+msgid "Invalid post ID"
+msgstr ""
+
+#: libs/metaboxes.php:499
+msgid "Failed to add comment"
+msgstr ""
+
+#: libs/metaboxes.php:504
+msgid "Comment added successfully"
+msgstr ""
+
+#: libs/metaboxes.php:533
+msgid "Missing comment ID"
+msgstr ""
+
+#: libs/metaboxes.php:544
+msgid "Comment not found"
+msgstr ""
+
+#: libs/metaboxes.php:550
+msgid "Permission denied"
+msgstr ""
+
+#: libs/metaboxes.php:559
+msgid "Failed to delete comment"
+msgstr ""
+
+#: libs/metaboxes.php:564
+msgid "Comment deleted successfully"
+msgstr ""
+
+#: post-types/contacts.php:11
+#: wpestate-crm.php:97
+msgid "Contacts"
+msgstr ""
+
+#: post-types/contacts.php:12
+msgid "Contact"
+msgstr ""
+
+#: post-types/contacts.php:13
+#: wpestate-crm.php:98
+msgid "Add New Contact"
+msgstr ""
+
+#: post-types/contacts.php:14
+msgid "Add Contact"
+msgstr ""
+
+#: post-types/contacts.php:15
+#: post-types/leads.php:15
+msgid "Edit"
+msgstr ""
+
+#: post-types/contacts.php:16
+msgid "Edit Contact"
+msgstr ""
+
+#: post-types/contacts.php:17
+msgid "New Contact"
+msgstr ""
+
+#: post-types/contacts.php:18
+#: post-types/leads.php:18
+msgid "View"
+msgstr ""
+
+#: post-types/contacts.php:19
+msgid "View Contact"
+msgstr ""
+
+#: post-types/contacts.php:20
+msgid "Search Contact"
+msgstr ""
+
+#: post-types/contacts.php:21
+#: post-types/contacts.php:22
+msgid "No Contacts found"
+msgstr ""
+
+#: post-types/contacts.php:23
+msgid "Parent Contacts"
+msgstr ""
+
+#: post-types/contacts.php:48
+#: wpestate-crm.php:99
+msgid "Contact Status"
+msgstr ""
+
+#: post-types/contacts.php:49
+msgid "Add New Contact Status"
+msgstr ""
+
+#: post-types/contacts.php:50
+msgid "New  Status"
+msgstr ""
+
+#: post-types/contacts.php:69
+msgid "Contacts Settings"
+msgstr ""
+
+#: post-types/contacts.php:152
+msgid "Lead from Contact"
+msgstr ""
+
+#: post-types/contacts.php:166
+#: post-types/contacts.php:172
+#: wpestate-crm.php:116
+msgid "Full Name"
+msgstr ""
+
+#: post-types/contacts.php:174
+#: post-types/contacts.php:208
+#: post-types/leads.php:351
+#: wpestate-crm.php:122
+#: wpestate-crm.php:188
+#: wpestate-crm.php:225
+msgid "Status"
+msgstr ""
+
+#: post-types/contacts.php:175
+#: post-types/contacts.php:206
+#: wpestate-crm.php:129
+msgid "Email"
+msgstr ""
+
+#: post-types/contacts.php:176
+#: post-types/contacts.php:207
+#: wpestate-crm.php:160
+msgid "Phone"
+msgstr ""
+
+#: post-types/contacts.php:177
+#: wpestate-crm.php:134
+msgid "Address"
+msgstr ""
+
+#: post-types/contacts.php:178
+#: wpestate-crm.php:140
+msgid "City"
+msgstr ""
+
+#: post-types/contacts.php:179
+#: wpestate-crm.php:145
+msgid "County"
+msgstr ""
+
+#: post-types/contacts.php:180
+#: wpestate-crm.php:150
+msgid "State"
+msgstr ""
+
+#: post-types/contacts.php:183
+msgid "full details"
+msgstr ""
+
+#: post-types/contacts.php:205
+msgid "Photo"
+msgstr ""
+
+#: post-types/leads.php:11
+#: wpestate-crm.php:96
+msgid "Leads"
+msgstr ""
+
+#: post-types/leads.php:13
+#: wpestate-crm.php:101
+msgid "Add New Lead"
+msgstr ""
+
+#: post-types/leads.php:14
+msgid "Add Lead"
+msgstr ""
+
+#: post-types/leads.php:16
+msgid "Edit Lead"
+msgstr ""
+
+#: post-types/leads.php:17
+msgid "New Lead"
+msgstr ""
+
+#: post-types/leads.php:19
+msgid "View Lead"
+msgstr ""
+
+#: post-types/leads.php:20
+msgid "Search Lead"
+msgstr ""
+
+#: post-types/leads.php:21
+#: post-types/leads.php:22
+msgid "No Leads found"
+msgstr ""
+
+#: post-types/leads.php:23
+msgid "Parent Leads"
+msgstr ""
+
+#: post-types/leads.php:48
+#: wpestate-crm.php:102
+msgid "Lead Status"
+msgstr ""
+
+#: post-types/leads.php:49
+msgid "Add New Lead Status"
+msgstr ""
+
+#: post-types/leads.php:50
+msgid "New Status"
+msgstr ""
+
+#: post-types/leads.php:74
+msgid "Lead Settings"
+msgstr ""
+
+#: post-types/leads.php:349
+msgid "From Name"
+msgstr ""
+
+#: post-types/leads.php:350
+msgid "Image"
+msgstr ""
+
+#: post-types/leads.php:352
+#: wpestate-crm.php:181
+msgid "Agent in Charge"
+msgstr ""
+
+#: post-types/leads.php:353
+msgid "Details"
+msgstr ""
+
+#: wpestate-crm-dashboard_contacts.php:121
+#: wpestate-crm-dashboard_leads.php:101
+msgid "You are not allowed to edit this!"
+msgstr ""
+
+#: wpestate-crm.php:99
+msgid "Edit Contact Statuses"
+msgstr ""
+
+#: wpestate-crm.php:102
+msgid "Edit Lead Statuses"
+msgstr ""
+
+#: wpestate-crm.php:155
+msgid "Mobile"
+msgstr ""
+
+#: wpestate-crm.php:166
+#: wpestate-crm.php:194
+msgid "Notes"
+msgstr ""
+
+#: wpestate-crm.php:201
+msgid "Sent From"
+msgstr ""
+
+#: wpestate-crm.php:208
+msgid "Message"
+msgstr ""

@@ -1,0 +1,79 @@
+{
+	"wpresidence_admin": {
+		"wp_estate_header5_info_widget1_text1": "",
+		"wp_estate_header5_info_widget1_text2": "",
+		"wp_estate_header5_info_widget2_text1": "",
+		"wp_estate_header5_info_widget2_text2": "",
+		"wp_estate_header5_info_widget3_text1": "",
+		"wp_estate_header5_info_widget3_text2": "",
+		"wp_estate_location_animation_text": "",
+		"wp_estate_copyright_message": "",
+		"wp_estate_currency_label_main": "",
+		"wp_estate_property_multi_text": "",
+		"wp_estate_property_overview_text": "",
+		"wp_estate_property_multi_child_text": "",
+		"wp_estate_property_adr_text": "",
+		"wp_estate_property_features_text": "",
+		"wp_estate_property_description_text": "",
+		"wp_estate_property_details_text": "",
+		"wp_estate_property_video_text": "",
+		"wp_estate_property_virtual_tour_text": "",
+		"wp_estate_property_map_text": "",
+		"wp_estate_property_documents_text": "",
+		"wp_estate_property_booking_shortcode_text": "",
+		"wp_estate_property_energy_savings_text": "",
+		"wp_estate_property_walkscorer_text": "",
+		"wp_estate_property_near_by_text": "",
+		"wp_estate_property_calculator_text": "",
+		"wp_estate_property_page_views_text": "",
+		"wp_estate_property_floor_plan_text": "",
+		"wp_estate_property_reviewstext": "",
+		"wp_estate_property_schedule_tour_text": "",
+		"wp_estate_property_similart_listings_text": "",
+		"wp_estate_property_other_agents_text": "",
+		"wp_estate_property_sitcky_agent_text": "",
+		"wp_estate_splash_page_title": "",
+		"wp_estate_splash_page_subtitle": "",
+		"wp_estate_company_name": "",
+		"wp_estate_email_adr": "",
+		"wp_estate_duplicate_email_adr": "",
+		"wp_estate_telephone_no": "",
+		"wp_estate_mobile_no": "",
+		"wp_estate_fax_ac": "",
+		"wp_estate_skype_ac": "",
+		"wp_estate_co_address": "",
+		"wp_opening_hours_1": "",
+		"wp_opening_hours_value_1": "",
+		"wp_opening_hours_2": "",
+		"wp_opening_hours_value_2": "",
+		"wp_opening_hours_3": "",
+		"wp_opening_hours_value_3": "",
+		"wp_estate_hq_latitude": "",
+		"wp_estate_hq_longitude": "",
+		"wp_estate_facebook_link": "",
+		"wp_estate_twitter_link": "",
+		"wp_estate_google_link": "",
+		"wp_estate_linkedin_link": "",
+		"wp_estate_pinterest_link": "",
+		"wp_estate_instagram_link": "",
+		"wp_estate_subject_agent_review": "",
+		"wp_estate_agent_review": "",
+		"wp_estate_matching_submissions": "",
+		"wp_estate_recurring_payment": "",
+		"wp_estate_subject_agent_update_profile": "",
+		"wp_estate_agent_update_profile": "",
+		"wpestate_set_search": {
+			"adv_search_label": {
+				"*": ""
+			}
+		},
+		"wp_estate_adv_search_label": {
+			"*": ""
+		},
+		"wpestate_custom_fields_list": {
+			"add_field_label": {
+				"*": ""
+			}
+		}
+	}
+}

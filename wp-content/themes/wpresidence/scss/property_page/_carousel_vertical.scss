@@ -1,0 +1,141 @@
+/**
+ * Vertical Property Carousel Styles
+ * 
+ * Package: WpResidence Theme
+ * Component: Vertical Property Listing Carousel
+ * 
+ * This file contains styles for the vertical property listing carousel component.
+ * It's part of the WpResidence theme and depends on the theme's global styles.
+ * 
+ * Usage: 
+ * - Ensure this file is imported into the main theme stylesheet
+ * - Used in conjunction with the vertical property listing carousel HTML structure
+ * - Customizes the appearance of the carousel, its vertical indicators, and captions
+ */
+
+// Main vertical carousel container
+.wpestate_property_carousel.carouselvertical {
+    height: auto;
+
+    // Carousel inner container
+    .carousel-inner {
+        margin-right: 149px;
+        width: auto;
+    }
+
+    // Owl carousel specific styles
+    .owl-carousel {
+        &.owl-loaded {
+            height: auto;
+        }
+
+        .owl-item .item {
+            padding: 0px;
+            height: auto;
+        }
+    }
+    .owl-theme .owl-nav{
+        margin-top: 0px;
+    }
+}
+
+// Vertical indicators
+#carousel-indicators-vertical {
+    width: 149px;
+    right: 0px;
+    position: absolute;
+    top: 0px;
+    bottom: auto;
+    list-style: none;
+    @include smooth-transition-shorter;
+    background: #222;
+    padding-left: 3px;
+    padding-top: 3px;
+    height: 100%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    li {
+        margin-bottom: 3px;
+        position: relative;
+        cursor: pointer;
+
+        img {
+            opacity: 0.4;
+            @include smooth-transition-shorter;
+        }
+
+        &:hover img {
+            opacity: 0.6;
+        }
+    }
+
+    .active img {
+        opacity: 1;
+    }
+}
+
+// Caption wrapper
+.vertical-wrapper {
+    width: auto !important;
+    background: transparent !important;
+    position: absolute !important;
+    bottom: 0px;
+    padding: 0px !important;
+    right: 144px;
+    left: 0px;
+
+    span {
+        z-index: 11;
+        position: relative;
+        padding-left: 15px;
+        padding-top: 9px;
+        display: none;
+        background: #222;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        margin: 10px;
+
+        &.active {
+            display: block;
+        }
+
+        &.blank_caption ,
+        &:empty {
+            display: none;
+        }
+    }
+
+    &-back:empty {
+        display: none;
+    }
+}
+
+// Closed caption state
+.caption-wrapper.closed {
+    background: #222;
+}
+
+// Right control for vertical carousel
+.carousel-control.right.vertical {
+    right: 143px;
+}
+
+// Styles for property slider section
+.wpestate_estate_property_slider_section_wrapper {
+    .post-carusel {
+        .item img {
+            max-height: 100%;
+        }
+
+        .vertical-wrapper {
+            width: 100% !important;
+        }
+    }
+}
+
+// Unused or context-dependent styles (moved to the end)
+#carousel-indicators-vertical .caption-wrapper {
+    width: 665px;
+}

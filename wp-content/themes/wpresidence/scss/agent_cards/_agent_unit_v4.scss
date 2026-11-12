@@ -1,0 +1,87 @@
+// MILLDONE
+// Agent Unit V4 Styles
+// src:scss\agent_cards\_agent_unit_v4.scss
+// This file contains styles for the fourth version of agent units displayed in the WpResidence theme.
+// File location: scss/agent_cards/_agent_unit_v4.scss
+
+// Styles for Agent Unit Type 4 wrapper
+.wpresidence_agent_unit_wrapper {
+  &.agent_card_4 {
+    &.listing_wrapper {
+      // Specific styles for agent card 4 wrapper, if any
+      // This nested structure allows for highly specific targeting of the v4 agent card
+    }
+  }
+}
+
+// Main styles for agent unit type 4
+.agent_unit.agent_unit_type_4 {
+  box-shadow: none; // Removes any box shadow
+  background-color: transparent; // Makes the background transparent
+  min-height: auto; // Allows the height to adjust to content
+  padding-bottom: 0; // Removes bottom padding
+  border: 0px; //Removes card border
+
+  // Styles for the image wrapper
+  .agent-unit-img-wrapper {
+    margin: 0 0 15px 0; // Removes margin
+    border-radius: 10px; // Adds rounded corners to the image wrapper
+
+    img {
+      border-radius: 10px; // Ensures the image itself has rounded corners
+    }
+  }
+
+  // Styles for agent name
+  h4 {
+    font-size: 16px; // Sets the font size for the agent name
+    width: 100%; // Makes the name take up full width
+    line-height: 1.3em; // Sets the line height for better readability
+    padding: 0; // Removes any padding
+    margin-bottom: 3px; // Adds a small margin at the bottom
+
+    a {
+      // Styles for the agent name link, if any
+    }
+  }
+
+  // Styles for agent position
+  .agent_position {
+    padding: 0; // Removes any padding
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color)); // Sets the text color
+    margin-left: 0; // Removes left margin
+    margin-bottom: 0; // Removes bottom margin
+  }
+
+  // Styles for social icons (if present in this version)
+  .agent_unit_social {
+    padding: 0; // Removes any padding
+    position: relative; // Enables positioning relative to its normal position
+    font-size: 13px; // Sets the font size for social icons
+  }
+
+  // Styles for email (if present in this version)
+  .agent_unit_email_type_4 {
+    font-size: 13px; // Sets the font size for the email
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color)); // Sets the text color
+    background-color: transparent; // Makes the background transparent
+    width: 100%; // Makes the email take up full width
+    display: inline-block; // Allows setting of width and height
+    margin: 0; // Removes any margin
+
+    a {
+      font-size: 13px; // Sets the font size for the email link
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color)); // Sets the text color for the email link
+    }
+  }
+}
+
+// Specific styles for Elementor widget container
+.elementor-widget-container {
+  .listing_wrapper {
+    .agent_unit.agent_unit_type_4 {
+      // These styles are the same as .agent_unit.agent_unit_type_4
+      // You can add any Elementor-specific overrides here if needed
+    }
+  }
+}

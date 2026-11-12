@@ -1,0 +1,151 @@
+
+
+
+.property_unit_custom_element,
+.property_unit_custom_element i {
+    display: inline-block;
+}
+
+.property_unit_custom.col-md-12 {
+    padding: 0px;
+}
+
+.property_unit_custom_agent_face {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    @include background-cover; 
+    border: 2px solid #f0f0f0;
+}
+
+.property_listing.property_listing_custom_design img {
+    border: none;
+}
+
+.property_listing.property_listing_custom_design {
+    padding-bottom: 0px;
+}
+
+.custom_separator {
+    border-top: 1px solid #dde4e9;
+    width: 100%;
+}
+
+.no_content_area_back_color .agent_contanct_form,
+.page_template_loader .vc_row.no_content_area_back_color {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px -8px;
+
+}
+
+.property_unit_custom_element.property_status:empty,
+.property_unit_custom_element.featured_icon:empty {
+    display: none;
+}
+
+.icon-fav.favorite-text,
+.compare-action.text_compare,
+.share_list.text_share {
+    background-image: none !important;
+}
+
+.property_unit_custom {
+    line-height: 1;
+}
+
+.icon-fav.custom_fav.icon-fav-on,
+.icon-fav.custom_fav {
+    background-image: none !important;
+    border: none;
+}
+
+.icon-fav.custom_fav:before {
+    content: "\f08a";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+.icon-fav.custom_fav.icon-fav-on {
+    background-image: none !important;
+}
+
+.icon-fav.custom_fav.icon-fav-on:before {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+.listing_wrapper.col-md-12 .custom_property_image_wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.listing_wrapper.col-md-12>.property_listing.property_listing_custom_design {
+    min-height: 169px;
+}
+
+.listing_wrapper.col-md-12 .property_listing.property_listing_custom_design {
+    padding-left: 280px;
+}
+
+.listing_wrapper.col-md-12 .property_listing.property_listing_custom_design h4 {
+    padding-left: 0px;
+}
+
+.listing_wrapper.col-md-12>.property_listing.property_listing_custom_design .carousel-inner {
+    max-width: 100%;
+}
+
+.listing_wrapper.col-md-12>.property_listing.property_listing_custom_design .carousel-inner img {
+    width: auto;
+}
+
+.listing_wrapper.col-md-12 .property_listing.property_listing_custom_design {
+    padding-left: 33%;
+}
+
+.wrap_custom_image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* width: 33%; */
+    /*max-width: 33%*/
+    ;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+
+
+.property_listing .property_unit_custom_element h4 {
+    padding: 0px;
+}
+
+.wrap_custom_image img {
+    width: 100%;
+    height: auto;
+}
+
+.wrap_custom_image .property_unit_custom_element.image {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.listing_wrapper.col-md-12>.property_listing.property_listing_custom_design .carousel-inner {
+    max-width: 100%;
+    height: 100%;
+}
+
+.listing_wrapper.col-md-12>.property_listing.property_listing_custom_design .carousel,
+.listing_wrapper.col-md-12>.property_listing.property_listing_custom_design .listing-unit-img-wrapper {
+    position: inherit;
+}

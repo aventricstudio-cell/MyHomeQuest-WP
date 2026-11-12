@@ -1,0 +1,125 @@
+// search wrapper 
+#google_map_prop_list_sidebar .search_wrapper {
+    border-bottom: none;
+    background-color: #e7e7e7;
+    padding: 0px;
+}
+
+.search_wrapper {
+    position: relative;
+    display: inline-block;
+
+    width: 100%;
+    @include smooth-transition-shorter;
+    z-index: 99;
+    background: transparent;
+    height: auto;
+    padding: 15px;
+
+    &.with_search_on_end {
+        .adv-search-header-1 {
+            top: -55px;
+        }
+    }
+   
+
+     // Styles for error404 page
+    .error404 & {
+        display: inline-block;
+        float: none;
+    }
+
+    // Styles for single estate developer and agency pages
+    .single-estate_developer &,
+    .single-estate_agency & {
+        display: none;
+    }
+
+    // Styles for splash page template
+    .page-template-splash_page & {
+        &.with_search_form_float {
+        display: block;
+        }
+
+        top: 55%;
+    }
+
+}
+
+
+// search wrapper color
+.search_wrapper_color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #ffffff;
+
+    &.with_search_form_float{
+        border-bottom:0px;
+    }
+}
+
+// extended search checker 
+.residence_adv_extended_options_text {
+    font-size: 13px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    font-weight: 500;
+}
+
+
+.extended_search_check_wrapper {
+    position: relative;
+    display: none;
+    width: 100%;
+    .extended_search_checker {
+        float: left;
+        width: 25%;
+        margin: 5px 0px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    label {
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        font-weight: normal;
+        margin-bottom: 0px;
+        line-height: 15px;
+    }
+
+    .adv_extended_close_button {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        display: none;
+        cursor: pointer;
+    }
+}
+
+// form button
+
+.advanced_submit_4,
+#advanced_submit_4 {
+    width: 100%;
+}
+
+
+// always at 50%
+.wpestate_location {
+    width: 50%;
+}
+
+
+// change sign when search 1 or 3 is closed
+.float_search_closed #adv-search-header-1:after,
+.float_search_closed #adv-search-header-3:after {
+    content: "\f0d8"!important;
+}

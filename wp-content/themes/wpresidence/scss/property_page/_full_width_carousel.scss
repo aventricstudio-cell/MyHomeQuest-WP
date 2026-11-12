@@ -1,0 +1,118 @@
+/* MILLDONE
+ * Slider v4 , Full Width Slider 
+ * Package: WpResidence
+ * src: scss\property_page\_full_width_carousel.scss
+ * Purpose: Styles for the property slider v4 component in the WpResidence theme
+ * Dependencies: None
+ * 
+ * This file contains styles for the property slider v4 or full-width property slider used on single
+ * property pages. It defines the layout and appearance of the main image slider,
+ * thumbnail indicators, and related elements.
+ * 
+ */
+
+// Main slider container
+.wpestate_property_slider_v3 {
+    position: relative;
+    min-height: 467px;
+    margin-bottom: 30px;
+
+    // Main image styles
+    .propery_listing_main_image {
+        height: 467px;
+    }
+}
+
+// Main image styles
+.propery_listing_main_image {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    @include background-cover; 
+    overflow: hidden;
+    cursor: pointer;
+}
+
+// Carousel indicators container
+.carousel-indicators-wrapper-header-prop {
+    background-color: #2B2937;
+    width: 100%;
+    position: absolute;
+    height: auto;
+    z-index: 9;
+    bottom: 0px;
+} 
+
+// Carousel indicators
+#carousel-property-page-header {
+    .carousel-indicators {
+        padding: 0 45px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        bottom: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 45px;
+
+        button {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            text-indent: 0px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            border-radius: 0px;
+            opacity: 1;
+            position: relative;
+            margin: 0px;
+        }
+
+        img {
+            border: 2px solid #fff;
+            max-width: 110px;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        }
+
+        .active img {
+            border: 2px solid #222;
+        }
+    }
+}
+
+// Overlay for carousel indicators
+.carousel-property-page-header-overalay {
+    background: #222;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    max-height: 64px;
+    position: absolute;
+    max-width: 108px;
+    left: 1px;
+    top: 1px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+// Active indicator overlay
+.carousel-indicators .active .carousel-property-page-header-overalay {
+    opacity: 0;
+}
+
+// Styles for specific page layouts
+.wpestate_property_header_extended,
+.single-content.listing-content .wpestate_full_width_slider_wrapper.wpestate_listing_full_slider_1 {
+    .wpestate_property_slider_v3 .propery_listing_main_image,
+    .propery_listing_main_image {
+        height: 590px;
+    }
+}
+

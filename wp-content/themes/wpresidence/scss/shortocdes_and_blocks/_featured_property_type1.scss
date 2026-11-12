@@ -1,0 +1,306 @@
+/** MILLDONE
+ * Featured Property Styles for WpResidence Theme
+ * src: scss/shortocdes_and_blocks/_featured_property.scss
+ * This SCSS file contains styles for the featured property component
+ * in the WpResidence WordPress theme.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - None (all styles are self-contained)
+ *
+ * Usage:
+ * 
+ * It styles the featured property component, including its carousel,
+ * price display, agent information, and overall layout.
+ */
+
+ .featured_property {
+    width: 100%;
+    position: relative;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    border: 1px solid #f1f8ff;
+    @include smooth-transition-shorter;
+    max-width: 940px;
+
+    &.featured_property_type1 {
+      overflow: hidden;
+  
+      .featured_div {
+        z-index: 99;
+        float: left;
+        bottom: auto;
+      }
+  
+      .featured_prop_price {
+        position: absolute;
+        bottom: 97px;
+        left: 15px;
+        z-index: 10;
+        font-size: 13px;
+        line-height: 1.5em;
+        color: white !important;
+        background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        padding: 3px 10px;
+        font-weight: 500;
+        width: auto;
+        right: auto;
+        top: auto;
+  
+        .price_label {
+          color: #fff;
+          position: relative;
+          right: auto;
+          top: auto;
+          float: initial;
+        }
+      }
+  
+      .ribbon-wrapper-default {
+        z-index: 99;
+        line-height: 0px;
+        background: transparent;
+        padding: 0px;
+        float: left;
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+    }
+  
+    // Featured image styles
+    .featured_img {
+      position: relative;   
+      .featured_gradient {
+        background-color: #1D293E;
+        opacity: 0.15;
+      }
+    }
+  
+    // Carousel styles
+    .property_unit_featured_carousel {
+      position: relative;
+  
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 45px;
+      }
+    }
+  
+
+    // Featured secondline styles
+    .featured_secondline {
+
+      position: relative;
+      background-color: #fff;
+      color: #fff;
+      height: 82px;
+      z-index: 11;
+      padding: 15px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: -45px;
+  
+      h2 {
+        font-size: 18px;
+        line-height: 1.6em;
+        margin-top: 0px;
+        margin-bottom: 0;
+  
+        a {
+          font-size: 18px;
+          line-height: 1.6em;
+          margin-top: 0px; 
+          margin-bottom: 0px; 
+        }
+      }
+  
+      .sale_line {
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+      }
+    }
+  
+    // Agent face styles
+    .agent_face {
+      display: inline;
+      float: left;
+      margin-right: 15px;
+      overflow: hidden;
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+      max-height: 100%;
+  
+      img {
+        border: none !important;
+      }
+  
+      &:hover .agent_face_details {
+        display: block;
+      }
+  
+      .agent_face_details {
+        width: 310px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        height: 110px;
+        background-color: #fdfdfd;
+        position: absolute;
+        bottom: 15px;
+        left: 79px;
+        z-index: 101;
+        padding: 13px;
+        display: none;
+        @include box-shadow(card);
+  
+        &:after,
+        &:before {
+          content: " ";
+          width: 0;
+          height: 0;
+          border-bottom: 10px solid transparent;
+          border-top: 10px solid transparent;
+          top: 50%;
+          position: absolute;
+          margin-top: -6px;
+        }
+  
+        &:after {
+          border-right: 10px solid #fdfdfd;
+          left: -10px;
+        }
+  
+        &:before {
+          border-right: 10px solid #f0f0f0;
+          left: -11px;
+        }
+  
+        img {
+          border-bottom: none !important;
+          border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+          float: left;
+          margin-right: 13px;
+          height: 80px !important;
+          width: auto;
+        }
+  
+        h4 {
+          display: inline;
+          float: left;
+          margin-right: 13px;
+          margin-bottom: 0px;
+        }
+  
+        .agent_position {
+          display: inline;
+          float: left;
+          width: 55%;
+          color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+          margin-bottom: 2px;
+        }
+      }
+    }
+  
+    // Featured property price styles
+    .featured_prop_price {
+      position: absolute;
+      right: 13px;
+      top: 19px;
+      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      font-size: 20px;
+      font-weight: 500;
+  
+      .price_label {
+        position: absolute;
+        right: 0px;
+        top: 20px;
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        word-break: break-all;
+        width: 100px;
+        text-align: right;
+      }
+  
+      .price_label_before {
+        position: relative;
+        right: auto;
+        top: auto;
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        word-break: break-all;
+        width: auto;
+        text-align: left;
+        float: left;
+        margin: 0px 5px;
+      }
+    }
+  
+    // Hover effects
+    &:hover {
+      .featured_secondline {
+        background-color: #fff;
+      }
+  
+   
+    
+      h2 a {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      }
+    }
+  }
+  
+  // Styles not directly related to the provided markup (kept at the end)
+  .featured_cover {
+    cursor: pointer;
+  }
+  
+  .featured_property {
+    .featured_div {
+      bottom: 61px;
+      z-index: 100;
+    }
+  }
+  
+  .featured_prop_type4 .featured_gradient {
+    opacity: 0.4;
+    background-color: rgba(29, 41, 62, 0.2);
+    background-image: linear-gradient(to right top, #000, rgba(0, 0, 0, 0) 54%);
+  }
+  
+  .featured_prop_label {
+    position: absolute;
+    right: 13px;
+    top: 40px;
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  }
+  
+  .google_map_sh {
+    width: 250px;
+    height: 130px;
+    background: red;
+    border: 5px solid white;
+    padding: 4px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    display: none;
+  }
+  
+  .featured-content {
+    float: left;
+    position: absolute;
+    margin-left: 270px;
+    top: 103px;
+  }
+
+
+  // general styles for other featured property types
+  
+.featured_property.featured_property_type1 .featured_img,
+.featured_property.featured_property_type2 .featured_img,
+.featured_property.featured_property_type3 .featured_img {
+    overflow: hidden;
+}
+
+.featured_property.featured_property_type1 .featured_img,
+.featured_property.featured_property_type3 .featured_img {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+

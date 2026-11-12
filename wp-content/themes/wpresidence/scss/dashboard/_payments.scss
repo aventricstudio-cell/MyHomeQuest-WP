@@ -1,0 +1,518 @@
+
+  /*=unit payment*/
+  .paymentmodal{
+    position: fixed;
+    top: 30%;
+    width: 450px;
+    height: 300px;
+    display: none;
+    left: 50%;
+    margin-left: -225px;
+    z-index: 999;
+  }
+  
+  .paymentmodal_close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  
+  .payment_backgorund{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    opacity: 0.3;
+    z-index: 9;
+    display: none;
+  }
+  
+  
+    
+  /*===Packages*/
+  .pack_description_unit{
+    width: auto;
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.pack_description_details{
+    font-size: 20px;
+    padding: 19px 15px 18px 15px;
+    margin-right: 9px;
+    margin-bottom: 9px;
+    height: 74px;
+    width: 190px;
+    text-align: left;
+    color: var(--wp-estate-user-dashboard-package-color-option, var(--wp_estate_user_dashboard_package_color));
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1px #E3E6EC;
+    box-shadow: 0px 1px 9px rgb(227 230 236 / 0.5);
+}
+
+.pack-unit{
+  border-radius: 2px;
+  padding: 0px 0px 7px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.pack-name{
+  padding: 14px 0px 0px 10px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  width: auto;
+  color: var(--wp-estate-user-dashboard-package-color-option, var(--wp_estate_user_dashboard_package_color));
+  font-size: 17px;
+}
+
+.pack-unit h4{
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--wp-estate-user-dashboard-package-select-option, #222);
+}
+
+.pack_description label{
+    padding: 5px 0px 0px 7px;
+}
+
+.pack_description  input[type="checkbox"]{
+    float: left;
+    margin-top: 5px;
+}
+
+#package_pick{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+.pack-listing{
+  margin-bottom: 9px;
+  display: inline-block;
+  padding: 15px 10px  10px 10px;
+  margin-right: 9px;
+  height: 265px;
+  width: 190px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 1px 9px rgb(227 230 236 / 0.5);
+  border-radius: 8px;
+}
+
+.pack-listing-title{
+  color: #222;
+  font-size: 15px;
+  margin-bottom: 0px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.pack-listing-period{
+    font-size: 14px;
+    margin: 7px 0px;
+    line-height: 1.4em;
+}
+
+#stripe_cancel{
+  background-color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+  border-radius: 9px;
+  padding: 12px 20px;
+  font-weight: normal;
+  color: #fff;
+  cursor: pointer;
+  margin: 0px 0px 15px 0px;
+  width: auto;
+  display: flex;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pack_description{
+    margin-bottom: 10px;
+    margin-top: 0px;
+    float: left;
+    width: 1000px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-color: transparent;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    padding-bottom: 7px;
+    width: 100%;
+}
+
+#pack_recuring{
+    float:left;
+    margin-top: -5px;
+}
+
+  
+  
+  /*=stripe card*/
+  .listing_upgrade,
+  .listing_submit_normal ,
+  .perpack,
+  .payment-container .perpack,
+  #direct_pay,
+  #pick_pack,
+  .wpestate_stripe_booking_prop,
+  #wpestate_stripe_booking_recurring,
+  #wpestate_stripe_booking{
+      min-width: 170px;
+      height: 69px;
+      cursor: pointer;
+      float: left;
+      font-size: 15px;
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+      line-height: 68px;
+      font-size: 17px;
+      padding: 0px 25px;
+      box-shadow: 0px 1px 9px rgb(227 230 236 / 0.5);
+      border-radius: 8px;
+      background-color: #fff;
+  }
+  
+  .payment-container .perpack,
+  #direct_pay,
+  #pick_pack,
+  .wpestate_stripe_booking_prop,
+  #wpestate_stripe_booking_recurring,
+  #wpestate_stripe_booking{
+      margin: 10px 5px 10px 5px;
+  }
+  
+  #pick_pack{
+      margin: 10px 5px 10px 0px;
+  }
+  
+  .recuring_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    float: left;
+  }
+  
+  .payment-container .perpack {
+      background-color: #0d73e1;
+  }
+  
+  .perpack,
+  #direct_pay{
+      color: #6c5dd3;
+      border: 1px solid #ffffff2e;
+  }
+  
+  
+  .wpestate_stripe_booking_prop,
+  #wpestate_stripe_booking_recurring,
+  #wpestate_stripe_booking{
+    background-image: url(images/stripe-button.png);  
+    width: 169px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .wpestate_stripe_booking_prop{
+  margin-top: 0px;
+  }
+  
+  .listing_upgrade:hover,
+  .listing_submit_normal:hover,
+  .perpack:hover,
+  #pick_pack:hover,
+  #direct_pay:hover,
+  .wpestate_stripe_booking_prop:hover,
+  #wpestate_stripe_booking_recurring:hover,
+  #wpestate_stripe_booking:hover{
+    border:1px solid #0073e12e
+  }
+  
+  .wpestate_stripe_form_wrapper{
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      z-index: 9999;
+  }
+  
+  #instant_booking_modal .wpestate_stripe_form_wrapper{
+      position: fixed;
+      height: 100vh;
+  }
+  
+  .wpestate_stripe_form_wrapper_back{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      background-color: #000;
+      opacity:0.6;
+  }
+  
+  
+  .wpestate_stripe_form_1{
+      position: absolute;
+      top: 30%;
+      max-width: 400px;
+      left: 0;
+      right: 0;
+      margin: 0px auto;
+      z-index: 1;
+  }
+  
+  #card-errors{
+      padding: 0px 15px;
+      color:#fff;
+  }
+  
+  #wpestate-stripe-paymentform-1{
+      padding-top: 25px;
+      padding-bottom: 0px;
+  }
+  
+  .close_stripe_form{
+      position:absolute;
+      top:5px;
+      right:5px;
+      cursor:pointer;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 {
+      background-color: #ffffff;
+      display: none;
+      border-radius: 0px;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 10px 0px;
+      border-radius: 8px;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 fieldset {
+      margin: 0 15px 20px;
+      padding: 0;
+      border-style: none;
+      background-color: #6A85DE;
+      box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #829fff;
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-left: 15px;
+      width: 305px;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .row + .row {
+    border-top: 1px solid #819efc;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 label {
+    width: 15%;
+    min-width: 70px;
+    padding: 11px 0;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 input,
+  .wpestate_stripe.wpestate_stripe_form_1 button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border-style: none;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 input:-webkit-autofill {
+    -webkit-text-fill-color: #fce883;
+    transition: background-color 100000000s;
+    -webkit-animation: 1ms void-animation-out;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .StripeElement--webkit-autofill {
+    background: transparent !important;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .StripeElement {
+    width: 100%;
+    padding: 11px 15px 11px 0;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 input {
+      width: 235px;
+      padding: 5px 15px 7px 15px;
+      color: #fff;
+      margin: 0px;
+      background-color: transparent;
+      -webkit-animation: 1ms void-animation-out;
+      background-color: #728ee9!important;
+      height: auto;
+      opacity: 1;
+      border-radius: 2px;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 input:focus{
+      border: 0px solid #6C5DD3;
+  }
+  
+  .close_stripe_form .base {
+      fill: #fff;
+  }
+  
+  .close_stripe_form .glyph {
+      fill: #6772e5;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 input::-webkit-input-placeholder {
+    color: #87BBFD!important;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 input::-moz-placeholder {
+    color: #87BBFD!important;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 input:-ms-input-placeholder {
+    color: #87BBFD!important;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 button {
+      display: block;
+      width: calc(100% - 30px);
+      height: 40px;
+      margin: 15px 15px 0;
+      background-color: #666ee7;
+      box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #9ea0ce;
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+  }
+  
+  #wpestate_stripe_form_button_sumit:hover{
+      background-color: #434582;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 button:active {
+      background-color: #434582;
+      box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 #9ea0ce;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .error svg .base {
+    fill: #fff;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .error svg .glyph {
+    fill: #6772e5;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .error .message {
+  
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .success .icon .border {
+    stroke: #87bbfd;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .success .icon .checkmark {
+   stroke: #87bbfd;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .success .title {
+    color: #fff;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .success .message {
+    color: #9cdbff;
+  }
+  
+  .wpestate_stripe.wpestate_stripe_form_1 .success .reset path {
+    fill: #fff;
+  }
+  
+  #wpestate_stripe_alert,
+  #wpestate_stripe_alert_succes{
+      text-align: center;
+      display:none;
+  }
+  .wpestate_stripe_form_1 .error{
+      text-align: center;
+      margin-top: 10px;
+  }
+  
+  .wpestate_stripe_form_1 img{
+      margin:0px auto;
+      display: block;
+  }
+  
+  .wpestate_stripe_pay_desc{
+      text-align: center;
+      color: #222;
+      font-weight: 600;
+  }
+  
+  #direct_pay_modal .modal-title{
+      padding-top:20px;
+  }
+
+  /*=Stripe
+-------------------------------------------------------------------------------*/
+.stripe_form_featured {
+  display: none;
+}
+
+.package_selected {
+  border: 1px solid color-mix(in srgb, var(--wp-estate-user-dashboard-buy-package-background-option, var(--wp_estate_user_dashboard_buy_package)) 18%, transparent);
+}
+
+.package_selected .buypackage {
+  background-color: var(--wp-estate-user-dashboard-buy-package-background-option, var(--wp_estate_user_dashboard_buy_package));
+  color: #ffffff;
+}
+
+
+.stripe_upgrade {
+  display: inline-block;
+  float: left;
+}
+
+#package_pick .stripe-button-el {
+  margin-bottom: 10px;
+}
+

@@ -1,0 +1,55 @@
+// MILLDONE
+// Agent Unit V2 Styles
+// src: scss\agent_cards\_agent_unit_v2.scss
+// This file contains styles for the second version of agent units displayed in the WpResidence theme.
+// File location: scss/agent_cards/_agent_unit_v2.scss
+
+// Styles for the second version of agent cards
+.agent_card_2 {
+     margin-bottom: 25px;
+    .listing_wrapper.elementor_places_wrapper{
+      overflow: hidden;
+      position: relative;
+      margin: 0px;
+    }
+
+
+    .realtor_position {
+      // Styles for the realtor's position (e.g., "Real Estate Agent", "Broker", etc.)
+      color: #f7f7f7; // Light color for better contrast against the background
+      line-height: 30px; // Increases line height for better readability
+      font-size: 14px; // Sets the font size
+      border: 0px; // Removes any border that might be inherited
+      position: absolute;
+      bottom: 0px;
+      z-index: 30;
+    }
+
+    .realtor_name {
+      // Styles for the realtor's name
+      position: absolute; // Positions the name absolutely within the card
+      bottom: 20px; // Places the name 35px from the bottom of the card
+      left: 20px; // Aligns the name to the left edge of the card
+      right: 20px; // Adds some padding on the right side
+      z-index: 15;
+    } 
+
+    .property_listing.places_listing {
+        // Applies to agent cards that are displayed as place listings
+        height: 350px; // Sets a fixed height for the agent card
+        @include background-cover; 
+        background-position: top center; // Aligns the background image to the top center
+        @include smooth-transition;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        z-index: 10;
+        &:hover {
+          @include image-hover-zoom;
+        }
+
+   
+    }
+  }
+
+  .elementor_wpresidece_grid .elementor_residence_grid.agent_card_2{
+    margin-bottom: 0;
+  }

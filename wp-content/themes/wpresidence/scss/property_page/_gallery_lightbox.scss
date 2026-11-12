@@ -1,0 +1,460 @@
+/** MILLDONE
+ * Lightbox Property Styles for WpResidence Theme
+ * src: scss\property_page\_gallery_lightbox.scss
+ * This file contains styles for the lightbox property feature in the WpResidence theme.
+ * It defines the layout and appearance of the lightbox modal, image slider, and contact form.
+ * 
+ * Package: WpResidence
+ * Dependencies: None (standalone SCSS file)
+ * 
+ * Usage: Include this file in the main theme stylesheet or compile separately and enqueue.
+ * 
+ * Note: This file has been optimized and commented for better maintainability.
+ */
+
+// Main lightbox wrapper
+.lightbox_property_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
+    overflow: hidden;
+    display: none;
+  
+
+    // Main content row
+    .lightbox_property_content.row {
+      // Image slider column
+      .lightbox_property_slider {
+        max-width: 75%;
+        padding: 0;
+        
+  
+        &.col-md-12.lightbox_no_contact {
+          max-width: 100%;
+          #owl-demo{
+            .item{
+              background-size: contain;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              align-items: center;
+              padding: 10px;
+            }
+          } 
+        }
+  
+        // Owl Carousel customization
+        #owl-demo {
+          max-width: 100%;
+          position: relative;
+          width: 100%;
+          margin: 0 auto;
+  
+          .item {
+            min-height: 100%;
+            @include background-cover; 
+            width: 100%;
+            height: 623px;
+            padding: 0px;
+            background-color: #222;
+            background-repeat: no-repeat;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            
+            img {
+              border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+  
+            }
+          }
+        }
+  
+        // Navigation arrows
+        .owl-prev,
+        .owl-next {
+          position: absolute;
+          top: 50%;
+          border: none;
+          background: transparent;
+        }
+  
+        .owl-prev {
+          left: 0;
+        }
+  
+        .owl-next {
+          right: 0;
+        }
+      }
+  
+      // Sidebar with property details and contact form
+      .lightbox_property_sidebar {
+        display: flex;
+        width: auto;
+        max-width: 25%;
+        flex-direction: column;
+        padding: 0 25px;
+        gap: 15px;
+  
+        // Property header
+        .lightbox_property_header {
+          margin-top: 30px;
+          width: 100%;
+          background-color: #FFF;
+  
+          .entry-prop {
+            font-size: 23px;
+            line-height: 1.3em;
+            color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+            font-weight: 500;
+          }
+        }
+  
+        // Contact form
+        .agent_contanct_form {
+          width: auto;
+          padding: 0;
+          box-shadow: none;
+  
+          .contact_form_flex_wrapper {
+            .contact_form_flex_input_wrapper {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+  
+              input[type="text"] {
+                width: 100%;
+              }
+            }
+  
+            textarea {
+              max-height: 100px;
+            }
+  
+            .agent_submit_class {
+              width: 100%;
+              margin-bottom: 0;
+            }
+  
+            // Contact buttons
+            .realtor-contact-buttons {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+  
+              .wpresidence_button {
+                width: 48%;
+                padding: 6px 0;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    // Close button
+    .lighbox-image-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+      background-color: #fff;
+      i {
+        color: #222;
+        cursor: pointer;
+        font-size: 15px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+      }
+    }
+  }
+  
+  // Overlay background
+  .lighbox_overlay {
+    background-color: #111;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  // Styles for lightbox without contact form
+  .lightbox_wrapped_no_contact {
+    max-width: 1100px;
+  
+    #owl-demo {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  
+  // Styles for lightbox with full-height images
+  .ligtbox_no_crop {
+    max-height: 100%;
+  
+    .owl-carousel .owl-item {
+      float: left;
+      overflow: hidden;
+  
+      .item {
+        height: auto;
+        padding: 0;
+        height: 700px;
+      }
+    }
+  }
+  
+  // Image caption styles
+  .owl_caption {
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+    // Inner wrapper for lightbox content
+    .lightbox_property_wrapper_level2 {
+    background: #fff;
+    max-width: 1450px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 623px;
+    top: 50%;
+    transform: translate(0, -50%);
+    overflow: hidden;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    z-index: 100;
+    }
+ 
+      
+
+  // Specific styles for no-crop lightbox
+  .lightbox_property_wrapper_level2.lightbox_wrapped_no_contact.ligtbox_no_crop {
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+  
+    .lightbox_property_content.row {
+      margin: 0;
+      height: 100%;
+    }
+  
+    .lightbox_property_slider {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    #owl-demo {
+      max-width: 100%;
+      width: 100%;
+    }
+  
+    .owl-carousel .owl-item {
+      .item {
+        background: transparent;
+      }
+    }
+  
+    #owl-demo .item img {
+   
+    }
+  
+    .lighbox-image-close {
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+    }
+  
+    .owl-carousel .owl-wrapper-outer {
+      background: transparent;
+    }
+  
+    .owl_caption {
+      display: none;
+    }
+  }
+  
+  // Styles for modal lightbox
+  .modal_lightbox_property_wrapper .lightbox_property_wrapper_level2,
+  .lightbox_property_wrapper_level2.lightbox_wrapped_no_contact {
+    .lighbox-image-close {
+      background: #222;
+  
+      i {
+        color: #fff;
+      }
+    }
+  }
+  
+  // Ensure full-width images in slider
+  .lightbox_property_slider #owl-demo .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  // Hidden elements
+  .lightbox_property_sidebar .schedule_meeting,
+  .lightbox_property_wrapper .schedule_day,
+  .lightbox_property_wrapper .schedule_hour,
+  .lightbox_property_wrapper #show_contact,
+  .lightbox_property_wrapper .wpestate_agent_details_wrapper,
+  .lightbox_property_wrapper .agent_call_no,
+  .lightbox_property_wrapper .agent_web_class,
+  .lightbox_property_wrapper .agent_skype_class,
+  .lightbox_property_wrapper .agent_email_class,
+  .lightbox_property_wrapper .agent_unit_social_single {
+    display: none;
+  }
+  
+  // Additional styles not found in the provided HTML markup
+  // These are kept at the end of the file for reference
+  .lightbox_property_footer {
+    width: 100%;
+  }
+  
+  .lighbox-logo {
+    width: 200px;
+    background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    float: left;
+    height: 100%;
+  }
+  
+  .lightbox_enquire {
+    width: auto;
+    margin: 0;
+    box-shadow: none;
+    float: left;
+  }
+  
+  .lightbox_property_wrapper .agentpic-wrapper {
+    width: 100%;
+  }
+  
+  .lightbox_property_wrapper .agent_details h3,
+  .lightbox_property_wrapper .agent_details {
+    width: 100%;
+    padding-left: 0;
+    min-height: auto;
+  }
+  
+  .lightbox_property_wrapper .agent_position,
+  .lightbox_property_wrapper .agent_detail {
+    margin-left: 0;
+  }
+  
+  .lightbox_property_wrapper #agent_comment {
+    max-height: 85px;
+  }
+  
+  .lightbox_property_wrapper .agentpict {
+    border-bottom: none;
+    border-radius: 0;
+    margin-bottom: 10px;
+  }
+  
+  .lightbox_property_wrapper .wpcf7-response-output {
+    margin-top: 5px;
+  }
+  
+  .lightbox_property_wrapper .message_submit {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .classic-carousel .owl-carousel .owl-item img,
+  .classic-carousel .owl-carousel .owl-item .item {
+    background-color: #222;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+  }
+  
+  .owl-carousel .owl-item .itemimage {
+    min-height: 100%;
+    @include background-cover; 
+    width: 100%;
+    height: 623px;
+  }
+  
+  .owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px); // Standard property for compatibility
+  }
+  
+  .owl-pagination {
+    display: none;
+  }
+
+  
+
+#owl-demo .slick-track {
+    position: relative;
+    top: 0px;
+    left: 0;
+    padding-top: 0px;
+    display: block;
+}
+#owl-demo .slick-slide{
+    min-height: 100%;
+    @include background-cover; 
+    width: 100%;
+    height: 623px;
+    padding: 10px;
+    background-color: #222;
+    position: relative;
+}
+
+#owl-demo button.slick-prev.slick-arrow, 
+#owl-demo  button.slick-next.slick-arrow{
+    background: rgb(34 34 34 / 66%);
+    color: #FFF;
+    display: inline-block;
+    zoom: 1;
+    margin: -20px 10px 10px;
+    font-size: 20px;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    -webkit-border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    -moz-border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    filter: Alpha(Opacity=95);
+    opacity: 0.95;
+    cursor: pointer;
+    z-index: 1;
+    top: 50%;
+}
+#owl-demo button.slick-prev.slick-arrow {
+    right: auto;
+    left: 15px;
+}
+
+.lightbox_property_wrapper .slick-slider .carousel-control-prev {
+  left: 10px;
+ 
+}
+.lightbox_property_wrapper .slick-slider .carousel-control-next {
+
+}

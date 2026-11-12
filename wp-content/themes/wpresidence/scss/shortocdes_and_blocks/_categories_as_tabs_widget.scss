@@ -1,0 +1,113 @@
+/** MILLDONE
+ * WPResidence Theme - Categories as Tabs Widget Styles
+ * src: scss\shortocdes_and_blocks\_categories_as_tabs_widget.scss
+ * This file contains styles for the Categories as Tabs widget in the WPResidence theme.
+ * It defines the layout and appearance of the tab navigation and content areas.
+ *
+ * @package WPResidence
+ * @subpackage Widgets
+ * @since 1.0.0
+ *
+ */
+
+// Main wrapper for the categories as tabs widget
+.wpestate_categories_as_tabs_wrapper {
+    display: inline-block;
+    width: 100%;
+
+    // Styles for the tab navigation
+    .wpestate_categories_as_tabs_ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border: none;
+        gap: 15px;
+
+        // Individual tab item
+        .wpestate_categories_as_tabs_item {
+            // SVG icon styles
+            svg {
+                height: 18px;
+                z-index: 10;
+                max-width: 20px;
+           
+            }
+
+            // Font icon styles
+            i {
+                margin-right: 5px;
+            }
+
+            // Tab link styles
+            & > a {
+                border: none;
+                font-weight: 500;
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+                gap:5px;
+
+                // Hover state
+                &:hover {
+                    text-decoration: none;
+                    background-color: transparent;
+                    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+
+                    i, svg {
+                        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                        fill: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                    }
+                }
+
+                // Active state
+                &.active {
+                    border: none;
+                    color: #fff;
+                    width: 100%;
+                    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+                    i, svg {
+                        color: #fff;
+                        fill: #fff;
+                    }
+                    &:hover {
+                        color: #fff;
+
+                        i, svg {
+                            color: #fff;
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Styles for the tab content panels
+    .wpestate_categories_as_tabs_panel {
+        padding: 30px 0;
+        box-shadow: none;
+        float: left;
+        width: 100%;
+
+        // Styles for individual category terms
+        .wpestate_categories_as_tabs_term {
+            color: #222;
+            font-weight: 500;
+            width: 100%;
+        }
+
+        // Styles for the term count
+        .places_list_tab_term-count {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    }
+}

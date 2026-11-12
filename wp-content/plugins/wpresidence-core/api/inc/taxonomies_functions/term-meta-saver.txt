@@ -1,0 +1,138 @@
+# WordPress Term Custom Fields System Documentation
+
+## Overview
+
+This system provides a flexible way to add custom fields to taxonomy terms in WordPress. It allows administrators to create reusable field definitions and assign them to specific terms, with support for different field types (text, number, select, textarea).
+
+## Core Concepts
+
+### 1. Field Definitions vs Field Assignments vs Field Values
+
+The system separates three distinct concepts:
+
+- **Field Definitions**: Global templates that define what a field is (name, type, options)
+- **Field Assignments**: Which fields are assigned to which terms
+- **Field Values**: The actual data stored for each field on each term
+
+This separation allows fields to be reused across multiple terms while maintaining independent values.
+
+### 2. Reusable Field System
+
+Fields are designed to be created once and reused across multiple terms. When you create a field for one term, it becomes available for assignment to other terms through the "Use Existing Field" interface.
+
+## Data Structures
+
+### 1. Global Field Definitions
+**Option Name**: `wpestate_custom_fields_for_terms`
+**Purpose**: Stores all field definitions globally
+
+```php
+array(
+    'field-slug-1' => array(
+        'name'    => 'Property Price',
+        'slug'    => 'property-price',
+        'type'    => 'number',
+        'options' => ''
+    ),
+    'field-slug-2' => array(
+        'name'    => 'Property Type',
+        'slug'    => 'property-type', 
+        'type'    => 'select',
+        'options' => 'House,Apartment,Condo,Townhouse'
+    ),
+    'description' => array(
+        'name'    => 'Description',
+        'slug'    => 'description',
+        'type'    => 'textarea',
+        'options' => ''
+    )
+)
+```
+
+### 2. Field Assignments
+**Option Name**: `wpestate_term_field_assignments`
+**Purpose**: Maps which fields are assigned to which terms
+
+```php
+array(
+    '123' => array('property-price', 'property-type'),      // Term ID 123 has 2 fields
+    '124' => array('property-price', 'description'),        // Term ID 124 has 2 fields  
+    '125' => array('property-type', 'description')          // Term ID 125 has 2 fields
+)
+```
+
+### 3. Field Values
+**Option Name**: `taxonomy_{term_id}`
+**Purpose**: Stores actual field values for each term
+
+```php
+// For term ID 123: taxonomy_123
+array(
+    'property-price' => '350000',
+    'property-type'  => 'House',
+    'featured_image' => 'image-123.jpg'  // Other metadata preserved
+)
+
+// For term ID 124: taxonomy_124  
+array(
+    'property-price' => '250000',
+    'description'    => '<p>Beautiful downtown location...</p>',
+    'custom_color'   => '#ff0000'        // Other metadata preserved
+)
+```
+
+## System Workflow
+
+### Creating a New Field
+
+1. **User Input**: Admin enters field name, selects type, adds options (if select type)
+2. **AJAX Call**: `wpestate_save_term_custom_field_definition` 
+3. **Processing**:
+   - Generate slug from field name
+   - Store definition in `wpestate_custom_fields_for_terms`
+   - If editing existing term, auto-assign field to current term
+   - Return field definition to JavaScript
+4. **UI Update**: JavaScript adds field to form and removes from "existing fields" dropdown
+
+### Assigning Existing Field
+
+1. **User Action**: Admin selects field from dropdown, clicks "Add to Term"
+2. **AJAX Call**: `wpestate_assign_existing_field_to_term`
+3. **Processing**:
+   - Validate field exists and term is valid
+   - Add field slug to term's assignment array
+   - Return field definition to JavaScript
+4. **UI Update**: JavaScript adds field to form and removes from dropdown
+
+### Removing Field from Term
+
+1. **User Action**: Admin clicks "Remove from Term" button
+2. **AJAX Call**: `wpestate_delete_term_custom_field_definition` (with term_id)
+3. **Processing**:
+   - Remove field slug from term's assignment array
+   - Field definition remains available globally
+   - Field values for this term remain but become inactive
+4. **UI Update**: JavaScript removes field from form and adds back to dropdown
+
+### Saving Term with Custom Fields
+
+1. **Form Submit**: WordPress processes term save
+2. **Hook Triggered**: `edited_term` or `create_term` calls `wpestate_save_term_custom_fields`
+3. **Processing**:
+   - Validate each field against global definitions
+   - Sanitize values based on field type
+   - Ensure field assignments exist
+   - Merge with existing term metadata
+   - Store in `taxonomy_{term_id}` option
+
+
+### Theme Integration
+```php
+// Get custom field value for a term
+$term_meta = get_option('taxonomy_' . $term_id, array());
+$price = isset($term_meta['property-price']) ? $term_meta['property-price'] : '';
+
+// Check if term has specific field assigned
+$assigned_fields = wpestate_get_term_assigned_fields($term_id);
+$has_price_field = in_array('property-price', $assigned_fields);
+```

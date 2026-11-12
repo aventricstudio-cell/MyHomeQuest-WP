@@ -1,0 +1,214 @@
+/** MILLDONE
+ * Property Masonary Gallery v1
+ * src: scss\property_page\_property_gallery.scss
+ * Package: WpResidence
+ * Purpose: Styles for the property Property gallery v1  component in the WpResidence theme
+ * Dependencies: None
+ * 
+ * This file contains styles for the roperty Property gallery v1  used on property detail pages.
+ * It defines the layout and appearance of the image gallery, including the main image,
+ * thumbnails, overlays, and status indicators.
+ * 
+ * Usage: Import this file into the main theme stylesheet or enqueue it specifically
+ * on pages where the property gallery is used.
+ */
+
+// Main gallery wrapper
+.gallery_wrapper {
+    float: left;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 0 30px;
+
+    // Status wrapper positioning
+    .status-wrapper {
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
+}
+
+// Individual image gallery item
+.image_gallery {
+    min-height: 160px;
+    border-bottom: 6px solid #ffffff;
+    border-right: 6px solid #ffffff;
+    @include background-cover; 
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    // Main large image
+    &.col-md-8 {
+        min-height: 320px;
+        border-bottom: 6px solid #ffffff;
+    }
+
+    // Overlay styles
+    .img_listings_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        background-color: #444;
+        opacity: 0;
+        @include smooth-transition-shorter;
+
+        &:hover {
+            opacity: 0.3;
+            background-color: #222;
+        }
+
+        &.img_listings_overlay_last {
+            background-color: #222;
+            opacity: 0.4;
+        }
+    }
+}
+
+// Special border classes
+.special_border {
+    border-top: 6px solid #ffffff;
+    border-left: 6px solid #ffffff;
+}
+
+.special_border_top {
+    border-top: 6px solid #ffffff;
+}
+
+.special_border_left {
+    border-left: 6px solid #ffffff;
+}
+
+// First column of thumbnails
+.wpresidence_gallery_first_col {
+    padding: 0;
+}
+
+// Last gallery item with "See all photos" text
+.last_gallery_item {
+    .img_listings_mes {
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        color: #fff;
+        z-index: 10;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        pointer-events: none;
+        right: 50%;
+        width: 200px;
+        text-align: center;
+        margin-right: -100px;
+        @include smooth-transition-shorter;
+    }
+}
+
+// Styles not found in the provided markup (kept at the end)
+.gallery_wrapper .left-column .image_gallery {
+    height: 100%;
+}
+
+.elementor-widget-container .gallery_wrapper {
+    margin-bottom: 0;
+}
+
+.property_header_gallery_wrapper {
+    .slider-property-status {
+        margin-top: 10px;
+    }
+
+    .image_gallery {
+        border-bottom: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+
+        &.special_border {
+            border-top: 1px solid #f0f0f0;
+            border-left: 1px solid #f0f0f0;
+        }
+
+        &.special_border_top {
+            border-top: 1px solid #f0f0f0;
+        }
+    }
+
+
+    .col-md-6.image_gallery {
+        height: 650px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+
+    .gallery-left-column .col-md-6.image_gallery {
+        height: 50%;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+}
+
+.property_header_gallery_wrapper .image_gallery.last_gallery_item,
+.property_header_gallery_wrapper {
+    margin-bottom: 0;
+}
+
+
+.featured_prop_type5 .img_listings_overlay,
+.featured_prop_type5 .image_gallery {
+    cursor: auto;
+}
+
+
+.property_header_gallery_wrapper .img_listings_overlay:hover {
+    opacity: 0.1;
+}
+
+
+.wpestate_property_header_extended .col-md-8.image_gallery {
+    min-height: 480px;
+}
+
+.wpestate_property_header_extended .wpresidence_gallery_first_col .image_gallery,
+.wpestate_property_header_extended .col-md-4.image_gallery {
+    min-height: 240px;
+}
+
+
+
+.gallery-left-column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.wpestate_lay3_media_wrapper .property_header_gallery_wrapper,
+.single-content.listing-content > .property_header_gallery_wrapper {
+    margin-bottom: 30px;
+}
+
+.single-content.listing-content > .property_header_gallery_wrapper .col-md-6.image_gallery {
+    height: 466px;
+}
+
+.single-content.listing-content > .property_header_gallery_wrapper .gallery-left-column.col-md-6 .image_gallery {
+    height: 233px;
+}
+
+
+#accordion_property_virtual_tour_collapse{
+    .accordion-body{
+        text-align: center;
+    }
+}
+iframe[src*="tiktok.com"] {
+  max-width: 355px;
+
+} 

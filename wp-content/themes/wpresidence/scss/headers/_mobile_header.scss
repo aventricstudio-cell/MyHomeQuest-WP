@@ -1,0 +1,318 @@
+//// MILLDONE
+// components/_mobile_menu.scss
+// This file contains styles for the user menu that appears in the mobile menu.
+
+// ==========================================================================
+// Mobile Menu
+// ==========================================================================
+
+.mobile_header {
+    background-color: var(--wp-estate-mobile-header-background-color-option, var(--wp-estate-mobile-header-background-color)); // Set the background color of the mobile header with a fallback option.
+    height: 70px; // Set the height of the mobile header.
+    width: 100%; // Set the width of the mobile header to 100%.
+ 
+    z-index: 100; // Set the z-index to ensure the mobile header is above other elements.
+    position: relative; // Set the position to relative.
+
+    &.mobile_header_sticky_yes {
+        position: sticky; // Make the mobile header sticky.
+        top: 0px; // Position the sticky header at the top of the viewport.
+    }
+
+    // Mobile logo
+    .mobile-logo img {
+        margin: 0px auto; // Center the mobile logo horizontally.
+        max-height: 70px; // Set the maximum height of the mobile logo.
+        width: auto; // Set the width of the mobile logo to auto.
+        max-width: 200px; // Set the maximum width of the mobile logo.
+        top: 50%; // Center the mobile logo vertically.
+        -webkit-transform: translate(0, -50%); // Apply vertical centering transformation for webkit browsers.
+        -ms-transform: translate(0, -50%); // Apply vertical centering transformation for IE browsers.
+        transform: translate(0, -50%); // Apply vertical centering transformation for modern browsers.
+        left: 0px; // Align the mobile logo to the left.
+        right: 0px; // Align the mobile logo to the right.
+        position: absolute; // Position the mobile logo absolutely within the header.
+    }
+
+    .mobile-trigger-user,
+    .mobile-trigger {
+        font-size: 14px; // Set the font size of the mobile triggers.
+        color: var(--wp-estate-mobile-header-icon-color-option, var(--wp_estate_mobile_header_icon_color)); // Set the link color on hover with a fallback.
+        height: 70px; // Set the height of the mobile triggers.
+        display: inline; // Display the mobile triggers inline.
+        float: left; // Float the mobile triggers to the left.
+        cursor: pointer; // Change the cursor to pointer on hover.
+        position: absolute; // Position the mobile triggers absolutely.
+        top: 0px; // Align the mobile triggers to the top of the header.
+
+        &:hover i {
+            color: var(--wp-estate-mobile-menu-hover-font-color-option, var(--wp-estate-mobile-menu-hover-font-color)); // Change the icon color on hover.
+        }
+    }
+
+    .mobile-trigger-user {
+        right: 0px; // Align the user trigger to the right.
+        
+        .menu_user_picture {
+            border-radius: 50%; // Make the user picture round.
+            width: 45px; // Set the width of the user picture.
+            height: 45px; // Set the height of the user picture.
+            margin-top: 11px; // Add top margin to the user picture.
+            float: left; // Float the user picture to the left.
+            display: inline; // Display the user picture inline.
+            border: 2px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Add a border with a fallback color.
+            margin-right: 15px; // Add right margin to the user picture.
+        }
+    }
+
+    i {
+        color: var(--wp-estate-mobile-header-icon-color-option, var(--wp_estate_mobile_header_icon_color)); // Set the icon color to white.
+        font-size: 17px; // Set the font size of the icons.
+        margin: 26px; // Add margin to the icons.
+    }
+}
+
+// ==========================================================================
+// Wrapper for Mobile Menu
+// ==========================================================================
+
+.mobilewrapper {
+    min-height: 100%; // Set the minimum height to 100%.
+    position: fixed; // Fix the position of the mobile wrapper.
+    overflow-x: hidden !important; // Hide horizontal overflow.
+    width: 100%; // Set the width to 100%.
+    height: 100%; // Set the height to 100%.
+    max-height: 100%; // Set the maximum height to 100%.
+    top: 0px; // Align to the top.
+    bottom: 0; // Align to the bottom.
+    display: none; // Initially hide the mobile wrapper.
+    width: 256px; // Set the width to 256px.
+    min-height: 100vh; // Set the minimum height to 100vh.
+
+    .header_phone {
+        color: var(--wp-estate-mobile-menu-font-color-option, var(--wp_estate_mobile_menu_font_color)); // Set the icon color with a fallback.
+        padding: 25px 25px 0px 25px; // Add padding around the header phone.
+        
+        a {
+            color: var(--wp-estate-mobile-menu-font-color-option, var(--wp_estate_mobile_menu_font_color)); // Set the link color with a fallback.
+        }
+        
+        svg{
+            fill: var(--wp-estate-mobile-menu-font-color-option, var(--wp_estate_mobile_menu_font_color)); // Set the link color on hover with a fallback.
+        }
+    }
+}
+
+// ==========================================================================
+// Wrapper for User Mobile Menu
+// ==========================================================================
+
+.mobilewrapper-user {
+    display: none; // Initially hide the user mobile wrapper.
+    min-height: 100%; // Set the minimum height to 100%.
+    position: fixed; // Fix the position of the user mobile wrapper.
+    overflow-x: hidden !important; // Hide horizontal overflow.
+    width: 100%; // Set the width to 100%.
+    height: 100%; // Set the height to 100%.
+    min-height: 100%; // Set the minimum height to 100%.
+    max-height: 100%; // Set the maximum height to 100%.
+    top: 0px; // Align to the top.
+    background-color: #282D33; // Set the background color.
+
+    label,
+    a,
+    .widget-title-sidebar {
+        color: var(--wp-estate-mobile-menu-font-color-option, var(--wp_estate_mobile_menu_font_color)); //Sets color
+    }
+
+    .widget-title-sidebar {
+        padding-left: 13px; // Add left padding to the widget title.
+    }
+
+    .login_sidebar {
+        width: 254px; // Set the width of the login sidebar.
+        display: inline-block; // Display the login sidebar inline-block.
+        margin-left: 6px; // Add left margin to the login sidebar.
+    }
+}
+
+// ==========================================================================
+// Snap Drawers
+// ==========================================================================
+
+.snap-drawers {
+    position: absolute; // Set absolute positioning.
+    top: 0; // Align to the top.
+    right: 0; // Align to the right.
+    bottom: 0; // Align to the bottom.
+    left: 0; // Align to the left.
+    width: auto; // Set the width to auto.
+    height: auto; // Set the height to auto.
+}
+
+.snap-drawer {
+    position: absolute; // Set absolute positioning.
+    top: 0; // Align to the top.
+    right: auto; // Set right to auto.
+    bottom: 0; // Align to the bottom.
+    left: auto; // Set left to auto.
+    width: 255px; // Set the width to 255px.
+    height: auto; // Set the height to auto.
+    overflow: auto; // Enable overflow.
+    -webkit-overflow-scrolling: touch; // Enable smooth scrolling on touch devices.
+    @include transition(all 0.3s ease); // Apply transition for all properties.
+    background-color: var(--wp-estate-mobile-menu-background-color-option, var(--wp-estate-mobile-menu-background-color)); // Set the background color with a fallback.
+}
+ 
+.snap-drawer-right {
+    right: 0px; // Align to the right.
+    padding-top: 18px; // Add top padding.
+}
+
+// ==========================================================================
+// Login/Register/Forgot Password Titles for Mobile
+// ==========================================================================
+
+#login-div-title-mobile,
+#register-div-title-mobile,
+#forgot-div-title-mobile {
+    font-size: 16px; // Set the font size.
+    color: #fff; // Set the text color to white.
+    padding-left: 13px; // Add left padding.
+}
+
+// ==========================================================================
+// Navigation Mobile Menu
+// ==========================================================================
+
+.mobilex-menu {
+    margin-bottom: 0px; // Remove bottom margin.
+    margin-left: 0px !important; // Remove left margin with important.
+    margin-top: 0px; // Remove top margin.
+    width: 100%; // Set the width to 100%.
+    float: left; // Float the menu to the left.
+    
+    .menu-item-has-children>a:after {
+        content: "\f107"; // Add FontAwesome icon after menu items with children.
+        position: absolute; // Set absolute positioning.
+        right: 15px; // Align to the right.
+        margin-right: 15px; // Add right margin.
+        font-family: "Font Awesome 5 Free"; // Set the font family to FontAwesome.
+        font-weight: 700; // Set the font weight.
+    }
+
+    .sub-menu {
+        display: none; // Hide sub-menus.
+        margin-left: 0px; // Remove left margin.
+        
+        ul {
+            padding-left: 0px; // Remove left padding.
+            border-top: none !important; // Remove top border with important.
+            
+            li {
+                padding-left: 20px; // Add left padding.
+                
+                &:hover>a {
+                    padding-left: 45px !important; // Add left padding on hover with important.
+                }
+
+                &:hover {
+                    border-bottom: 1px solid var(--wp-estate-mobile-menu-border-color-option, var(--wp-estate-mobile-menu-border-color));
+                 // Add bottom border on hover.
+                }
+            }
+        }
+
+        a {
+            padding-left: 45px; // Add left padding.
+            line-height: 20px; // Set the line height.
+        }
+        
+        .sub-menu a {
+            padding-left: 35px; // Add left padding for sub-menu links.
+            line-height: 20px; // Set the line height.
+        }
+    }
+
+    i {
+        width: 10px; // Set the width of the icons.
+        margin-right: 10px; // Add right margin to the icons.
+    }
+
+    li {
+        position: relative; // Set relative positioning.
+        font-weight: 400; // Set the font weight.
+        list-style: none; // Remove list style.
+        font-size: 13px; // Set the font size.
+        margin-bottom: 0px; // Remove bottom margin.
+        border-bottom: 1px solid var(--wp-estate-mobile-menu-border-color-option, var(--wp-estate-mobile-menu-border-color)); // Set the bottom border with a fallback.
+
+        svg {
+            height: 15px; // Set the height of the SVG icons.
+            margin-right: 10px; // Add right margin to the SVG icons.
+            
+            path,
+            circle {
+                stroke: var(--wp-estate-mobile-header-icon-color-option, var(--wp_estate_mobile_header_icon_color)); // Set the stroke color to white.
+            }
+        }
+
+        .menu-item-has-children:hover { 
+            background: transparent; // Set the background to transparent on hover.
+        }
+
+        &:hover {
+            a {
+                color: var(--wp-estate-mobile-menu-hover-font-color-option, var(--wp-estate-mobile-menu-hover-font-color)); // Set the link color on hover with a fallback.
+                background-color: var(--wp-estate-mobile-item-hover-back-color-option, var(--wp-estate-mobile-item-hover-back-color)); // Set the background color on hover with a fallback.
+            }
+        }
+
+        a {
+            color: var(--wp-estate-mobile-menu-font-color-option, var(--wp_estate_mobile_menu_font_color)); // Set the link color with a fallback.
+            width: 100%; // Set the width to 100%.
+            padding: 17px 20px 17px 30px; // Add padding to the links.
+            display: flex; // Display the links as flex.
+            align-items: center; // Align items to the center.
+            @include transition(all 0.3s ease); // Apply transition for all properties.
+        }
+    }
+}
+
+// ==========================================================================
+// User Menu for Mobile Header
+// ==========================================================================
+
+.mobile_user_menu {
+    margin-top: 10px; // Add top margin.
+    
+    li:hover {
+        background-color: var(--wp-estate-mobile-item-hover-back-color-option, var(--wp-estate-mobile-item-hover-back-color)); // Set the background color on hover with a fallback.
+        color: var(--wp-estate-mobile-menu-font-color-option, var(--wp_estate_mobile_menu_font_color)); // Set the text color on hover with a fallback.
+    }
+}
+
+// ==========================================================================
+// Close Button
+// ==========================================================================
+
+.mobilemenu-close-user,
+.mobilemenu-close {
+    position: absolute; // Set absolute positioning.
+    top: 0px; // Align to the top.
+    right: 0px; // Align to the right.
+    cursor: pointer; // Change the cursor to pointer on hover.
+    width: 40px; // Set the width.
+    height: 40px; // Set the height.
+    padding: 7px; // Add padding.
+    color: var(--wp-estate-mobile-header-icon-color-option, var(--wp_estate_mobile_header_icon_color)); // Set the color with a fallback.
+    
+    &:hover {
+        color: var(--wp-estate-mobile-menu-hover-font-color-option, var(--wp-estate-mobile-menu-hover-font-color)); // Change the color on hover with a fallback.
+    }
+
+    i {
+        font-size: 15px; // Set the font size.
+        padding: 3px 0px 0px 8px; // Add padding.
+    }
+}

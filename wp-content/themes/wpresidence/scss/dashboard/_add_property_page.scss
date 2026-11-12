@@ -1,0 +1,40 @@
+
+  
+  /*
+  * New floor plans
+  */
+
+  #add_new_floor_plan {
+    margin-left: 15px;
+  }
+  
+  .wpestate_dashboard_content_wrapper .use_floor_plans_label {
+    float: left;
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .floor_plan_image_thumb {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .wpestate_dash_delete_plan {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+  }
+  
+  .wpestate_dash_delete_plan:hover {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  }
+  
+  .aaiu-upload-imagelist-floor-plan {
+    padding: 5px;
+    word-break: break-word;
+  }
+  

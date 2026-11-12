@@ -1,0 +1,263 @@
+# Copyright (C) 2021 wpestate
+# This file is distributed under the same license as the WpEstate CRM plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WpEstate CRM 3.6.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpestate-crm\n"
+"POT-Creation-Date: 2021-04-05T09:11:13+00:00\n"
+"PO-Revision-Date: 2023-11-27 14:59+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Domain: wpestate-crm\n"
+
+#. Plugin Name of the plugin
+msgid "WpEstate CRM"
+msgstr "WpEstate CRM"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpestate.org"
+msgstr "https://wpestate.org"
+
+#. Description of the plugin
+msgid "WpEstate Customer Relationship Management"
+msgstr "WpEstate Customer Relationship Management"
+
+#. Author of the plugin
+msgid "wpestate"
+msgstr "wpestate"
+
+#: libs/hubspot/hubspot.php:18
+msgid "Message sent from "
+msgstr "Mensaje enviado desde "
+
+#: libs/metaboxes.php:96
+msgid "added manually"
+msgstr "agregado manualmente"
+
+#: libs/metaboxes.php:160
+msgid "Add a new comment"
+msgstr "Añadir un nuevo comentario"
+
+#: libs/metaboxes.php:162
+msgid "Add Comment"
+msgstr "Añadir comentario"
+
+#: libs/metaboxes.php:176 post-types/leads.php:12
+msgid "Lead"
+msgstr "Cliente potencial"
+
+#: libs/metaboxes.php:196
+msgid "from"
+msgstr "desde"
+
+#: post-types/contacts.php:11 wpestate-crm.php:71
+msgid "Contacts"
+msgstr "Contactos"
+
+#: post-types/contacts.php:12
+msgid "Contact"
+msgstr "Contacto"
+
+#: post-types/contacts.php:13 wpestate-crm.php:72
+msgid "Add New Contact"
+msgstr "Añadir nuevo contacto"
+
+#: post-types/contacts.php:14
+msgid "Add Contact"
+msgstr "Agregar contacto"
+
+#: post-types/contacts.php:15 post-types/leads.php:15
+msgid "Edit"
+msgstr "Editar"
+
+#: post-types/contacts.php:16
+msgid "Edit Contact"
+msgstr "Editar Contacto"
+
+#: post-types/contacts.php:17
+msgid "New Contact"
+msgstr "Nuevo Contacto"
+
+#: post-types/contacts.php:18 post-types/leads.php:18
+msgid "View"
+msgstr "Ver"
+
+#: post-types/contacts.php:19
+msgid "View Contact"
+msgstr "Ver contacto"
+
+#: post-types/contacts.php:20
+msgid "Search Contact"
+msgstr "Buscar contacto"
+
+#: post-types/contacts.php:21 post-types/contacts.php:22
+msgid "No Contacts found"
+msgstr "No se encontraron contactos"
+
+#: post-types/contacts.php:23
+msgid "Parent Contacts"
+msgstr "Contactos Principales"
+
+#: post-types/contacts.php:48 wpestate-crm.php:73
+msgid "Contact Status"
+msgstr "Etapa del Contacto"
+
+#: post-types/contacts.php:49
+msgid "Add New Contact Status"
+msgstr "Añadir Nuevo Estado de Contacto"
+
+#: post-types/contacts.php:50
+msgid "New  Status"
+msgstr "Nuevo Estado"
+
+#: post-types/contacts.php:69
+msgid "Contacts Settings"
+msgstr "Ajustes de Contactos"
+
+#: post-types/contacts.php:152
+msgid "Lead from Contact"
+msgstr "Liderar desde el Contacto"
+
+#: post-types/contacts.php:166 post-types/contacts.php:172 wpestate-crm.php:90
+msgid "Full Name"
+msgstr "Nombre completo"
+
+#: post-types/contacts.php:174 post-types/contacts.php:208
+#: post-types/leads.php:351 wpestate-crm.php:96 wpestate-crm.php:163
+#: wpestate-crm.php:198
+msgid "Status"
+msgstr "Estado"
+
+#: post-types/contacts.php:175 post-types/contacts.php:206 wpestate-crm.php:103
+msgid "Email"
+msgstr "Email"
+
+#: post-types/contacts.php:176 post-types/contacts.php:207 wpestate-crm.php:134
+msgid "Phone"
+msgstr "Teléfono"
+
+#: post-types/contacts.php:177 wpestate-crm.php:108
+msgid "Address"
+msgstr "Dirección"
+
+#: post-types/contacts.php:178 wpestate-crm.php:114
+msgid "City"
+msgstr "Ciudad"
+
+#: post-types/contacts.php:179 wpestate-crm.php:119
+msgid "County"
+msgstr "País"
+
+#: post-types/contacts.php:180 wpestate-crm.php:124
+msgid "State"
+msgstr "Estado"
+
+#: post-types/contacts.php:183
+msgid "full details"
+msgstr "mostrar Detalles"
+
+#: post-types/contacts.php:205
+msgid "Photo"
+msgstr "Foto"
+
+#: post-types/leads.php:11 wpestate-crm.php:70
+msgid "Leads"
+msgstr "Clientes Potenciales"
+
+#: post-types/leads.php:13 wpestate-crm.php:75
+msgid "Add New Lead"
+msgstr "Añadir nuevo cliente potencial"
+
+#: post-types/leads.php:14
+msgid "Add Lead"
+msgstr "Añadir Cliente Potencial"
+
+#: post-types/leads.php:16
+msgid "Edit Lead"
+msgstr "Editar cliente potencial"
+
+#: post-types/leads.php:17
+msgid "New Lead"
+msgstr "Nuevo cliente potencial"
+
+#: post-types/leads.php:19
+msgid "View Lead"
+msgstr "Ver Cliente Potencial"
+
+#: post-types/leads.php:20
+msgid "Search Lead"
+msgstr "Buscar Ciente Potencial"
+
+#: post-types/leads.php:21 post-types/leads.php:22
+msgid "No Leads found"
+msgstr "No se encontraron clientes potenciales"
+
+#: post-types/leads.php:23
+msgid "Parent Leads"
+msgstr "Principales Clientes Potenciales"
+
+#: post-types/leads.php:48 wpestate-crm.php:76
+msgid "Lead Status"
+msgstr "Estado del Cliente Potencial"
+
+#: post-types/leads.php:49
+msgid "Add New Lead Status"
+msgstr "Añadir nuevo estado del cliente potencial"
+
+#: post-types/leads.php:50
+msgid "New Status"
+msgstr "Nuevo Estado"
+
+#: post-types/leads.php:74
+msgid "Lead Settings"
+msgstr "Ajustes de clientes potenciales"
+
+#: post-types/leads.php:349
+msgid "From Name"
+msgstr "De Nombre"
+
+#: post-types/leads.php:350
+msgid "Image"
+msgstr "Imagen"
+
+#: post-types/leads.php:352 wpestate-crm.php:156
+msgid "Agent in Charge"
+msgstr "Agente a Cargo"
+
+#: post-types/leads.php:353
+msgid "Details"
+msgstr "Detalles"
+
+#: wpestate-crm-dashboard_contacts.php:117 wpestate-crm-dashboard_leads.php:88
+msgid "You are not allowed to edit this!"
+msgstr "No está permitido editar esto!"
+
+#: wpestate-crm.php:73
+msgid "Edit Contact Statuses"
+msgstr "Editar Estados del Contacto"
+
+#: wpestate-crm.php:76
+msgid "Edit Lead Statuses"
+msgstr "Editar Estados del Cliente Potencial"
+
+#: wpestate-crm.php:129
+msgid "Mobile"
+msgstr "Móvil"
+
+#: wpestate-crm.php:140 wpestate-crm.php:169
+msgid "Notes"
+msgstr "Notas"
+
+#: wpestate-crm.php:176
+msgid "Sent From"
+msgstr "Enviado Desde"
+
+#: wpestate-crm.php:183
+msgid "Message"
+msgstr "Mensaje:"

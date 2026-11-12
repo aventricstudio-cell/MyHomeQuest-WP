@@ -1,0 +1,22 @@
+//scss\widgets\_contact_sidebar.scss
+
+/*=Contact Sidebar
+------------------------------------------------*/
+
+.contact_sidebar_wrap{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: stretch;
+    row-gap: 10px;
+
+    p {
+        margin-bottom: 0px;
+        line-height: 1.6em;
+    }
+
+    i {
+        margin-right: 10px;
+        width: 13px;
+    }
+}    

@@ -1,0 +1,17 @@
+.input-group-addon.searchf{
+    cursor: pointer;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: 0px;
+    right: -31px;
+    line-height: 38px;
+}

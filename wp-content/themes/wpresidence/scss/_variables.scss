@@ -1,0 +1,527 @@
+// _variables.scss
+
+// This file contains global SCSS variables used throughout the project.
+// Modifying these variables allows for easy theming and consistent styling across the site.
+
+// ==========================================================================
+// Colors
+// ==========================================================================
+// Define the main color palette for the project. These colors should be used
+// consistently across all components for a cohesive look and feel.
+
+$scrollbar-width: 17px;
+
+$primary-color: #0073e1;       // Main brand color, used for primary actions and key elements
+$secondary-color: #5c727d;     // Secondary color, often used for less prominent elements
+$accent-color: #69c17d;        // Accent color for highlighting or contrasting elements
+$text-color: #222222;          // Main text color for body copy
+$light-text-color: #ffffff;    // Light text color, typically used on dark backgrounds
+$background-color: #f7f7f7;    // Default background color for the site
+$border-color: #e7e7e7;        // Color used for borders and dividers
+
+// ==========================================================================
+// Typography
+// ==========================================================================
+// Define the base font styles and sizes. These variables ensure consistent
+// typography throughout the site.
+
+
+$font-size-base: 14px;         // Base font size for body text
+$font-size-small: 13px;        // Smaller font size for less important text
+$font-size-large: 16px;        // Larger font size for emphasis
+$font-weight-normal: 400;      // Normal font weight
+$font-weight-bold: 500;        // Bold font weight
+$line-height-base: 1.65em;     // Base line height for better readability
+
+// Heading Sizes
+// These variables define the font sizes for different heading levels
+$h1-font-size: 34px;
+$h2-font-size: 28px;
+$h3-font-size: 24px;
+$h4-font-size: 18px;
+$h5-font-size: 14px;
+$h6-font-size: 12px;
+
+// ==========================================================================
+// Spacing and Layout
+// ==========================================================================
+// Define common spacing and layout variables to maintain consistent 
+// spacing and sizing across the site.
+
+$spacing-unit: 15px;           // Base spacing unit for margins and paddings
+$container-width: 1200px;      // Maximum width of the main content container
+
+// Key layout dimensions
+
+$footer-height: 60px;          // Height of the footer
+$sidebar-width: 300px;         // Width of the sidebar (if applicable)
+
+// ==========================================================================
+// Component-specific variables
+// ==========================================================================
+// These variables are used for specific components and can be adjusted
+// to modify the appearance of those components site-wide.
+ 
+ 
+//lists
+$list-margin-bottom:10px;
+$list-padding-left:0px;
+ 
+// Borders
+       
+
+// Transitions
+$transition-speed: 0.3s;       // Default transition speed for animations
+
+// Z-index levels
+$z-index-header: 100;          // Z-index for the header
+$z-index-modal: 1000;          // Z-index for modal dialogs
+
+
+
+// Buttons
+$button-padding: 10px 15px;    // Default padding for buttons
+$button-border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));  // Border radius for buttons
+$btn-line-height-lg:auto;
+$btn-line-height-sm:auto;
+$btn-block-spacing-y:auto;
+
+
+// Forms
+$input-height: 40px;           // Height of form inputs
+$input-padding: 10px 15px;     // Padding inside form inputs
+
+// Cards
+$card-padding: 20px;           // Padding inside card components
+$card-border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));  // Border radius for cards
+
+// Property Listing
+$property-image-height: 200px; // Height of property images in listings
+$property-card-width: 525px;   // Width of property cards
+
+// Slider
+$slider-height: 580px;         // Height of the main slider
+
+// Modal
+$modal-width: 500px;           // Width of modal dialogs
+
+// Pagination
+$pagination-item-size: 30px;   // Size of pagination items
+
+// Icons
+$icon-size-small: 16px;        // Size of small icons
+$icon-size-medium: 24px;       // Size of medium icons
+$icon-size-large: 32px;        // Size of large icons
+
+// Search
+$search-input-height: 50px;    // Height of search input fields
+
+// Dashboard
+$dashboard-sidebar-width: 250px;  // Width of the dashboard sidebar
+
+// Google Maps
+$map-height: 400px;            // Height of Google Maps components
+
+// ==========================================================================
+// Bootstrap Overrides
+// ==========================================================================
+// Variables to override default Bootstrap settings
+
+$grid-columns: 12;             // Number of columns in the grid system
+$grid-gutter-width: 30px;      // Width of gutters in the grid system
+
+
+// ==========================================================================
+// Custom Variables
+// ==========================================================================
+
+:root {
+
+    // main color
+    --wp-estate-main-color:#0073e1;
+    
+    //second color
+    --wp-estate-second-color:#69c17d;
+
+    // background color
+    --wp-estate-background-color:#f8f8f8;
+
+    // page content background color
+    --wp_estate_content_back_color:#f8f8f8;
+
+    //text sections background color
+    --wp_estate_content_area_back_color:#ffffff;
+
+    //breadcrumbs, forms, blog meta, second line font color
+    --wp_estate_breadcrumbs_font_color:#8593a9;
+
+    //Text Font Color
+    --wp-estate-font-color:#5c727d;
+
+    //Link Color
+    --wp_estate_link_color:#222222;
+
+    //Headings Color
+    --wp_estate_headings_color:#222222;
+
+    //Map Controls Background Color
+    --wp_estate_map_controls_back:#ffffff;
+
+    //Map Controls Icon Color
+    --wp_estate_map_controls_font_color:#222222;
+
+    //Property, Agent and Blog Unit Card Background Color
+    --wp_estate_property_unit_color:#ffffff;
+
+    //Unit Card border color
+    --wp_estate_unit_border_color-option:#222222;
+    
+    // Container Width
+    --wp-estate-main-grid-content-width:1200px;
+
+    // content variable
+    --wp-estate-main-content-width:66.66666667%; 
+
+
+
+
+
+    //Header Border Bottom  Height
+    --wp_estate_border_bottom_header:0px;
+
+    //Sticky Header Border Bottom  Height
+    --wp_estate_sticky_border_bottom_header:0px;
+
+    // Header Bottom Border  Color
+    --wp_estate_border_bottom_header_color:#ccc;
+
+    //Header Sticky  Border Bottom Color
+    --wp_estate_border_bottom_header_sticky_color:#ccc;
+
+    //top bar background color
+    --wp-estate-top-bar-back:#f3f3f3;
+
+    //top bar font color
+    --wp-estate-top-bar-font:#b6b6b6;
+
+
+    //Top Menu & Sticky Menu Background Color
+    --wp-estate-header-color:#ffffff;
+
+  
+    //Top Menu Font Color
+    --wp-estate-menu-font-color:#222222;
+
+    
+    //Sticky Menu Font Color
+    --wp-estate-sticky-menu-font-color:#222222;
+
+
+    //Top Menu Hover Font Color
+    --wp-estate-top-menu-hover-font-color:#0073e1;
+
+    //Active Menu Font Color
+    --wp-estate-active-menu-font-color:#0073e1;
+
+    //Top Menu Hover Background Color
+    --wp-estate-top-menu-hover-back-font-color:#0073e1;
+
+    //Transparent Header - Top Menu Font Color
+    --wp-estate-transparent-menu-font-color:#ffffff;
+
+    //Transparent Header - Top Menu Hover Font Color
+    --wp-estate-transparent-menu-hover-font-color:#0073e1;
+
+    //Dropdown Menu Background Color
+    --wp-estate-menu-item-back-color:#ffffff;
+
+    //wp_estate_menu_items_color
+    --wp-estate-menu-items-color:#222222;
+
+ 
+    //Dropdown Menu Item Hover Font Color
+    --wp-estate-menu-hover-font-color:#ffffff;
+    --wp-estate-menu-hover-font-color-megamenu:#222;
+
+    //Dropdown Menu Item Hover Background Color
+    --wp-estate-menu-hover-back-color:#0073e1;;
+
+    //Dropdown Menu Item Border Color
+    --wp-estate-menu-border-color:transparent;
+
+    //Maximum height for the logo in px
+    --wp-estate-logo-max-height:90px;
+
+    //Maximum width for the logo in px
+    --wp-estate-logo-max-width:160px;
+
+    //Margin top for logo in px
+    --wp-estate-logo-margin:'0px';
+
+    // Mobile Header Background Color
+    --wp-estate-mobile-header-background-color:#222222;
+
+    // Mobile Header Icon Color
+    --wp_estate_mobile_header_icon_color:#fff;
+
+    // Mobile Menu Font Color
+    --wp_estate_mobile_menu_font_color:#fff;
+
+    // Mobile Menu Hover Font Color
+    --wp-estate-mobile-menu-hover-font-color:#ffffff;
+
+    //'Mobile menu item hover background color
+    --wp-estate-mobile-item-hover-back-color:#0073e1;
+
+    // Mobile Menu Background Color
+    --wp-estate-mobile-menu-background-color:#001a33;
+
+    // Mobile Menu Border Color
+    --wp-estate-mobile-menu-border-color:#f7f8f91c;
+ 
+    // border for dropdown menu
+    --wpestate-border-size-for-menu-border-color:0px;
+
+    //border size and color for unit card
+    --wp_estate_unit_border_size:1px;
+    --wp-estate-unit-border-color:#f1f8ff;
+
+    //border size and color for sidebar widgets
+    --wp_estate_widget_sidebar_border_size:1px;
+    --wp_estate_widget_sidebar_border_color:#ffffff;
+
+    //background color for sidebar widgets
+    --wp_estate_sidebar_widget_color:#ffffff;
+
+    //User Dashboard Menu Color
+    --wp_estate_user_dashboard_menu_color:#222;
+
+    //User Dashboard Menu Hover Color
+    --wp_estate_user_dashboard_menu_hover_color:#6C5DD3;
+
+    //User Dashboard Menu Item Background Colo
+    --wp_estate_user_dashboard_menu_color_hover:#6C5DD3;
+
+    //User Dashboard Menu Background
+    --wp_estate_user_dashboard_menu_back:#ffffff;
+
+    //User Dashboard - Package Row Background
+    --wp_estate_user_dashboard_package_back:#fff;
+
+    //User Dashboard Package Color
+    --wp_estate_user_dashboard_package_color:#5F75EE;
+
+    //Dashboard Buy Package Select Background
+    --wp_estate_user_dashboard_buy_package:#6c5dd3;
+
+    //Dashboard Package - Select Color
+    --wp_estate_user_dashboard_package_select:#fff;
+
+    //content background color
+    --wp_estate_user_dashboard_content_back:#fff;
+
+    //button for dasboard back color
+    --wp_estate_user_dashboard_content_button_back:#6c5dd3;
+
+    //button for dasboard back color
+    --wp_estate_hover_button_color:#222;
+    
+    // dashboard content color
+    --wp_estate_user_dashboard_content_color:#222;
+
+    // extra header 4 - which was header 5
+
+    --wp_estate_header4_back_color:#004274;
+    --wp_estate_header4_font_color:#ffffff;
+
+    //footer background color
+    --wp_estate_footer_back_color:#001a33;
+
+     //footer copyright background color
+     --wp_estate_footer_copy_back_color:#001a33;
+
+    //footer text color
+    --wp_estate_footer_font_color:#bbbbbb;
+    
+    //footer copyright text color
+    --wp_estate_footer_copy_color:#bbbbbb;
+
+    //footer widget heading color
+    --wp_estate_footer_heading_color:#ffffff;
+
+    //footer social widget back color 
+    --wp_estate_footer_social_widget_back_color:#002547;
+    
+
+    //Advanced Search Background Color
+    --wp_estate_adv_back_color:#ffffff;
+
+    //Advanced Search Background color Opacity 
+    --wp_estate_adv_back_color_opacity:1;
+
+    //Advanced Search Font Color
+    --wp_estate_adv_font_color:#5c727d;
+
+    //Advanced Search Button Background Color 
+    --wp_estate_adv_search_back_color:#0073e1;
+
+    //Tab Font Color in Advanced Search
+    --wp_estate_adv_search_tab_font_color:#0073e1;
+
+    //Tab Background Color in Advanced Search 
+    --wp_estate_adv_search_tab_back_font_color:#0073e1;
+
+    //Advanced Search Hover Font Color
+    --wp_estate_adv_search_font_color:#5c727d;
+
+    //Advanced Search Hover Background Color
+    --wp_estate_adv_search_background_color:#efefef;
+
+
+    // header height
+    //var(--wp-estate-header-height-option,var(--wp_estate_header_height));
+    //var(--wp-estate-sticky-header-height-option',var(--wp_estate_sticky_header_height));
+   
+ 
+    // header height option
+    --wp-estate-header-height:90px;
+
+    // sticky header height option
+    --wp-estate-sticky-header-height:90px;
+
+  
+
+
+
+
+
+       /* H1 fallbacks */
+   --wp-estate-h1-font-family: 'Roboto', sans-serif;
+   --wp-estate-h1-font-size: 34px;
+   --wp-estate-h1-line-height: 1.3em;
+   --wp-estate-h1-font-weight: 500;
+
+   /* H2 fallbacks */
+   --wp-estate-h2-font-family: 'Roboto', sans-serif;
+   --wp-estate-h2-font-size: 28px;
+   --wp-estate-h2-line-height: 1.3em;
+   --wp-estate-h2-font-weight: 500;
+
+   /* H3 fallbacks */
+   --wp-estate-h3-font-family: 'Roboto', sans-serif;
+   --wp-estate-h3-font-size: 24px;
+   --wp-estate-h3-line-height: 1.3em;
+   --wp-estate-h3-font-weight: 500;
+
+   /* H4 fallbacks */
+   --wp-estate-h4-font-family: 'Roboto', sans-serif;
+   --wp-estate-h4-font-size: 18px;
+   --wp-estate-h4-line-height: 1.3em;
+   --wp-estate-h4-font-weight: 500;
+
+   /* H5 fallbacks */
+   --wp-estate-h5-font-family: 'Roboto', sans-serif;
+   --wp-estate-h5-font-size: 14px;
+   --wp-estate-h5-line-height: 1em;
+   --wp-estate-h5-font-weight: 500;
+
+   /* H6 fallbacks */
+   --wp-estate-h6-font-family: 'Roboto', sans-serif;
+   --wp-estate-h6-font-size: 12px;
+   --wp-estate-h6-line-height: 1em;
+   --wp-estate-h6-font-weight: 500;
+
+   /* p - paragraph fallbacks */
+   --wp-estate-paragraph-font-family:'Roboto', sans-serif;
+   --wp-estate-paragraph-font-size:14px;
+   --wp-estate-paragraph-line-height:1.65em;
+   --wp-estate-paragraph-font-weight:400;
+
+
+    // top menu font size
+    --wp-estate-top-menu-font-size:15px;
+    //menu item font size
+    --wp-estate-menu-item-font-size:14px;
+    --wp-estate-menu-font-family:'Roboto', sans-serif;
+    --wp-estate-menu-font-weight:500;
+
+
+    //font-family: var(--wp-estate-menu-font-family-option, var(--wp-estate-menu-font-family));
+    //font-weight: var(--wp-estate-menu-font-weight-option, var(--wp-estate-menu-font-weight));
+    --wp-estate-menu-line-heigh:1.3em;
+
+    //    var(--wp-estate-main-content-width-option,var(--wp_estate_main_content_width));
+    --wp_estate_main_content_width:66.66666667%;
+
+    //  internal padding for content area
+    //var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top))
+    //var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left))
+    //var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom))
+    //var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right))
+    --wp_estate_contentarea_internal_padding_top:30px;
+    --wp_estate_contentarea_internal_padding_left:30px;
+    --wp_estate_contentarea_internal_padding_bottom:30px;
+    --wp_estate_contentarea_internal_padding_right:30px;
+
+
+    // internal padding for property unit
+    //var(--wp-estate-propertyunit-internal-padding-top-option,var(--wp_estate_propertyunit_internal_padding_top))
+    //var(--wp-estate-propertyunit-internal-padding-left-option,var(--wp_estate_propertyunit_internal_padding_left))
+    //var(--wp-estate-propertyunit-internal-padding-bottom-option,var(--wp_estate_propertyunit_internal_padding_bottom))
+    //var(--wp-estate-propertyunit-internal-padding-right-option,var(--wp_estate_propertyunit_internal_padding_right))
+    --wp_estate_propertyunit_internal_padding_top:0px;
+    --wp_estate_propertyunit_internal_padding_left:0px;
+    --wp_estate_propertyunit_internal_padding_bottom:0px;
+    --wp_estate_propertyunit_internal_padding_right:0px;
+
+
+    // internal padding for sidebar widgets
+    //var(--wp-estate-sidebarwidget-internal-padding-top-option,var(--wp_estate_sidebarwidget_internal_padding_top))
+    //var(--wp-estate-sidebarwidget-internal-padding-left-option,var(--wp_estate_sidebarwidget_internal_padding_left))
+    //var(--wp-estate-sidebarwidget-internal-padding-bottom-option,var(--wp_estate_sidebarwidget_internal_padding_bottom))
+    //var(--wp-estate-sidebarwidget-internal-padding-right-option,var(--wp_estate_sidebarwidget_internal_padding_right))
+    --wp_estate_sidebarwidget_internal_padding_top:30px;
+    --wp_estate_sidebarwidget_internal_padding_left:30px;
+    --wp_estate_sidebarwidget_internal_padding_bottom:30px;
+    --wp_estate_sidebarwidget_internal_padding_right:30px;
+
+    //border radius
+    //var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner))
+    //var(--wp-estate-border-radius-corner--dashboard-option,var(--wp_estate_border_radius_dashboard_corner))
+    --wp_estate_border_radius_corner:4px;
+    --wp_estate_border_radius_dashboard_corner: 4px;   
+
+
+    //var(--wp-estate-cssbox-shadow-option,var(--wp_estate_cssbox_shadow))
+    //--wp_estate_cssbox_shadow:0 10px 31px 0 rgba(7, 152, 255, 0.09);
+    --wp_estate_cssbox_shadow:none;
+    --wp-estate-cssbox-shadow-elementor-option: 0 10px 31px 0 rgba(7, 152, 255, 0.09);
+
+
+    // search form postion
+    //var(--wp-estate-float-form-top-option,var(--wp_estate_float_form_top))
+    //var(--wp-estate-float-form-top-tax-option,var(--wp_estate_float_form_top_tax))
+
+    --wp_estate_float_form_top:0px;
+    --wp_estate_float_form_top_tax:0px;
+
+
+
+
+    ////////////////////
+ 
+    --wp_estate_card_details_font_awsome_size:13px;
+    --wp_estate_card_details_image_icon_size:15px;
+
+
+    --wp-estate-card-unit-font-family: 'Roboto', sans-serif;
+    --wp-estate-card-unit-font-size: 13px;
+    --wp-estate-card-unit-line-height: 14px;
+    --wp-estate-card-unit-font-weight: 400;
+    --wp-estate-card-unit-font-color:#5c727d;
+    --wp_estate_card_details_image_color:#5c727d;
+
+    --wp_estate_card_details_image_position:row;
+    --wp_estate_card_details_gap:5px;
+    --wp_estate_card_details_alignment: space-between;
+}  

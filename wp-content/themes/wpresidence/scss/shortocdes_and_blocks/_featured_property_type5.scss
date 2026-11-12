@@ -1,0 +1,144 @@
+/** MILLDONE
+ * Featured Property Type 5 Styles for WpResidence Theme
+ * src: scss/shortocdes_and_blocks/_featured_property_type5.scss
+ * This SCSS file contains styles for the featured property type 5 component
+ * in the WpResidence WordPress theme.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - None (all styles are self-contained)
+ *
+ * Usage:
+ * This file should be compiled to CSS and enqueued in the theme.
+ * It styles the featured property type 5 component, including its layout,
+ * image gallery, property details, and interactive elements.
+ */
+
+ .featured_article_type2.featured_prop_type5 {
+    overflow: hidden;
+  
+    // Gallery wrapper styles  
+    .featured_gradient {
+      background-color: #1D293E;
+      opacity: 0;
+    }
+  
+    // Featured article title wrapper styles
+    .featured_article_type5_title_wrapper {
+      background-color: #fff;
+      position: absolute;
+      width: 350px;
+      left: 20%;
+      right: 0;
+      bottom: 0px;
+      z-index: 99;
+      height: 350px;
+      padding: 30px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      box-shadow: 1px 3px 14px 0 rgba(7, 152, 255, 0.09);
+  
+      // Featured article label styles
+      .featured_article_label {
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  
+        .price_label {
+          font-size: 17px;
+          margin: 0px;
+        }
+      }
+  
+      // Property title styles
+      h2 {
+        font-size: 30px;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        width: auto;
+        float: left;
+        line-height: 1.1em;
+        margin-bottom: 0px;
+        @include smooth-transition-shorter;
+  
+        &:hover {
+          color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+      }
+  
+      // Property details styles
+      .property_unit_type5_content_details_second_row {
+        display: inline-block;
+        background: transparent;
+        padding: 0px;
+        border-radius: 20px;
+        font-weight: 500;
+        margin: 15px 10px 15px -5px;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        font-size: 16px;
+  
+        .inforoom_unit_type5 {
+          display: inline-block;
+          margin: 0px 5px;
+        }
+      }
+  
+      // Property excerpt styles
+      .featured_type5_excerpt {
+        line-height: 1.65em;
+      }
+  
+      // Read more link styles
+      .featured_read_more_5 {
+        width: 100%;
+        float: left;
+        margin: 15px 0px 0px 0px;
+        font-weight: 500;
+  
+        a {
+          color: var(--wp_estate_link_color-option, var(--wp_estate_link_color));
+          text-transform: lowercase;
+          font-size: 14px;
+          font-weight: 500;
+          position: relative;
+          &:hover{
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+          }
+        }
+  
+        i {
+          font-size: 11px;
+        }
+      }
+    }
+  
+    a:hover {
+      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+  }
+  
+  // Styles not directly related to the provided markup (kept at the end)
+  .featured_property_type5_agent_name {
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    font-size: 16px;
+    font-weight: 500;
+    float: left;
+    margin: 28px 0px 0px 10px;
+  }
+  
+  .featured_prop_type5 .img_listings_overlay_last {
+    opacity: 0;
+  }
+  
+  .elementor-widget-container {
+    .featured_article_type2 .img_listings_overlay,
+    .featured_prop_type5 .img_listings_overlay {
+      @include smooth-transition-shorter;
+    }
+  }
+
+
+

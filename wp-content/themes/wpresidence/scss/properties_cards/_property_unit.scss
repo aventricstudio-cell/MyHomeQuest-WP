@@ -1,0 +1,447 @@
+// MILLDONE
+// _property_unit.scss
+// src: scss\properties_cards\_property_unit.scss
+// This file contains styles for individual property listings in the WpResidence theme.
+// It defines the layout and appearance of property cards displayed in various views.
+
+// Main wrapper for individual property listings
+.listing_wrapper {
+    margin-bottom: 25px;
+    position: relative;
+    &.col-md-12{
+        .carousel-item{
+            height: 100%;
+        }
+
+    }
+}
+
+// Main container for property listing information
+.property_listing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include card-base; 
+    transition: none;
+    
+    .featured_gradient {
+        // Gradient overlay for featured properties
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 56%);
+        pointer-events: none;
+    }
+    .carousel {
+        // Styles for image carousel within the listing
+        float: left;
+        height: 100%;
+    }
+    // Container for the property listing image
+    .listing-unit-img-wrapper {
+        position: relative;
+        float: left;
+        background: #fff;
+        overflow: hidden;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner)) var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner)) 0 0;
+        flex-grow: 1;
+        min-height: 150px;
+
+        // Media icons (e.g., photo, video)
+        .property_media {
+            position: absolute;
+            bottom: 8px;
+            right: 20px;
+            color: #fff;
+            opacity: 0.9;
+            z-index: 9;
+            display: flex;
+            gap: 7px;
+            align-items: center;
+        }
+
+        // Overlay for new property details
+        .prop_new_details {
+            position: absolute;
+            inset: 0;
+            z-index: 9;
+            pointer-events: none;
+
+            // Background for new property details
+            &_back {
+                width: 100%;
+                height: 100%;
+            }
+            
+            // Property location information
+            .property_location_image {
+                position: absolute;
+                bottom: 8px;
+                left: 20px;
+                right: 20px;
+                color: #fff;
+                opacity: 0.9;
+                z-index: 9;
+                pointer-events: auto;
+
+                a {
+                    color: inherit;
+                }
+
+                // Property marker icon
+                i {
+                    color: #fff;
+                    margin-right: 5px;
+                    line-height: 14px;
+                    font-size: 10px;
+                }
+            }
+        }
+
+      
+    }
+
+    // Action Tag wrapper for property status and actions
+    .action_tag_wrapper {
+        font-size: 11px;
+        float: left;
+        background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 85%, transparent);
+        color: #fff;
+        position: relative;
+        padding: 0 10px;
+        text-align: center;
+        line-height: 20px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+
+    // Wrapper for property information
+    .property-unit-information-wrapper {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: stretch;
+        flex-grow: 100;
+        padding-top: 20px;
+
+        h4 {
+            // Styles for property title
+            padding: 0 20px;
+            margin-bottom: 10px;
+            float: left;
+            width: 100%;
+            font-size: var(--wp-estate-h4-font-size-option, var(--wp-estate-h4-font-size));
+            line-height: var(--wp-estate-h4-line-height-option, var(--wp-estate-h4-line-height));
+        }
+
+        // Price wrapper styles
+        .listing_unit_price_wrapper {
+            position: relative;
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            font-size: 17px;
+            line-height: 17px;
+            font-weight: 500;
+            padding: 0 20px;
+            margin-bottom: 10px;
+        }
+
+        // Property details styles
+        .listing_details {
+            margin: 0;
+            line-height: 1.65em;
+            float: left;
+            padding: 0 20px;
+            margin-bottom: 10px;
+            width: 100%;
+            word-break: break-word;
+        }
+
+        // Property listing details (bedrooms, bathrooms, etc.)
+        .property_listing_details {
+            position: relative;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            padding: 0 20px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: 20px;
+            row-gap: 5px;
+
+            // Common styles for info elements
+            .inforoom,
+            .infobath,
+            .infosize {
+                line-height: 30px;
+                color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+
+                svg {
+                    float: left;
+                    margin-right: 5px;
+                    fill: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+                }
+            }
+
+            .infosize svg {
+                width: 15px;
+                margin-top: 6px;
+            }
+
+            .infobath svg {
+                margin-top: 6px;
+            }
+
+            .inforoom svg {
+                width: 19px;
+                margin-top: 6px;
+            }
+
+            .infodate {
+                line-height: 30px;
+                margin-right: 10px;
+                padding-left: 12px;
+                color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+                font-size: 13px;
+
+                .fa {
+                    margin-right: 5px;
+                    color: #C2CBD9;
+                }
+            }
+        }
+    }
+}
+
+// Property agent wrapper styles
+.property_agent_wrapper {
+    float: left;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a {
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+
+        &:hover{
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+
+    .property_agent {
+        &_name {
+            float: left;
+            display: inline;
+        }
+
+        &_image {
+            width: 30px;
+            height: 30px;
+            float: left;
+            @include background-cover; 
+       
+            border-radius: 50%;
+
+            &_sign {
+                display: none;
+            }
+        }
+    }
+
+    .has_4per_row {
+        .property_agent_image {
+            display: none;
+
+            &_sign {
+                display: block;
+                float: left;
+                margin-right: 5px;
+
+                .fa {
+                    color: #c2cbd9;
+                }
+            }
+        }
+    }
+}
+
+.property_location {
+    border-top: 1px solid #eef3f6;
+    font-size: 13px;
+    margin: 0px 20px;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    line-height: 1.4em;
+    float: left;
+    max-width: 100%;
+    //height: 57px;
+    padding: 13px 0px;
+    align-self: stretch;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+
+// Styles for property listings in grid view
+.shortcode_wrapper_grid_item {
+    .listing_wrapper {
+        margin-bottom: 0;
+        height: 100%;
+    }
+}
+
+
+// Styles for property listings with sliders
+.has_prop_slider .property_listing {
+    cursor: default;
+}
+
+// Styles for removing a property from favorites
+.remove_favorite_fron_end {
+    position: absolute;
+    top: 17px;
+    right: 30px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    background-color: rgba(255, 255, 255);
+    font-weight: 500;
+    font-size: 12px;
+    color: #222;
+    z-index: 99;
+    padding: 1px 15px;
+    cursor: pointer;
+    @include smooth-transition-shorter;
+
+    &:hover {
+        background-color: rgba(51, 51, 51, 0.93);
+        color: #fff;
+    }
+}
+
+// Styles for unit details button
+.unit_details_x {
+    font-size: 12px;
+    background-color: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+    padding: 4px 7px;
+    margin-top: 4px;
+    color: #fff;
+    float: right;
+    line-height: 12px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    background-image: linear-gradient(to right, transparent 50%, var(--wp-estate-second-color-option, var(--wp-estate-second-color)) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border: 1px solid var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+    font-weight: 500;
+    display: none;
+    @include smooth-transition-shorter;
+
+    &:hover {
+        background-color: transparent;
+        background-position: left bottom;
+        color: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+        border-color: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+    }
+}
+
+
+
+// Tag wrapper for property status and actions - applys to multiple units
+.tag-wrapper {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;    
+}
+
+.action_tag_wrapper {
+    font-size: 11px;
+    float: left;
+    background-color: rgba(0, 115, 225, 0.85);
+    color: #fff;
+    position: relative;
+    padding: 0px 10px;
+    text-align: center;
+    line-height: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+
+.featured_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.67;
+    z-index: 1;
+    background-image: linear-gradient(to right top, #000, rgba(0, 0, 0, 0) 56%);
+}
+
+.status-wrapper {
+   
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0px;
+    display: flex;
+    gap: 5px;
+     
+    // Ribbon wrapper styles 
+    .ribbon-wrapper-default {
+        position: absolute;
+        top: 12px; 
+        right: 12px;
+        font-size: 10px;
+        background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 85%, transparent);
+        color: #ffffff;
+        line-height: 19px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    // Ribbon inner styles
+    .ribbon-inside {
+        text-transform: capitalize; 
+        font-size: 11px;
+        color: #fff;
+        text-align: center;
+        line-height: 20px;
+        display: inline-block;
+        position: relative;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+        padding: 0px 10px;
+        background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 85%, transparent);
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        .new-offer {
+            background-color: #dd3333;
+        }
+        
+    }
+}
+
+.inforoom path, .infobath path, .infosize path {
+    fill: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+}
+
+
+.wpresidence_card_composer_wrapper_align_center{
+    text-align: center;
+
+    .property_listing .property-unit-information-wrapper .listing_details,
+    .property_card_categories_wrapper{
+        float: none;
+    }
+}
+
+.wpresidence_card_composer_wrapper_align_right{
+    text-align: right;
+    
+    .property_listing .property-unit-information-wrapper .listing_details,
+    .property_card_categories_wrapper{
+        float: right;
+    }
+}

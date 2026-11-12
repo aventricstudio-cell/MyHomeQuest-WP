@@ -1,0 +1,122 @@
+
+/*=marker*/
+
+.wpestate_marker {
+    padding: 3px 10px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #222;
+    position: absolute;
+    font-size: 13px;
+    line-height: 1.2em;
+    box-shadow: 3px 9px 15px -1px rgba(0, 0, 0, 0.1);
+    min-width: 50px;
+    width: auto;
+    text-align: center;
+    font-weight: 500;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+    font-family: Roboto;
+}
+
+.wpestate_marker:before {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -7px;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: 6px solid #ffffff;
+    border-left: 7px solid #cccccc00;
+    border-right: 7px solid #cccccc00;
+}
+
+
+.openstreet_price_marker_on_click_parent .wpestate_marker,
+.wpestate_marker.openstreet_price_marker_on_click {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+    color: #fff;
+}
+
+.openstreet_price_marker_on_click_parent .wpestate_marker:before,
+.wpestate_marker.openstreet_price_marker_on_click:before {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -7px;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: 6px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+}
+
+.wpestate_marker span {
+    font-size: 13px;
+    color: #0d0d0d;
+}
+
+.wpestate_marker.sales span {
+    color: #fff;
+}
+
+.hover_z_pin.wpestate_marker span {
+    color: #fff;
+}
+
+.hover_z_pin {
+    z-index: 9999;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+    color: #fff;
+}
+
+
+.openstreet_price_marker_on_click_parent .wpestate_marker,
+.wpestate_marker.openstreet_price_marker_on_click {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+    color: #fff;
+}
+
+.openstreet_price_marker_on_click_parent .wpestate_marker:before,
+.wpestate_marker.openstreet_price_marker_on_click:before {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -7px;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: 6px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+    border-left: 7px solid #cccccc00;
+    border-right: 7px solid #cccccc00;
+}
+
+.wpestate_marker.openstreet_price_marker:hover:before {
+    border-top: 6px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+}
+
+.wpestate_marker.openstreet_price_marker:hover {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+    color: #fff;
+}
+
+.wpestate_marker.openstreet_price_marker:hover span {
+    color: #fff;
+}
+
+.hover_z_pin:before {
+    border-top: 6px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+}
+
+.wpestate_marker.sales {
+    background-color: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+    color: #fff;
+}
+
+.wpestate_marker.sales:before {
+    border-top: 6px solid var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+}
+
+.wpestate_marker.sales:after {
+    border-top: 4px solid var(--wp-estate-second-color-option, var(--wp-estate-second-color)); 
+}

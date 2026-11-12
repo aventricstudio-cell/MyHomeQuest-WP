@@ -1,0 +1,291 @@
+$enable-rtl: true;
+ 
+// Import Bootstrap SCSS
+@import "~bootstrap/scss/bootstrap";
+// Base
+@import 'variables'; 
+
+@import 'mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/general_declarations';
+@import 'base/_bakery.scss';
+@import 'base/_gutenberg.scss';
+@import 'base/_woocommerce.scss';
+// vendors
+@import 'vendors/slick.scss';
+@import 'vendors/owl.carousel.min.css';
+@import 'vendors/owl.theme.default.min.css';
+@import 'vendors/venobox.css';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/top_bar';
+@import 'components/user_menu';
+@import 'components/forms';
+@import 'components/_autocomplete_input.scss';
+@import 'components/_slider.scss';
+@import 'components/_favorite_buttons.scss';
+
+
+ 
+
+// header Components
+@import 'headers/header_transparent';
+@import 'headers/header_type1';
+@import 'headers/header_type2';
+@import 'headers/header_type3'; 
+@import 'headers/header_type4';
+@import 'headers/header_type5';
+@import 'headers/header_type6';
+@import 'headers/mobile_header';
+ 
+
+// header media Components
+@import 'header_media/header-media'; 
+@import 'header_media/header-media-slider-type-1'; 
+@import 'header_media/header-media-slider-type-2'; 
+@import 'header_media/header-media-slider-type-3';
+
+
+// modals
+@import 'components/modals/login_modal';
+@import 'components/modals/other-modals.scss';
+
+
+//sidebar
+@import 'sidebar/sidebar';
+@import 'widgets/social_sidebar';
+@import 'widgets/twitter_widget';
+@import 'widgets/search_widget';
+@import 'widgets/default_widgets';
+@import 'widgets/contact_sidebar';
+@import 'widgets/latest_listings_widget';
+@import 'widgets/featured_property_widget';
+@import 'widgets/social_sidebar';
+@import 'widgets/widget_nav_menu';
+@import 'widgets/currency_and_measure_widgets.scss';
+@import 'widgets/category_list_widget.scss';
+@import 'widgets/elementor_widget_container.scss';
+@import 'widgets/featured_agent_widget.scss';
+@import 'widgets/splash_page_widgets.scss';
+@import 'widgets/mortgage_calculator_widget.scss';
+ 
+
+//footer
+@import 'footer/_footer';
+
+ 
+//advanced search
+@import 'advanced_search/_global_definitions';
+@import 'advanced_search/_advanced_search_mobile';
+@import 'advanced_search/_advanced_search_shortcode';
+@import 'advanced_search/_advanced_search_sidebar';
+@import 'advanced_search/_advanced_search_geolocation';
+@import 'advanced_search/_advanced_search_float_search';
+@import 'advanced_search/_preview_listings';
+@import 'advanced_search/_save_search';
+@import 'advanced_search/_advanced_search_half_map';
+@import 'advanced_search/_advanced_search_sticky';
+@import 'advanced_search/advanced_search_1';
+@import 'advanced_search/advanced_search_2';
+@import 'advanced_search/advanced_search_3';
+@import 'advanced_search/advanced_search_4';
+@import 'advanced_search/advanced_search_5';
+@import 'advanced_search/advanced_search_6';
+@import 'advanced_search/advanced_search_7';
+@import 'advanced_search/advanced_search_8';
+@import 'advanced_search/advanced_search_9';
+@import 'advanced_search/advanced_search_10';
+@import 'advanced_search/advanced_search_11';
+
+//blog cards
+@import 'blog_card/_blog_card_v1.scss';
+@import 'blog_card/_blog_card_v2.scss';
+@import 'blog_card/_blog_card_v3.scss';
+@import 'blog_card/_blog_card_v4.scss';
+@import 'blog_card/_blog_card_related.scss';
+
+
+//blog page
+@import 'blog_page/blog_page.scss';
+@import 'blog_page/comments.scss';
+
+
+
+
+
+// general components
+@import 'components/forms';
+@import 'components/menus';
+@import 'components/_breadcrumbs.scss';
+@import 'components/beds-baths-search.scss';
+@import 'components/search';
+@import 'components/contact7_form.scss';
+@import 'components/price_v2_search.scss';
+@import 'components/price_v3_search.scss';
+@import 'components/_search_slider.scss';
+@import 'components/_prev_next_navbar.scss';
+@import 'components/_map_infobox.scss';
+@import 'components/_map_point_of_interest.scss';
+
+
+
+
+
+// property cards 
+@import 'property_lists/_property_lists.scss';
+@import 'property_lists/_property_lists_half_map_templates.scss';
+@import 'properties_cards/_share_unit.scss';
+@import 'properties_cards/_property_unit.scss';
+@import 'properties_cards/_property_unit_list_view.scss';
+@import 'properties_cards/_property_unit_type1.scss';
+@import 'properties_cards/_property_unit_type2.scss';
+@import 'properties_cards/_property_unit_type3.scss';
+@import 'properties_cards/_property_unit_type4.scss';
+@import 'properties_cards/_property_unit_type5.scss';
+@import 'properties_cards/_property_unit_type6.scss';
+@import 'properties_cards/_property_unit_type7.scss';
+@import 'properties_cards/_property_unit_type8.scss';
+@import 'properties_cards/_property_unit_custom.scss';
+
+
+// agent cards 
+@import 'agent_cards/_agent_unit.scss';
+@import 'agent_cards/_agent_unit_v2.scss';
+@import 'agent_cards/_agent_unit_v3.scss';
+@import 'agent_cards/_agent_unit_v4.scss';
+
+//agency cards
+@import 'agency_developer_cards/_agency_developer_cards.scss';
+@import 'agency_developers_page/agency_developers_page.scss';
+
+
+//agent page
+@import 'agent_page/agent_page.scss';
+
+
+// property page
+@import 'property_page/property_page_base.scss';
+@import 'property_page/_carousel_classic.scss';
+@import 'property_page/_carousel_vertical.scss';
+@import 'property_page/_carousel_horizontal.scss';
+@import 'property_page/_multi_image_carousel.scss';
+@import 'property_page/_full_width_carousel.scss';
+@import 'property_page/_overview_sections.scss';
+@import 'property_page/_agent_section.scss';
+@import 'property_page/_features_and_ammenities.scss';
+@import 'property_page/_property_gallery.scss';
+@import 'property_page/_property_page_tabs.scss';
+@import 'property_page/_schedule_tour.scss';
+@import 'property_page/_mortgage_calculator.scss';
+@import 'property_page/_property_modal.scss';
+@import 'property_page/_floor_plans.scss';
+@import 'property_page/_gallery_lightbox.scss';
+@import 'property_page/_gallery_lightbox.scss';
+@import 'property_page/_multi_units_sections.scss';
+@import 'property_page/_energy_sections.scss';
+@import 'property_page/_reviews_section.scss';
+@import 'property_page/_print_page_style.scss';
+@import 'property_page/yelp.scss';
+@import 'property_page/custom_template_blocks.scss';
+
+
+// shortcodes and blocks
+@import 'shortocdes_and_blocks/_contact_forms_simple_and_builder.scss';
+@import 'shortocdes_and_blocks/_featured_property_type1.scss';
+@import 'shortocdes_and_blocks/_featured_property_type2.scss';
+@import 'shortocdes_and_blocks/_featured_property_type3.scss';
+@import 'shortocdes_and_blocks/_featured_property_type4.scss';
+@import 'shortocdes_and_blocks/_featured_property_type5.scss';
+@import 'shortocdes_and_blocks/_advanced_search_shortcode.scss';
+@import 'shortocdes_and_blocks/_featured_article_shortcodes.scss';
+@import 'shortocdes_and_blocks/_featured_agents_shortcodes.scss';
+@import 'shortocdes_and_blocks/_property_list_shortcodes.scss';
+@import 'shortocdes_and_blocks/_testomonial_shortcodes.scss';
+@import 'shortocdes_and_blocks/_post_grid_shortcodes.scss';
+@import 'shortocdes_and_blocks/_other_shortcodes.scss';
+@import 'shortocdes_and_blocks/_wpestate_tabs.scss';
+@import 'shortocdes_and_blocks/_wpestate_accordions.scss';
+@import 'shortocdes_and_blocks/_wpestate_tours.scss';
+@import 'shortocdes_and_blocks/_sliding_box.scss';
+@import 'shortocdes_and_blocks/_places_shortcodes.scss';
+@import 'shortocdes_and_blocks/_categories_as_tabs_widget.scss';
+@import 'shortocdes_and_blocks/_categories_grid_builder.scss';
+@import 'shortocdes_and_blocks/_property_sliders_shortcodes.scss';
+@import 'shortocdes_and_blocks/_property_sliders_shortcodes_v1_type2..scss';
+@import 'shortocdes_and_blocks/_property_sliders_shortcodes_v2.scss';
+@import 'shortocdes_and_blocks/_property_sliders_shortcodes_v3.scss';
+@import 'shortocdes_and_blocks/_advanced_search_form';
+@import 'shortocdes_and_blocks/_property_lists';
+@import 'shortocdes_and_blocks/_hot_spot';
+@import 'shortocdes_and_blocks/_elementor_widget_for_property_page_design';
+@import 'shortocdes_and_blocks/_content_grid';
+@import 'shortocdes_and_blocks/_places_sliders';
+@import 'shortocdes_and_blocks/_membership_pack';
+@import 'shortocdes_and_blocks/_term_header';
+
+
+
+// general components
+@import 'components/slider';
+@import 'components/_wpresidence_carousels';
+@import 'components/icons';
+@import 'components/pagination';
+@import 'components/tables';
+@import 'components/map_components.scss';
+@import 'components/tooltip.scss';
+@import 'components/_images.scss';
+@import 'components/_idx.scss';
+@import 'components/_preloader.scss';
+@import 'components/_map_markers.scss';
+
+// Layout
+@import 'layout/container';
+@import 'layout/footer';
+@import 'layout/sidebar';
+
+// Pages
+@import 'pages/_single_page.scss';
+@import 'pages/home';
+@import 'pages/_archive_categories_taxonomies.scss';
+@import 'pages/property-listing';
+@import 'pages/property-single';
+@import 'pages/blog';
+@import 'pages/contact';
+@import 'pages/agents';
+@import 'pages/dashboard';
+@import 'pages/_submit_listing.scss';
+@import 'pages/compare_listing_page';
+@import 'pages/_front_end_submission.scss';
+@import 'pages/_splash_page.scss';
+
+
+// wpresidence studio
+@import 'wpresidence_studio/_menu_widget.scss';
+
+
+// dashboard
+@import 'dashboard/_variables_dashboard.scss';
+@import 'dashboard/_dashboard_base.scss';
+@import 'dashboard/_inbox.scss';
+@import 'dashboard/_payments.scss';
+@import 'dashboard/_crm.scss';
+@import 'dashboard/_invoices.scss';
+@import 'dashboard/_add_property_page.scss';
+@import 'dashboard/_property_lists.scss';
+@import 'dashboard/_agents.scss';
+@import 'dashboard/_searches.scss';
+@import 'dashboard/_responsive.scss';
+
+
+
+
+// Utilities
+@import 'utilities/helpers';
+@import 'utilities/animations';
+
+
+// Responsive
+@import 'base/responsive'; 

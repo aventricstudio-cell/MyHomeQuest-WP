@@ -1,0 +1,102 @@
+
+//scss\advanced_search\_advanced_search_mobile.scss
+// advanced search mobile
+
+.search_wrapper {
+    div{
+      
+    }
+}
+
+#adv-search-header-mobile {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    margin-bottom: 0px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+
+ #adv-search-mobile {
+    padding: 15px 15px 3px 15px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    z-index: 9;
+    display: none;
+    
+    form{
+        display: flex;
+        gap:10px;
+        flex-direction: column;
+    }
+    .tab-pane{
+        form{
+            gap:0px;
+        }
+    }
+
+    .extended_search_checker {
+        width: 100%;
+    }
+
+    .tab-pane{
+        .residence_adv_extended_options_text {
+            margin-bottom: 15px;
+        }
+    }
+
+
+    .adv_search_tab{
+
+        .nav-tabs {
+            text-align: left;
+            margin-bottom: 5px;
+            border-bottom: 0px;
+            position: relative;
+            top:auto;
+            left:auto;
+            
+            .adv6_tab_head {
+                padding: 10px 10px !important;
+            }
+        }
+        
+        .wpestate-field-on-sidebar{
+            margin-bottom: 7px;
+        }
+            
+        .wpestate_location{
+            width: 100%;
+        }
+        .advanced_submit_4{
+            width: 100%;
+        }
+    }
+
+
+}
+ 
+
+
+
+// advanced search mobile for spash page
+
+.page-template-splash_page{
+    #adv-search-header-mobile {
+        margin-bottom: 0px;
+        z-index: 9;
+        position: relative;
+    }
+
+    #adv-search-mobile {
+        padding: 13px;
+    }
+}

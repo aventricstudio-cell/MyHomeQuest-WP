@@ -1,0 +1,49 @@
+
+
+.advanced_search_sidebar{
+
+    .tab-content > .active{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+   
+    form{
+        gap:10px;
+        .wpresidence_advanced_submit_widget{
+            margin-bottom: 0px;
+        }
+    }
+
+    .extended_search_check_wrapper .adv_extended_close_button{
+        right: 0;
+        top: 5px;
+    }
+    
+    .adv_search_tab{
+        .nav-tabs {
+            text-align: left;
+            margin-bottom: 10px;
+            border-bottom: 0px;
+            position: relative;
+            top:auto;
+            left:auto;
+        }
+    
+        .wpestate_location{
+            width: 100%;
+        }
+    }
+
+    .extended_search_check_wrapper{
+        .extended_search_checker{
+            width: 100%;
+        }
+    }
+} 
+
+.advanced_search_shortcode .tab-pane,
+.adv-search-mobile .tab-pane,
+.advanced_search_sidebar .tab-pane {
+    box-shadow: none;
+}

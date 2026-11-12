@@ -1,0 +1,133 @@
+
+
+.search_wr_3.search_wrapper{
+    width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+    margin: 0px auto;
+    position: absolute;
+    border: none;
+    position: absolute;
+    top:5%;
+    left: 0;
+    right: 0;
+    @include smooth-transition-shorter;
+
+    .residence_adv_extended_options_text{
+        margin-top: 10px;
+    }
+
+    .adv-search-3{
+        width: 446px;
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        @include smooth-transition-shorter;
+        height: auto;
+
+        //preview resuls
+        #results {
+            transform: translate(-102%, 43px);
+        }
+
+        //search header
+        #adv-search-header-3 {
+            background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            height: 40px;
+            line-height: 40px;
+            margin: 0px;
+            padding: 0 15px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            width: 100%;
+            pointer-events: auto;
+            border-top-right-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            border-top-left-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            &:after {
+                content: "\f0d7";
+                position: absolute;
+                right: 15px;
+                top:11px;
+                font-size: 17px;
+                font-family: "Font Awesome 5 Free";
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+
+        //submmit button
+        #advanced_submit_3 {
+            width: 100%;
+            border: none;
+            &:hover{
+                background-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+                color: #fff;
+            }
+        }
+
+        // fields wrapper
+        .adv3-holder {
+            background-color: #fdfdfd;
+            float: left;
+            width: 100%;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            form {
+                padding: 15px 15px 0px 15px;
+    
+
+            }
+
+        }
+
+        // more search option section
+        .extended_search_check_wrapper {
+            .extended_search_checker {  
+                width: 33%;                
+            }
+            .adv_extended_close_button {
+                right: 5px;
+            }
+        }
+
+        &.float_search_closed{
+            box-shadow: none;
+        }
+    } 
+}
+
+
+
+
+
+
+
+
+.fullscreen_search {
+    z-index: 99 !important;
+    border: none !important;
+}
+
+.fullscreen_search.search_wrapper {
+    top: auto;
+}
+
+.search_wr_3.fullscreen_search.search_wrapper {
+    bottom: 80%;
+}
+
+.search_wr_3 .search_wrapper_color {
+    width: 414px;
+    left: auto;
+    right: 0px;
+}
+
+
+.adv-search-3.adv-search-1-close,
+.adv-search-3.adv-search-1-close-extended.adv_extended_class {
+    bottom: 0px;
+    transform: translate(0, 0);
+}
+

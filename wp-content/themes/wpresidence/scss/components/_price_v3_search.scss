@@ -1,0 +1,110 @@
+// MILLDONE
+// wpresidence\scss\components\_price_v3_search.scss
+// Styles for the price component dropdowns (both v2 and v3)
+.dropdown-menu.wpestate-price-popoup-wrapper_v3,
+.dropdown-menu.wpestate-price-popoup-wrapper {
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+}
+
+/*=price v2 component styles
+--------------------------------------------------------------------*/
+.wpestate-price-popoup-wrapper {
+    padding: 25px;
+    min-width: 365px;
+    max-width: 100vw;
+    overflow-x: auto;
+   
+    // Remove bottom margin from paragraphs
+    p {
+        margin-bottom: 0px;
+    }
+
+    // Styles for the v2 price component wrapper
+    .wpestate_pricev2_component_adv_search_wrapper {
+        display: flex;
+        margin-bottom: 5px;
+        gap: 5px;
+   
+        // Adjust bottom margin for sliders
+        .ui-slider {
+            margin-bottom: 10px;
+        }
+       
+        // Styles for input fields
+        input {
+            width: 154px;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            border: 1px solid #e7e7e7;
+            background-color: #fff;
+            box-shadow: none;
+            -webkit-appearance: none; /* For WebKit browsers */
+            -moz-appearance: none;    /* For Firefox */
+            appearance: none;         /* Standard property */
+            font-size: 13px;
+            line-height: 35px;
+            padding: 0px 15px;
+        }
+    }
+   
+    // Styles for the advanced search slider
+    .adv_search_slider {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+}
+
+/*=price v3 component styles
+--------------------------------------------------------------------*/
+.wpestate-price-popoup-wrapper_v3 {
+    padding: 25px;
+    min-width: 365px;
+    max-width: 100vw;
+    overflow-x: auto;
+    overflow: visible;
+   
+    // Set minimum width for nested dropdowns
+    .dropdown-menu {
+        min-width: 130px;
+    }
+   
+    // Styles for the v3 price component wrapper
+    .wpestate_pricev3_component_adv_search_wrapper {
+        display: flex;
+        gap: 10px;
+
+        .wpresidence_dropdown{
+            margin-bottom: 10px; 
+        }
+        // Styles for dropdown menu items
+        .filter_menu li {
+            padding: 10px 15px;
+            line-height: 1.4em;
+            margin-bottom: 0px;
+            font-size: 13px;
+           
+            &:hover {
+                background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+                color: var(--wp-estate-adv-search-font-color-option, var(--wp_estate_adv_search_font_color));
+            }
+        }
+
+        // Styles for the price component select elements
+        .wpestate-price-component-select {
+            width: 50%;
+            border: 1px solid #e7e7e7;
+            padding: 10px;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+            option {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+// Adjust margin for sliders in Elementor widget
+.elementor-widget-WpResidence_Search_Form_Builder .wpestate-price-popoup-wrapper .adv_search_slider {
+    margin-bottom: 15px;
+}

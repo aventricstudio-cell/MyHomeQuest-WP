@@ -1,0 +1,268 @@
+// MILLDONE
+// components/_header_type4.scss
+// This file contains styles for the header type 4 component of the website.
+// It includes styles for the main header, navigation, and related elements.
+
+// ==========================================================================
+// Header Wrapper for Header Type 4
+// ==========================================================================
+
+.header_wrapper.d-flex.w-100.header_type4 {
+    display: none !important; // Hide the header wrapper for header type 4.
+}
+
+// ==========================================================================
+// Wrapper for Header Type 4
+// ==========================================================================
+
+.wpresidence_wrapper_for_header_type4 {
+    display: block; // Display the wrapper as a block element.
+    width: 100%; // Set the wrapper width to 100%.
+    height: 100vh; // Set the wrapper height to 100% of the viewport height.
+
+    .wpresidence_wrapper_for_header_4_colum {
+        margin-left: 270px; // Add left margin to the column wrapper.
+     
+     
+        z-index: 90 ;
+        position: relative;
+            .container-fluid {
+                position: relative; // Set relative positioning for container.
+            }
+    }
+
+    .header_wrapper_inside_type_4 {
+        position: fixed; // Fix the header inside the wrapper.
+        z-index: 99; // Ensure it is above other elements.
+        width: 270px; // Set the width.
+        background: var(--wp-estate-header-color-option, var(--wp-estate-header-color)); // Set the background color with fallback.
+        height: 100vh; // Set the height to 100% of the viewport height.
+        top: 0; // Align to the top.
+        left: 0; // Align to the left.
+        display: flex;
+        flex-direction: column;
+        .logo {
+            text-align: center; // Center align the logo.
+            margin: 40px 0px;
+        }
+
+        .wpresidence-navigation-menu {
+            .menu-main-menu-container,
+            .menu-mega-menu-updated-container {
+                width: 100%; // Set the width to 100%.
+                ul {
+                    li {
+                        display: block; // Display list items as block elements.
+                        line-height: 45px;
+
+                        ul {
+                            ul {
+                                left: 100%; // Align sub-menus to the left.
+                            }
+                        }
+                    }
+
+                    li:hover > ul {
+                        top: 0px; // Align to the top.
+                        left: 100%; // Position to the right.
+                        opacity: 1; // Make visible.
+                        visibility: visible; // Ensure visibility.
+                    }
+                }
+            }
+        }
+    }
+
+    .login_form {
+        padding: 0px; // Remove padding.
+    }
+}
+
+// ==========================================================================
+// Adjustments for Admin Bar
+// ==========================================================================
+
+.admin-bar {
+    .header_wrapper_inside_type_4 {
+        top: 32px; // Adjust the top position for admin bar.
+    }
+}
+
+// ==========================================================================
+// Mega Menu for Header Type 4
+// ==========================================================================
+
+.header_wrapper_inside_type_4 {
+    .wpresidence-navigation-menu {
+        .menu-mega-menu-updated-container {
+            ul {
+                li.with-megamenu {
+                    position: relative; // Set relative positioning.
+
+                    > ul,
+                    &:hover > ul {
+                        top: 0px; // Align to the top.
+                        width: 100vw; // Full viewport width.
+                        display: flex; // Display as flex.
+                        justify-content: center; // Center align.
+                        position: absolute; // Set absolute positioning.
+                        width: calc(100vw - 17px); // Adjust width.
+                        max-width: 1200px; // Set maximum width.
+                        left: 100% !important; // Position to the right.
+                        transform: none; // Remove transform.
+                        padding: 25px 0px; // Add vertical padding.
+                        ul {
+                            top: 0px; // Align to the top.
+                            left: 0; // Align to the left.
+                        }
+                    }
+                }
+
+                ul:before {
+                    content: none; // Remove content before the list.
+                }
+            }
+        }
+    }
+}
+
+// ==========================================================================
+// Footer Adjustments for Header Type 4
+// ==========================================================================
+
+#header4_footer {
+    margin-top: auto;
+    margin-bottom: 50px;
+    padding: 0px 15px;
+    color: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set text color based on variable.
+
+    ul {
+        padding: 0px; // Remove padding.
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .widget-container{
+        margin-bottom: 0px;
+        h3.widget-title-header4{
+            font-size: var(--wp-estate-top-menu-font-size-option, var(--wp-estate-top-menu-font-size));
+            margin-bottom:10px;
+        }
+    }
+
+    .social_sidebar_internal{
+        a{
+            background-color: transparent;
+            width: auto;
+            height: auto;
+            line-height: normal;
+            color: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set text color based on variable.
+            &:hover i{
+                color: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Change text color on hover based on variable.
+            }
+        }
+    }
+}
+.wpresidence_header_menu_type3_4_text_align_center .header_wrapper_inside_type_4 #header4_footer {
+    text-align: center;
+    
+    .social_sidebar_internal{
+        justify-content: center;
+    }
+  }
+
+// ==========================================================================
+// User Menu Adjustments for Header Type 4
+// ==========================================================================
+
+.header_wrapper.header_type4 .user_menu {
+    display: inline-block; // Display as inline-block.
+    float: none; // Remove float.
+    margin-right: 0px; // Remove right margin.
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Set text color.
+    padding: 0px 0px 0px 0px; // Remove padding.
+    cursor: pointer; // Set cursor to pointer.
+    margin-top: 20px; // Add top margin.
+    position: relative; // Set relative positioning.
+    right: auto; // Set right to auto.
+    top: auto; // Set top to auto.
+}
+
+// ==========================================================================
+// Text Alignment Center for Header Type 4
+// ==========================================================================
+
+.wpresidence_header_menu_type3_4_text_align_center {
+    .header_wrapper_inside_type_4 {
+        .wpresidence-navigation-menu {
+            .menu {
+                > li {
+                    text-align: center; // Center align text.
+                }
+            }
+        }
+        #header4_footer {
+            text-align: center; // Center align footer text.
+        }
+    }
+}
+
+// ==========================================================================
+// Text Alignment Right for Header Type 4
+// ==========================================================================
+
+.wpresidence_header_menu_type3_4_text_align_right {
+    .header_wrapper_inside_type_4 {
+        .wpresidence-navigation-menu {
+            .menu {
+                > li {
+                    text-align: right; // Right align text.
+                }
+            }
+        }
+        #header4_footer {
+            text-align: right; // Right align footer text.
+        }
+        .wpresidence_elementor_social_sidebar_internal{
+            justify-content: flex-end;
+        }
+    }
+}
+
+// ==========================================================================
+// Logo Alignment Right for Header Type 4
+// ==========================================================================
+
+.wpresidence_header3_logo_align_right {
+    .wpresidence_wrapper_for_header_type4 {
+        .header_wrapper_inside_type_4 {
+            left: auto; // Remove left alignment.
+            right: 0px; // Align to the right.
+        }
+    }
+
+    .wpresidence_wrapper_for_header_4_colum {
+        margin-right: 270px; // Add right margin.
+        margin-left: 0px; // Remove left margin.
+    }
+
+    .wpresidence-navigation-menu .menu-header-6-secondary-container ul li ul,
+    .wpresidence-navigation-menu .menu-main-menu-container ul li ul,
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li ul {
+        left: auto; // Remove left alignment.
+        right: 253px; // Align to the right.
+    }
+
+    .wpresidence-navigation-menu .menu-main-menu-container ul li:hover > ul,
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li:hover > ul {
+        left: auto !important; // Remove left alignment with important.
+        right: 100%; // Align to the right.
+    }
+
+    .header_wrapper_inside_type_4 .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li.with-megamenu > ul,
+    .header_wrapper_inside_type_4 .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li.with-megamenu:hover > ul {
+        left: unset !important; // Unset left alignment with important.
+        right: 254px; // Align to the right.
+    }
+}

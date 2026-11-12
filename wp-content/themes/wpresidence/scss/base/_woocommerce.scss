@@ -1,0 +1,428 @@
+
+#shopping-cart {
+    float: left;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px 0px 0px 0px;
+    position: relative; 
+}
+
+#shopping-cart-icon {
+    width: 84%;
+}
+ 
+
+.wpestream_cart_counter_header_mobile {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    float: right;
+    color: #fff;
+    left: auto;
+}
+
+.wpestream_cart_counter_header_mobile,
+.wpestream_cart_counter_header {
+    position: absolute;
+    top: -18px;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 13px;
+    color: #fff;
+    left: 0px;
+} 
+
+.wpestate_header_shoping_cart {
+    position: absolute;
+    background: #fff;
+    @include main-box-shadow();
+    width: 300px;
+    right: 15px;
+    top: 65px;
+    padding: 20px;
+    display: none;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.wpestate_header_shoping_cart_total {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+}
+
+.wpestate_header_view_cart,
+.wpestate_header_view_checkout {
+    width: 100%;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    padding: 4px 15px;
+}
+
+.wpestate_header_view_cart {
+    margin-bottom: 0px;
+}
+
+.wpestate_header_view_cart:hover,
+.wpestate_header_view_checkout:hover {
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+.wpestate_in_cart_image {
+    float: left;
+    margin-right: 10px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    overflow: hidden;
+}
+
+.wpestate_in_cart_title {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    text-align: left !important;
+}
+
+.wpestate_in_cart_price{
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.woocommerce-order-received .wpresidence_sidebar_cart {
+    display: none;
+}
+
+.transparent_header #shopping-cart_icon path {
+    fill: #fff;
+}
+
+/*=Woo pay*/
+
+.return_woo_button {
+    margin-top: 0px;
+    padding: 13px 15px;
+    color: #fff!important;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    display: inline-block;
+    width: auto;
+    color: #fff !important;
+    margin: 10px 0px;
+}
+
+.woocommerce form .form-row {
+    padding: 3px 3px 3px 0px;
+}
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+    width: 50%;
+}
+
+.woo_pay,
+.woo_pay_submit {
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px 30px;
+    background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    cursor: pointer;
+    text-align: center;
+    margin-top: 15px;
+    color: #ffffff;
+    width: 210px;
+    line-height: 54px;
+}
+
+.woo_pay_submit:hover,
+.woo_pay:hover {
+    background-color: #106dd2;
+}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    border-top-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    @include woocomerce-box-shadow-v2();
+}
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+    background-color: #fff;
+    border: none;
+    @include woocomerce-box-shadow-v2();
+    margin: 0px 0px 30px 0px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+    -webkit-font-smoothing: antialiased;
+    padding: 12px 12px;
+    margin-top: 0px;
+    padding: 16px 15px;
+    color: #fff;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid #e7e9ef;
+    color: #8A8F9A;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    padding: 2px 13px 0px 13px;
+    font-weight: 400;
+    width: 100%;
+    height: 40px;
+}
+
+.woocommerce form .form-row textarea {
+    height: 240px;
+    padding-top: 10px;
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #e7e9ef;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    height: 40px;
+}
+
+form.woocommerce-checkout {
+    background: #fff;
+    padding: 20px 20px 20px 20px;
+    @include woocomerce-box-shadow-v2();
+    border-top: 3px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+
+}
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+    background: #fcfcfc;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
+    background-color: #efeded;
+    color: #333;
+}
+
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
+    border: 1em solid #efeded;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    -webkit-font-smoothing: antialiased;
+    padding: 12px 12px;
+    margin-top: 0px;
+    padding: 20px 45px;
+    color: #fff;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    margin-top: 10px;
+}
+
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled] {
+    padding: 16px 15px;
+    opacity: 0.7;
+    color: #fff;
+    display: none;
+}
+
+.woocommerce button.button.alt:hover {
+    background-color: #576074; 
+}
+
+.meta-element-head {
+    display: none;
+}
+
+.wpresidence_sidebar_cart {
+    display: inline-block;
+    background-color: #fff;
+    width: 100%;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    padding: 30px 30px 19px 30px;
+    @include woocomerce-box-shadow-v2();
+
+}
+
+.wpresidence_sidebar_cart h3 {
+    margin: 10px 0px;
+}
+
+.wpestate_cart_item span {
+    font-weight: 500;
+}
+
+.wpresidence_sidebar_cart h4 {
+    margin-top: 10px;
+}
+
+.wpresidence_sidebar_cart_unit {
+    margin-bottom: 20px;
+}
+
+.woocommerce table.shop_table {
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    background: #fff;
+    border: 1px solid #e7e9ef;
+}
+
+#coupon_code {
+    width: 150px;
+    padding: 12px;
+    margin-right: 15px;
+    border: 1px solid #e7e9ef;
+}
+
+.woocommerce-form-coupon #coupon_code {
+    width: 100%;
+    height: 48px;
+    margin-right: 0px;
+}
+
+.woocommerce a.remove:hover {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+    background: transparent;
+}
+
+.woocommerce button.button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+    background-color: #576074;
+    color: #fff;
+}
+
+.woocommerce form .form-row label {
+    line-height: 2;
+    margin-bottom: 0px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #8A8F9A;
+    line-height: 40px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 40px;
+}
+
+.woocommerce form .form-row .select2-container {
+    width: 100%;
+    line-height: 42px;
+    margin-bottom: 15px;
+}
+
+
+#order_review_heading {
+    margin-top: 15px;
+}
+
+.showcoupon {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+.woocommerce-order {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    border-top-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    @include woocomerce-box-shadow-v2();
+    padding: 20px;
+}
+
+.woocommerce ul.order_details {
+    margin: 20px 0px;
+    list-style: none;
+}
+
+.woocommerce ul.order_details {
+    margin: 20px 0px 40px 0px;
+    list-style: none;
+}
+
+.woocommerce ul.order_details li {
+    float: left;
+    margin-right: 15px;
+}
+
+.woocommerce .woocommerce-customer-details address {
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    padding: 20px;
+    font-size: 14px;
+}
+
+.woocommerce-terms-and-conditions-checkbox-text {
+    padding-left: 20px;
+}
+
+.woocommerce form .form-row .input-checkbox {
+    margin: 5px 8px 0 0;
+}
+
+.wpestream_cart_counter_header_mobile {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    float: right;
+    color: #fff;
+    left: auto;
+}

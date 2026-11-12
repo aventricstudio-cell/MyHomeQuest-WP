@@ -1,0 +1,253 @@
+/* MILLDONE
+ * Mortgage Calculator 
+ * src: property_payment_calculator.scss
+ * Package: WpResidence
+ * 
+ * Purpose: Provides styles for the property payment calculator component in the WpResidence theme. This includes 
+ *          layout, input styling, and chart display adjustments, focusing on mortgage calculations.
+ * 
+ * Dependencies:
+ * - Chart.js for rendering the mortgage chart.
+ * - WpResidence theme structure and base styles for general layout.
+ * 
+ * Usage:
+ * This file should be included in the main theme stylesheet or loaded only on pages featuring 
+ * the property payment calculator. It is designed to work with the specific markup structure of the calculator.
+ */
+
+// Mortgage chart wrapper - styles for the chart and its related components
+
+.morgage_chart_wrapper {
+    width: 50%;              // Set the width of the wrapper to 50% of its container
+    float: left;             // Float left to allow the next wrapper to be placed alongside
+    position: relative;      // Position the wrapper relatively to allow absolute positioning inside
+
+    // Specific styles for the first mortgage chart wrapper
+    &.onfirst {
+        padding-right: 15px;  // Add padding to the right for spacing
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        align-items: stretch;
+        justify-content: space-between;
+        // Container holding the canvas (chart) element
+        #canvas-holder {
+            margin-left: -40px;  // Adjust the margin for layout correction
+            position: relative;  // Relative positioning for internal elements
+
+            // Chart canvas itself
+            #morgage_chart {
+                position: relative;  // Relative positioning for responsive adjustments
+            }
+
+            // Monthly payment overlay displayed on top of the chart
+            .morg_momth_pay {
+                text-align: center;                    // Center the text
+                position: absolute;                    // Position absolute to overlay on the chart
+                top: 50%; left: 50%;                   // Center the overlay
+                transform: translate(-50%, -50%);      // Adjust centering via transformation
+                height: 46px;
+                margin-left: 25px;
+
+                // Monthly payment text wrapper
+                .morg_month_wrap {
+                    width: 100%;                      // Full-width text
+                    display: block;                   // Block display for alignment
+                    font-weight: 500;                 // Medium font weight
+                    font-size: 17px;                  // Font size
+                    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));// Text color
+                }
+            }
+        }
+
+        // Legend for the chart with list items
+        .morgage_legend {
+            list-style-type: none;   // Remove default list styling
+            margin: 0;               // Reset margin
+            display: inline-block;          // Display legend items inline
+          
+            font-size: 13px;         // Font size for legend items
+            margin-top: 10px;
+            text-align: center;
+             // Positioning the legend
+
+            li {
+                display: inline-block;     // Inline display for list items
+                  // Float items for proper alignment
+                margin-right: 20px;
+                position: relative;
+
+                // Before pseudo-element for the colored box in the legend
+                &::before {
+                    width: 10px;
+                    height: 5px;
+                    content: " ";
+                    margin-right: 5px;
+                    position: absolute;
+                    left: -15px;
+                    bottom: 9px;
+                }
+
+                &:nth-child(1)::before { background: #0073e1; } // Color for the first legend item
+                &:nth-child(2)::before { background: #0ac3f8; } // Color for the second legend item
+                &:nth-child(3)::before { background: #ff5e5b; } // Color for the third legend item
+                &:nth-child(4)::before { background: #9c27b0; } // Color for the third legend item
+            }
+        }
+    }
+
+    // Input field styling for labels and inputs
+    label {
+        display: inline-block;         // Block display to control label positioning
+        width: 100%;                   // Full-width label
+        margin-bottom: 3px;            // Space below the label
+        margin-top: 13px;              // Space above the label
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    }
+
+    // Specific styling for input fields
+    #hoo_fees,
+    #monthly_property_tax {
+        width: 100%;  // Full-width input fields
+    }
+}
+ 
+// Data input wrapper for other mortgage details
+.morgage_data_wrapper {
+    width: 50%;             // Set wrapper width to 50% of the container
+    float: left;            // Float left to allow side-by-side layout
+    position: relative;     // Relative positioning for inner elements
+
+    label {
+        margin-bottom: 3px;            // Space below the label
+        margin-top: 13px;              // Space above the label
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        width: 100%;
+    }    
+
+    // Additional styles for the first data input wrapper
+    &.onfirst {
+        // Down payment input styles
+        #morgage_down_payment {
+     
+            float: left;     // Float to the left for layout
+        }
+
+       
+    }
+
+    // Common styling for all input fields
+    .morgage_inputdata {
+        width: 100%;         // Full-width input fields for consistent layout
+    }
+}
+
+
+.percentage-wrapper {
+    width: 25%;
+    float: left;
+    position: relative;
+    
+    &::after {
+        content: '%';
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #22222269;
+        font-size: 14px;
+    }
+    
+    #morgage_down_payment_percent {
+        width: 100%;
+        padding-right: 20px;
+    }
+}
+
+
+.currency-wrapper {
+    position: relative;
+    
+    &::after {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #22222269;
+        font-size: 14px;
+    }
+    
+    input {
+        padding-right: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// Responsive chart container size adjustments for Elementor widget
+.elementor-widget-container #morgage_chart {
+    width: 379px !important;
+    height: 189px !important;
+    margin: 0px auto;
+}
+
+// Responsive adjustments for .col-md-12 layouts
+.col-lg-12 {
+    #morgage_chart {
+        display: block;
+        max-width: 100%;              // Ensure the canvas width does not exceed its container
+        max-height: 100%;             // Ensure the canvas height does not exceed its container
+        width: auto;                  // Auto width for flexibility
+        height: auto;                 // Auto height for responsiveness
+        margin: 0 auto;               // Center the chart
+        object-fit: contain;          // Ensure the canvas content scales proportionally
+    }
+
+    #morgage_chart {
+        width: 369px!important;               // Slightly smaller width for certain column layouts
+        height: 184px!important;              // Adjusted height for smaller containers
+    }
+
+    .morgage_chart_wrapper.onfirst #canvas-holder .morg_momth_pay{
+        margin-left: 17px;
+    }
+}
+
+// Tab layout styles for mortgage chart legends inside tabs
+#tab_prpg .tab-pane .morgage_chart_wrapper ul {
+    margin-left: 0;                // Reset margin for legend lists inside tabs
+
+    li {
+        width: auto;               // Allow auto width for list items inside tabs
+    }
+}
+
+.wpresidence_private_mortgate_insurance_wrapper{
+    display: flex;
+    .currency-wrapper{
+        width: 25%;
+    }
+    .percentage-wrapper{
+        width: 75%;
+    }
+    #morgage_pmi{
+        background-color:#ededed ;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    #morgage_pmi_percent{
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+} 

@@ -1,0 +1,38 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wpresidence_editor_label {
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+}
+
+.wpresidence_editor_select{
+    width:200px;
+    
+}
+
+.wp-block-residence-gutenberg-block-membership-package-settings{
+    background-color: #fafafa;
+    padding: 10px;
+    box-shadow: 0 5px 40px rgba(0,0,0,0.05);
+}
+
+
+.wp-block-residence-gutenberg-block-membership-package-settings .autocomplete_p{
+    font-size: 12px;
+}
+
+.wp-block-residence-gutenberg-block-membership-package-settings .components-autocomplete{
+    border: 1px solid #ddd;
+}

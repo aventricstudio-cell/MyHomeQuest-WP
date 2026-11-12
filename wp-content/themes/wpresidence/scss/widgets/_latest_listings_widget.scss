@@ -1,0 +1,123 @@
+//scss\widgets\_latest_listings_widget.scss
+
+
+// Latest Listings
+// ------------------------------------------------
+
+.widget-container.latest_listings {
+  
+    .owl-carousel {
+      .owl-item {
+        float: left;
+        position: relative;
+        height: auto;
+  
+        .item {
+          min-height: 100%;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        }
+      }
+    }
+  
+    .owl-theme {
+      .owl-nav  {
+        margin-top: -15px;
+        .wpresidence-carousel-control{
+          margin-top: -35px;
+        }
+      }
+    }
+  
+    .featured_title {
+      position: absolute;
+      float: left;
+    }
+}
+  
+.widget_latest_internal {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 100%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .price_label{
+      font-size: 13px;
+  }
+
+  img {
+    vertical-align: top;
+    display: inline;
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+
+
+  &:hover img {
+    opacity: 0.85;
+  }
+}
+  
+.listing_name {
+  display: inline;
+  margin-left: 0;
+  float: left;
+  line-height: 20px;
+  position: relative;
+  width: 60%;
+  padding-left: 13px;
+}
+  
+.no_post_th {
+  margin-left: 0;
+}
+  
+.widget_latest_title {
+  color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+}
+
+.widget_latest_listing_image {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  max-width: 150px;
+}
+  
+.widget_latest_price {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+#primary {
+  .widget-container.latest_listings{
+    overflow: hidden;
+  }
+  .widget_latest_title a {
+    font-size: 14px;
+    line-height: 1.1em;
+    font-weight: 500;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+
+    &:hover{
+      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+  }
+}
+
+#colophon {
+  .widget_latest_price {
+    color: var(--wp-estate-footer-font-color-option, var(--wp_estate_footer_font_color));
+  }
+}   
+

@@ -1,0 +1,49 @@
+#wpestate-pro_list_adv .inside{
+    margin:0;
+    padding:0;
+    background:#fdfdfd;
+}
+
+.pladv_options_wrapper{
+    display:flex;
+}
+.pladv_options_wrapper_list{
+    background: linear-gradient(45deg, var(--redux-col), var(--redux-selected-menu-group-back));
+    padding-top:15px;
+    min-height:350px;
+}
+.pladv_tab_item{
+    width:200px;
+    color: rgba(240, 245, 250, 0.85) !important;
+    padding:10px;
+    cursor:pointer;
+    margin:5px 15px;
+    font-weight:400 !important;
+    font-size:13px;
+}
+.pladv_tab_item:hover{
+    background: var(--redux-sidebar-hover-back);
+    color: var(--redux-col-menu-menu-hover-color);
+    border-radius:8px;
+    box-shadow:none;
+}
+.pladv_tab_item.active_tab{
+    color:#fff;
+    font-weight:600;
+    background-color: var(--redux-col-menu-menu-header) !important;
+    border-radius:8px;
+    text-shadow:none;
+    margin: 5px 15px;
+}
+.pladv_tab_item_content{
+    display:none;
+    background:#fff;
+    padding:30px;
+}
+.pladv_tab_item_content.active_tab{
+    display:block;
+}
+.pladv_options_content_wrapper{
+    width: 100%;
+    padding-bottom: 30px;
+}

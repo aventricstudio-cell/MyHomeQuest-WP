@@ -1,0 +1,62 @@
+//scss\widgets\_featured_agent_widget.scss
+
+/* =Featured Agent Widget
+------------------------------------------------*/
+
+#primary {
+
+    .agent_unit{
+        &:hover{
+            box-shadow: none;
+        }
+        
+        h4 {
+            margin-bottom: 5px;
+            margin-top: 20px;
+            a{
+                font-size: 18px;
+            } 
+        }   
+    }
+    
+    .agent_unit.agent_unit_sidebar{
+        box-shadow: none;
+        
+        .agent_position {
+            margin-bottom: 15px;
+        }
+
+        .agent_detail {
+            display: flex;
+            align-items: center;
+            line-height: 1.4em;
+            font-size: 13px;
+        }
+    }    
+
+    .agent_contanct_form_sidebar {
+        .widget-container {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+
+    .agent_unit_social {
+        padding: 0 30px;
+        margin-right: 10px; // This applies to the container and individual links
+        font-size: 15px;
+        line-height: 30px;
+        
+        a {
+            margin-right: 10px;
+        }
+    } 
+}
+
+.widget-area-sidebar {
+    .agent_unit_button.agent_unit_contact_me {
+        line-height: 1em;
+        bottom: 15px;
+        right: 30px;
+    }
+}

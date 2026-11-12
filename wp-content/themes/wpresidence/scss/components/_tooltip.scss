@@ -1,0 +1,39 @@
+/** MILLDONE
+ * Custom Bootstrap 5.3 Tooltip Styles
+ *  src: scss\components\_tooltip.scss
+ * Overrides default Bootstrap tooltip styles with custom colors and sizes.
+ * Uses data-popper-placement for positioning instead of directional classes.
+ */
+
+/* Base tooltip styling */
+.tooltip {
+    &-inner {
+        background: #333;
+        font-size: 12px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    /* Top arrow */
+    &[data-popper-placement^="top"] .tooltip-arrow::before {
+        border-top-color: #333 !important;
+    }
+
+    /* Bottom arrows */
+    &[data-popper-placement^="bottom"] {
+        .tooltip-arrow {
+            &::before {
+                border-bottom-color: #333 !important;
+            }
+        }
+    }
+
+    /* Left arrow */
+    &[data-popper-placement^="left"] .tooltip-arrow::before {
+        border-left-color: #333 !important;
+    }
+
+    /* Right arrow */
+    &[data-popper-placement^="right"] .tooltip-arrow::before {
+        border-right-color: #333 !important;
+    }
+}

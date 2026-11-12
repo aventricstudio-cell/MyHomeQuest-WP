@@ -1,0 +1,96 @@
+.search_wrapper.search_wr_8 {
+    padding-bottom: 0px;
+
+    .wpresidece-reset-btn{
+        margin-left: 10px;
+        top: 27px;
+    }
+
+    .wpresidence_button{
+        width: 100%;
+        margin: 0px;
+    }
+
+    form{
+        .d-flex{
+            gap:7px;
+        }
+    }
+
+    #adv-search-8{
+        margin: 0px auto;
+        
+        .adv8-holder {
+            margin-top: -70px;
+        }
+
+    }
+
+    &.with_search_form_float {
+        padding: 0px 0px;
+    }
+    
+    &.with_search_on_start.without_search_form_float {
+        padding-top: 66px;
+    }
+    
+    &.without_search_form_float {
+        padding-top: 85px;
+        padding-bottom: 5px;
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//  tate cu float
+.search_wr_8.without_search_form_float .wpestate_search_tab_align_center .nav-tabs {
+    top: -70px;
+}
+
+
+
+.search_wr_8.with_search_form_float .nav-tabs {
+    border: none;
+    margin-left: 0px;
+}
+
+.with_search_form_float .adv8-holder {
+    margin-top:0!important;
+}
+
+
+
+
+
+.with_search_form_float .adv8-holder .tab-content {
+    padding: 27px 7px 0px 7px;
+}
+
+.with_search_form_float .adv8-holder .residence_adv_extended_options_text {
+    margin-bottom: 13px;
+}
+
+
+
+.search_wr_8.with_search_on_start.without_search_form_float #results {
+    top: 41px;
+    left: 7px;
+    transform: translate(0, 100%);
+    top: auto;
+    bottom: 0px;
+}
+
+.search_wr_8.with_search_form_float #results {
+    left: 0px;
+}
+

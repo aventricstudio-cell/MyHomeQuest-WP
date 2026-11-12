@@ -1,0 +1,132 @@
+/** MILLDONE
+ * Agent Section  Styles
+ * src: scss\property_page\_agent_section.scss
+ * This file contains styles for agent details sections in the WpResidence theme.
+ * It includes styles for the agent wrapper, header, and related elements.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 3.0.3
+ */
+
+
+// Listing content styles
+
+.col-12.col-md-12.wpresidence-content-container-wrapper {
+  .wpestate_contact_form_parent.wpestate_agent_details_wrapper.row.wpestate_single_agent_details_wrapper{
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+    
+    margin: 0 0 30px 0;
+    .custom_details_container {
+      display: none;
+    }
+    .col-md-6.agent_details{
+      padding: 0 30px;
+    }
+  }
+}
+
+
+.listing-content {
+  .wpestate_single_agent_details_wrapper {
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+    
+    margin: 0 0 30px 0;
+    .custom_details_container {
+      display: none;
+    }
+    .col-md-6.agent_details{
+      padding: 0 30px;
+    }
+  }
+}
+  
+  // Property design agent styles
+  .wpestate_estate_property_design_agent {
+    display: inline-block;
+    width: 100%;
+    min-height: 1px;
+  
+    .wpestate_agent_details_wrapper {
+      width: 100%;
+      padding: 30px 30px 10px;
+      margin-bottom: 30px;
+      background: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+  
+      &.wpestate_single_agent_details_wrapper {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  // Tab content agent details
+  .tab-content .wpestate_agent_details_wrapper {
+    padding: 0;
+  }
+  
+  // Agent details header wrapper
+  .wpestate_single_agent_details_header_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: nowrap;
+    padding: 0;
+  
+    .schedule_meeting {
+      float: left;
+      margin-left: 15px;
+      padding: 3px 15px;
+      font-size: 13px;
+      line-height: 20px;
+      color: #fff !important;
+      background-color: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+      cursor: pointer;
+      transition: background-color 0.1s linear;
+  
+      &:hover {
+        background-color: color-mix(in srgb, var(--wp-estate-second-color-option, var(--wp-estate-second-color)) 80%, transparent);
+      }
+    }
+
+    h4#show_contact{
+      margin-bottom: 0;
+    }
+  }
+
+  .wpestate_single_agent_details_wrapper {
+    row-gap: 10px; 
+    .contact_form_flex_wrapper,
+    .schedule_wrapper{
+      padding: 0;
+    }
+  }
+  
+  // Hide schedule meeting for specific post types
+  .single-estate_developer,
+  .single-estate_agency,
+  .single-estate_agent {
+    .schedule_meeting {
+      display: none;
+    }
+  }
+  
+  // Message explaining
+  .message_explaining {
+    width: 100%;
+    font-size: 13px;
+    line-height: 1em;
+  }

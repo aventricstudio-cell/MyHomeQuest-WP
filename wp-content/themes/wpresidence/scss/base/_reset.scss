@@ -1,0 +1,14 @@
+body a {
+    color: var(--wp_estate_link_color-option, var(--wp_estate_link_color));
+    @include color-transition(color, $transition-speed, linear); // Use the color-transition mixin
+    text-decoration: none;
+}
+ 
+a:hover {
+    color: $primary-color;
+}
+
+a img {
+    border: 0;
+}
+//

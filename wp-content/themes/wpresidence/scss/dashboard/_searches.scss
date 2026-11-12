@@ -1,0 +1,114 @@
+
+  /*=dashboard search
+  --------------------------------------------------------------------------------*/
+  #search_form_submit_1 {
+    margin-left: 15px;
+    color: #fff;
+    margin-top: 0px;
+    float: left;
+    background-image: none;
+    border-color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+    background-color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+    min-height: 56px;
+    padding: 12px 25px;
+}
+
+.wpestate_dashboard_content_wrapper input[type=text].wpestate_dashboard_input_type,
+#prop_name {
+  width: 300px;
+  padding: 15px;
+  float: left;
+  background: rgb(228 228 228 / 0.3);
+  opacity: 1;
+  border: none;
+  color: #1B1D21;
+}
+
+#prop_name:focus{
+    background: #fff!important;
+    border: 2px solid #6C5DD3!important; 
+    opacity: 1;
+}
+
+.wpestate_dashboard_input_type{
+  margin-right: 15px;
+}
+
+.wpestate-dashboard-select{
+  margin-right: 15px;
+  box-shadow: none;
+  padding: 15px;
+  text-shadow: none;
+  background-image: none;
+  background-color: #f7f7f7;
+  color: #8593a9;
+  text-transform: none;
+  border: none;
+  line-height: 56px;
+  position: unset;
+  text-align: left;
+  border-radius: 8px;
+  min-width: 220px;
+}
+
+.wpestate-dashboard-select select{
+  margin-right: 10px;
+}
+
+
+
+.page-template-user_dashboard_add .ui-widget-content.ui-autocomplete {
+  max-width: 600px
+}
+
+.ui-menu .ui-menu-item{
+    color: #222;
+    line-height: 1.6em;
+    font-size: 14px;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+.ui-autocomplete .ui-menu-item .ui-state-focus {
+    border: none !important;
+    border-radius: 0px !important;
+    background-color: #fff!important;
+    background-image: none!important;
+    color:  var(--wp-estate-user-dashboard-menu-color-option, #5F75EE ) !important;
+  
+}
+
+.ui-menu .ui-state-focus{
+    border: none !important;
+     border-radius: 0px !important;
+     background-color: #fff!important;
+     background-image: none!important;
+     color:  var(--wp-estate-user-dashboard-menu-color-option, #5F75EE)!important;
+    
+}
+
+.pp_social .facebook {
+  width: 102px !important;
+}
+
+  .page-template-user_dashboard_searches .search_param {
+    padding: 0px 0px 0px 15px; 
+    
+  }
+  
+
+  
+.delete_search{
+
+  margin-right: 10px;
+}
+
+.property_wrapper_dash.search_unit_wrapper {
+  padding: 30px 0px 30px 0px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}

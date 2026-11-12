@@ -1,0 +1,4 @@
+== Frequently Asked Questions ==
+= Where do I report security bugs found in this plugin? =
+
+Please report security bugs found in the source code of the WpResidence plugin through the [Patchstack Vulnerability Disclosure  Program](https://patchstack.com/database/vdp/5dc2789d-acff-4e47-b921-13bd565b66f1). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.

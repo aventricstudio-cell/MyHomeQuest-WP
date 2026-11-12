@@ -1,0 +1,193 @@
+
+
+//styles for Property Address widget
+
+.property_categs_elementor {
+    margin-top: 0px;
+    min-height: 1px;
+    float: none;
+}
+
+// styles for Add To Favorites/Share/Print buttons widget
+
+.elementor-widget-property_add_to_favorites{
+    .share_list{
+        margin-left: 0px;
+    }
+}
+
+// styles for property page status  widget
+.elementor-widget-container>.status-wrapper {
+    float: none;
+    position: relative;
+    top:unset;
+    left:unset;
+    right: unset;
+    .ribbon-wrapper-default {
+        position: relative;
+        top:unset;
+        left:unset;
+        right: unset;
+    }
+    
+}
+
+
+// accordion temapltes
+.elementor-widget .property-panel {
+    margin-bottom: 0px;
+    background: #fff;
+}
+
+.elementor-widget-Details_as_Accordion .property-panel {
+    margin-bottom: 20px;
+}
+
+
+// Agent Form Section widget
+.elementor-widget-property_show_agent_form_section {
+    .wpestate_agent_details_wrapper  {
+        margin-bottom: 30px;
+        background-color: #fff;
+        padding: 30px 20px 20px 20px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+}
+
+//agent Form v2 (for sidebar) Section widget
+.elementor-widget-property_show_agent_form2_section{
+    .agent_contanct_form_sidebar {
+        padding: 30px;
+    }
+}
+
+//Details as Accordion widget
+.elementor-widget-Details_as_Accordion {
+    .property-panel{
+        margin-bottom: 0px;
+        background-color: transparent;
+        .accordion-item{
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+    }
+}
+
+//Agent Card widget
+.elementor-widget-Agent_Card{
+    .property_desing_agent_two_col {
+        .wpestate_agent_details_wrapper{
+            display: flex;
+        }
+
+    }
+
+}
+
+.wpestate_estate_property_design_intext_details #add_favorites {
+    position: relative;
+    top: auto;
+    right: auto;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #a6b3bb;
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.wpestate_estate_property_design_intext_details #add_favorites.isfavorite {
+    background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+.wpestate_estate_property_design_intext_details #add_favorites.isfavorite i {
+    display: none;
+}
+
+.wpestate_estate_property_design_intext_details .no_views {
+    float: none;
+    display: inline-block;
+}
+
+.wpestate_estate_property_design_intext_details #print_page,
+.wpestate_estate_property_design_intext_details .share_facebook,
+.wpestate_estate_property_design_intext_details .share_tweet,
+.wpestate_estate_property_design_intext_details .share_google,
+.wpestate_estate_property_design_intext_details .share_pinterest {
+    float: none;
+    font-size: 17px;
+    margin-left: 13px;
+}
+
+.wpestate_estate_property_details_section .google_map_shortcode_wrapper {
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    float: left;
+}
+
+.wpestate_estate_property_slider_section_wrapper .wpestate_property_carousel,
+.wpestate_estate_property_slider_section_wrapper .wpestate_property_carousel.post-carusel .item,
+.wpestate_estate_property_slider_section_wrapper .wpestate_property_carousel.carouselvertical,
+.wpestate_estate_property_slider_section_wrapper .wpestate_property_carousel .carousel-inner,
+.wpestate_estate_property_slider_section_wrapper .carouselvertical {
+    height: 100% !important;
+    min-height: 150px !important;
+}
+
+.wpestate_estate_property_slider_section_wrapper .carouselvertical .carousel-inner {
+    max-width: 100%;
+}
+
+
+
+.wpestate_estate_property_design_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 1px;
+}
+
+.wpestate_estate_property_design_gallery .wpestate_property_gallery_item {
+    position: relative;
+}
+
+.wpestate_estate_property_design_gallery .wpestate_property_gallery_item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wpestate_estate_property_design_gallery .wpestate_property_gallery_item .img_listings_mes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.wpestate_estate_property_design_gallery .wpestate_property_gallery_item:last-child .img_listings_mes {
+    display: flex;
+}
+
+
+.elementor-widget-container .wpestate_property_carousel .owl-carousel.owl-loaded {
+    height: auto;
+    min-height: 385px;
+}
+
+/*single detail widget for elementor*/
+.elementor-widget-container{
+    #accordion_prop_floor_plans,
+    .wpestate_estate_property_details_section{
+        .row{
+            margin: 0;
+        }
+    } 
+}

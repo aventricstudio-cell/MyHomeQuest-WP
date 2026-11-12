@@ -1,0 +1,47 @@
+
+.icon-fav-on-remove {
+    position: absolute;
+    font-size: 12px;
+    background-color: #FB6A5C;
+    padding: 9px 0px;
+    color: #fff;
+    text-align: center;
+    height: auto;
+    width: 150px;
+    border-bottom-left-radius: 4px;
+    top: 0px;
+    right: 0px;
+    border: none;
+}
+
+.icon-fav-on-remove:before {
+    display: none;
+}
+
+.icon-fav.icon-fav-on-remove {
+    z-index: 99;
+}
+
+.icon-fav-on {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+.property_listing.property_unit_type4 .icon-fav:hover {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+.icon-fav-off:hover {
+    border: 1px solid #d8e0e5;
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+.icon-fav:before {
+    content: "\f004";
+    font-size: 12px;
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 500 !important;
+}
+
+.icon-fav.icon-fav-on:before {
+    font-weight: 600 !important;
+}

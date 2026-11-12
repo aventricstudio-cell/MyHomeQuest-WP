@@ -1,0 +1,101 @@
+/** MILLDONE
+ * Property Multi Image Slider
+ * src: property-multi-image-slider.scss 
+ * Package: WpResidence
+ * 
+ * Purpose: Styles for the property multi-image slider component in the WpResidence theme
+ * 
+ * This file contains SCSS styles for the multi-image slider used on property detail
+ * pages. It defines the layout and appearance of the slider, individual slides,
+ * captions, and related elements.
+ * 
+ * Dependencies: None
+ * 
+ * Usage: Import this file into the main theme stylesheet or compile and enqueue it
+ * specifically on pages where the property multi-image slider is used.
+ */
+
+// Main slider container
+.property_multi_image_slider {
+    width: 100%;
+    position: relative;
+    background-color: #222;
+    margin-bottom: 30px;
+
+    // Individual slide item
+    .item {
+        width: 33.3%;
+        float: left;
+        position: relative;
+        display: none; // Hidden by default, shown when initialized
+
+        // Slide image
+        .multi_image_slider_image {
+            border-left: 1px solid #f0f0f0;
+            border-right: 1px solid #f0f0f0;
+            position: relative;
+            width: 100%;
+            height: 600px;
+            @include background-cover; 
+            overflow: hidden;
+            cursor: pointer;
+            float: left;
+            @include smooth-transition-shorter;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        // Caption for each slide
+        .carousel-caption {
+            right: auto;
+            left: 0px;
+            padding-bottom: 0px;
+            bottom: 0px;
+            width: 100%;
+            text-align: left;
+
+            // Caption background overlay
+            .carousel-caption_underlay {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background-color: #222;
+                opacity: 0.4;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            // Caption text
+            .carousel_caption_text {
+                z-index: 2;
+                position: relative;
+                text-shadow: none;
+                padding: 10px;
+            }
+        }
+    }
+
+    // Hide Slick dots (pagination)
+    .slick-dots {
+        display: none;
+    }
+}
+
+// Show slides when slider is initialized
+.property_multi_image_slider.slick-initialized {
+    .item {
+        display: block;
+    }
+}
+
+// Specific styles for single listing content
+.single-content.listing-content .property_multi_image_slider {
+    height: 467px;
+
+    .multi_image_slider_image {
+        height: 467px;
+    }
+}

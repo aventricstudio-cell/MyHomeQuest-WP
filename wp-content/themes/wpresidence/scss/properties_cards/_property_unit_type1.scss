@@ -1,0 +1,187 @@
+// MILLDONE
+// _property_unit_type1.scss
+// src: scss\properties_cards\_property_unit_type1.scss
+// This file contains styles specific to Property Unit Type 1 in the WpResidence theme.
+// It defines the layout and appearance of Type 1 property cards displayed in various views.
+
+.property_unit_type1 {
+
+    // Image wrapper styles
+    .listing-unit-img-wrapper {
+        margin: 8px;
+        height: auto;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    // Featured property label styles
+    .featured_div {
+        position: absolute;
+        left: -5px;
+        top: 20px;
+        font-size: 11px;
+        color: #fff;
+        padding: 0 10px 0 13px;
+        line-height: 20px;
+
+        // Triangle shape for featured label
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 0;
+            border: solid transparent;
+            border-width: 0 5px 5px 0;
+            border-right-color: #7fca90;
+        }
+    }
+
+    // Property information wrapper
+    .property-unit-information-wrapper {
+        padding-top: 12px;
+    }
+
+    // Price wrapper styles
+    .listing_unit_price_wrapper {
+        position: absolute;
+        bottom: 15px;
+        left: 12px;
+        z-index: 99;
+        color: #fff;
+        font-size: 17px;
+        line-height: 1;
+    }
+
+   
+
+    // Property address styles
+    .property_address_type1_wrapper {
+        padding: 0 20px;
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        line-height: 20px;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+
+        a {
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            &:hover{
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+
+        .fas {
+            margin-right: 5px;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            font-size: 11px;
+        }
+    }
+
+    // Property categories styles
+    .property_categories_type1_wrapper {
+        padding: 0 20px;
+        float: left;
+        width: 100%;
+
+        a {
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            &:hover{
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+    }
+
+    // Property details styles
+    .property_details_type1_wrapper {
+        padding: 0 20px;
+        float: left;
+        width: 100%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+    }
+
+    // Property location styles
+    .property_location {
+        margin: 0;
+        padding: 13px 20px;
+        margin-top: auto;
+    }
+
+    // Carousel control styles
+    .carousel-control {
+        width: 40px;
+    }
+
+    // Status wrapper styles
+    .status-wrapper {
+        position: absolute;
+        right: 10px;
+        top:10px
+    }
+
+   
+
+    // Compare action styles
+    .compare-action:before {
+        font-size: 16px;
+    }
+}
+
+// SVG styles for property unit types 1, 2, and 8
+$property-unit-types: 1, 2, 8;
+
+.property_unit {
+  @each $type in $property-unit-types {
+    &_type#{$type} {
+      svg {
+        float: left;
+        width: 14px;
+        fill: rgba(0, 0, 0, 0.5);
+      }
+      .icon-fav-on svg {
+        fill: rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+}
+
+// Styles for favorite icon in property listings (types 1 and 3)
+.property_listing {
+    &.property_unit_type1 {
+        .icon-fav {
+            // Base styles for favorite icon
+            position: absolute;
+            right: 10px;
+            bottom: 9px;
+            z-index: 12;
+            color: #fff;
+            border: 0; // Removed unnecessary properties
+            padding-top: 0;
+
+            // Hide default icon
+            &:before,
+            &.icon-fav-on:before {
+                display: none;
+            }
+
+            // Styles for remove favorite icon
+            &.icon-fav-on-remove {
+                z-index: 99;
+                top: 12px;
+                right: 0 !important;
+                bottom: auto !important;
+                line-height: 27px;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+.listing_wrapper.property_unit_type1.col-md-12{
+    height: fit-content;
+}
+

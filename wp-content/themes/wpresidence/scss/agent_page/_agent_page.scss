@@ -1,0 +1,593 @@
+/** MILLDONE
+ * WPResidence Agent Page Styles
+ * src: scss\agent_page\_agent_page.scss
+ * This file contains styles for the agent page template in the WPResidence theme.
+ * It includes styles for agent details, contact form, listings, and related elements.
+ *
+ * Package: WPResidence
+ * Dependency: None
+ * Usage: Imported in the main theme stylesheet or enqueued separately for agent pages
+ */
+
+// Main content wrapper
+.wpresidence-content-container-wrapper {
+    // Main content area
+    .single_width_blog {
+
+        // About me
+        .agent_content{
+            padding: 10px 0; 
+        }
+
+        .single-content.single-agent {
+            margin-bottom: 30px;
+            background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+            padding: 30px;
+            padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+            padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+            padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+            padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+        
+            
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+ // Agent buttons
+.realtor-contact-buttons{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+// Custom details container
+.custom_details_container {
+    > a {
+        margin-right: 10px;
+    }  
+}
+
+
+// only for agent page
+.single-estate_agent {
+    .wpestate_agent_details_wrapper  {
+        .agentpic-wrapper {
+            padding: 0px 0px 10px 10px;
+        }
+        .agent_details{
+            padding: 0px 0px 0px 30px;
+        }
+    }
+
+    h4#show_contact{
+        margin-bottom: 5px;
+        padding: 0 13px;
+    }
+
+    .wpestate_success, 
+    .alert-message, 
+    .login-alert {
+        display: flex;
+        margin: 0px 13px 10px 13px;
+        width: auto;
+        flex-grow: 1; 
+    }
+
+    .agency_taxonomy, 
+    .developer_taxonomy{
+        padding-top: 0;
+    }
+
+    .wpestate_agent_details_container_wrapper_type_2{
+        .alert-message{
+            margin: 0px 0px 10px 0px;
+        }
+
+    }
+}
+
+// Agent details wrapper
+.wpestate_agent_details_wrapper {
+
+    // Agent picture wrapper
+    .agentpic-wrapper {
+        @include smooth-transition-shorter;
+        padding: 0px;
+
+        .agent-listing-img-wrapper {
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+
+            .agentpict {
+                width: 100%;
+                height: 260px;
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+         
+           
+        }
+    }
+
+    // Agent social links
+    .agent_unit_social_single {
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        width: 90%;
+        z-index: 10;
+        position: relative;
+        text-align: center;
+     
+        margin: 0 auto;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        font-size: 15px;
+
+        a {
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            margin-right: 8px;
+            margin-left: 8px;
+
+            &:hover {
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+
+        i {
+            padding: 10px 0;
+        }
+    }
+
+    // Agent details
+    .agent_details {
+        h3 {
+            margin-bottom: 3px;
+            font-size: 20px;
+        }
+
+        .agent_position{
+            margin-bottom: 10px;
+        }
+
+        .agent_detail {
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            svg {
+                width: 14px;
+            }
+        }
+    }
+}
+
+
+
+            
+
+// Agent listings wrapper
+.wpresidence_realtor_listings_wrapper {
+    margin-bottom: 30px;
+    min-height: 1px; 
+
+    .term_bar_wrapper {
+        width: auto;
+        background-color: #fff;
+        box-shadow: var(--wp-estate-cssbox-shadow-option, var(--wp_estate_cssbox_shadow));
+        margin: 0px 10px 30px 10px;
+        padding: 0px;
+        display: flex;
+        flex-grow: 1;
+ 
+
+        .term_bar_item {
+            float: left;
+            font-size: 14px;
+            padding: 15px 25px;
+            cursor: pointer;
+            color: #222222;
+            min-width: 120px;
+            text-align: center;
+            margin-right: 1px;
+            position: relative;
+            overflow: hidden;
+            text-transform: capitalize;
+            font-weight: 500;
+            background-color: #fff;
+
+            &:hover{
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+            &.active_term {
+                background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                color: #fff;
+            }
+
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background: #edf0f1;
+                content: '';
+                @include smooth-transition-shorter;
+                transform: translate3d(0, 100%, 0) translate3d(0, -3px, 0);
+            }
+
+            &:hover:after,
+            &.active_term:after {
+                transform: translate3d(0, 0, 0);
+                background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+    }
+}
+
+// agent custom parameter wrapper
+.custom_parameter_wrapper {
+    margin-top: 15px;
+
+    .col-md-4 {
+        margin-bottom: 15px;
+    }
+
+    .custom_parameter_label {
+        margin-right: 10px;
+        font-weight: 500;
+        width: 100%;
+        float: left;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color))
+        ;
+    }
+}
+
+
+
+// Agent contact form
+
+.contact_form_flex_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .contact_form_flex_input_wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+.elementor-widget-Agent_Contact_Form .elementor-widget-container {
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+* Code for agent layput type 2
+* This file contains styles for the agent page template in the WPResidence theme.
+* It includes styles for agent details, contact form, listings, and related elements.
+*/
+.wpestate_agent_header2 {
+    width: 100%;
+    height: 200px;
+    background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 10%, transparent);
+    
+    .wpestate_agent_header2_breadcrumbs {
+        width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0px 15px;
+    }
+}
+
+
+.wpestate_agent_header2_content {
+    &.wpresidence-content-container-wrapper {
+        margin-top: -135px;
+        padding: 0;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    .wpestate_single_agent_details_wrapper_type2 {
+        background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+        display: flex;
+        margin-bottom: 30px;
+
+        h3{
+            margin: 3px 0;
+        }
+
+        .agent_position{
+            margin-bottom: 10px;
+        }
+    
+        .agentpict {
+            width: 380px;
+            height: 335px;
+            @include background-cover; 
+            background-position: top center;
+        }
+    
+        .agent_details {
+            padding: 30px;
+        }
+    }
+    
+
+    .agent_social_share_type2 {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        display: flex;
+        gap: 20px;
+
+        i {
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            font-size: 16px;
+
+            &:hover{
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+    }
+
+    .single-content.single-agent{
+        box-shadow: none;
+    }
+}
+
+
+.wpestate_agent_details_container_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 30px;
+
+    .wpestate_agent_details_container {
+        background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+        padding: 30px;
+        padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+        padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+        padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+        padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+    
+        width: 100%;
+    }
+
+    .wpestate_agent_contact_details_type2 {
+        margin-bottom: 30px;
+    }
+    
+}
+
+
+
+
+// Styles for elements not directly found in the provided markup
+// These are kept at the end of the file as per instructions
+
+.mobile_agent_area_wrapper {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #f0f3f7;
+    @include box-shadow(card);
+    padding: 10px;
+    z-index: 105;
+    
+    .mobile_agent_area_details_wrapper {
+        float: right;
+        width: 49%;
+    }
+    
+
+    .agent-listing-img-wrapper {
+        width: 49%;
+        float: left;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .agentpict {
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-right: 5px;
+        @include background-cover; 
+    }
+
+    a {
+        max-width: 106px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        float: left;
+        font-weight: 500;
+    }
+
+    .agent_detail {
+        float: right;
+        margin-bottom: 0;
+
+        i {
+            color: #fff;
+            margin-right: 10px;
+            font-size: 17px;
+            background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            position: relative;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            margin-bottom: 0;
+        }
+
+        &:first-of-type i {
+            margin-right: 0;
+        }
+    }
+}
+
+// classes for sidebar display of agents on property page
+.agent_unit_widget_sidebar_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .agent_unit_widget_sidebar_wrapper_unit {
+        display: flex;
+
+        .agent_unit_widget_sidebar {
+            background-position: top;
+            width: 70px;
+            height: 70px;
+            background-size: cover;
+            float: left;
+            margin-right: 15px;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            flex-shrink: 0;
+           
+        }
+        .agent_unit_widget_sidebar_details_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h4 {
+                margin-bottom: 5px;
+                a{
+                    font-family: var(--wp-estate-h4-font-family-option, var(--wp-estate-h4-font-family));
+                    font-size: var(--wp-estate-h4-font-size-option, var(--wp-estate-h4-font-size));
+                    line-height: var(--wp-estate-h4-line-height-option, 16px);
+                    font-weight: var(--wp-estate-h4-font-weight-option, var(--wp-estate-h4-font-weight));
+                }
+            }
+            .agent_position {
+                margin: 0px;
+            }
+        }
+    }
+
+}
+
+.agent_contanct_form_sidebar {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+
+    #show_contact{
+        display: none;
+    }
+
+    .schedule_wrapper{
+        margin-bottom: 10px;
+    }
+    
+    .wpestate_single_agent_details_header_wrapper {
+        .schedule_meeting {
+            width: 100%;
+            margin: 10px 0px;
+        }
+    }
+
+ 
+    .contact_form_flex_wrapper { 
+        .contact_form_flex_input_wrapper{
+            flex-direction: column;
+        }
+        .realtor-contact-buttons{
+            .agent_call_no{
+                display: none;
+            }
+        }
+    }
+
+}
+
+#primary{ 
+    .widget-container .wpresidence_button.wpresidence_button_inverse{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        gap: 5px;
+        justify-content: center;
+    }
+        
+    .agent_unit_widget_sidebar_details_wrapper h4 a {
+        font-family: var(--wp-estate-h4-font-family-option, var(--wp-estate-h4-font-family));
+        font-size: var(--wp-estate-h4-font-size-option, var(--wp-estate-h4-font-size));
+        line-height: var(--wp-estate-h4-line-height-option, var(--wp-estate-h4-line-height));
+        font-weight: var(--wp-estate-h4-font-weight-option, var(--wp-estate-h4-font-weight));
+    }
+}
+
+
+.single-estate_agent #footer-contact-form .alert-message{
+    margin: 0px;
+}
+    
+.agent_taxonomy {
+    width: 100%;
+    float: left;
+    margin: 15px 0px 0px 0px;
+}
+
+.elementor_agent_wrapper {
+    display: inline-block;
+    overflow: hidden;
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    width: 100%;
+    .agent_contanct_form_sidebar {
+        width: 100%;
+    }
+}
+ 
+/* AGENT customg parameters features */
+
+.elementor-widget-container .wpestate_property_widget .custom_details_container {
+    display: none;
+}
+
+.wpestate_agent_details_container_wrapper_type_2 .agent_web_member_of_class,
+.wpestate_agent_details_container_wrapper_type_2 #show_contact{
+    display: none;
+}
+
+.col-md-8.add_custom_data_cont .row {
+    margin: 0px;
+}
+
+.row.single_parameter_row .col-md-5:first-of-type,
+.row.single_parameter_row .col-md-2:last-of-type {
+    padding-left: 0px;
+}
+
+.row.single_parameter_row .col-md-2:last-of-type {
+    line-height: 1.3em;
+}
+
+
+.wpresidence_builder_contact_form{
+    .wpestate_single_agent_details_header_wrapper{
+        display: none;
+    }
+}

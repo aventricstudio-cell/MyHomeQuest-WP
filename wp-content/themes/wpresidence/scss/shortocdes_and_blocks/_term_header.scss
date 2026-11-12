@@ -1,0 +1,98 @@
+.term-featured-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.fallback-preview {
+        background: #f0f0f0;
+        height: 400px;
+    }
+}
+
+.term-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.term-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.term-title {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.term-tagline {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.wpresidence-term-featured-image{
+    min-height: 100px;
+}
+// Responsive styles
+@media (max-width: 768px) {
+    .term-title {
+        font-size: 2rem;
+    }
+    
+    .term-tagline {
+        font-size: 1.2rem;
+    }
+    
+    .term-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .term-title {
+        font-size: 1.5rem;
+    }
+    
+    .term-tagline {
+        font-size: 1rem;
+    }
+    
+    .term-content {
+        padding: 10px;
+    }
+}
+
+
+.documents-list{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    .document-icon{
+        svg{
+            max-width: 20px;
+        }
+    }
+}

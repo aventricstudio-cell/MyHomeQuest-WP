@@ -1,0 +1,243 @@
+// sidebar/_sidebar.scss
+
+// sidebar/_sidebar.scss
+
+// This file contains styles for the sidebar components of the website.
+// It includes styles for widgets, search forms, and other sidebar elements used on sidebar.
+
+.widget-title-sidebar {
+    font-size: 16px;
+    line-height: 1.6em;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    margin: 0 0 15px 0;
+}
+
+.widget-title-sidebar_blank {
+    width: 100%;
+}
+
+.widget-area-sidebar {
+    min-height: 200px;
+    margin-top: 0;
+
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=url],
+    input[type=number],
+    textarea,
+    .wpresidence_dropdown {
+        font-size: 13px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-weight: normal;
+        font-size: 13px;
+    }
+
+    #input_formula{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        label{
+            margin-bottom: -5px;
+        }
+    }
+
+    li a:hover {
+        text-decoration: none;
+        transition-duration: 0s; // No transition on hover
+    }
+}
+
+#primary {
+
+    .wpestate_login_form_wrapper .login_register_div_title, 
+    .wpestate_register_form_wrapper .login_register_div_title, 
+    .wpestate_forgot_form_wrapper .login_register_div_title{
+        font-size: 16px;
+        line-height: 1.6em;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    a {
+        font-size: 13px;
+        @include smooth-transition-shorter;
+    }
+
+    li {
+        font-size: 13px;
+    }
+
+    #user_terms_register_wd {
+        margin: 10px 5px 10px 0;
+        float: left;
+    }
+    
+    #user_terms_register_wd_label {
+        margin: 10px 5px 10px 0;
+    }
+
+    .widget-container {
+        padding: 30px;
+        padding-top: var(--wp-estate-sidebarwidget-internal-padding-top-option,var(--wp_estate_sidebarwidget_internal_padding_top));
+        padding-left: var(--wp-estate-sidebarwidget-internal-padding-left-option,var(--wp_estate_sidebarwidget_internal_padding_left));
+        padding-bottom:var(--wp-estate-sidebarwidget-internal-padding-bottom-option,var(--wp_estate_sidebarwidget_internal_padding_bottom));
+        padding-right:var(--wp-estate-sidebarwidget-internal-padding-right-option,var(--wp_estate_sidebarwidget_internal_padding_right));
+   
+
+        background: var(--wp-estate-sidebar-widget-color-option, var(--wp_estate_sidebar_widget_color));;
+        border: var(--wp-estate-widget-border-size-option, --wp_estate_widget_sidebar_border_size ) solid var(--wp-estate-widget-sidebar-border-color-option,--wp_estate_widget_sidebar_border_color);
+     
+      
+        &.featured_sidebar_property{
+            padding: 0px;
+        }
+      
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            --bs-gutter-y: 0rem;
+        }
+
+        .wpresidence_button {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.single-content {
+    .widget.widget-container {
+        padding: 30px;
+        border: var(--wp-estate-widget-border-size-option, --wp_estate_widget_sidebar_border_size ) solid var(--wp-estate-widget-sidebar-border-color-option,--wp_estate_widget_sidebar_border_color);
+    
+        #login-div,
+        .login_form {
+            padding: 0;
+        }
+    }
+}
+
+.widget-container {
+    width: 100%;
+    margin-bottom: 30px;
+
+    li{
+      
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.children {
+    padding: 10px 0;
+
+    li:last-of-type {
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.widget li:before {
+    margin-top: 3px;
+}
+
+.sidebar_filter_menu {
+    margin-top: 1px;
+    position: relative;
+    padding: 10px 15px;
+}
+
+._4s7c {
+    border: 1px solid #fff000 !important;
+    border-top-color: #fff000 !important;
+}
+
+.error404 #primary {
+    display: none;
+}
+
+.wpestate_sidebar_sticky {
+    position: sticky;
+    top: 120px;    
+    align-self: flex-start;
+}
+
+
+
+// directory template sidebar styles
+.directory_sidebar_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    .extended_search_checker{
+        margin-top: 10px;
+        display: flex;
+    }
+    label{
+       line-height: 15px;
+    }
+}
+.directory_sidebar{
+    h3{
+        font-size: 16px;
+    }
+}
+
+
+
+/*no sidebar when adding a template*/
+.elementor_library-template-default #primary {
+    display: none;
+}
+
+
+/*elementor template and sidebar*/
+
+ul.wd_user_menu {
+    margin: 0px 0px 0px 0px;
+}
+
+.elementor-widget-property_show_agent_form2_section {
+    gap: 10px;
+
+    .wpestate_property_schedule_dates_wrapper {
+      button.slick-arrow {
+        width: 30px;
+        height: 30px;
+  
+        &:before {
+          line-height: 30px;
+        }
+  
+        &.slick-prev {
+          left: -20px;
+        }
+  
+        &.slick-next {
+          right: -20px;
+        }
+      }
+    }
+
+    .realtor_call,
+    .realtor_whatsapp{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .agent_submit_class{
+        margin-bottom: 0;
+    }
+  }
+
+

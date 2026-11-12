@@ -1,0 +1,71 @@
+//scss\widgets\_category_list_widget
+
+/*Category List Widget*/
+
+.category_list_widget {
+    li {
+      width: 100%;
+      border-bottom: 1px solid #e7e7e7;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0; // Adds vertical padding inside each `li`
+      margin-bottom: 0;
+  
+      .child_category {
+        float: left;
+        width: 100%;
+  
+        li {
+          padding: 8px 0px 0px 8px;
+          border:none;
+        }
+      }
+      &.category-icon {
+        justify-content: flex-start;
+        i {
+          margin-right: 5px;
+        }
+        span {
+          margin-top: 0px;
+          align: right;
+        }
+      }
+    }
+}
+
+#colophon {
+  .category_list_widget {
+    li {
+      border: none;
+      justify-content: flex-start;
+      column-gap: 5px;
+      padding: 0px;
+      line-height: normal;
+      margin-bottom: 10px; // Add px for the margin
+
+      &:last-child {
+        margin-bottom: 0; // No margin-bottom for the last list item
+      }
+    }
+  }
+}
+
+
+.wpresidence_term_background_image{
+  height: 100%;
+  width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    position: relative;
+    border-radius: var(--wp-estate-border-radius-corner-option, var(--wp_estate_border_radius_corner));
+}

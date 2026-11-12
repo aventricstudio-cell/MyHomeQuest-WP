@@ -1,0 +1,241 @@
+// MILLDONE
+// file scss/components/header-media/_header-media.scss
+/* =Header Media
+----------------------------------------------- */
+// Main container for header media (e.g., sliders, images)
+// Typically used as: <div class="header_media">
+.header_media {
+    background-color: #fdfdfd;
+    z-index: 11;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+/* =Theme sliders common classes
+----------------------------------------------- */
+// Wrapper for all theme sliders
+// Used as: <div class="theme_slider_wrapper">
+.theme_slider_wrapper {
+    overflow: hidden;
+    width: 100%;
+
+    // Individual slide item
+    // Used as: <div class="item">
+    .item {
+        height: 100%;
+        @include background-cover; 
+    }
+
+    // Gradient overlay for featured content
+    // Used as: <div class="featured_gradient">
+    .featured_gradient {
+        background-image: none;
+        background-color: #1D293E;
+        opacity: 0.45;
+    }
+   
+    // Navigation indicators for the slider
+    // Used as: <ol class="carousel-indicators">
+    .carousel-indicators {
+        gap: 5px;
+     
+        // Individual indicator
+        li {
+            display: inline-block;
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            width: 10px;
+            height: 10px;
+            text-indent: -999px;
+            opacity: 1;
+        }
+
+        // Active indicator
+        // Applied when a slide is active: <li class="active">
+        .active {
+            width: 11px;
+            height: 11px;
+            background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            border: 1px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+}
+
+// Specific styling for splash page template
+// Applied when using the splash page template
+.page-template-splash_page .header_media {
+    height: 100%;
+}
+
+// Hides header media on pages with half map layout
+// Applied on pages using the half map template
+.half_map_body .header_media {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-template-splash_page .header_media {
+    height: 100%;
+}
+
+.half_map_body .header_media {
+    display: none;
+}
+
+.page-template-splash_page .header_media {
+    height: 100vh;
+}
+
+
+/* =header media image
+----------------------------------------------- */
+.wpestate_header_image {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 580px;
+    @include background-cover; 
+    background-color: #222;
+    overflow: hidden;
+}
+
+.parallax_effect_yes {
+    background-attachment: fixed;
+}
+
+.wpestate_header_image.full_screen_yes {
+    height: 900px;
+}
+
+.wpestate_header_image_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    z-index: 1;
+}
+
+.heading_over_image_wrapper {
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.subheading_over_video,
+.subheading_over_image {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(68, 68, 68, 0.25);
+    line-height: 22px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 50%;
+    margin: 0px auto;
+}
+
+
+.heading_over_video,
+.heading_over_image {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(68, 68, 68, 0.5);
+    font-size: 60px;
+    line-height: 1.1em;
+}
+
+
+/* =header media video
+----------------------------------------------- */
+
+.wpestate_header_video {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 580px;
+    background-color: #444;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.wpestate_header_video.full_screen_yes {
+    height: 900px !important;
+}
+
+.wpestate_header_video_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    z-index: 2;
+}
+
+.heading_over_video_wrapper {
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.header_video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    transition: 1s opacity;
+    object-position: center center;
+    object-fit: cover;
+}
+
+
+/* Virtual Tour Header */
+
+.container_tour {
+    position: relative;
+    min-height: 50px;
+    width: 100%;
+    iframe {
+        width: 100%;
+    }
+}
+
+
+@supports (-webkit-overflow-scrolling: touch) {
+
+    /* CSS specific to iOS devices */
+    .parallax_effect_yes {
+        background-attachment: initial;
+    }
+}

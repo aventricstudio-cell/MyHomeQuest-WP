@@ -1,0 +1,89 @@
+[dir="rtl"] {
+
+    .property_slider2_wrapper{
+        .featured_secondline {
+            left: unset;
+            right: 20px;
+        }
+        .status-wrapper .ribbon-wrapper-default {
+            right: unset;
+            left:12px;
+        }
+    }
+    .property_slider_carousel_elementor_v2.owl-carousel .owl-nav {
+        left: unset;
+        right: -60px;
+    }
+
+
+    // theme slider 1 version 1
+    .section__content {
+        padding: 0 0 0 4rem;
+    }
+    .section__description {
+        padding: 0 0 0 2rem;
+    }
+    .section__title span{
+        display: inline;
+    }
+
+
+    // theme slider version 1
+    .theme_slider_1 {
+        .theme_slider_contact_wrapper{
+            right: 4%;
+            left: unset;
+        }
+
+        .theme-slider-price {
+            right: 70px;
+        }
+        .listing-details{
+            margin-right: auto;
+            margin-left: unset!important;
+        }
+    }
+
+
+
+    // theme slider 2
+    .theme_slider_2 {
+        .theme_slider2_agent_picture{
+            float: right;
+        }
+        .theme-slider-location,
+        h3{
+            padding: 0px 110px 0px 0px;
+        }
+        .theme-slider-price{
+            margin: 0px 20px 0px 0px ;
+        }
+    }
+
+
+    //theme slider 3    
+    .theme_slider_3 {
+        .owl-next {
+            right: unset;
+            left:0px;
+        }
+        .owl-prev {
+            left: 90px;
+            right: unset;
+        }
+
+        .theme_slider_3_sec_row {
+    
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+       
+    }
+   
+    .theme_slider_3_carousel-indicators{
+        padding: 0px 15px;
+    }
+
+ 
+   
+}

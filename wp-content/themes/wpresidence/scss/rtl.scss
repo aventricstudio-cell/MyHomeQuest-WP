@@ -1,0 +1,148 @@
+@import 'rtl/align_center';
+@import 'rtl/forms';
+@import 'rtl/headers';
+@import 'rtl/property_blog_agent_unit'; 
+@import 'rtl/sliders.scss'; 
+@import 'rtl/single_blog_agents_property.scss';
+@import 'rtl/pages.scss';
+@import 'rtl/dashboard.scss'; 
+// Your custom RTL styles below  
+// Add all your RTL-specific overrides here
+[dir="rtl"] {
+
+    .exclude-rtl-children *:not(.keep-rtl) {
+        text-align: left !important;
+        direction: ltr !important;
+    }
+    
+    div:not(.exclude-rtl):not(.keep-ltr):not([class*="elementor"]):not([class*="e-"]):not([class*="eicon"]) {
+        text-align: right;
+    }
+
+    p:not(.elementor-widget-container *) {
+        text-align: right;
+    }
+    
+    
+
+  
+    h1:not(.elementor-widget-container *),
+    h2:not(.elementor-widget-container *),
+    h3:not(.elementor-widget-container *),
+    h4:not(.elementor-widget-container *),
+    h5:not(.elementor-widget-container *),
+    h6:not(.elementor-widget-container *) {
+        text-align: right;
+    }
+
+    // All links
+    a:not(.exclude-rtl):not(.keep-ltr) {
+        text-align: right;
+    }
+
+    // If links are inside flexbox containers, you might also need
+    a.d-flex {
+        justify-content: flex-end;
+    }
+    ol,
+    ul{
+        padding-right: 0px;
+    }
+
+    .text-left { text-align: right !important; }
+    .text-right { text-align: left !important; }
+    
+    // Floats
+    .float-start { float: right !important; }
+    .float-end { float: left !important; }
+    
+ 
+    // Icons and arrows
+    .fa, .fas, .far {
+        &.fa-arrow-right { transform: rotate(180deg); }
+        &.fa-arrow-left { transform: rotate(180deg); }
+    }
+    .fa, .fas, .far, .fal, .fab {
+       
+    }
+    
+    // Forms and inputs
+    input, textarea {
+        text-align: right;
+    }
+    
+    // Navigation
+    .dropdown-menu {
+        text-align: right;
+    }
+    
+    // accordion
+    .accordion-button::after{
+        margin-left: unset;
+        margin-right: auto;
+    }
+    // Flexbox order
+  
+
+
+
+    .wd_user_menu .unread_mess{
+        left:0px;
+        right: auto;
+    }
+
+
+
+    // lisitings
+    .listing_name{
+        padding:0px 13px 0px 0px;
+    }
+
+
+
+    .breadcrumb-item::before {
+        float: none;
+        padding-left: var(--bs-breadcrumb-item-padding-x);
+    }
+
+    .contact_sidebar_wrap i {
+        margin-right: unset;
+        margin-left: 10px;
+    }
+
+
+
+    // contact box -footer
+    .contact-box{
+        right: unset;
+        left:-125px;
+        margin-left: 60px;
+    }
+    .backtop{
+        right: unset;
+        left:-60px;
+    }
+
+    .contact-box.islive, 
+    .backtop.islive {
+        right: unset;
+        left:15px
+    }
+    .contactformwrapper {
+        right: unset;
+        left:45px;
+        &:before {
+            right: unset;
+            left: 35px;
+        }
+        &::after{
+            right: unset;
+            left: 35px;
+        }
+        .contact_close_button {
+            left: 0px;
+            right: unset;
+        }
+    }
+    
+}

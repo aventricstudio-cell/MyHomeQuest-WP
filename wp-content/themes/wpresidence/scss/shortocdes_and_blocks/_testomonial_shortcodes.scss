@@ -1,0 +1,366 @@
+/** MILLDONE
+ * WPResidence Theme - Testimonial Styles
+ * src: scss\shortocdes_and_blocks\_testomonial_shortcodes.scss
+ * This file contains styles for testimonial elements used in the WPResidence theme.
+ * It includes styles for various testimonial layouts and a testimonial slider.
+ *
+ * @package WPResidence
+ * @subpackage Styles
+ * @version 1.0
+ *
+ * Dependencies:
+ * - Owl Carousel (for slider functionality)
+ * - Font Awesome 5 (for star icons)
+ *
+ * Usage:
+ * This SCSS file should be compiled and included in the main stylesheet of the WPResidence theme.
+ */
+
+// Main testimonial container styles
+.testimonial-container {
+    float: left;
+    width: 100%;
+    display: inline;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+    // Type class variations
+    &.type_class_1 {
+        float: none;
+        display: inline-block !important;
+        margin: auto;
+        padding: 0 2% 10px;
+
+        .testimonial-image {
+            background-size: cover;
+        }
+    }
+
+    &.type_class_2 {
+        float: none;
+        width: 100%;
+        display: inline-block !important;
+        margin: 0 auto 26px !important;
+        text-align: center;
+        margin-bottom: 10px;
+
+        .testimonial-text {
+            position: relative;
+            border: none;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            padding: 0 15% 30px;
+            margin-left: 0;
+            background-color: transparent;
+            text-align: center;
+
+            &:after, &:before {
+                display: none;
+            }
+        }
+
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            float: none;
+            margin: 0 auto;
+            display: block;
+            background-size: cover;
+        }
+
+        .testimonial-author-line {
+            font-size: 14px;
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+
+    &.type_class_3,
+    &.type_class_4 {
+        background-color: #fff;
+        padding: 20px;
+        @include box-shadow(card);
+    }
+
+    &.type_class_4 {
+        padding: 45px;
+
+        .testimonial-text:before {
+            display: none;
+        }
+
+        .testimonial-image {
+            width: 45px;
+            height: 45px;
+            float: left;
+            margin-top: 0;
+            background-size: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .testimmonials_starts i {
+            margin: 14px 3px 0;
+            color: #ffc662;
+            font-size: 13px;
+        }
+    }
+
+    &.type_class_3 {
+        .testimonial_title {
+            font-size: 20px;
+            line-height: 1.2em;
+            font-weight: 500;
+            color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+            text-align: center;
+        }
+
+        .testimmonials_starts {
+            text-align: center;
+
+            i {
+                margin: 14px 3px;
+                color: #ffc662;
+                font-size: 13px;
+            }
+        }
+
+        .testimonial-image {
+            border-radius: 120px;
+            width: 100px;
+            height: 100px;
+            margin: 26px auto;
+            float: none;
+            display: block;
+            background-size: cover;
+        }
+
+        .testimonial-text {
+            position: relative;
+            border: none;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            padding: 13px 26px;
+            margin-left: 0;
+            background-color: #fff;
+
+            &:after, &:before {
+                display: none;
+            }
+        }
+
+        .testimonial-author-line {
+            color: 
+            var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            margin: 0;
+            padding: 26px 0;
+            text-align: center;
+        }
+    }
+}
+
+// Common testimonial element styles
+.testimonial-image {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    display: inline-block;
+    float: left;
+    @include box-shadow(card);
+}
+
+.testimonial-text {
+    position: relative;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    padding: 20px;
+    margin-left: 141px;
+    background-color: #fff;
+    line-height: 1.65em;
+
+    &:before,
+    &:after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        position: absolute;
+        top: 20px;
+    }
+
+    &:before {
+        border-right: 10px solid #f0f0f0;
+        left: -11px;
+    }
+
+    &:after {
+        border-right: 10px solid #fff;
+        left: -10px;
+    }
+}
+
+.testimonial-author-line {
+    font-size: 14px;
+    margin-left: 141px;
+    margin-top: 18px;
+}
+
+.testimonial-author {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+}
+
+// Type class 4 specific styles
+.type_class_4 {
+    .testimonial-author-line {
+        margin-left: 20px;
+        font-size: 18px;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        font-weight: 500;
+        display: inline-block;
+        margin-top: 0;
+        line-height: 1.65em;
+    }
+
+    .testimonial-text {
+        margin-left: 0;
+        display: inline;
+        width: 100%;
+        float: left;
+        padding: 0;
+        border: 0;
+        line-height: 1.65em;
+    }
+
+    .testimonial-location-line {
+        margin-left: 20px;
+        display: inline-block;
+        width: calc(100% - 75px);
+    }
+
+    .testimmonials_starts {
+        float: left;
+    }
+}
+
+// WPEstate testimonial slider styles
+.wpestate_testimonial_slider {
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    max-width: 770px;
+    margin: 0 auto;
+
+    &.owl-carousel .owl-stage-outer {
+        padding: 30px 0;
+    }
+
+    .item {
+        position: relative;
+        margin: auto;
+        max-width: 770px;
+        height: 400px !important;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        @include box-shadow(card);
+        overflow: hidden;
+        padding: 0 !important;
+        background-color: #fff !important;
+        border-radius: 10px;
+    }
+
+    .item_testimonial_content {
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+        float: left;
+        padding: 50px;
+        
+        .item_testimonial_title {
+            font-size: 19px;
+            color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+            font-weight: 500;
+            display: inline-block;
+            margin: 0 0 30px;
+        }
+
+        .item_testimonial_text {
+            font-size: 15px;
+            margin-bottom: 30px;
+            line-height: 1.6em;
+        }
+
+        .item_testimonial_stars i {
+            margin: 0 3px 12px 0;
+            color: #ffc662;
+            font-size: 13px;
+        }
+
+        .item_testimonial_name {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            line-height: 1em;
+        }
+
+        .item_testimonial_job {
+            font-size: 15px;
+            font-weight: 500;
+            color: #a5b5bd;
+        }
+    }
+
+    .item_testimonal_image {
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        display: inline-block;
+        float: left;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-top: -35px;
+    }
+
+    &.owl-theme {
+        .owl-nav {
+            .owl-prev,
+            .owl-next {
+                position: absolute;
+                background-color: #777AF212;
+                width: 40px;
+                height: 40px;
+                border-radius: 5px;
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+
+                &:hover {
+                    color: #fff;
+                    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                }
+            }
+
+            .owl-prev {
+                left: -80px;
+            }
+
+            .owl-next {
+                right: -80px;
+            }
+        }
+
+        .owl-dots {
+            margin-top: 0;
+
+            .owl-dot {
+                &.active span,
+                &:hover span {
+                    background: #1f80e4;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

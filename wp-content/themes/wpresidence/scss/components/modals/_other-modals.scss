@@ -1,0 +1,41 @@
+/** MILLDONE
+ * Modal Components Styles for WpResidence Theme
+ * src: scss/components/modals/_other-modals.scss
+ * This file contains styles for various modal components used in the WpResidence WordPress theme.
+ * It defines the appearance and behavior of popup elements such as login modals,
+ * property details modals, and video containers.
+ *
+ * Package: WpResidence
+ * Dependency: None (standalone SCSS file)
+ * Usage: Import this file in the main theme stylesheet or compile separately.
+ *
+ * @since 1.0.0
+ */
+
+
+.video_container_modal,
+#property_details_modal_wrapper {
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 9999;
+}
+
+
+.wp-submit {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}

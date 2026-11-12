@@ -1,0 +1,167 @@
+/* MILLDONE
+ * Horizontal Property Carousel
+ * src: property-carousel.scss
+ * Package: WpResidence
+ * 
+ * Purpose: Styles for the horizontal property carousel component in the WpResidence theme
+ * Dependencies: Font Awesome 5 for icons
+ * 
+ * This file contains styles for the horizontal carousel used to display
+ * property images and details. It's part of the WpResidence theme and should
+ * be included in the main theme stylesheet or loaded on property detail pages.
+ */
+
+// Main carousel container
+.wpestate_property_carousel.carouselhorizontal {
+    // Owl carousel item styles
+    .owl-carousel .owl-item .item {
+      padding: 0px;
+      height: auto;
+    }
+  
+    // Carousel background and indicators
+    .carusel-back,
+    .carousel-indicators {
+      width: 100%;
+      position: absolute;
+      float: left;
+      display: inline;
+      box-sizing: border-box;
+      margin: 1px 0px 0px 0px;
+      left: 0px;
+      bottom: 39px;
+      height: 90px;
+      padding-top: 3px;
+      z-index: 10;
+      @include smooth-transition-shorter;
+      white-space: nowrap;
+      text-align: left;
+  
+      // Style for closed state
+      &.rowclosed {
+        bottom: -90px;
+      }
+    }
+  
+    // Background color for carousel
+    .carusel-back {
+      background-color: #222;
+      opacity: 0.95;
+    }
+  
+    // Carousel indicators (thumbnail images)
+    .carousel-indicators {
+      li {
+        display: inline-block;
+  
+        img {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+  
+      .active {
+        border: none;
+        background: none;
+  
+        img {
+          opacity: 0.6;
+        }
+      }
+    }
+  
+    // Caption control button
+    .caption_control {
+      width: 20px;
+      height: 20px;
+      float: right;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      z-index: 99;
+  
+      &:after {
+        font-family: "Font Awesome 5 Free";
+        padding: 12px 13px 0px 5px;
+        color: #fff;
+        content: "\f107"; // Down arrow icon
+        margin: 0px;
+        position: absolute;
+        bottom: 9px;
+        right: 0px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  
+    // Round indicators for carousel
+    .carousel-round-indicators {
+      position: absolute;
+      right: 40px;
+      bottom: -6px;
+      z-index: 100;
+  
+      a {
+        display: inline;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        float: left;
+        color: #fff;
+        background-color: #ffffff9c;
+        margin-left: 13px;
+        cursor: pointer;
+      }
+    }
+  
+    // Caption wrapper styles
+    .caption-wrapper {
+        height: 40px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #222;
+        left: 0px;
+        right: 0px;
+        z-index: 99;
+      span {
+        z-index: 11;
+        position: relative;
+        background: #222;
+        color: #fff;
+        padding: 5px 15px;
+        height: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: none;
+  
+        &.active {
+          display: block;
+          margin: 0px;
+          line-height: 28px;
+        }
+  
+       
+      }
+    }
+  }
+  
+  // Style for closed caption control
+  .closed .caption_control:after {
+    content: "\f106"; // Up arrow icon
+  }
+  
+  // Styles not found in the provided markup (kept at the end)
+  .carouselhorizontal {
+    // These styles were in the original SCSS but not used in the provided HTML markup.
+    // They are kept here for reference or potential future use.
+    .caption-wrapper span {
+      padding-left: 15px;
+      padding-top: 9px;
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+      margin: 10px;
+      border-radius: 0px;
+    }
+  }

@@ -1,0 +1,264 @@
+/*=dashboard property card
+  --------------------------------------------------------------------------------*/
+  
+  .wpestate_dashboard_table_list_header.row {
+    margin-bottom: 30px;
+  }
+  
+  .property_wrapper_dash.row {
+    border-top: 1px solid #f6f4f4;
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+
+  
+  .property_wrapper_dash.row:hover {
+    background-color: #f3f3f3;
+  }
+  .property_wrapper_dash.row.inbox_row_open:hover{
+    background-color: transparent;
+  }
+  
+  .property_wrapper_dash .blog_listing_image img {
+    border-radius: 6px;
+    max-width: 105px;
+  }
+  
+  .blog_listing_image {
+    float: left;
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .wpestate_dashboard_content_wrapper .featured_div{
+    z-index:10;
+    top: auto;
+      left: 15px;
+      position: absolute;
+      background-color: color-mix(in srgb, var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back)) 85%, transparent);
+      padding: 0px 7px;
+      bottom: -4px;
+      border-bottom-left-radius: 8px;
+      font-size: 10px;
+  }
+  
+  
+  .dashbard_unit_image {
+    position: relative;
+    float: left;
+  }
+  
+  .dashbard_unit_image img {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .dashboard_agent_listing_image{
+    position: relative;
+    max-width: 105px;
+  }
+  
+  .dashboard_agent_listing_image:after {
+    background-color: color-mix(in srgb, var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back)) 50%, transparent);
+  }
+
+  .dashbard_unit_image:after {
+    content: " ";
+    position: absolute;
+    height: 10px;
+    width: 90%;
+    background-color: color-mix(in srgb, var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back)) 50%, transparent);
+    bottom: -7px;
+    left: 5%;
+    border-radius: 9px;
+    z-index: 0;
+  }
+  
+  
+  .property_dashboard_location_wrapper {
+    float: left;
+    padding-left: 20px;
+  }
+  
+  .invoice_unit_title,
+  .dashbard_unit_title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    color: var(--wp-estate-user-dashboard-content-color-option, var(--wp_estate_user_dashboard_content_color));
+    word-break: break-all;
+  }
+  
+  .property_dashboard_location {
+    display: block;
+    line-height: 1.3em;
+  }
+  
+  .property_dashboard_location a {
+    color: var(--wp-estate-user-dashboard-content-color-option, #808191 );
+  }
+  
+  .property_dashboard_status_unit{
+    color: var(--wp-estate-user-dashboard-content-color-option, #808191 );
+    margin: 5px 0px 0px 0px;
+  }
+  
+
+  
+  .property_dashboard_price .price_label,
+  .property_dashboard_price,
+  .property_dashboard_status,
+  .property_dashboard_types {
+    font-size: 14px;
+    color: #222;
+    color: var(--wp-estate-user-dashboard-content-color-option, #222 );
+    display: flex;
+    height: 70px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    a{
+      color: var(--wp-estate-user-dashboard-content-color-option, #222 );
+    }
+  }
+  
+  
+  .property_list_status_label {
+    font-size: 14px;
+    position: relative;
+    padding-left: 30px;
+    height: auto;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    background-color: transparent;
+    overflow: unset;
+    display: block;
+    line-height: 1em;
+  }
+  
+  .wpestate_crm_contact_status .property_list_status_label.anycrm:before,
+  .wpestate_crm_contact_status .property_list_status_label.anycrm.new:before,
+  .property_dashboard_status .property_list_status_label.pending:before,
+  .property_dashboard_status .property_list_status_label.waitingforapproval:before,
+  .property_list_status_label.notpaid:before,
+  .property_dashboard_status .property_list_status_label.disabled:before,
+  .property_dashboard_status .property_list_status_label.expired:before,
+  .property_dashboard_status .property_list_status_label.draft:before,
+  .property_dashboard_status .property_list_status_label.sold:before,
+  .property_list_status_label.paid:before,
+  .property_dashboard_status .property_list_status_label.publish:before,
+  .property_dashboard_status .property_list_status_label.published:before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        top: -3px;
+        left: 0px;
+        bottom: -4px;
+  }
+  .property_dashboard_status .property_list_status_label.pending:before,
+  .property_dashboard_status .property_list_status_label.waitingforapproval:before {
+      background-color: #6c5dd3;
+  }
+  
+  .wpestate_crm_contact_status .property_list_status_label.anycrm.new:before,
+  .property_list_status_label.anycrm.new:before,
+  .property_list_status_label.notpaid:before{
+      background-color: #ff754c;
+  }
+  
+  .wpestate_crm_contact_status .property_list_status_label.anycrm:before,
+  .property_list_status_label.paid:before{
+      background-color: #7FBA7A;
+  }
+  
+  .property_dashboard_status .property_list_status_label.publish:before,
+  .property_dashboard_status .property_list_status_label.published:before{
+      background-color: #7FBA7A;
+  }
+  
+  .property_dashboard_status .property_list_status_label.disabled:before{
+      background-color: #FFA2C0;
+  }
+  
+  .property_dashboard_status .property_list_status_label.draft:before {
+      background-color: #FF754C;
+  }
+
+    .property_dashboard_status .property_list_status_label.sold:before {
+      background-color: #982908;
+    }
+  
+  .property_dashboard_status .property_list_status_label.expired:before {
+    background-color: #FFCE73;
+  }
+  
+  .property_dashboard_price {
+    color: var(--wp-estate-user-dashboard-package-color-option, var(--wp_estate_user_dashboard_package_color));
+    word-break: break-word;
+  }
+  
+  .property_dashboard_action{
+    display: flex;
+    justify-content: flex-end;
+    &.col-md-2{
+      padding-right: 10px;
+    }
+  }
+
+
+
+  .property_dashboard_action .btn-default:focus,
+  .print_invoice,
+  .property_dashboard_actions_button {
+    box-shadow: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0px;
+    padding: 9px 15px;
+    text-shadow: none;
+    background-image: none;
+    color: #fff;
+    text-transform: none;
+    border:2px solid transparent;
+    @include smooth-transition-short;
+    background-color: var(--wp-estate-user-dashboard-content-button-background-option, var(--wp_estate_user_dashboard_content_button_back));
+  }
+   
+
+
+  .wpestate_crm_lead_actions{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+
+  .print_invoice{
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    cursor:pointer;
+    padding: 9px;
+    text-align: center;
+  }
+  
+  .print_invoice:hover{
+      background-color: #222;
+      color: #fff;
+  }
+  
+  .wpestate_print_invoice_details_detail label {
+     margin-bottom: 0px;
+     font-size: 13px;
+  }
+  
+  .wpestate_print_invoice_details_detail{
+      font-size: 13px;
+  }

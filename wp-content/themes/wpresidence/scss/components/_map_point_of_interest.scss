@@ -1,0 +1,85 @@
+
+
+/*=POI
+--------------------------------------------------------------------------------------*/
+
+.google_map_poi_marker {
+    position: absolute;
+    top: 78px;
+}
+
+.wpestate_property_media_section_wrapper .google_map_poi_marker {
+    top: 129px;
+    z-index: 99;
+    left: 15px;
+}
+
+.wpestate_property_media_section_wrapper #gmapzoomminus.smallslidecontrol,
+.wpestate_property_media_section_wrapper #gmapzoomplus.smallslidecontrol {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.wpestate_property_carousel .google_map_poi_marker {
+    top: 125px;
+    z-index: 99;
+    left: 15px;
+    display: none;
+}
+
+.google_map_shortcode_wrapper .google_map_poi_marker {
+    top: 111px;
+    z-index: 99;
+    z-index: 1;
+    left: 15px;
+}
+
+.google_poish,
+#google_poi_clear,
+.google_poi {
+    position: relative;
+    background-color: #fff;
+    color: #8f9eb6;
+    cursor: pointer;
+    margin-bottom: 2px;
+    font-size: 12px;
+    pointer-events: auto;
+    padding: 6px;
+    border: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    @include main-box-shadow(); // Include main box shadow.
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+    &hover{
+        opacity: 0.9;
+    }
+}
+
+.google_poish.poi_active,
+.google_poi.poi_active {
+    border: 1px solid #ebba7c;
+}
+
+.google_poish img,
+.google_poi img {
+    vertical-align: baseline;
+}
+
+.estate_poi_box {
+    background: #ffffff;
+    box-shadow: 3px 5px 13px 0px rgba(29, 29, 29, 0.05);
+    padding: 5px 5px;
+    font-size: 11px !important;
+    color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+    min-width: 130px;
+    text-align: center;
+}
+
+.google_poi .tooltip {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: initial;
+}

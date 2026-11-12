@@ -1,0 +1,86 @@
+
+
+/*=taxonmy
+--------------------------------------------------------------------*/
+.listing_main_image {
+    position: relative;
+    width: 100%;
+    height: 515px;
+    background-repeat: no-repeat;
+    @include background-cover; 
+    overflow: hidden;
+
+}
+
+.entry-title.entry-tax {
+    margin-top: -45px;
+}
+
+.entry-tax {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: auto;
+    margin-top: -54px;
+    z-index: 11;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 46px;
+    width: 100%;
+}
+
+.tax_tagline {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: auto;
+    width: 100%;
+    z-index: 11;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #3e4453;
+    opacity: 0.75;
+}
+
+
+
+
+
+.wpestate_term_list {
+    list-style-type: none;
+    width: 100%;
+    margin: 0px;
+    font-weight: 500;
+}
+
+.wpestate_term_list li {
+    width: 100%;
+    padding: 2px 0px
+}
+
+.wpestate_term_list span {
+    float: right;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    background: #0073e0;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+.elementor-location-archive {
+    float: left;
+}

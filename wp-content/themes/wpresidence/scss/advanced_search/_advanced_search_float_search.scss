@@ -1,0 +1,99 @@
+
+.search_wrapper.with_search_form_float {
+    position: absolute;
+    max-width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    @include main-box-shadow(); // Include main box shadow.
+
+    &.float_search_closed {
+        top: 100% !important;
+        pointer-events: none;
+        box-shadow: none;
+        background: transparent;
+
+        .adv1-holder,
+        .residence_advanced_submit_button_search_1{
+            opacity: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+
+    .extended_search_check_wrapper{
+        .adv_extended_close_button,
+        label{
+            color: var(--wp-estate-adv-font-color-option, var(--wp_estate_adv_font_color));
+        }
+    }    
+}
+
+
+.with_search_form_float{
+    // Float Search - advanced search type 1
+    .adv1-holder{
+        padding: 10px;
+    }
+    .adv-search-header-1{
+        &:after {
+            content: "\f0d7";
+            position: absolute;
+            right: 13px;
+            font-size: 17px;
+            font-family: "Font Awesome 5 Free";
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+}
+
+.search_wrapper.with_search_form_float.float_search_closed.search_wr_3 .adv3-holder,
+.search_wrapper.with_search_form_float.float_search_closed #advanced_submit_3,
+.search_wrapper.with_search_form_float .adv4-holder,
+.search_wrapper.with_search_form_float .search_wrapper_color,
+.search_wrapper.with_search_form_float #advanced_submit_2,
+.search_wrapper.with_search_form_float .adv1-holder,
+.search_wrapper.with_search_form_float .residence_advanced_submit_button_search_1,
+.search_wrapper.with_search_form_float {
+    @include smooth-transition;
+}
+
+.search_wrapper.with_search_form_float .search_wrapper_color {
+    background-color: var(--wp-estate-adv-back-color-option, var(--wp_estate_adv_back_color));
+    opacity: var(--wp-estate-adv-back-color-opacity-option, var(--wp_estate_adv_back_color_opacity));
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.search_wrapper.search_wr_3.with_search_form_float.float_search_closed {
+    top: 100%;
+    margin-top: -40px;
+}
+
+.search_wrapper.with_search_form_float.float_search_closed.search_wr_3 .adv3-holder,
+.search_wrapper.with_search_form_float.float_search_closed #advanced_submit_3,
+.search_wrapper.with_search_form_float.float_search_closed .adv4-holder,
+.search_wrapper.with_search_form_float.float_search_closed .search_wrapper_color,
+.search_wrapper.with_search_form_float.float_search_closed #advanced_submit_2{
+    opacity: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.with_search_form_float .adv-search-3.adv-search-1-close-extended form,
+.with_search_form_float .adv-search-1-close-extended #advanced_submit_3,
+.with_search_form_float .adv-search-1-close-extended .adv3-holder,
+.with_search_form_float .adv-search-1-close-extended .adv4-holder,
+.with_search_form_float.adv-search-1-close-extended #advanced_submit_2,
+.with_search_form_float.adv-search-1-close-extended .adv1-holder {
+    display: none;
+}
+
+.search_wr_2 .adv1-holder {
+    background-color: transparent;
+}

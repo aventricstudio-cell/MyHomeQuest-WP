@@ -1,0 +1,654 @@
+/*
+ Theme Name:   WpResidence child theme
+ Theme URI:    https://themeforest.net/item/wp-residence-real-estate-wordpress-theme/7896392
+ Description:  WpResidence child theme
+ Author:       WpEstate
+ Author URI:   http://wpestate.org
+ Template:     wpresidence
+ Version:      5.0.7
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/* Main Container */
+/* Main Container */
+/* Main Container */
+/* Main Container */
+/* .pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease;
+    flex: 1;  
+    max-width: 300px;
+    min-height: 250px; 
+	
+}
+
+.pricing-card h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+	color: #6c5dd3 !important;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.select-button {
+    display: inline-block;
+    background: #6c5dd3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.select-button :hover{
+	color: #ffffff !important
+}
+
+.remove {
+    background: #07ab48;
+}
+
+
+
+.next-button {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.next-button a {
+    background: #6c5dd3;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+} */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease;
+    flex: 1;  
+    max-width: 300px;
+    min-height: 250px; 
+}
+
+.pricing-card h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    min-height: 50px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6c5dd3 !important;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.select-button {
+    display: inline-block;
+    background: #ffffff;
+    color: #6c5dd3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid #6c5dd3;
+    font-weight: normal;
+	min-width:140px
+}
+
+.select-button:hover {
+    color: #fff !important;
+	border: 1px solid #6c5dd3;
+	 background: #6c5dd3;
+}
+
+.remove {
+    background: #6c5dd3;
+	border: 1px solid #6c5dd3;
+	color: #fff !important;
+}
+
+.next-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-right: 20px; /* thoda right spacing */
+}
+
+.next-button a {
+    background: #6c5dd3;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.next-button a:hover {
+    background-color: #5a4acb;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .next-button {
+        justify-content: center; /* Mobile par center mein button */
+        padding-right: 0;
+    }
+}
+
+
+
+.master_header_sticky .logo img {
+    max-height: 63px !important;
+}
+/* body .top_bar_wrapper {
+    display: none !important;
+}
+ */
+/* a.return_woo_button {
+    display:none !important;
+}  */
+.wpmenucartli .wpmenucart-contents{
+    display: none !important;
+}
+
+.wc-block-components-order-summary-item__quantity{
+    display:none !important;
+}
+.wc-block-components-order-summary-item__image{
+    display:none !important;
+}
+.button button-primary{
+	display:none !important
+}
+/* .return_woo_button  {
+    display: none !important;
+} */
+
+/* Styles for general alerts, success messages, and login alerts */
+/* .wpestate_success,
+.alert-message,
+.login-alert {
+    color: #fff;
+    font-size: 12px;
+    background-color: #07ab48 !important;
+    margin-bottom: 10px;
+    padding: 3px 10px;
+    line-height: 1.5em;
+    width: 100%;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    display: inline-block; */
+/* .success{
+    background-color: #61ce70 !important;
+} */
+/* .wpestate-crm-dashboard{
+    display: none !important;
+} */
+.wp-block-heading {
+    color: #ffffff !important;
+    font-size: 16px !important;
+}
+
+.submit_action {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .element {
+        display: block;
+    }
+}
+
+/* 	.login_register_message_area .login-alert.login_loading{
+  background-color: #20c997 !important; color: white;
+} */
+.createAccount p.error{color: #0073e1; background:#fff}
+.createAccount .login-alert{color: #0073e1; background:#fff}
+/* woocommerece checkout */
+ .wc-block-components-checkout-return-to-cart-button{
+    display: none !important;
+}
+
+.wc-block-components-address-form-wrapper{
+  display: none !important;
+}
+.wc-block-components-address-card__edit{
+  display: none !important;
+} */
+.submit_mandatory{
+  display: none !important;
+}
+.woocommerce-customer-details{
+    display: none !important
+}
+/* a:hover {
+    color: #000 !important;
+} */
+/* woocommerce checkout */
+.wc-block-components-address-card-wrapper{
+    display:none !important
+}
+.wc-block-checkout__billing-fields{
+    display:none !important
+}
+.wpresidence-content-container-wrapper {
+    background-color: #ffffff !important;
+   
+}
+.content_wrapper {
+    background-color: #ffffff !important;
+    
+}
+.wc-block-components-product-details__property{
+    font-size: 15px
+}
+.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.contained {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+.master_header_sticky.master_header {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+}
+.product-quantity{
+    display: none !important
+}
+#delete_profile{
+    display: none !important
+}
+/* woocommerce adderss */
+.wc-block-components-address-form{
+    display:none !important
+}
+.wp-block-woocommerce-checkout-order-summary-totals-block{
+    display: none !important
+}
+
+/* Property prosses tabel css */
+.property-card-wrapper {
+    max-width: 930px;
+    margin: 30px auto;
+    display: flex;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.property-card-image {
+    width: 40%;
+    object-fit: cover;
+    height: 215px !important;
+}
+
+
+
+.property-card-content {
+    padding:20px 30px 10px 50px;
+    width: 60%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.property-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.property-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 30px;
+    font-size: 16px;
+    color: #555;
+}
+
+.property-info-grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-info-grid span:first-child {
+    font-size: 14px;
+    color: #999;
+}
+
+.property-info-grid span:last-child {
+    font-weight: bold;
+    color: #000;
+}
+
+/* 📱 Responsive Styling */
+@media screen and (max-width: 768px) {
+    .property-card-wrapper {
+        flex-direction: column;
+    }
+
+    .property-card-image,
+    .property-card-content {
+        width: 100%;
+    }
+
+    .property-card-image {
+        height: 220px !important;
+    }
+
+    .property-card-content {
+        padding: 20px;
+    }
+
+    .property-info-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
+
+/* CHECKOUT PRICE CSS */
+.wc-block-components-order-summary-item__total-price .wc-block-components-product-price {
+    display: none;
+}
+
+/* thankyou page order details and date hide  */
+.woocommerce-thankyou-order-details {
+    display:none !important
+}
+/* remove print */
+#print_page{
+    display:none !important;
+}
+
+/* check out page pay pal detials hide */
+  .wc-block-components-radio-control-accordion-option{
+  display: none !important;
+}
+.wc-block-checkout__actions_row{
+  display: none !important;
+}
+.wc-block-components-checkout-step__heading{
+  display: none !important;
+}
+.wc-block-components-express-payment-continue-rule{
+  display: none !important;
+}  
+
+/*  */
+.breadcrumb{
+    display: none  !important
+}
+.upload_explain{
+    display:none !important
+}
+/* 
+.wp-block-woocommerce-checkout {
+    padding-bottom: 300px !important;
+}
+ */
+.submit_mandatory{
+    display:none !important
+}
+.page-id-31591 .wc-block-components-product-name {
+    font-size: 17px;
+  
+}
+
+/* Latitude  and Longitude hide */
+#property_latitude, 
+#property_longitude,
+label[for="property_latitude"],
+label[for="property_longitude"] {
+    display: none !important;
+}
+
+/* property page details hide  */
+button.accordion-button[data-bs-target="#accordion_property_payment_calculator_collapse"],
+#accordion_property_payment_calculator_collapse {
+    display: none !important;
+}
+
+button.accordion-button[data-bs-target="#accordion_property_energy_savings_collapse"],
+#accordion_property_energy_savings_collapse {
+    display: none !important;
+}
+/* checkout page4 detils hide payment */
+  .wc-block-checkout__payment-method{
+    display:none !important;
+} 
+.wc-block-components-express-payment-continue-rule{
+    display:none !important;
+}
+.wc-block-components-button{
+    display:none !important;
+}  
+
+.product-description{min-height:200px}
+.advanced_search_shortcode .wpestate-field-on-shortcode.col-md-3{
+    width: 100% !important;
+} 
+
+.advanced_search_shortcode .submit_container_half {
+    width: 100% !important;
+} 
+
+/* interior designer form css   */
+.delete-btn {
+    padding: 25px !important;
+    height: 8px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-portfolio .search_wrapper{
+    display: none !important;
+}
+
+.portfolio-listings{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}   
+.portfolio-business-card{
+
+    margin-bottom: 20px;
+    border-radius: 8px; 
+    border: 1px solid #e0e0e0; 
+    overflow: hidden; 
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    flex:0 0 calc(33.33% - 14px); /* 3 cards per row with gap */
+}
+.business-image{
+height: 180px; 
+    margin: 0;
+}
+.portfolio_button a{
+    display: inline-block; 
+    padding: 8px 16px; 
+    background-color: #0073e1; 
+    color: white;
+    text-decoration: none; 
+    border-radius: 4px; 
+    font-weight: 500; 
+    width:100%;
+    text-align: center;
+}
+.business-description{
+    font-size: 14px;
+    color: #222222;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 48px;
+    margin-bottom: 10px;
+}
+.portfolio-filter-fields{
+    width: 200px;
+}
+
+@media (max-width: 767px) {
+    .portfolio-business-card{
+        flex:0 0 100%; /* 3 cards per row with gap */
+    }
+    .portfolio-filter-fields{
+        flex: 0 0 100%;
+        width: 200px;
+    }
+	
+	.elementor-30774 .elementor-element.elementor-element-4b3bde6b > .elementor-widget-container {
+    padding: 92px 65px 0px 65px!important;
+}
+	
+.elementor-widget-wrap>.elementor-element.elementor-absolute{
+    position: relative !important;
+}
+	
+	.elementor-30774 .elementor-element.elementor-element-bc52b65 {
+    top: 37px!important;
+}
+	.info_details {
+    margin: -139px 0 0 -123px !important;
+    padding: 12px !important;
+    width: 286px !important;
+}
+}
+
+.address-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; 
+    height: 180px; 
+
+}
+
+.address-image-wrapper .remove-preview-image {
+    position: absolute; 
+    top: 0px; 
+    right: 0px; 
+    background: red; 
+    color: white; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    width: 15px; 
+    height: 15px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 12px;
+}
+
+.portfolio-listings-section {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background: #f8f8f8;
+    padding: 15px;
+}
+
+/* payslip */
+.woocommerce-order-received .wc-item-meta {
+    display: none !important;
+}
+
+/* portfolio */
+
+.portfolio_button a:hover{
+	color:#fff !important;
+}
+
+/* changes css */
+.listing_detail.col-md-4.property-year {
+    display: none;
+}
+.listing_detail.col-md-4.property_default_lot_size {
+    display: none !important;
+}
+.dropdown-menu.filter_menu li[data-value="11"],
+.dropdown-menu.filter_menu li[data-value="12"] {
+    display: none !important;
+}
+
+
+/* property county hide */
+div[class*="county_/_state"]{
+    display:none !important;
+}

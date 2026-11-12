@@ -1,0 +1,15 @@
+/* WPBakery custom widget icons */
+.vc_element-icon.wpestate_vc_logo,
+.vc_element-icon.wpestate_vc_logo2 {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.vc_element-icon.wpestate_vc_logo {
+    background-image: url('../img/residence-icon_settings.png') !important;
+}
+
+.vc_element-icon.wpestate_vc_logo2 {
+    background-image: url('../img/residence_icon.png') !important;
+}

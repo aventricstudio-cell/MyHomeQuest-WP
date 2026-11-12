@@ -1,0 +1,287 @@
+// MILLDONE
+// components/_user_menu.scss
+
+// This file contains styles for the user menu that appears in the header.
+
+// ==========================================================================
+// User Menu
+// ==========================================================================
+
+.user_menu_wrapper {
+    position: relative; // Set the user menu wrapper to a relative position for positioning child elements.
+}
+
+.user_menu {
+    cursor: pointer; // Change the cursor to pointer on hover to indicate it's clickable.
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Set the color of the user menu text.
+    position: relative; // Set the user menu to a relative position.
+    gap:10px;
+    justify-content: flex-end;
+}
+
+#user_menu_open {
+    background-color: var(--wp-estate-menu-item-back-color-option, var(--wp-estate-menu-item-back-color)); // Set background color based on variable.
+    right: 35px; // Position the menu 35px from the right.
+    left: auto; // Ensure the left position is auto.
+    z-index: 999999; // Set a high z-index to ensure it appears above other elements.
+    top: 100%; // Position the menu below the user menu.
+    margin-top: 0px; // Remove top margin.
+    padding: 15px 0px; // Add padding to the top and bottom.
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner)); // Add border radius for rounded corners.
+    width: 255px; // Set the width of the menu.
+    display: none; // Initially hide the menu.
+    border: none; // Remove any border.
+    @include main-box-shadow(); // Include the main box shadow mixin for shadow effect.
+
+    &:before {
+        content: " "; // Add a before pseudo-element for the triangle.
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent; // Create a triangle.
+        border-right: 10px solid transparent; // Create a triangle.
+        border-bottom: 10px solid #fff; // Create a triangle with a white color.
+        top: -10px; // Position the triangle above the menu.
+        right: 7px; // Position the triangle to the right.
+        position: absolute; // Position the triangle absolutely.
+    }
+
+    &:after {
+        content: " "; // Add an after pseudo-element for the triangle.
+        width: 0;
+        height: 0;
+        border-left: 9px solid transparent; // Create a smaller triangle.
+        border-right: 9px solid transparent; // Create a smaller triangle.
+        border-bottom: 9px solid #fdfdfd; // Create a smaller triangle with a slightly different color.
+        top: -9px; // Position the smaller triangle above the main triangle.
+        right: 7px; // Position the smaller triangle to the right.
+        position: absolute; // Position the smaller triangle absolutely.
+    }
+
+    li {
+        position: relative; // Set the list items to a relative position.
+    }
+
+    a {
+        color: var(--wp-estate-menu-items-color-option, var(--wp-estate-menu-items-color)); // Set text color based on variable.
+        font-size: var(--wp-estate-top-menu-font-size-option, var(--wp-estate-top-menu-font-size));
+        padding: 10px 20px; // Add padding to the links.
+        width: 100%; // Set the width to 100%.
+        display: flex; // Display the links as flex items.
+        align-items: center; // Align items to the center.
+        line-height: 1.6em;
+        @include transition(all 0.3s ease); // Include a transition for all properties.
+
+        font-family: var(--wp-estate-menu-font-family-option, var(--wp-estate-menu-font-family));
+        font-weight: var(--wp-estate-menu-font-weight-option, var(--wp-estate-menu-font-weight));
+        &:hover {
+            .unread_mess {
+                background-color: #fff; // Change the background color of the unread message indicator on hover.
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Change the text color of the unread message indicator on hover.
+            }
+
+            i {
+                color: #fff; // Change the icon color to white on hover.
+            }
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--wp-estate-menu-hover-font-color-option, var(--wp-estate-menu-hover-font-color)); // Change text color on hover based on variable.
+            background-color: var(--wp-estate-menu-hover-back-color-option,var(--wp-estate-menu-hover-back-color));
+            padding-left: 25px; // Add left padding on hover and focus.
+
+            svg {
+                circle,
+                path {
+                    stroke: var(--wp-estate-menu-hover-font-color-option, var(--wp-estate-menu-hover-font-color)); // Change the stroke color of SVG elements to white on hover and focus.
+                }
+            }
+        }
+
+        svg {
+            height: 16px; // Set the height of the SVG icons.
+            width: 16px; // Set the width of the SVG icons.
+            margin-right: 10px; // Add right margin to the SVG icons.
+            circle,
+            path {
+                stroke: var(--wp-estate-menu-items-color-option, var(--wp-estate-menu-items-color)); // Set the stroke color of the SVG elements.
+            }
+        }
+    }
+
+    i {
+        width: 10px; // Set the width of the icons.
+    }
+
+    .unread_mess {
+        top: 10px; // Position the unread message indicator from the top.
+        border-radius: 50%; // Make the unread message indicator round.
+        min-width: 20px; // Set the width of the unread message indicator.
+        width: auto;
+        height: 20px; // Set the height of the unread message indicator.
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Set the background color of the unread message indicator to blue.
+        line-height: 20px; // Set the line height for vertical centering.
+        text-align: center; // Center the text horizontally.
+        font-size: 12px; // Set the font size of the unread message indicator.
+        position: absolute; // Position the unread message indicator absolutely.
+        right: 15px; // Position the unread message indicator from the right.
+        color: #fff; // Set the text color of the unread message indicator to white.
+    }
+}
+
+#user_menu_open .secondary_menu_sidebar,
+.mobile_user_menu .secondary_menu_sidebar {
+    display: none !important; // Hide the secondary menu sidebar in user menu and mobile user menu.
+}
+
+
+
+
+// submit new property button
+.submit_action {
+    @include smooth-transition-shorter;
+    
+    svg {
+        width: 25px;
+        height: 30px;
+        fill: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set text color based on variable.
+        margin: 5px 0 0 0px;
+        &:hover{
+            fill: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Set the color of the header phone based on a variable.
+ 
+        }
+    }
+}
+
+// header phone
+.header_phone {
+    font-size: 17px; // Set the font size of the header phone text.
+    font-weight: 500; // Set the font weight of the header phone text.
+    color: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set the color of the header phone text based on a variable.
+    padding-top: 4px; // Add top padding to the header phone.
+    @include transition(all 0.3s ease); // Include a transition for all properties.
+
+    a {
+        color: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set the link color based on a variable.
+        &:hover{
+            color: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Set the color of the header phone based on a variable.
+        }
+    }
+
+    svg {
+        height: 21px; // Set the height of the SVG icons.
+        fill: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set the fill color of the SVG icons based on a variable.
+        vertical-align: middle; // Vertically align the SVG icons to the middle.
+    }
+}
+
+.menu_user_picture {
+    border-radius: 50%; // Make the user picture round.
+    width: 45px; // Set the width of the user picture.
+    height: 45px; // Set the height of the user picture.
+    border: 1px solid var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Add a border with a color based on a variable.
+    background-size: cover; // Cover the background of the user picture. margin-right: 10px; // Add right margin to the user picture.
+
+}
+
+.menu_user_tools {
+    border-radius: 50%; // Make the user tools round.
+    height: 20px; // Set the height of the user tools.
+    margin: 0px; // Remove any margin.
+    float: left; // Float the user tools to the left.
+    display: inline; // Display the user tools inline.
+    cursor: pointer; // Change the cursor to pointer on hover.
+    font-size: 14px; // Set the font size of the user tools.
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Set the color of the user tools text.
+}
+
+.navicon-button {
+    @include transition(all 0.5s ease); // Include a transition for all properties.
+    cursor: pointer; // Change the cursor to pointer on hover.
+    user-select: none; // Prevent text selection.
+    opacity: 0.8; // Set the initial opacity.
+
+    &:hover {
+        opacity: 1; // Change the opacity to 1 on hover.
+    }
+
+    &.open {
+        padding: 4px 0px 6px 15px; // Add padding when the button is open.
+    }
+}
+
+.nav-notlog {
+    display: none; // Hide the navigation for not logged in users.
+}
+
+.user_loged {
+    .navicon-button.open {
+        margin-top: 21px; // Add top margin to the open navicon button for logged in users.
+    }
+    
+    i {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+}
+
+.navicon {
+    position: relative; // Set the position to relative.
+    width: 18px; // Set the width of the navicon.
+    height: 2px; // Set the height of the navicon.
+    background: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color));// Set the background color to dark gray.
+    @include smooth-transition-shorter;// Add a transition effect.
+    border-radius: 2.5rem; // Add border radius for rounded corners.
+}
+
+.opensvg {
+    transform: scale(0.75); // Scale down the SVG when open.
+}
+
+.navicon:before,
+.navicon:after {
+    display: block; // Display the before and after pseudo-elements as blocks.
+    content: ""; // Add empty content.
+    height: 2px; // Set the height of the pseudo-elements.
+    width: 18px; // Set the width of the pseudo-elements.
+    background: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set the background color to dark gray.
+    position: absolute; // Position the pseudo-elements absolutely.
+    transition: 0.5s 0.25s; // Add a transition effect with a delay.
+    border-radius: 1rem; // Add border radius for rounded corners.
+}
+
+.navicon:after {
+    top: -5px; // Position the after pseudo-element 5px above.
+}
+
+.navicon:before {
+    top: 5px; // Position the before pseudo-element 5px below.
+}
+
+#user_menu_u:hover .navicon:before {
+    top: 7px; // Adjust the top position on hover.
+}
+
+#user_menu_u:hover .navicon:after {
+    top: -7px; // Adjust the top position on hover.
+}
+
+.opensvg.plus .navicon,
+.opensvg.x .navicon {
+    background: transparent; // Make the background transparent for the navicon.
+}
+
+.opensvg.plus .navicon:before,
+.opensvg.x .navicon:before {
+    transform: rotate(-45deg); // Rotate the before pseudo-element.
+}
+
+.opensvg.plus .navicon:after,
+.opensvg.x .navicon:after {
+    transform: rotate(45deg); // Rotate the after pseudo-element.
+}
+
+.opensvg:not(.steps) .navicon:before,
+.opensvg:not(.steps) .navicon:after {
+    top: 0 !important; // Position the pseudo-elements at the top.
+}
+

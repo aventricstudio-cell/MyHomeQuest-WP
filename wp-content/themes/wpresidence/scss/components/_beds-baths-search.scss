@@ -1,0 +1,173 @@
+// MILLDONE
+// src: wpresidence\scss\components\_beds-baths-search.scss
+// This file contains styles for the beds and baths search component in the WPEstate theme
+
+// Main container for the beds and baths popup component
+.wpestate-beds-baths-popoup-component {
+    // Styles for headings within the component (e.g., "Beds" and "Baths" labels)
+    h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    // Styles for the popup wrapper (the dropdown content)
+    .wpestate-beds-baths-popoup-wrapper {
+        padding: 25px;
+        min-width: 365px;
+        max-width: 100vw;
+        overflow-x: auto;
+        @include main-box-shadow(); // Include main box shadow.
+        border: 1px solid rgba(0, 0, 0, 0.05);
+       
+        // Styles for individual bed and bath selection items
+        .wp_estate_baths_component_item,
+        .wp_estate_beds_component_item {
+            width: 52px;
+            height: 35px;
+            border: 1px solid #e7e7e7;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            line-height: 35px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        }
+   
+        // Styles for the first items (rounded left corners)
+        .wp_estate_baths_component_item[data-value="1"],
+        .wp_estate_beds_component_item[data-value="1"] {
+            border-bottom-left-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            border-top-left-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        }
+        // Styles for the last items (rounded right corners)
+        .wp_estate_baths_component_item:last-child,
+        .wp_estate_beds_component_item:last-child {
+            border-top-right-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            border-bottom-right-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        }
+        
+        // Styles for hover and selected states of bed/bath items
+        .wp_estate_baths_component_item:hover,
+        .wp_estate_beds_component_item:hover,
+        .wp_estate_component_item_selected {
+            background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            color: #fff;
+            border: 1px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+    
+    // Styles for the dropdown toggle button
+    .dropdown-toggle {
+        &::after {
+            border: none;
+            font-family: "Font Awesome 5 Free";
+            content: "\f107"; // Down arrow icon
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            font-size: 13px;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            right: 10px;
+            font-weight: 600;
+        }
+    }
+}
+
+    // Styles for the active state of the component (when dropdown is open)
+
+button.wpestate-multiselect-custom-style.dropdown-toggle.bs-placeholder.btn-light,
+button.btn.btn-default.dropdown-toggle.wpestate-multiselect-custom-style{
+    &.show {
+        background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+        color: var(--wp-estate-adv-search-font-color-option, var(--wp_estate_adv_search_font_color));
+        box-shadow: none;
+        border: 1px solid #e7e7e7;
+        .dropdown-toggle {
+            border: 1px solid #e7e7e7;
+        }
+    }
+    &:focus-visible {
+        outline: none; /* Removes the default outline */
+    }
+}
+
+// Styles for the 'Done' and 'Reset' buttons in various components
+.wpestate-price-component-popoup-done_v3,
+.wpestate-price-component-popoup-reset_v3,
+.wpestate-price-component-popoup-done,
+.wpestate-price-component-popoup-reset,
+.wpestate-beds-baths-popoup-done,
+.wpestate-beds-baths-popoup-reset {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    border: 1px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    color: #fff;
+    padding: 0px 9px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    font-size: 13px;
+    line-height: 33px;
+   
+    // Hover state for buttons
+    &:hover {
+        background-color: #ffff;
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        border: 1px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+}
+
+// Styles for the search wrapper and multiselect custom style in Elementor context
+.search_wr_elementor .btn-group.wpestate-beds-baths-popoup-component.open,
+.search_wr_elementor .wpestate-beds-baths-popoup-component.open>.dropdown-toggle.btn-default,
+.search_wr_elementor .wpestate-multiselect-custom-style,
+.search_wr_elementor .btn.wpestate-multiselect-custom-style {
+    height: auto;
+}
+
+// Base styles for the multiselect custom style button
+.wpestate-multiselect-custom-style,
+.btn.wpestate-multiselect-custom-style {
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    display: inline;
+    float: left;
+    padding: 0px;
+    font-size: 13px;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    box-shadow: none;
+    padding: 10px 15px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    text-transform: none;
+    text-shadow: none;
+    background-image: none;
+    text-align: left;
+    height: 40px;
+}
+
+// Styles for focus and hover states of the multiselect custom style button
+.wpestate-multiselect-custom-style.btn-default:focus,
+.wpestate-multiselect-custom-style.btn-default:hover {
+    background-color: #ffffff;
+}
+// Style for dropdown state in bootstrap select
+.bootstrap-select.wpestatemultiselect{
+    > .dropdown-toggle {
+      &:after {
+        margin-top: 0; // Adjust the margin at the top to 0 for the dropdown arrow
+      }
+    }
+  }
+
+// Styles for placeholder states in bootstrap select
+.bootstrap-select > .wpestate-multiselect-custom-style.dropdown-toggle.bs-placeholder,
+.bootstrap-select > .wpestate-multiselect-custom-style.dropdown-toggle.bs-placeholder:hover {    
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+}
+
+// Styles for focus states in bootstrap select
+.bootstrap-select .wpestate-multiselect-custom-style.dropdown-toggle:focus,
+.bootstrap-select>select.mobile-device:focus+.wpestate-multiselect-custom-style.dropdown-toggle {
+    outline: none!important;
+    box-shadow: none;
+}

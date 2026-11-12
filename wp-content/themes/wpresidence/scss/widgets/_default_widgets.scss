@@ -1,0 +1,194 @@
+//scss\widgets\_standard_widgets.scss
+
+/* =Tagcloud
+------------------------------------------------*/
+.tagcloud a {
+    margin: 0px 10px 10px 0px;
+}
+
+
+/* =Calendar Widget
+------------------------------------------------*/
+#calendar_wrap {
+    border: 1px solid #f0f0f0;
+    background: #fdfdfd;
+}
+
+.widget_calendar #wp-calendar {
+    color: #555;
+    width: 100%;
+    text-align: center;
+}
+
+.widget_calendar #wp-calendar caption,
+.widget_calendar #wp-calendar td,
+.widget_calendar #wp-calendar th {
+    text-align: center;
+    background: #fff;
+}
+
+table tbody tr td {
+    color: #222;
+    padding: 5px 6px;
+    vertical-align: top;
+
+}
+
+.widget_calendar table tbody tr td {
+    vertical-align: middle;
+}
+
+
+#calendar_wrap table {
+    border: none;
+    margin-bottom: 0px;
+}
+
+#calendar_wrap table td,
+table tr {
+    border: none;
+}
+
+.widget_calendar #wp-calendar caption {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 15px 0 15px 0;
+}
+
+.widget_calendar #wp-calendar th {
+    background: #f4f4f4;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-weight: 500;
+    padding: 6px 0px;
+}
+
+.widget_calendar #wp-calendar tfoot td {
+    background: #f4f4f4;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 0px;
+}
+
+
+#colophon #calendar_wrap {
+    background-color: #fff;
+}
+
+.widget_calendar #wp-calendar th {
+    padding: 13px 0px;
+}
+
+.widget_calendar #wp-calendar tfoot td {
+    padding: 10px 0px;
+}
+
+// MILLDONE
+// scss\widgets\_search_forms_wp.scss
+// WordPress Block Search Styles
+// These styles are likely for a search component, possibly in the sidebar
+
+.wp-block-search {
+    // Styles for the search input field
+    .wp-block-search__input {
+        display: block;
+        width: 100%;  // Makes the input full-width
+        height: 40px; // Sets a specific height for the input
+        padding: 10px 15px; // Adds internal spacing
+        line-height: 1.4;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color)); // Sets text color
+        background-color: #ffffff;
+        background-image: none;
+        border: 1px solid #e7e7e7; // Adds a light border
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner)); // Rounds the corners
+
+        // These styles create a consistent, modern look for the search input
+        // that aligns with the WPEstate theme's design language
+    }
+
+    // Styles for the search button
+    .wp-block-search__button {
+        background: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Sets a blue background color
+        border: none;
+        padding: .375em .625em;
+        color: #fff; // White text
+        margin-left: .625em; // Adds space between input and button
+        word-break: normal;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner)); // Rounds the corners
+
+        // These styles create a visually appealing button that stands out
+        // and matches the theme's color scheme
+    }
+
+
+}
+
+
+.widget_nav_menu li:before,
+.widget_pages li:before,
+.widget_rss li:before,
+.widget_text li:before,
+.widget_recent_entries li:before {
+    content: "\f15c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    float: left;
+    text-decoration: inherit;
+    margin-right: 10px;
+}
+
+.widget_text li:before {
+    content: "";
+    margin: 0px;
+}
+
+.widget_archive li:before {
+    content: "\f133";
+    font-family: "Font Awesome 5 Free";
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    float: left;
+    text-decoration: inherit;
+    margin-right: 10px;
+}
+
+.widget_meta li:before {
+    content: "\f013";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-style: normal;
+    display: block;
+    float: left;
+    text-decoration: inherit;
+    margin-right: 10px;
+}
+
+.widget_categories li:before {
+    content: "\f07c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    float: left;
+    text-decoration: inherit;
+    margin-right: 10px;
+}
+
+
+
+/*zillow answer */
+.wpestate_zillow_answer{
+    line-height: 1.6em;
+    margin-top: 10px;
+}
+.wpestate_zillow_price{
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    font-size: 16px;
+    font-weight: 600;
+}
+.wpestate_zillow_address{
+    text-transform: capitalize;
+}

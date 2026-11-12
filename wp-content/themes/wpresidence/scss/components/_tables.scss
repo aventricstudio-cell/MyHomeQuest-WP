@@ -1,0 +1,37 @@
+// components/_tables.scss
+
+// This file is intended to contain styles for table components.
+// Currently, there are no specific table styles in the original CSS file.
+// This file serves as a placeholder for future table styles.
+
+
+// ==========================================================================
+// Basic Table Styles
+// ==========================================================================
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// ==========================================================================
+// Table Cells
+// ==========================================================================
+
+// The following style was found in the original CSS and might be related to table cells
+td {
+    font-weight: normal;
+    text-align: left;
+}
+
+// ==========================================================================
+// Custom Table Styles
+// ==========================================================================
+
+// Add any custom table styles here if they are added to the project in the future
+
+// ==========================================================================
+// Responsive Table Adjustments
+// ==========================================================================
+
+// Add any responsive adjustments for tables here if they are needed in the future

@@ -1,0 +1,136 @@
+//scss\widgets\_widget_nav_menu.scss
+
+/* =Elementor Widget Container
+------------------------------------------------*/
+
+.elementor-widget-container {
+    
+    .widget-container {
+      margin-bottom: 0px;
+    }
+    
+    .loginwd_sidebar,
+    .advanced_search_sidebar,
+    .measurement_unit_widget,
+    .multiple_currency_widget,
+    .g_ag_dev_search_widget,
+    .mortgage_calculator_li {
+      clear: both;
+      background: #fff;
+      padding: 30px;
+      border: 1px solid #fff;
+      width: 100%;
+    }
+  
+    .login_form {
+      padding: 0;
+    }
+  
+    .loginwd_sidebar,
+    .advanced_search_sidebar,
+    .measurement_unit_widget,
+    .multiple_currency_widget,
+    .g_ag_dev_search_widget,
+    .mortgage_calculator_li,
+    .social_sidebar,
+    .contact_sidebar,
+    .facebook_widget_like,
+    .featured_sidebar,
+    .latest_listings,
+    .property_categories,
+    .twitter_wrapper {
+      margin-bottom: 30px;
+    }
+  
+    .social_sidebar_internal {
+      a {
+        width: 22%;
+        margin: 0 4% 4% 0;
+        height: 0;
+        padding-bottom: 18%;
+        position: relative;
+        padding: 11px 0;
+        background-color: #ffffff;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        display: inline-block;
+        @include smooth-transition-shorter;
+        width: 41px;
+        height: 41px;
+      }
+    }
+  
+    .boxed_widget {
+      form {
+        width: 100%;
+      }
+    }
+  
+    .category_list_widget {
+      li {
+        border-bottom: 0 solid #f0f0f0;
+        margin-bottom: 0;
+      }
+  
+      ul {
+        list-style-type: none;
+        margin: 0;
+      }
+  
+      .category_no {
+        float: none;
+        margin: 5px 0 0 auto;
+        
+      }
+    }
+  
+    .widget-container#footer_latest_widget-2 {
+      padding: 30px 15px 15px 30px;
+      background: #fff;
+      margin-bottom: 30px;
+      border-bottom: 0;
+    }
+}
+
+/* Elementor Widgets */
+.elementor-widget-Site_Measurement_Unit_Changer,
+.elementor-widget-Site_Currency_Changer {
+    .dropdown.form-control {
+        padding: 0px;
+        margin-bottom: 0px;
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+.elementor-widget-Site_Measurement_Unit_Changer .multiple_currency_widget,
+.elementor-widget-Site_Currency_Changer .multiple_currency_widget,
+.right-top-widet #multiple_currency_widget-7 {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 0px;
+    padding: 8px 15px 0px 15px;
+    margin: 0px;
+}
+
+.elementor-widget-Site_Measurement_Unit_Changer,
+.elementor-widget-Site_Currency_Changer{
+    margin: 0px;
+    width: 170px;
+}
+
+.elementor-widget-Site_Measurement_Unit_Changer .sidebar_filter_menu,
+.elementor-widget-Site_Currency_Changer .sidebar_filter_menu {
+    font-size: 13px;
+    padding: 2px 10px;
+    min-width: 100px;
+}
+
+.elementor-widget-Site_Measurement_Unit_Changer #list_sidebar_measure_unit,
+.elementor-widget-Site_Currency_Changer #list_sidebar_curr {
+    margin-left: 0px;
+    min-width: 140px;
+}
+
+

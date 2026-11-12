@@ -1,0 +1,101 @@
+// MILLDONE
+// Agent Unit V3 Styles
+// src: scss\agent_cards\_agent_unit_v3.scss
+// This file contains styles for the third version of agent units displayed in the WpResidence theme.
+// File location: scss/agent_cards/_agent_unit_v3.scss
+
+
+  // Styles for the third version of agent cards
+
+  // Styles for featured agent units
+  .agent_unit_featured {
+    padding-bottom: 0; // Removes bottom padding
+    float: left; // Floats the unit to the left
+    margin-right: 30px; // Adds margin to the right
+
+    // Reset padding for nested agent units
+    .agent_unit {
+      padding-bottom: 0;
+    }
+
+    // Align social icons to the right
+    .agent_unit_social {
+      float: right;
+      left: auto;
+      right: 0;
+      width: auto;
+    }
+  }
+
+
+
+  // Styles for agent notes
+  .featured_agent_notes {
+  
+    @include smooth-transition-shorter;// Smooth transition for any changes
+    line-height: 1.65em; // Sets the line height for readability
+   
+  }
+
+
+  // Styles for social media links
+  .agent_unit_social a {
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color)); // Sets the color of the social icons
+    font-size: 13px; // Sets the font size
+    position: relative; // Enables positioning relative to its normal position
+    height: 26px; // Sets a fixed height
+    line-height: 26px; // Matches line-height to height for vertical centering
+    display: inline-block; // Allows setting of width and height
+  }
+
+ 
+// Styles for the "My Listings" button
+  .featured_agent_listings.wpresidence_button {
+    position: absolute; // Positions the button absolutely within its container
+    bottom: 15px; // Places the button 15px from the bottom
+    left: 20px; // Places the button 20px from the left
+    border: 1px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Adds a blue border
+    font-size: 12px; // Sets the font size
+    padding: 0 10px; // Adds horizontal padding
+    margin-bottom: 0; // Removes bottom margin
+    line-height: 24px; // Sets the line height for vertical centering
+  }
+
+
+
+.agent_featured_details {
+    height: 75px;
+    padding: 0px 20px;
+    line-height: 1.65em;
+    width: 100%;
+    .agent_detail {
+      display: none;
+    }
+}
+
+.wpresidence_agent_unit_wrapper .agent_unit_featured:hover .agent_featured_details {
+  .agent_detail {
+    display: block;
+  }
+  .featured_agent_notes{
+    display: none;
+  }
+}
+
+
+
+.agent_unit .agent_detail {
+  line-height: 1.2em;
+  font-size: 14px;
+
+  a {
+    word-break: break-word;
+  }
+
+  i {
+    width: 15px;
+    font-size: 12px;
+  }
+}
+
+

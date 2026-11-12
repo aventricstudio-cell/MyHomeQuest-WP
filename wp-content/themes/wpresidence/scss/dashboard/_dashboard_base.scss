@@ -1,0 +1,34 @@
+
+
+.row.row_user_dashboard {
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 800px;
+  }
+
+
+
+.wpestate_dashboard_section_title,
+.user_details_row,
+.change_pass {
+    color: var(--wp-estate-user-dashboard-content-color-option, var(--wp_estate_user_dashboard_content_color));
+    font-size: 17px;
+    line-height: 1.6em;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+  
+.col-md-9.dashboard-margin{
+  flex: auto;
+  align-content: flex-start;
+  background-color: var(--wp-estate-user-dashboard-content-background-option, var(--wp_estate_user_dashboard_content_back));
+}
+
+ 

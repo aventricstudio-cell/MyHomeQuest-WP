@@ -1,0 +1,125 @@
+// components/_slider.scss
+// This file contains styles for slider components, including property sliders,
+// carousels, and related navigation elements.
+
+// Base styles for slick arrow buttons
+// This placeholder class contains all common styles to reduce repetition
+%slick-arrow-base {
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    background-color: #777AF212;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    @include smooth-transition-shorter;
+    padding-left: 0;
+    font-size: 0;
+  
+    // Hover styles for arrow buttons
+    &:hover {
+      color: #fff;
+      background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+  
+    // Styles for the arrow icons (using Font Awesome)
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      font-size: 14px;
+      line-height: 40px;
+      opacity: 1;
+      font-weight: 900;
+    }
+  }
+  
+  // Common styles for both standard and sideways arrow layouts
+  .slider_container, .arrow_class_sideways {
+    button {
+      &.slick-prev,
+      &.slick-next {
+        &.slick-arrow {
+          @extend %slick-arrow-base;
+        }
+      }
+  
+      // Set Font Awesome icon for previous arrow
+      &.slick-prev.slick-arrow:before {
+        content: '\f060'; // Left arrow icon
+      }
+  
+      // Set Font Awesome icon for next arrow
+      &.slick-next.slick-arrow:before {
+        content: '\f061'; // Right arrow icon
+      }
+    }
+  }
+  
+  // Specific styles for standard slider layout
+  .slider_container {
+    button {
+      &.slick-prev.slick-arrow {
+        right: 60px;
+      }
+  
+      &.slick-next.slick-arrow {
+        right: 15px;
+      }
+  
+      // Position arrows at the top for standard layout
+      &.slick-prev.slick-arrow,
+      &.slick-next.slick-arrow {
+        top: -42px;
+      }
+    }
+  }
+  
+  // Specific styles for sideways arrow layout
+  .arrow_class_sideways {
+    button {
+      // Center arrows vertically for sideways layout
+      &.slick-prev.slick-arrow,
+      &.slick-next.slick-arrow {
+        top: 50%;
+        margin-top: -35px;
+      }
+  
+      // Position previous arrow on the left side
+      &.slick-prev.slick-arrow {
+        left: -80px;
+      }
+  
+      // Position next arrow on the right side
+      &.slick-next.slick-arrow {
+        right: -80px;
+      }
+    }
+  }
+  
+  // Default styles for slick carousel arrows
+  // These styles are applied when no custom styling is provided
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+
+
+  
+.elementor-widget-WpResidence_Property_Slider_v3 i,
+.elementor-widget-Wpresidence_Testimonial_Slider i,
+.elementor-widget-WpResidence_Property_Slider_v2 i {
+    font-size: 14px;
+}
+

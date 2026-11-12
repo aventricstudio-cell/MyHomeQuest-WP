@@ -1,0 +1,96 @@
+
+
+/*=shortcode membership package
+----------------------------------------------------------------------------*/
+
+.membership_package_product h4 {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+.pack-price_sh {
+    position: relative;
+    text-align: center;
+    font-size: 29px;
+    line-height: 35px;
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    font-weight: 500;
+    padding: 30px 0px;
+}
+
+.pack-price_title {
+    background-color: #f6f6f6;
+    padding: 20px 0px;
+}
+
+.pack-bill_freg_sh,
+.pack-listing_sh,
+.pack-listing-period_sh,
+.pack-listing_feat_sh {
+    text-align: center;
+    padding: 15px 0px;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.pack-listing_feat_sh {
+    border-bottom: 0px solid #e2e2e2;
+}
+
+.membership_package_product {
+    padding: 0px 0px 45px 0px;
+    margin: 15px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.wp-block-column .membership_package_product {
+    margin: 7px;
+}
+
+.membership_package_product.featured_pack_sh {
+    box-shadow: 0px 30px 70px 0px rgba(0, 0, 0, 0.1);
+    padding: 0px 0px 45px 0px;
+    border: 1px solid #f1f8ff;
+    margin-top: -15px;
+}
+
+.featured_pack_sh .pack-price_title {
+    background-color: #222;
+    color: #fff;
+}
+
+.featured_pack_sh .wpresidence_button:hover {
+    background-color: #fff;
+}
+
+.buy_package_sh {
+    text-align: center;
+    margin: 0px auto;
+}
+
+.featured_pack_sh .buy_package_sh {
+    margin-top: 30px;
+}
+
+.membership_package_product.featured_pack_sh h4 {
+    color: #fff;
+}
+
+.buy_package_sh .wpresidence_button {
+    float: none;
+    margin-bottom: 0px;
+    width: 200px;
+    display: inline-block;
+    margin-top: 10px;
+} 
+
+.pack_content {
+    text-align: center;
+    padding: 0px 20px 10px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+} 

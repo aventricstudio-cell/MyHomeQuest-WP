@@ -1,0 +1,317 @@
+// MILLDONE
+// file scss/components/header-media/header-media-slider-type-1.scss
+// Main container for the theme slider version 1-
+// Used on the outer-most div of the slider in the HTML
+.theme_slider_1 {
+    cursor: pointer;
+
+    // Applied to all anchor tags within the slider
+    // This includes property titles, agent names, and any other links
+    a {
+        pointer-events: auto;
+        @include smooth-transition-shorter;
+    }
+
+    // Applied to each individual slide
+    // In the HTML, this is the div with classes "item carousel-item theme_slider_classic"
+    .item {
+        position: relative;
+    }
+
+    // Styles for navigation arrows
+    // These are the 'a' tags with classes "carousel-control-theme-prev" and "carousel-control-theme-next"
+    .carousel-control-theme-prev,
+    .carousel-control-theme-next {
+        position: absolute;
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        opacity: 0.99;
+        color: #fff;
+        pointer-events: auto;
+        z-index: 10;
+  
+        // Flexbox properties for centering the arrow icons
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px 15px;
+        &:hover {
+            background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 85%, transparent);
+            color: #fff;
+        }
+    }
+
+    // Specific positioning for previous arrow
+    // This targets the 'a' tag with class "carousel-control-theme-prev"
+    .carousel-control-theme-prev {
+        top: 137px;
+        right: 0px;
+        height: 138px;
+        border-bottom-right-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    // Specific positioning for next arrow
+    // This targets the 'a' tag with class "carousel-control-theme-next"
+    .carousel-control-theme-next {
+        top: 0px;
+        right: 0px;
+        height: 137px;
+        border-top-right-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    // Font Awesome icon size for the arrows
+    // This targets the 'i' tags within the navigation arrows
+    .fa {
+        font-size: 40px;
+    }
+
+    // Extended slider styles 
+    // This class is not present in the provided HTML, but likely used for an alternative view mode
+    &.theme_slider_extended {
+        .slider-content {
+            bottom: 10%;
+            @include main-box-shadow-v2();
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            
+            // Styles for the property title link
+            // Targets the 'a' tag within the 'h3' in the slider content
+            h3{
+                margin-bottom: 0px;
+                a {
+                text-decoration: none;
+                    &:hover {
+                        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))
+                    }
+            } 
+            }
+
+            // Read more link styles
+            // This element is not present in the provided HTML, but likely used in extended view
+            .read_more {
+                text-decoration: none;
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                display: block;
+                margin-top: 7px;
+                position: absolute;
+                bottom: 61px;
+                right: 75px;
+                font-weight: 500;
+                i {
+                    font-size: 14px;
+                    padding: 0px 0px 0px 8px !important;
+                }
+            }
+        }
+    }
+
+    // Wrapper for slider content
+    // This targets the div with class "slider-content-wrapper"
+    .slider-content-wrapper {
+        width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+        max-width: 100%;
+        padding: 0px 15px;
+        bottom: 0;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9;
+
+        // Main content area for each slide
+        // This targets the div with class "slider-content"
+        .slider-content {
+            position: absolute;
+            width: 466px;
+            height: 275px;
+            background-color: #fdfdfd;
+            opacity: 0.99;
+            font-size: 14px;
+            bottom: 130px;
+            padding: 21px 81px 0px 26px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            line-height: 22px;
+            box-shadow: 0 44px 98px 0 rgba(0, 0, 0, 0.1);
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 10px;
+        
+
+            // Price display within the slider
+            // This targets the div with class "theme-slider-price"
+            .theme-slider-price {
+                margin-top: auto;
+                border-top: 1px solid #f0f0f0;
+                height: 50px;
+                font-size: 18px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                font-weight: 500;
+                gap: 5px;
+ 
+                // Property details (bedrooms, bathrooms, etc.)
+                // This targets the div with class "listing-details"
+                .listing-details {
+                    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+                    font-size: 15px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 15px;
+                    margin-left: auto;
+
+                    .inforoom, 
+                    .infobath,
+                    .infosize{
+                        flex-direction: row;
+                        column-gap: 5px;
+                        align-items: center;
+                        display: flex;
+
+                        svg {
+                            height: 15px;
+
+                            path{
+                                fill: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
+
+// Wrapper for agent contact information
+// This targets the div with class "theme_slider_contact_wrapper"
+.theme_slider_contact_wrapper {
+            z-index: 9;
+  
+            pointer-events: initial;
+            
+            // Agent image styles
+            // This targets the div with class "theme_slider_agent"
+            .theme_slider_agent {
+                width: 63px;
+                height: 63px;
+                float: left;
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin-right: 15px;
+                border-radius: 50%;
+            }
+
+            // Agent name styles
+            // This targets the div with class "theme_slider_agent_name"
+            .theme_slider_agent_name {
+                font-weight: 500;
+                color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            // Contact agent button styles
+            // This targets the div with class "wpestate_theme_slider_contact_agent"
+            .wpestate_theme_slider_contact_agent {
+                padding: 0px 15px;
+                background: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+                width: auto;
+                position: relative;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+                border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+                line-height: 2;
+                display: inline-block;
+                text-align: center;
+                @include smooth-transition-shorter;
+ 
+                &:hover {
+                    background: color-mix(in srgb, var(--wp-estate-second-color-option, var(--wp-estate-second-color)) 85%, transparent)
+                }
+            }
+}
+
+/* Styles for the contact form wrapper */
+.theme_slider_contact_form_wrapper {
+    position: absolute;
+    top: -45px;
+    left: 450px;
+    width: 420px;
+    z-index: 10;
+    pointer-events: initial;
+    opacity: 0;
+    box-shadow: 0 44px 98px 0 rgba(0, 0, 0, .1);
+    display: none;
+    @include smooth-transition;
+
+    /* Styles for the contact form itself */
+    .agent_contanct_form {
+        margin-bottom: 0px;
+        box-shadow: 0 44px 98px 0 rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 25px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        gap: 10px;
+    }
+
+    /* Submit button for the contact form */
+    .wpresidence_button {
+        margin-bottom: 0px;
+    }
+
+    /* Textarea within the contact form */
+    textarea.form-control {
+        height: 95px;
+    }
+
+  
+}
+
+/* Visible state for the contact form */
+.theme_slider_contact_form_wrapper_visible {
+    opacity: 1;
+    left: 480px;
+}
+
+/* Close button for the contact form modal */
+.theme_slider_details_modal_close {
+    top: 5px;
+    right: 10px;
+    opacity: 1;
+    position: absolute;
+    z-index: 10;
+
+    /* SVG icon for the close button */
+    svg {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+// Styles for a book tour button 
+// Note: This class is not present in the provided HTML, may be used elsewhere in the theme
+.wpestate_theme_slider_book_toor {
+    padding: 4px 45px;
+    background: #E0BB0B;
+    width: auto;
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 2;
+    display: inline-block;
+    text-align: center;
+}
+}

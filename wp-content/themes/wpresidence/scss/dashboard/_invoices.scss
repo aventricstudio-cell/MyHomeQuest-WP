@@ -1,0 +1,178 @@
+/** MILLDONE
+ * WpResidence Invoices Styles
+ * src: scss\dashboard\_invoices.scss
+ * This file contains styles for the invoices section of the WpResidence theme's user dashboard.
+ *
+ * @package WpResidence
+ * @subpackage UserDashboard
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - WpResidence theme's global styles
+ *
+ * Usage:
+ * This file should be included in the main stylesheet of the WpResidence theme
+ * or imported into the user dashboard styles.
+ */ 
+
+// Invoices Page Styles
+.page-template-user_dashboard_invoices {
+    // Dashboard content wrapper
+    .wpestate_dashboard_content_wrapper {
+      // Dashboard list header (filters)
+      .wpestate_dashboard_list_header {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+  
+  
+        // Invoice status select
+        #invoice_status {
+          margin-right: 0px;
+        }
+      }
+  
+      // Invoice totals
+      .invoice_totals {
+        padding: 0px;
+        color: #263238;
+      }
+  
+     
+  
+      // Invoices container
+
+        // Individual invoice unit
+        .invoice_unit {
+    
+          border-top: 1px solid #f6f4f4;
+          padding: 30px 0px 30px 0px;
+          width: 100%;
+          float: left;
+          display: flex;
+          align-content: center;
+          justify-content: flex-start;
+          align-items: center;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          color: var(--wp-estate-user-dashboard-content-color-option, #5c727d );
+  
+          // Alternating background for invoice units
+          &:nth-of-type(odd) {
+            background: #fff;
+          }
+  
+          // Invoice status label
+          .property_list_status_label {
+            &.paid {
+              // Styles for paid status if needed
+            }
+          }
+  
+          // Print invoice button
+          .print_invoice_wrap {
+            .print_invoice {
+              // Styles for print button if needed
+            }
+          }
+        }
+      
+    }
+  }
+  
+
+  .no_invoices {
+    float: left;
+  }
+  
+  .invoice_filters {
+    padding: 0px;
+    margin: 0px -15px;
+  }
+
+
+  
+/* Print body wrapper styles
+-------------------------------------------------- */
+.print_body {
+  /* Logo styles */
+  .printlogo {
+    &.img-responsive {
+      // Maintain original image responsive behavior
+    }
+  }
+}
+
+/* Invoice header section
+-------------------------------------------------- */
+.invoice_print_title {
+  font-size: 25px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+/* Billing information sections
+-------------------------------------------------- */
+.wpestate_print_invoice_to_section,
+.wpestate_print_invoice_from_whom_section {
+  width: 50%;
+  float: left;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+/* Invoice details container
+-------------------------------------------------- */
+.wpestate_print_invoice_details_wrapper {
+  width: 100%;
+  text-align: right;
+
+  /* Individual detail rows */
+  .wpestate_print_invoice_details_detail {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 15px 0px;
+    font-size: 13px;
+    margin-bottom: 0px;
+
+    label {
+      float: left;
+      font-weight: 500;
+    }
+  }
+}
+
+/* Extended details section
+-------------------------------------------------- */
+.wpestate_print_invoice_details_wrapperex_details {
+  width: 100%;
+  float: left;
+  text-align: left;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+/* Invoice footer
+-------------------------------------------------- */
+.wpestate_print_invoice_end {
+  width: 100%;
+  float: left;
+  text-align: left;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+/* Classes not found in current markup but retained
+-------------------------------------------------- */
+.wpestate_invoice_date {
+  font-size: 13px;
+}

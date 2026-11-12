@@ -1,0 +1,420 @@
+
+// MILLDONE
+// components/_forms.scss
+
+// This file contains styles for form elements and form-related components.
+// It includes styles for inputs, textareas, select elements, and other form controls.
+
+// Make all dropdown elements cursor: pointer for better UX
+.dropdown {
+    cursor: pointer;
+}
+
+// ==========================================================================
+// Form Controls
+// ==========================================================================
+// These styles apply to all elements with the .form-control class
+// This includes inputs, textareas, and select elements
+.form-control {
+  border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e7e7e7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  @include smooth-transition-short;
+
+  // Styling for placeholder text
+  &::placeholder,
+  input::placeholder {
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    opacity: 1;
+  }
+
+  // Styles for focus and open states
+  &:focus,
+  &.open {
+    background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+    color: var(--wp-estate-adv-search-font-color-option, var(--wp_estate_adv_search_font_color));
+    border: 1px solid #e7e7e7;
+    box-shadow: none;
+  }
+}
+
+.form-select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: var(--wp-estate-border-radius-corner-option, var(--wp_estate_border_radius_corner));
+
+    &:focus{
+        background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+        border: 1px solid #e7e7e7;
+        box-shadow: none;
+    }
+    option {
+        background-color: #fff;  // Change background color of options
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));             // Change text color of options
+      
+        &:hover {
+          background-color: #fff;  // Change background on hover
+          color: #222;             // Change text color of options
+        }
+    }
+}
+
+// Ensure consistent placeholder styling across different browsers
+input.form-control {
+    &::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+      opacity: 1;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+      opacity: 1;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+      opacity: 1;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+      opacity: 1;
+    }
+    &::placeholder { /* Standard syntax for modern browsers */
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+      opacity: 1;
+    }
+  }
+
+// Custom dropdown styles for WPResidence
+.wpresidence_dropdown{
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    @include smooth-transition-short;
+    margin-bottom: 0px;
+     width: 100%;
+    // Styles for the dropdown toggle button
+    .dropdown-toggle{
+        width: 100%;
+        padding: 10px 15px;
+        text-transform: none;
+        position: relative;
+        font-size: 13px;
+        line-height: 1.4;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        background-color: #ffffff;
+        background-image: none;
+        border: 1px solid #e7e7e7;
+        box-shadow: none;
+        text-align: left;
+        
+        // Ensure consistent styling when active
+        &:active{
+            border: 1px solid #e7e7e7;
+            box-shadow: none!important;
+        }
+
+        // Custom dropdown arrow using Font Awesome
+        &::after {
+            border: none;
+            font-family: "Font Awesome 5 Free";
+            content: "\f107";
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%); 
+            font-size: 13px;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            right: 10px;
+            font-weight: 600;
+        }
+
+        &.show {
+            color: var(--wp-estate-adv-search-font-color-option, var(--wp_estate_adv_search_font_color));
+            background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+            border: 1px solid #e7e7e7;
+        }
+    }
+
+    // Styles for the dropdown menu
+    .dropdown-menu {
+        font-size: 13px;
+        padding: 5px 0 0px 0px;
+        width: 100%;
+        min-width: 200px;
+        // Custom box shadow for depth
+        @include main-box-shadow(); // Include main box shadow.
+        max-height: 225px;
+        overflow-y: scroll;
+        border-color: #e7e7e7;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+
+        // Styles for dropdown items
+        li{
+            padding: 10px 15px;
+            line-height: 1.4em;
+            margin-bottom: 0px;
+     
+            &:hover{
+                background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+                color: var(--wp-estate-adv-search-font-color-option, var(--wp_estate_adv_search_font_color));
+            }
+        }
+    }
+}
+
+// Styles for open state of custom dropdown
+.wpresidence_dropdown.open {
+    .dropdown-toggle{
+        background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+        border: 1px solid #e7e7e7;
+    }
+}
+
+// Styles for filters dropdown
+.wpresidence_dropdown.wpresidence_filters_dropdown{
+    width: auto;
+    
+    .dropdown-toggle {
+        width: auto;     
+        padding: 10px 30px 10px 5px;
+        border: 0px;
+    }
+
+    .dropdown-toggle.show{
+        background-color: #ffffff;
+    }
+
+    .btn:not(:disabled):not(.disabled):active:focus, 
+    .btn:not(:disabled):not(.disabled).active:focus {
+        background-color: #ffffff;
+        border: 0px;
+    }
+}
+
+// Styles for filters dropdown on directory sidebar
+.directory_sidebar_wrapper {
+    .wpresidence_dropdown.wpresidence_filters_dropdown{
+        width: 100%;
+        .dropdown-toggle {
+            width: 100%;     
+            padding: 10px 15px;
+            border: 1px solid #e7e7e7;
+        }
+    }
+}
+
+
+.wpestatemultiselectselectpicker{
+    display: none;
+}
+
+// Styles for multiselect dropdown
+.wpestatemultiselect{
+    margin-bottom: 10px;
+
+    .dropdown-menu{
+        border:0px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        font-size: 13px;
+        
+        // Styles for open state
+        &.open{
+            min-width: 185px;
+            min-height: 100px!important;
+        }
+
+        // Styles for dropdown items
+        li{
+            &:hover{
+                background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+            }
+            
+            // Remove default focus and hover styles
+            &>a:focus,
+            &>a:hover{
+                background-color: transparent;
+                background-image: none;
+            }
+        }
+
+        // Styles for action buttons in multiselect
+        .bs-actionsbox{
+            button {
+                padding: 0.25rem 0;
+                border-color: #e7e7e7;
+                background: #ffffff;
+                color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+                font-size: 13px;
+                line-height: 1.6;
+                border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+                box-shadow: none;
+                text-shadow: none;
+                background-image: none;
+                text-transform: none;
+                &:hover{
+                    box-shadow: none;
+                    text-shadow: none;
+                    background-image: none;
+                    text-transform: none;
+                    background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+                    color: var(--wp-estate-adv-search-font-color-option, var(--wp_estate_adv_search_font_color));
+                    border-color: #e7e7e7;
+                }
+            }
+        }
+
+        // Custom checkmark for selected items
+        .check-mark {
+            top: 10px!important;
+            
+            &:before {
+                content: "\f058";
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                font-family: "Font Awesome 5 Free";
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                font-weight: 800;
+            }
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    // Custom dropdown arrow
+    .dropdown-toggle{
+        &::after {
+            border: none;
+            font-family: "Font Awesome 5 Free";
+            content: "\f107";
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%); 
+            font-size: 13px;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            right: 10px;
+            font-weight: 600;
+        }
+    }
+}
+
+.dropdown-item {
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    // Apply styles for both .active class and :active state
+    &.active, // When the dropdown item has the 'active' class
+    &:active,
+    &:hover,
+    &:focus { // When the dropdown item is being clicked
+      background-color: #ffffff; // Set background color to white 
+      color: var(--wp-estate-adv-search-font-color-option, var(--wp_estate_adv_search_font_color));
+    }
+  }
+
+// Custom scrollbar styles for dropdowns
+.wpestatemultiselect .dropdown-menu.show .inner.show::-webkit-scrollbar,
+.dropdown-menu::-webkit-scrollbar {
+    width: 15px;
+    margin: 0px 0px;
+    padding: 0px !important;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.wpestatemultiselect .dropdown-menu.show .inner.show::-webkit-scrollbar-thumb,
+.dropdown-menu::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+    background-color: #c8ceda;
+    border-left: 7px solid #f1f1f1;
+    border-right: 7px solid #f1f1f1;
+    border-top: 10px solid #f1f1f1;
+    border-bottom: 10px solid #f1f1f1;
+    height: 90px;
+}
+
+.wpestatemultiselect .dropdown-menu.show .inner.show::-webkit-scrollbar-track,
+.dropdown-menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: #f1f1f1;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+
+// Ensure minimum width for dropdowns in specific search layouts
+.search_wr_10 .dropdown-menu,
+.search_wr_11 .dropdown-menu {
+    min-width: 160px;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    outline: 0px !important;
+    -webkit-appearance: none;  // For WebKit-based browsers (Chrome, Safari)
+    -moz-appearance: none;     // For Firefox
+    appearance: none;          // Standard property for compatibility
+    height: 15px;
+    width: 15px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    vertical-align: top;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: #565a5c;
+    box-sizing: border-box;
+    padding: 0;
+    margin-top: 0px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+input[type="checkbox"]:checked:before {
+    content: "\f00c"; // Use the Unicode for the Font Awesome checkmark icon
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown.bootstrap-select.show-tick li{
+    line-height: 1.4em;
+    margin-bottom:0px;
+}
+
+.dropdown.bootstrap-select.show-tick li a{
+    padding: 10px 15px;
+}
+
+.wp-block-search__inside-wrapper {
+    display: flex;
+    flex: auto;
+    flex-wrap: nowrap;
+    max-width: 100%;
+}
+
+
+
+.filter_menu,
+.ui-autocomplete.ui-widget-content{
+    border:0px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+}

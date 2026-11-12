@@ -1,0 +1,74 @@
+<?php
+// Example request parameters for WPResidence property query
+$request_params = [
+    'page' => 1, // Pagination: page number
+    'posts_per_page' => 10, // Number of properties per page
+    'order' => 0, // Sorting order
+    'response_type' => 'full', // 'basic' or 'full'
+    'taxonomies' => [
+        'property_city' => ['New York'], // Filter by city
+        'property_area' => ['Manhattan'], // Filter by area
+        'property_features' => ['Pool', 'Gym'], // Filter by features
+        'property_category' => ['Apartment'], // Filter by category
+        'property_action_category' => ['Sale'], // Filter by action
+        'property_status' => ['Active'], // Filter by status
+        'property_county_state' => ['New York'] // Filter by county/state
+    ],
+    'meta' => [
+        'property_price' => [
+            'value' => 500000, // Minimum price
+            'compare' => '>=', // Comparison operator
+            'type' => 'NUMERIC', // Data type
+        ],
+        'property_size' => [
+            'value' => 1000, // Minimum size in square feet
+            'compare' => '>=', // Comparison operator
+            'type' => 'NUMERIC', // Data type
+        ],
+        'property_bedrooms' => [
+            'value' => 2, // Minimum bedrooms
+            'compare' => '>=', // Comparison operator
+            'type' => 'NUMERIC', // Data type
+        ],
+        'property_bathrooms' => [
+            'value' => 1, // Minimum bathrooms
+            'compare' => '>=', // Comparison operator
+            'type' => 'NUMERIC', // Data type
+        ],
+        'prop_featured' => [
+            'value' => 1, // Featured properties
+            'compare' => '=', // Comparison operator
+            'type' => 'NUMERIC', // Data type
+        ],
+    ],
+    'userID' => 123, // Optional filter by user ID (property owner)
+];
+
+// Example usage
+$results = wpestate_api_custom_query(
+    'estate_property',            // Post type (properties)
+    $request_params['page'],      // Page number
+    $request_params['posts_per_page'], // Posts per page
+    $request_params['meta'],      // Meta query
+    $request_params['taxonomies'], // Taxonomy query
+    $request_params['order'],     // Order
+    $request_params['userID'],    // User ID (property owner)
+    'api'                         // Query type (web or api)
+);
+
+// Process results
+if (!empty($results) && isset($results['post_ids'])) {
+    // Display or process property IDs
+    echo "Total properties found: " . $results['total_posts'] . "<br>";
+    echo "Total pages: " . $results['max_num_pages'] . "<br>";
+    
+    echo "Property IDs: <br>";
+    foreach ($results['post_ids'] as $property_id) {
+        echo $property_id . "<br>";
+        
+        // Get property details if needed
+        // $property_title = get_the_title($property_id);
+        // $property_permalink = get_permalink($property_id);
+        // $property_price = get_post_meta($property_id, 'property_price', true);
+    }
+}

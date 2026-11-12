@@ -1,0 +1,209 @@
+[dir="rtl"] {
+
+    //testimonials
+   
+    .type_class_4 {
+        .testimonial-author-line,
+        .testimonial-location-line {
+            margin-right: 20px;
+            margin-left: 0px;
+        }
+        .testimonial-image {
+            float: right;
+        }
+    }
+
+
+
+    // simple dropdowns rtl
+    .dropdown {
+        &.wpresidence_dropdown {
+            // Make dropdown button RTL
+            .dropdown-toggle {
+                text-align: right;
+                padding-right: 12px;  // adjust as needed
+                padding-left: 24px;   // space for caret
+                
+                // If there's a caret/arrow
+                &::after {
+                    margin-left: 0;
+                    margin-right: 8px;
+                    float: left;
+                    left: 10px;
+                    right: auto;
+                }
+            }
+            
+            // Make dropdown menu RTL
+            .dropdown-menu {
+                text-align: right;
+                left: auto;
+                right: 0;
+                
+                li {
+                    text-align: right;
+                    padding-right: 12px;
+                    padding-left: 12px;
+                }
+            }
+        }
+    }
+     .form-select {
+        background-position: left 0.75rem center;
+        padding-right: 0.75rem;
+        padding-left: 2.25rem;
+    }
+    input[type=checkbox]{
+        margin-right: unset;
+        margin-left: 5px;
+    }
+    // multiple select boostrap
+    .bootstrap-select {
+        // Main button
+        .dropdown-toggle {
+            text-align: right;
+            
+            .filter-option {
+                text-align: right;
+             
+                
+                .filter-option-inner-inner {
+                    text-align: right;
+                }
+            }
+            
+            // Caret/arrow
+            &::after {
+                right: auto;
+                left: 12px;
+            }
+        }
+        
+        // Dropdown menu
+        .dropdown-menu {
+            text-align: right;
+            
+            // Action buttons at top
+            .bs-actionsbox {
+                text-align: right;
+                
+                .btn-group {
+                    flex-direction: row-reverse;
+                }
+            }
+            
+            // Menu items
+            .inner {
+                text-align: right;
+                
+                .dropdown-item {
+                    text-align: right;
+                    padding-right: 12px;
+                    
+                    // Checkbox
+                    .check-mark {
+                        right: auto;
+                        left: 12px;
+                    }
+                    
+                    // Text
+                    .text {
+                        text-align: right;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .radius_wrap:after {
+        right: unset;
+        left:15px;
+    }
+
+    //beds and bats component
+    .wpestate-beds-baths-popoup-component{
+
+        .dropdown-toggle{
+            text-align: right;
+            &::after {
+                right: auto;
+                left: 12px;
+            }
+        }
+    }
+
+
+    .listing_filters_head{
+        .dropdown.wpresidence_dropdown .dropdown-toggle::after{
+            left: 0px;
+            right: unset;
+        
+        }
+        .wpestate_list_grid_filter_wiew_wrapper{
+            margin-left: unset;
+            margin-right: auto;
+            
+        }
+    }
+
+    //contact form
+    .schedule_meeting{
+        margin-right: 15px;
+        margin-left: unset;
+    }
+
+    .extended_search_check_wrapper .adv_extended_close_button {
+        left:0px;
+        right: unset;
+    }
+
+    // infobox
+    .infobox_wrapper_image{
+        float: right;
+    }
+    
+    .infobox_details,
+    .prop_pricex{
+        padding-right: 15px;
+        float: right;
+    }
+    .infobox_title a{
+        float: right;
+    }
+    #infocloser::before {
+        right: unset;
+        left: 0px;
+    }
+
+
+    //search
+
+    .adv-search-1 {
+        .adv-search-header-1 {
+            left: 0px;
+            right: 0px;
+            
+            &:after {
+                right: unset;
+                left: 15px;
+            }
+        }
+        .residence_advanced_submit_button_search_1 {
+            right: unset;
+            left:0px;
+        }
+    }
+    #results .results_header #preview_view_all {
+        float: left;
+    }
+
+    // save search
+    #save_search_notice{
+        padding-right: 0px;
+    }
+    #search_name {
+        margin-right: unset;
+        margin-left: 15px;
+    }
+}

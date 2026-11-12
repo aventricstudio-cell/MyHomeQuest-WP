@@ -1,0 +1,179 @@
+// MILLDONE
+// _property_unit_type7.scss
+// src: scss\properties_cards\_property_unit_type7.scss
+// This file contains styles specific to Property Unit Type 7 in the WpResidence theme.
+// It defines the layout and appearance of Type 7 property cards displayed in various views.
+
+// Property Unit Type 7 specific styles
+.property_unit_type7 {
+    .property_location {
+        padding: 11px 0px;
+    }
+    
+    .property_listing_details {
+        justify-content: space-between;
+
+        &_v7_item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 5px;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        }
+    }
+
+    .wpestate_property_card_contact_wrapper {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+// Modal styles for email and call actions
+.modal.wpestate_card_unit_email,
+.modal.wpestate_card_unit_call {
+    font-size: 14px;
+    .modal-dialog {
+        top: 85px;
+    }
+    .realtor-contact-buttons{
+        display: none;
+    }
+
+    .modal-body {
+        padding:  30px 30px 20px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 9;
+    }
+    p{
+        margin-bottom: 0px;
+    }
+
+    .modal-header {
+        border: none;
+        padding: 0;
+        height: 0;
+    }
+}
+
+// Specific styles for call modal
+.wpestate_card_unit_call .modal-body {
+    line-height: 1.6em;
+}
+
+// Close button SVG path styles
+.wpestate_card_unit_call .close svg path,
+.wpestate_card_unit_email .close svg path {
+    stroke: #222;
+}
+
+.wpestate_card_unit_email {
+    .schedule_wrapper{
+        flex-wrap: nowrap;
+        .schedule_day,
+        .schedule_hour  {
+            width: 50%;
+        } 
+   }
+    
+}
+
+// Property card contact wrapper styles
+.wpestate_property_card_contact_wrapper {
+    margin-bottom: 10px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    // Common styles for contact buttons
+    &_phone,
+    &_email,
+    &_whatsupp {
+        @include no-transition;
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        border: 1px solid color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 10%, transparent);
+        background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 10%, transparent);
+        padding: 5px 15px;
+        line-height: 22px;
+        font-size: 13px;
+        font-weight: 400;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        gap: 5px;
+        display: flex;
+        flex-direction: row;
+
+        &:hover {
+            background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            color: #fff;
+            border-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            i{
+                color: #fff;
+            }
+        }
+    }
+
+    svg {
+        fill: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        width: 14px;
+        max-height: 17px;
+    }
+
+    &_whatsupp {
+        flex-shrink: 2;
+
+        a {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &_phone:hover svg {
+        fill: #fff;
+    }
+}
+
+// MLS data wrapper styles
+.wpestate_property_card_mls_data_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    gap: 20px;
+    img{
+        max-height: 30px;
+        width: auto;
+    }
+}
+
+// Shared SVG styles for property unit types 3 and 7
+.property_unit_type3 .property_listing_details svg,
+.property_unit_type7 .property_listing_details svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+.property-unit-information-wrapper{
+    .wpestate_property_card_mls_data_wrapper{
+           /* display: block; */
+    }
+}

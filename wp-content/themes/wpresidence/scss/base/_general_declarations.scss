@@ -1,0 +1,734 @@
+.wpresidence_term_background_image,
+.elementor-widget-container .property_listing_square,
+.elementor-widget-container .overview_wrapper,
+.elementor-widget-container .property_slider2_wrapper .image_div,
+.elementor-widget-container .property_slider2_info_wrapper,
+.elementor-widget-container .property_listing_blog,
+.elementor-widget-container .adv-search-3,
+.page-template-front_property_submit .navigation_container,
+.elementor-widget-container .advanced_search_shortcode,
+.elementor-widget-container .membership_package_product,
+.elementor-widget-container .contact-wrapper,
+.elementor-widget-container .developer_contact_wrapper,
+.elementor-widget-container .agency_contact_wrapper,
+.elementor-widget-container.property_reviews_wrapper,
+.elementor-widget-container .agency_contact_container_wrapper,
+.elementor-widget-container .agency_content_wrapper,
+.elementor-widget-container .submit_property_front_wrapper,
+.elementor-widget-container .directory_sidebar_wrapper,
+.elementor-widget-container .places_wrapper_type_3 .places_background_image,
+.elementor-widget-container .featured_property,
+.elementor-widget-container .agency_unit,
+.elementor-widget-container #comments,
+.elementor-widget-container .single-blog,
+.elementor-widget-container #content_container .container_agent,
+.elementor-widget-container .listing_wrapper .property_listing,
+.elementor-widget-container .agent_contanct_form,
+.elementor-widget-container .wpresidence_agent_unit_wrapper .agent_unit,
+.elementor-widget-container .agent_content,
+.elementor-widget-container .wpestate_agent_details_wrapper,
+.elementor-widget-container .wpestate_property_description,
+.elementor-widget-container .multi_units_wrapper,
+.elementor-widget-container .property-panel,
+.elementor-widget-container #primary .widget-container,
+.elementor-widget-container .user_role_unit,
+.elementor-widget-container .testimonial-slider-container .testimonial-container.type_class_3,
+.elementor-widget-container .google_map_shortcode_wrapper,
+.elementor-widget-container .testimonial-container.type_class_1 .testimonial-text,
+.elementor-widget-container .blog_unit,
+.elementor-widget-container .agent_unit_featured,
+.elementor-widget-container .featured_article,
+.elementor-widget-container .saved_search_wrapper {
+    @include box-shadow(card);
+ 
+}
+
+
+.listing_wrapper .property_listing{
+      box-shadow: var(--wp-estate-cssbox-shadow-option,var(--wp_estate_cssbox_shadow));   
+}
+.slider_container .listing_wrapper .property_listing,
+.agent_unit,
+.blog_unit,
+.property_listing,
+.agency_unit,
+.user_role_unit,
+.featured_article,
+.featured_property {
+    box-shadow: var(--wp-estate-cssbox-shadow-option,var(--wp_estate_cssbox_shadow));   
+    @include smooth-transition;
+}
+
+.wpresidence_term_background_image,
+.agent_unit_social_single,
+.listing_filters_head_directory, 
+.adv_listing_filters_head, 
+.listing_filters_head, 
+.listing_filters,
+.single-content.single-blog,
+#comments,
+.single_property_action,
+.estate_places_slider button.slick-prev.slick-arrow, 
+.estate_places_slider button.slick-next.slick-arrow,
+.estate_places_slider button.slick-prev.slick-arrow:hover, 
+.estate_places_slider button.slick-next.slick-arrow:hover,
+.listing_wrapper .property_listing:hover, 
+.agent_unit:hover, 
+.blog_unit:hover, 
+.property_listing:hover, 
+.agency_unit:hover, 
+.user_role_unit:hover, 
+.featured_article:hover, 
+.featured_property:hover,    
+.wpb_btn-info,
+#primary .widget-container.twitter_wrapper,
+.wpcf7-form-control,
+#access ul ul,
+.btn,
+.customnav,
+#user_menu_open,
+.filter_menu,
+.property_listing,
+.agent_unit,
+.blog_unit,
+.property_listing_blog,
+.related_blog_unit .blog_unit_image img,
+#tab_prpg .tab-pane,
+.agent_unit_social_single,
+.agent_contanct_form_sidebar .agent_contanct_form,
+.advanced_search_shortcode,
+.advanced_search_sidebar,
+.mortgage_calculator_div,
+.footer-contact-form,
+.contactformwrapper,
+.info_details,
+.info_idx,
+.loginwd_sidebar,
+.featured_article,
+.featured_property,
+.customlist2 ul,
+.featured_agent,
+.wpb_alert-info.vc_alert_3d.wpestate_message,
+.wpb_alert-success.vc_alert_3d.wpestate_message,
+.wpb_alert-error.vc_alert_3d.wpestate_message,
+.wpb_alert-danger.vc_alert_3d.wpestate_message,
+.wpb_call_to_action.wpestate_cta_button,
+.vc_call_to_action.wpestate_cta_button2,
+.saved_search_wrapper,
+.mortgage_calculator_li,
+.adv_listing_filters_head, 
+.listing_filters_head, 
+.listing_filters,
+.adv-search-3, 
+.page-template-front_property_submit .navigation_container,
+.advanced_search_shortcode,
+.membership_package_product, .contact-wrapper, .developer_contact_wrapper,
+.agency_contact_wrapper,
+.property_reviews_wrapper, .agency_contact_container_wrapper,
+.agency_content_wrapper, .submit_property_front_wrapper,
+.directory_sidebar_wrapper, 
+.featured_property, .agency_unit, #comments,
+.single-blog, 
+.single-content.single-agent,
+.single-content.contact-content,
+.listing_wrapper .property_listing,
+.listing_wrapper .agent_unit,
+.wpestate_property_description,
+.multi_units_wrapper, .property-panel,
+.listing-content .wpestate_single_agent_details_wrapper,
+#primary .widget-container, .user_role_unit,
+.testimonial-slider-container .testimonial-container.type_class_3,
+.estate_places_slider.slick-initialized.slick-slider,
+.google_map_shortcode_wrapper,
+.testimonial-container.type_class_1 .testimonial-text,
+.blog_unit, .agent_unit_featured,
+.featured_article,
+.agent_unit:hover,
+.blog_unit:hover,
+.property_listing:hover,
+.agency_unit:hover,
+.user_role_unit:hover,
+.featured_article:hover,
+.featured_property:hover,
+.testimonial-container.type_class_4,
+.testimonial-container.type_class_3,
+#print_page,
+.wpestate_property_schedule_singledate_wrapper.shedule_day_option_selected, 
+.wpestate_property_schedule_singledate_wrapper:hover,
+.term_bar_wrapper,
+#wpestate_sidebar_property_contact_tabs ul,
+.agent_face_details,
+.wpestate_property_header_extended .single-overview-section,
+.wpestate_schedule_tour_wrapper{
+    box-shadow: var(--wp-estate-cssbox-shadow-option,var(--wp_estate_cssbox_shadow));   
+}
+
+
+.listing_wrapper .property_listing:hover,
+.slider_container .listing_wrapper .property_listing:hover,
+.agent_unit:hover,
+.blog_unit:hover,
+.property_listing:hover,
+.agency_unit:hover,
+.user_role_unit:hover,
+.featured_article:hover,
+.featured_property:hover {
+    box-shadow: var(--wp-estate-cssbox-shadow-option, 1px 3px 20px 9px rgba(7, 152, 255, 0.11) );
+}
+
+.property_unit_type5_content_wrapper .carousel-inner,
+.property_unit_type5_content_wrapper .property_unit_type5_content,
+.blog_unit_image img,
+.property_listing img {
+    @include smooth-transition;
+}
+
+
+.property_listing_blog:hover img,
+.property_unit_type5_content_wrapper:hover .carousel-inner,
+.property_unit_type5_content_wrapper:hover .property_unit_type5_content,
+.property_listing:hover .listing-unit-img-wrapper img,
+.property_listing:hover .property_unit_custom_element.image img {
+    @include image-hover-zoom;
+}
+
+
+.wpresidence_term_background_image,
+.membership_package_product,
+.propery_listing_main_image,
+#googleMap_shortcode,
+.googleMap_shortcode_class,
+#carousel-indicators-vertical img,
+.property_listing_blog,
+.property_listing,
+.agency_content_wrapper,
+.agent_content,
+.wpestate_agent_details_wrapper,
+.comment-reply-link,
+.post-carusel,
+.single-blog,
+.widget-container,
+.blog2v .property_listing_blog,
+.agent_card_my_listings,
+.featured_div,
+.user_role_featured_image,
+.user_role_image,
+.user_role_status,
+.agent_unit,
+.blog_author_image,
+.featured_property_type1 .featured_prop_price,
+.agentpict,
+.wpestate_schedule_tour_wrapper,
+.wpestate_property_carousel,
+.indicator-energy,
+.leaflet-popup-content .info_details.openstreet_map_price_infobox,
+#access ul ul,
+input,
+.adv_handler,
+#search_wrapper,
+#search_wrapper_color,
+.blog_unit_image,
+.blog_unit,
+.comment-form #submit,
+.adv_search_tab_item,
+#search_wrapper,
+.property_unit_type5 .item,
+.property_unit_type5 .featured_gradient,
+.property_unit_type5,
+.adv_search_tab_item,
+.property_reviews_wrapper,
+.listing_wrapper,
+.term_bar_item,
+.agentpict,
+.schedule_meeting,
+.form-control,
+.subunit_wrapper,
+.related_blog_unit_image img,
+.widget_latest_listing_image img,
+.agent-unit-img-wrapper img,
+.featured_widget_image img,
+.front_plan_row,
+.front_plan_row_image,
+.acc_google_maps,
+.wpresidence_button,
+.sidebar_filter_menu,
+.header_agency_container img,
+.contact-comapany-logo,
+.wpestate_single_agent_details_wrapper_type2,
+.listing-content .wpestate_single_agent_details_wrapper,
+.wpestate_agent_details_container,
+.elementor-widget-container .property_listing_square,
+.elementor-widget-container .overview_wrapper,
+.elementor-widget-container .property_slider2_wrapper .image_div,
+.elementor-widget-container .property_slider2_info_wrapper,
+.elementor-widget-container .property_listing_blog,
+.elementor-widget-container .adv-search-3,
+.page-template-front_property_submit .navigation_container,
+.elementor-widget-container .advanced_search_shortcode,
+.elementor-widget-container .membership_package_product,
+.elementor-widget-container .contact-wrapper,
+.elementor-widget-container .developer_contact_wrapper,
+.elementor-widget-container .agency_contact_wrapper,
+.elementor-widget-container.property_reviews_wrapper,
+.elementor-widget-container .agency_contact_container_wrapper,
+.elementor-widget-container .agency_content_wrapper,
+.elementor-widget-container .submit_property_front_wrapper,
+.elementor-widget-container .directory_sidebar_wrapper,
+.elementor-widget-container .featured_property,
+.elementor-widget-container .agency_unit,
+.elementor-widget-container #comments,
+.elementor-widget-container .single-blog,
+.elementor-widget-container #content_container .container_agent,
+.elementor-widget-container .listing_wrapper .property_listing,
+.elementor-widget-container .agent_contanct_form,
+.elementor-widget-container .agent_content,
+.elementor-widget-container .wpestate_agent_details_wrapper,
+.elementor-widget-container .wpestate_property_description,
+.elementor-widget-container .multi_units_wrapper,
+.elementor-widget-container .property-panel,
+.elementor-widget-container #primary .widget-container,
+.elementor-widget-container .user_role_unit,
+.elementor-widget-container .testimonial-slider-container .testimonial-container.type_class_3,
+.elementor-widget-container .google_map_shortcode_wrapper,
+.elementor-widget-container .testimonial-container.type_class_1 .testimonial-text,
+.elementor-widget-container .blog_unit,
+.elementor-widget-container .agent_unit_featured,
+.elementor-widget-container .featured_article,
+.elementor-widget-container .saved_search_wrapper,
+.single-overview-section,
+.wpestate_property_description,
+.agency_contact_wrapper,
+.contact-wrapper,
+.info_details img,
+.messagebox_text, 
+.saved_search_wrapper,
+button.actions-btn.bs-select-all.btn.btn-light,
+.info_details{
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+ 
+
+
+.label {
+    padding: .4em .6em .4em;
+    font-weight: normal;
+    margin-left: 10px;
+    border-radius: 0px;
+}
+
+small,
+.small {
+    font-size: 100%;
+}
+
+.label-success {
+    background-color: #00e1a6;
+}
+
+/*=Lists
+-------------------------------------------------------------------------------------*/
+
+
+.checklist {
+    margin: 0px;
+    float: left;
+    list-style: none;
+}
+
+.checklist li {
+    padding: 0px 11px 5px 22px;
+    margin: 0px 0px 6px 0px;
+}
+
+.checklist li:hover {
+    cursor: default;
+}
+
+
+
+/*=definition list
+-------------------------------------------------------------------------------------*/
+dl {
+    margin-bottom: 26px;
+}
+
+.widget_media_gallery dl {
+    margin-bottom: 0px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 13px;
+}
+
+/*=table
+-------------------------------------------------------------------------------------*/
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 26px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.even {
+    background-color: #f0f0f0;
+}
+
+.comment.even {
+    background-color: transparent;
+}
+
+table th,
+table td {
+    border-right: 1px solid #f0f0f0;
+}
+
+table th,
+table tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table th {
+    padding: 7px;
+}
+
+
+/*=Blackquote
+-------------------------------------------------------------------------------------*/
+blockquote {
+    font-size: 14px;
+    margin: 15px 0px 30px 0px;
+    padding: 0px 15px;
+    border-left: 2px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    float: left;
+    width: 100%;
+}
+
+blockquote p {
+    line-height: 22px;
+    font-style: italic;
+}
+
+blockquote.is-style-large {
+    margin: 15px 0px 30px 0px !important;
+    padding: 0px !important;
+    border-left: none;
+}
+
+figure blockquote {
+    padding: 0px;
+    border-left: none;
+}
+
+blockquote cite {
+    font-weight: 400;
+    text-transform: initial;
+    font-style: normal;
+}
+
+blockquote cite,
+blockquote small {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*=Buttons
+-------------------------------------------------------------------------------------*/
+
+.green {
+    background-color: #4ecb8f;
+    background-image: none;
+    color: #fff;
+}
+
+.green:hover {
+    background-color: #45b37e;
+
+}
+
+.green :hover a,
+.green a:hover {
+    color: #ffffff;
+}
+
+.green a {
+    color: #ffffff;
+}
+
+.blue {
+    background-color: #67cfd8;
+    background-image: none;
+    color: #fff;
+}
+
+.blue:hover {
+    background-color: #54a9b0;
+    color: #ffffff;
+}
+
+.blue :hover a,
+.blue a:hover {
+    color: #ffffff;
+}
+
+.blue a {
+    color: #ffffff;
+}
+
+.purple {
+    background-color: #a51e6c;
+    background-image: none;
+    color: #fff;
+}
+
+.purple:hover {
+    background-color: #6e1448;
+}
+
+.purple :hover a,
+.purple a:hover {
+    color: #ffffff;
+
+}
+
+.purple a {
+    color: #ffffff;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+#ui-datepicker-div {
+    z-index: 10000 !important;
+}
+
+address {
+    font-style: italic;
+    margin: 0 0 26px;
+}
+
+pre {
+    margin-bottom: 26px;
+    background: transparent;
+}
+
+/*=datepicker----------------------
+---------------*/
+
+.page-template-front_property_submit .ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0;
+    height: auto;
+    border: 0px;
+    border-radius: 0px;
+    background: transparent;
+    color: #ffffff;
+    background: #333;
+}
+
+.page-template-front_property_submit #primary{
+    display: none;
+}
+
+.ll-skin-melon td.ui-datepicker-today .ui-state-default {
+    background: #4d5567 !important;
+    color: #fff !important;
+}
+
+.ll-skin-melon .ui-datepicker td.calendar-reserved.start_reservation .ui-state-default {
+    color: #000 !important;
+}
+
+.ll-skin-melon {
+    font-size: 90%;
+}
+
+.ll-skin-melon .ui-widget {
+    background: #f6f6f5 !important;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.ll-skin-melon .ui-datepicker {
+    padding: 0 0px 24px 0px;
+    width: 270px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.ll-skin-melon .ui-datepicker-header {
+    border: none;
+    background: transparent;
+    font-weight: normal;
+    font-size: 15px;
+    background-color: #333 !important;
+    border-radius: 0px;
+    border-radius: 0px;
+}
+
+.ll-skin-melon .ui-datepicker-header .ui-state-hover {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #e9f0f4;
+    padding: 0px 0px;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    width: 26px !important;
+    height: 28px !important;
+    top: -7px !important;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-next span,
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev span {
+    top: 23px !important;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev-hover,
+.ll-skin-melon .ui-datepicker .ui-datepicker-next-hover,
+.ll-skin-melon .ui-datepicker .ui-datepicker-next,
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev {
+    top: .9em;
+    border: none;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev-hover {
+    left: 2px;
+    background-color: transparent !important;
+    border: none!important;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-next-hover {
+    right: 2px;
+    background-color: transparent !important;
+    border: none!important;
+}
+
+.ll-skin-melon .ui-datepicker table {
+    margin: 0px auto;
+    border: none;
+    width: 240px;
+}
+
+.ll-skin-melon .ui-datepicker table tr {
+    border: none !important;
+}
+
+.ll-skin-melon .ui-datepicker th {
+    padding: 1em 0;
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+}
+
+.ll-skin-melon .ui-datepicker td {
+    background: #fff;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    border: 1px solid #d0d5de;
+}
+
+.ll-skin-melon td .ui-state-default {
+    background: transparent;
+    border: none;
+    text-align: center;
+    padding: 5px;
+    font-weight: normal;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    font-size: 14px;
+    line-height: 21px;
+    height: 30px;
+}
+
+.ll-skin-melon td a {
+    @include no-transition;
+}
+
+.ll-skin-melon .ui-datepicker .ui-state-disabled {
+    background-color: #efefee;
+    border: 1px solid #d0d5de;
+}
+
+.ui-datepicker-prev.ui-state-disabled,
+.ui-datepicker-next.ui-state-disabled {
+    background: transparent;
+    background-color: transparent !important;
+    border: none !important;
+}
+  
+
+.ll-skin-melon .ui-state-disabled {
+    opacity: 1;
+}
+
+.ll-skin-melon .ui-state-disabled .ui-state-default {
+    color: #d0d5de;
+}
+
+.ll-skin-melon td .ui-state-active,
+.ll-skin-melon td .ui-state-hover {
+    background-color: rgb(0 115 225 / 10%)!important;
+    border:0px!important;  
+}
+
+
+
+
+.pagination_ajax_search,
+.home-compare {
+    margin-left: 15px;
+}
+
+
+//venobox css
+.figlio{
+    background: rgb(255 255 255 / 0%)!important;
+}
+
+
+
+
+
+.col-md-five {
+    flex: 1 0 0%;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-md-five {
+        flex: 0 0 auto;
+        width: 20%;
+        max-width: 20%;
+    }
+}
+
+
+
+.wpresidence-carousel-control {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+        width: 19px;
+    }
+}

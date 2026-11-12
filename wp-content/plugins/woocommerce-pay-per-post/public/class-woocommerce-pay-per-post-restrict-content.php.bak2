@@ -1,0 +1,1122 @@
+<?php /** @noinspection PhpUnused */
+
+namespace PRAMADILLO;
+
+
+use Woocommerce_Pay_Per_Post_Helper;
+use Pramadillo\PayForPost\Carbon\Carbon;
+use Pramadillo\PayForPost\Carbon\CarbonInterface;
+
+/**
+ * Class Woocommerce_Pay_Per_Post_Restrict_Content
+ */
+class Woocommerce_Pay_Per_Post_Restrict_Content {
+
+	public const RESTRICT_CONTENT_DEFAULT_MESSAGE = "<h1>Oops, Restricted Content</h1><p>We are sorry but this post is restricted to folks that have purchased this page.</p>[products ids='{{product_id}}']";
+
+	public $protection_checks;
+	public $protection_type;
+	public $user_post_info;
+	public $current_user;
+	public $product_ids;
+	public $product_count;
+
+	protected $post_id;
+	protected $integrations;
+	protected $should_track_pageview;
+	protected $available_templates;
+
+	final public function __construct( $post_id = null, $should_track_pageview = true ) {
+		global $product_ids;
+		$this->product_ids           = $product_ids;
+		$this->should_track_pageview = $should_track_pageview;
+
+		//The Post ID is null because we use this class for displaying shortcodes as well as within the loop
+		if ( is_null( $post_id ) ) {
+			$this->post_id = get_the_ID();
+		} else {
+			$this->post_id = $post_id;
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/__construct  POST ID Passed in, populating product_ids from get_product_ids_by_post_id();' );
+			$this->product_ids = Woocommerce_Pay_Per_Post_Helper::get_product_ids_by_post_id( $post_id );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/__construct  $this->product_ids = ' . print_r( $this->product_ids, true ) );
+
+		}
+
+		$this->current_user      = wp_get_current_user();
+		$this->protection_checks = [
+			'check_if_logged_in',
+			'check_if_protected',
+			'check_if_should_show_paywall',
+			'check_if_admin_call',
+			'check_if_purchased',
+			'check_if_admin_user_have_access',
+			'check_if_user_role_has_access',
+			'check_if_has_access',
+			'check_if_post_contains_subscription_products',
+		];
+
+		$this->available_templates = [
+			'expiration-status' => 'expiration-status.php',
+			'pageview-status'   => 'pageview-status.php',
+		];
+
+		if ( wcppp_freemius()->is__premium_only() ) {
+			if ( wcppp_freemius()->can_use_premium_code() ) {
+				$this->register_shortcodes();
+				$this->available_templates['purchased-polylang']                 = 'shortcode-purchased-polylang.php';
+				$this->available_templates['woocommerce-order-receipt-polylang'] = 'woocommerce-order-receipt-polylang.php';
+			}
+		}
+		if ( is_array( $this->product_ids['product_ids'] ) ) {
+			$this->product_count = count( $this->product_ids['product_ids'] );
+		}
+		$this->protection_type = $this->product_ids['protection_type'];
+
+		if ( wcppp_freemius()->is__premium_only() ) {
+			if ( wcppp_freemius()->can_use_premium_code() ) {
+
+				if ( Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_memberships() && class_exists( 'PRAMADILLO\INTEGRATIONS\WooCommerceMemberships' ) ) {
+					$this->protection_checks[]                     = 'check_if_post_contains_membership_products';
+					$this->protection_checks[]                     = 'check_if_is_member';
+					$this->integrations['woocommerce-memberships'] = new \PRAMADILLO\INTEGRATIONS\WooCommerceMemberships();
+				}
+ttt$can_use_subs = Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_subscriptions();
+ttt$class_exists = class_exists( 'PRAMADILLO\INTEGRATIONS\WooCommerceSubscriptions' );
+tttWoocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/__construct - can_use_woocommerce_subscriptions: ' . ( $can_use_subs ? 'TRUE' : 'FALSE' ) );
+tttWoocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/__construct - class_exists(WooCommerceSubscriptions): ' . ( $class_exists ? 'TRUE' : 'FALSE' ) );
+
+				if ( Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_subscriptions() && class_exists( 'PRAMADILLO\INTEGRATIONS\WooCommerceSubscriptions' ) ) {
+					$this->protection_checks[]                       = 'check_if_is_subscriber';
+					$this->integrations['woocommerce-subscriptions'] = new \PRAMADILLO\INTEGRATIONS\WooCommerceSubscriptions();
+				}
+
+				if ( Woocommerce_Pay_Per_Post_Helper::can_use_paid_membership_pro() && class_exists( 'PRAMADILLO\INTEGRATIONS\PaidMembershipsPro' ) ) {
+					$this->protection_checks[]                  = 'check_if_post_contains_paid_memberships_pro_membership_products';
+					$this->protection_checks[]                  = 'check_if_is_paid_memberships_pro_member';
+					$this->integrations['paid-memberships-pro'] = new \PRAMADILLO\INTEGRATIONS\PaidMembershipsPro();
+				}
+
+			}
+		}
+
+
+	}
+
+	public function register_shortcodes() {
+		add_shortcode( 'wc-pay-for-post-status', [ $this, 'process_status_shortcode' ] );
+	}
+
+	/**
+	 * Function used to set to not track page view
+	 *
+	 * @param bool $track
+	 */
+
+	public function set_track_pageview( bool $track = true ) {
+		$this->should_track_pageview = $track;
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Protection Checks
+	|--------------------------------------------------------------------------
+	|
+	| Each of these functions go along with the $protection_checks
+	| We loop through each one and test
+	|
+	*/
+
+	public function check_if_admin_call(): bool {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_admin_call  - BACKTRACE - Called From - ' . print_r( debug_backtrace()[1]['function'], true ) );
+
+		if ( is_admin() || ! $this->post_id ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_admin_call  - Is an admin call' );
+
+			return true;
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_admin_call  - Is NOT an admin call' );
+
+		return false;
+	}
+
+	public function check_if_admin_user_have_access(): bool {
+		$admins_allowed_access = (bool) get_option( WC_PPP_SLUG . '_allow_admins_access_to_protected_posts', false );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_admin_user_have_access  - BACKTRACE - Called From - ' . print_r( debug_backtrace()[1]['function'], true ) );
+
+		// Check and see if admins are allowed to view protected content.
+		if ( $admins_allowed_access && is_super_admin() ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_admin_user_have_access  - Administrators HAVE access to all protected posts via settings' );
+
+			return true;
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_admin_user_have_access  - Administrators DO NOT HAVE access to all protected posts via settings' );
+
+		return false;
+
+	}
+
+	public function check_if_user_role_has_access(): bool {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_user_role_has_access  - BACKTRACE - Called From - ' . print_r( debug_backtrace()[1]['function'], true ) );
+
+		$allowed_user_roles = [];
+
+		if ( wcppp_freemius()->is__premium_only() ) {
+			if ( wcppp_freemius()->can_use_premium_code() ) {
+				$allowed_user_roles = apply_filters( 'wc_pay_for_post_allowed_roles', [] );
+			}
+		}
+
+		$current_user_roles = $this->get_current_user_roles();
+		foreach ( $current_user_roles as $role ) {
+			if ( in_array( $role, $allowed_user_roles ) ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public function check_if_purchased(): bool {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - Called. [NEW CODE v2]' );
+		// Log associated products
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - Products associated with page = ' . print_r( $this->product_ids['product_ids'] ?? [], true ) );
+
+		// Merge section product IDs if they exist
+		$product_ids = (array) $this->product_ids['product_ids'] ?? [];
+		if ( ! empty( $this->product_ids['section_product_ids'] ) ) {
+			$product_ids = array_merge( $product_ids, $this->product_ids['section_product_ids'] );
+		}
+
+		// If there are no product IDs, return false
+		if ( empty( $product_ids ) ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - No products found for this page.' );
+			return false;
+		}
+
+		// Loop through product IDs to check ownership
+		foreach ( $product_ids as $id ) {
+			$id = trim( $id ); // ID sanitization
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - Checking product ID: ' . $id );
+
+			// Debug subscription detection
+			$can_use_subs = Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_subscriptions();
+			$has_integration = isset( $this->integrations['woocommerce-subscriptions'] );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - can_use_woocommerce_subscriptions(): ' . ( $can_use_subs ? 'TRUE' : 'FALSE' ) );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - has integration: ' . ( $has_integration ? 'TRUE' : 'FALSE' ) );
+
+			// Check if this is a subscription product
+			$is_subscription_product = false;
+			if ( $can_use_subs && $has_integration ) {
+				$is_subscription_product = $this->integrations['woocommerce-subscriptions']->is_subscription_product( $id );
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - is_subscription_product(' . $id . '): ' . ( $is_subscription_product ? 'TRUE' : 'FALSE' ) );
+			}
+
+			if ( $is_subscription_product ) {
+				// For subscription products, ONLY check subscription status
+				$has_purchased = Woocommerce_Pay_Per_Post_Helper::customer_has_purchased_product( $this->current_user->user_email, $this->current_user->ID, $id );
+				$is_subscriber = $this->check_if_is_subscriber();
+
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - SUBSCRIPTION PRODUCT - has_purchased: ' . ( $has_purchased ? 'TRUE' : 'FALSE' ) . ', is_subscriber: ' . ( $is_subscriber ? 'TRUE' : 'FALSE' ) );
+
+				if ( $has_purchased && $is_subscriber ) {
+					Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - User has ACTIVE subscription for product ID: ' . $id );
+
+					return true;
+				} else {
+					Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - User subscription is NOT ACTIVE for product ID: ' . $id );
+					// Continue checking other products (don't return false yet)
+					continue;
+				}
+			}
+
+			// Check for regular (non-subscription) product purchase
+			if ( Woocommerce_Pay_Per_Post_Helper::customer_has_purchased_product( $this->current_user->user_email, $this->current_user->ID, $id ) ) {
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - REGULAR PRODUCT - User has purchased product ID: ' . $id );
+
+				return true;
+			}
+
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - User has NOT purchased product ID: ' . $id );
+		}
+
+		// If no purchases are found
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased - User has not purchased any associated products.' );
+
+		return false;
+	}
+
+	public function check_if_logged_in(): bool {
+		$logged_in = is_user_logged_in();
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_logged_in  - ' . ( is_user_logged_in() ? 'true' : 'false' ) );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_logged_in  - BACKTRACE - Called From - ' . print_r( debug_backtrace()[1]['function'], true ) );
+
+		return $logged_in;
+	}
+
+	public function check_if_has_access(): bool {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_has_access  - has been called.' );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_has_access  - BACKTRACE - Called From - ' . print_r( debug_backtrace()[1]['function'], true ) );
+
+		switch ( $this->protection_type ) {
+			case 'standard': // Since we already check to see if they purchased the product standard protection returns true all the time.
+			case 'delay': // Delay protection is same protection as standard, just difference in when to display pay wall, we already checked to see if they purchased product we return true.
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_has_access  - Protection Type is Standard or Delayed' );
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_has_access  - Calling Woocommerce_Pay_Per_Post_Restrict_Content/check_if_purchased()' );
+
+				return $this->check_if_purchased();
+			case 'page-view':
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_has_access  - Protection Type is Page View Protection' );
+
+				return $this->has_access_page_view_protection__premium_only();
+			case 'expire':
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_has_access  - Protection Type is Expiration Protection' );
+
+				return $this->has_access_expiry_protection__premium_only();
+		}
+
+		return true;
+	}
+
+	public function check_if_is_paid_memberships_pro_member() {
+		//Is user a Paid Memberships Pro Member?
+		if ( Woocommerce_Pay_Per_Post_Helper::can_use_paid_membership_pro() && isset( $this->integrations['paid-memberships-pro'] ) ) {
+			$is_member = $this->integrations['paid-memberships-pro']->is_member( $this->post_id );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_is_paid_memberships_pro_member  - Is the user a Paid Memberships Pro Member? - ' . ( $is_member ? 'true' : 'false' ) );
+
+
+			return $is_member;
+
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'User is NOT a Paid Memberships Pro member, as Paid Memberships Pro is not installed.' );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_is_paid_memberships_pro_member  - User is NOT a Paid Memberships Pro member, as Paid Memberships Pro is not installed.' );
+
+		return false;
+	}
+
+	public function check_if_is_member() {
+		//Is user a WooCommerce Memberships Member?
+		if ( Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_memberships() && isset( $this->integrations['woocommerce-memberships'] ) ) {
+			$is_member = $this->integrations['woocommerce-memberships']->is_member( $this->post_id );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_is_member  - Is the user a WooMemberships Member? - ' . ( $is_member ? 'true' : 'false' ) );
+
+			return $is_member;
+
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_is_member  - User is NOT a member, as WooMemberships is not installed.' );
+
+		return false;
+	}
+
+	public function check_if_is_subscriber() {
+		//Is user a WooCommerce Subscriptions Subscriber?
+		if ( Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_subscriptions() && isset( $this->integrations['woocommerce-subscriptions'] ) ) {
+			$is_subscriber = $this->integrations['woocommerce-subscriptions']->is_subscriber( $this->post_id );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_is_subscriber  - Does the user have a valid subscription? - ' . ( $is_subscriber ? 'true' : 'false' ) );
+
+			return $is_subscriber;
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_is_subscriber  - User is NOT a subscriber, as WooSubscriptions is not installed.' );
+
+		return false;
+	}
+
+	public function check_if_protected(): bool {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_protected  - BACKTRACE - Called From - ' . print_r( debug_backtrace()[1]['function'], true ) );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_protected  - product_ids - ' . var_export( $this->product_ids['product_ids'], true ) );
+		if ( $this->protection_type || is_array( $this->product_ids['product_ids'] ) || ! empty( $this->product_ids['product_ids'] ) ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_protected  - Page is NOT protected.' );
+
+			return true;
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_protected  - Page IS protected.' );
+
+		return false;
+
+	}
+
+	public function check_if_post_contains_subscription_products() {
+
+		if ( ! Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_subscriptions() || ! isset( $this->integrations['woocommerce-subscriptions'] ) ) {
+			return false;
+		}
+
+		$post_has_subscription_product = $this->integrations['woocommerce-subscriptions']->post_contains_subscription_products( $this->post_id );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_post_contains_subscription_products  - Does Post/Page Contain Subscription Products? - ' . ( $post_has_subscription_product ? 'true' : 'false' ) );
+
+		return $post_has_subscription_product;
+	}
+
+	public function check_if_post_contains_membership_products() {
+		if ( ! isset( $this->integrations['woocommerce-memberships'] ) ) {
+			return false;
+		}
+
+		$post_has_membership_product = $this->integrations['woocommerce-memberships']->post_contains_membership_products( $this->post_id );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_post_contains_membership_products  - Does Post Contain Membership Products? - ' . ( $post_has_membership_product ? 'true' : 'false' ) );
+
+		return $post_has_membership_product;
+	}
+
+	public function check_if_post_contains_paid_memberships_pro_membership_products() {
+		if ( ! isset( $this->integrations['paid-memberships-pro'] ) ) {
+			return false;
+		}
+
+		$post_has_membership_product = $this->integrations['paid-memberships-pro']->post_contains_membership_products( $this->post_id );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_post_contains_paid_memberships_pro_membership_products  - Does Post Contain Paid Membership Pro Membership Products? - ' . ( $post_has_membership_product ? 'true' : 'false' ) );
+
+		return $post_has_membership_product;
+	}
+
+	public function check_if_should_show_paywall(): bool {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/check_if_should_show_paywall  - BACKTRACE - Called From - ' . print_r( debug_backtrace()[1]['function'], true ) );
+
+		switch ( $this->protection_type ) {
+			case 'standard':
+			case 'page-view':
+			case 'expire':
+				return true;
+			case 'delay':
+				return $this->enable_delay_protection_paywall__premium_only();
+		}
+
+		return true;
+
+	}
+
+	/**
+	 * @return bool
+	 * This is really $show_paywall.  So if return false that means to NOT show the paywll.  Return True to show paywall.
+	 */
+	public function can_user_view_content(): bool {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/can_user_view_content  - BACKTRACE - Called From - ' . print_r( debug_backtrace()[1]['function'], true ) );
+
+		$check_results = [];
+		foreach ( $this->protection_checks as $check ) {
+			$check_results[ $check ] = $this->$check();
+		}
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/can_user_view_content  Check Results ' . var_export( $check_results, true ) );
+
+		if ( isset( $_GET['wc_ppp_debug'] ) &&
+		     "true" === $_GET['wc_ppp_debug']
+		) {
+			echo '<pre>';
+			echo '<h5>Post ID = ' . $this->post_id . '</h5>';
+			var_dump( $check_results );
+			echo '</pre>';
+		}
+
+		if ( $check_results['check_if_admin_call'] ||
+		     ! $check_results['check_if_protected'] ||
+		     ! $check_results['check_if_should_show_paywall'] ||
+		     $check_results['check_if_admin_user_have_access'] ||
+		     $check_results['check_if_user_role_has_access'] ||
+		     ( $check_results['check_if_has_access'] && ! $check_results['check_if_post_contains_subscription_products'] ) ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/can_user_view_content  Check Results FAILED returning FALSE' );
+
+			return true;
+		}
+
+
+		if ( wcppp_freemius()->is__premium_only() ) {
+			if ( wcppp_freemius()->can_use_premium_code() ) {
+				if ( Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_memberships() ) {
+					if ( $check_results['check_if_post_contains_membership_products'] ) {
+
+						if ( $this->product_count == 1 && $check_results['check_if_is_member'] ) {
+							return true;
+						}
+
+						if ( $this->product_count > 1 && ( $check_results['check_if_has_access'] || $check_results['check_if_is_member'] ) ) {
+							return true;
+						}
+
+					}
+				}
+				if ( Woocommerce_Pay_Per_Post_Helper::can_use_woocommerce_subscriptions() ) {
+					if ( $check_results['check_if_post_contains_subscription_products'] ) {
+						if ( $this->product_count == 1 && $check_results['check_if_is_subscriber'] ) {
+							return true;
+						}
+
+						if ( $this->product_count > 1 && ( $check_results['check_if_has_access'] && $check_results['check_if_is_subscriber'] ) ) {
+
+							return true;
+						}
+
+
+					}
+				}
+
+				if ( Woocommerce_Pay_Per_Post_Helper::can_use_paid_membership_pro() ) {
+					if ( $check_results['check_if_post_contains_paid_memberships_pro_membership_products'] ) {
+
+						if ( $this->product_count == 1 && $check_results['check_if_is_paid_memberships_pro_member'] ) {
+							return true;
+						}
+
+						if ( $this->product_count > 1 && ( $check_results['check_if_has_access'] || $check_results['check_if_is_paid_memberships_pro_member'] ) ) {
+							return true;
+						}
+
+					}
+				}
+			}
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/can_user_view_content  Check Results PASSED returning TRUE' );
+
+		if ( class_exists( 'Elementor\Plugin' ) && ! is_bool( \Elementor\Plugin::$instance->documents->get( $this->post_id ) ) && \Elementor\Plugin::$instance->documents->get( $this->post_id )->is_built_with_elementor() && ! get_post_meta( $this->post_id, WC_PPP_SLUG . '_product_ids', true ) ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * @param $unfiltered_content
+	 *
+	 * @return string
+	 */
+	public function show_paywall( $unfiltered_content ): string { //TODO document 3.1.2
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/show_paywall()  Called.' );
+
+		return '<div class="wc_ppp_paywall wc_ppp_paywall_' . $this->post_id . '">' . $this->get_paywall_content( $unfiltered_content ) . '</div>';
+	}
+
+	/**
+	 * @param $unfiltered_content
+	 *
+	 * @return string
+	 */
+	public function show_content( $unfiltered_content ): string {
+		$show_warnings = get_post_meta( $this->post_id, WC_PPP_SLUG . '_show_warnings', true );
+
+		if ( 'expire' === $this->protection_type &&
+		     ! is_admin() &&
+		     ! $this->check_if_admin_user_have_access()
+		     && apply_filters( 'wc_pay_per_post_enable_javascript_expiration_refresh', true )
+		) {
+			$this->countdown_refresh();
+		}
+
+		if ( $show_warnings && ! is_admin() ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Page/Post has show_warnings enabled' );
+
+			$position = apply_filters( 'wc_pay_for_post_show_warnings_position', 'top' );
+
+			switch ( $this->protection_type ) {
+				case 'page-view':
+					$template_file = do_shortcode( '[wc-pay-for-post-status template="page-view"]' );
+					break;
+				case 'expire':
+					$template_file = do_shortcode( '[wc-pay-for-post-status template="expiration-status"]' );
+					break;
+				default:
+					return $unfiltered_content;
+			}
+
+			if ( 'top' === $position ) {
+				return $template_file . $unfiltered_content;
+			} else {
+				return $unfiltered_content . $template_file;
+			}
+		}
+
+		return $unfiltered_content;
+
+
+	}
+
+	public function is_expired( $post_id ): bool {
+		return ! $this->has_access_expiry_protection__premium_only( $post_id );
+	}
+
+	public function process_status_shortcode( $atts ) {
+		$template = 'pageview-status';
+
+		if ( isset( $atts['template'] ) && array_key_exists( $atts['template'], $this->available_status_templates() ) ) {
+			$template = $atts['template'];
+		}
+
+		switch ( $template ) {
+			case 'pageview-status':
+				return $this->shortcode_pageview_status( $template );
+			case 'expiration-status':
+				return $this->shortcode_expiration_status( $template );
+		}
+
+		return false; //invalid template
+
+	}
+
+	protected function get_current_user_roles(): array {
+		return $this->current_user->roles;
+	}
+
+	/**
+	 * @param $unfiltered_content
+	 *
+	 * @return string
+	 */
+	protected function get_paywall_content( $unfiltered_content ): string {
+		global $product_ids;
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_paywall_content  - has been called.' );
+
+		// Checks if Divi or Beaver are on edit mode
+		$is_frontend_edit = ! empty( $_GET['et_fb'] ) || isset( $_GET['fl_builder'] );
+
+		// This filter should check for plugins that edit the content in the frontend!!!
+		$is_frontend_edit = apply_filters( 'wc_pay_for_post_is_frontend_edit', $is_frontend_edit, 10, 1 );
+
+		if ( is_user_logged_in() && $is_frontend_edit ) {
+			$user = wp_get_current_user();
+
+			if ( in_array( 'administrator', $user->roles ) || in_array( 'author', $user->roles ) ) {
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_paywall_content  - DIVI is on edit mode. Returning unfiltered content.' );
+
+				return $unfiltered_content;
+			}
+		}
+
+		$default_paywall_content  = get_option( WC_PPP_SLUG . '_restricted_content_default', _x( self::RESTRICT_CONTENT_DEFAULT_MESSAGE, 'wc_pay_per_post' ) );
+		$override_paywall_content = get_post_meta( $this->post_id, WC_PPP_SLUG . '_restricted_content_override', true );
+		$override_paywall_content = apply_filters( 'wc_pay_for_post_override_paywall_content', $override_paywall_content, 10, 1 );
+
+
+		$paywall_content = empty( $override_paywall_content ) ? $default_paywall_content : $override_paywall_content;
+
+		if ( isset( $product_ids['product_ids'] ) ) { //TODO add filter to remove do_shortcode
+			return wpautop( do_shortcode( Woocommerce_Pay_Per_Post_Helper::replace_tokens( $paywall_content, $product_ids['product_ids'], $unfiltered_content ) ) );
+		}
+
+		return wpautop( do_shortcode( $paywall_content ) );
+
+	}
+
+	/**
+	 * @return bool
+	 */
+	protected function has_access_page_view_protection__premium_only(): bool {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - has been called.' );
+
+		if ( ! $this->check_if_logged_in() || ! $this->check_if_purchased() ) {
+			return false;
+		}
+
+		$this->user_post_info = [];
+		$current_user         = $this->current_user;
+		$user_id              = $current_user->ID;
+
+		$number_of_allowed_pageviews             = (int) get_post_meta( $this->post_id, WC_PPP_SLUG . '_page_view_restriction', true );
+		$page_view_restriction_frequency         = get_post_meta( $this->post_id, WC_PPP_SLUG . '_page_view_restriction_frequency', true );
+		$page_view_restriction_enable_time_frame = get_post_meta( $this->post_id, WC_PPP_SLUG . '_page_view_restriction_enable_time_frame', true );
+		$page_view_restriction_time_frame        = get_post_meta( $this->post_id, WC_PPP_SLUG . '_page_view_restriction_time_frame', true );
+		$last_purchase_date                      = $this->get_last_purchase_date__premium_only( $this->post_id, $user_id );
+
+		if ( ! $last_purchase_date ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - Last Purchase Date FALSE - Aborting NO ACCESS' );
+
+			return false;
+		}
+
+		$this->user_post_info['last_purchase_date'] = $last_purchase_date;
+
+
+		$args = [
+			'start_time' => $last_purchase_date,
+			'end_time'   => Woocommerce_Pay_Per_Post_Helper::current_time()->toDateTimeString(),
+		];
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - arguments = ', $args );
+
+		if ( $page_view_restriction_enable_time_frame ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - $page_view_restriction_enable_time_frame enabled' );
+
+			$method   = Woocommerce_Pay_Per_Post_Helper::carbon_add_method( $page_view_restriction_frequency );
+			$end_time = $last_purchase_date->copy()->$method( $page_view_restriction_time_frame );
+
+			$args                             = [
+				'start_time'   => $last_purchase_date,
+				'end_time'     => $end_time,
+				'current_date' => Woocommerce_Pay_Per_Post_Helper::current_time(),
+			];
+			$this->user_post_info['end_date'] = $end_time;
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - OVERWRITTEN arguments = ', $args );
+
+
+			// Is current date between start_time and end_time.
+			if ( ! Woocommerce_Pay_Per_Post_Helper::current_time()->between( $last_purchase_date, $end_time ) ) {
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - Current date IS NOT between start_time and end_time.' );
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - Does NOT have Access' );
+
+				return false; // Window for viewing has past; show paywall.
+			}
+		}
+
+		$current_users_page_views = (int) $this->get_users_page_views__premium_only( $user_id, $this->post_id, $args );
+
+		//To be honest, I am not sure why this is here, but it works on some installs but not others
+		//so we are going to create a filter to enable this if needed.
+
+		$enable_hack = apply_filters( 'wc_pay_per_post_enable_pageview_fix', false );
+
+		if ( $enable_hack ) {
+			//This is hacky
+			if ( $current_users_page_views == 0 && $number_of_allowed_pageviews == 1 ) {
+				$current_users_page_views = 1;
+			} else {
+				$current_users_page_views = $current_users_page_views + 1;
+			}
+		}
+
+
+		$this->user_post_info['total_page_views'] = $current_users_page_views;
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - Current Users Page Views ' . $current_users_page_views );
+
+
+		if ( $current_users_page_views <= $number_of_allowed_pageviews ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - Number of current page views ' . ( $current_users_page_views ) . ' is LESS than or EQUAL ' . $number_of_allowed_pageviews );
+
+			if ( $this->should_track_pageview ) {
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - Tracking Page View' );
+				$this->save_page_view__premium_only( $user_id, $this->post_id );
+			} else {
+				Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - NOT Tracking Page View' );
+			}
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - HAS Access' );
+
+			return true;
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - Number of current page views ' . ( $current_users_page_views ) . ' is GREATER than or equal to ' . $number_of_allowed_pageviews );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_page_view_protection__premium_only  - Does NOT have Access' );
+
+		return false;
+	}
+
+	/**
+	 * @param $post_id
+	 * @param $user_id
+	 *
+	 * @return Carbon|string
+	 * @noinspection PhpUnnecessaryCurlyVarSyntaxInspection
+	 */
+	public static function get_last_purchase_date__premium_only( $post_id, $user_id ) {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  - Called' );
+
+		global $wpdb;
+
+		$product_ids = (array) get_post_meta( $post_id, WC_PPP_SLUG . '_product_ids', true );
+
+		// Sanitize product IDs and filter out invalid values
+		$product_ids = array_map( 'absint', $product_ids );
+		$product_ids = array_filter( $product_ids );
+
+		if ( empty( $product_ids ) ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  - No valid product IDs - Setting Date to 9/5/82' );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'WARNING: Sentinel date (09/05/1982) returned - No product IDs found for post ' . $post_id, 'warning' );
+
+			return Carbon::parse( '09/05/1982' )->locale( get_user_locale() );
+		}
+
+		// Create placeholders for IN clause
+		$placeholders = implode( ',', array_fill( 0, count( $product_ids ), '%d' ) );
+
+		if ( Woocommerce_Pay_Per_Post_Helper::hops_enabled() ) {
+			$sql = $wpdb->prepare(
+				"SELECT main_order.id
+                    FROM {$wpdb->prefix}wc_orders AS main_order
+                    INNER JOIN {$wpdb->prefix}wc_orders_meta AS order_meta ON main_order.id = order_meta.order_id
+                    INNER JOIN {$wpdb->prefix}woocommerce_order_items AS item ON main_order.id = item.order_id
+                    INNER JOIN {$wpdb->prefix}woocommerce_order_itemmeta AS item_meta ON item.order_item_id = item_meta.order_item_id
+                    WHERE main_order.status IN ('wc-completed', 'wc-processing')
+                    AND main_order.customer_id = %d
+                    AND item_meta.meta_key IN ('_product_id', '_variation_id')
+                    AND item_meta.meta_value != 0
+                    AND item_meta.meta_value IN ($placeholders)
+                    ORDER BY main_order.date_created_gmt DESC LIMIT 1",
+				array_merge( array( $user_id ), $product_ids )
+			);
+		} else {
+			$sql = $wpdb->prepare(
+				"SELECT post.id FROM {$wpdb->posts} AS post
+                            INNER JOIN {$wpdb->postmeta} AS post_meta ON post.ID = post_meta.post_id
+                            INNER JOIN {$wpdb->prefix}woocommerce_order_items AS item ON post.ID = item.order_id
+                            INNER JOIN {$wpdb->prefix}woocommerce_order_itemmeta AS item_meta ON item.order_item_id = item_meta.order_item_id
+                            WHERE post.post_type = 'shop_order'
+                            AND post.post_status IN ( 'wc-completed', 'wc-processing' )
+                            AND post_meta.meta_key IN ( '_customer_user' )
+                            AND item_meta.meta_key IN ( '_product_id', '_variation_id' )
+                            AND item_meta.meta_value != 0
+                            AND post_meta.meta_value = %d
+                            AND item_meta.meta_value IN ($placeholders)
+                            ORDER BY post.post_date DESC LIMIT 1",
+				array_merge( array( $user_id ), $product_ids )
+			);
+		}
+
+
+		//echo '<pre>'.print_r($sql,true).'</pre>';
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  - Last Purchase Date Order ID SQL: ' . $sql );
+
+		$order_id = $wpdb->get_var( $sql );
+
+		if ( is_null( $order_id ) ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  - Order ID is null - Setting Date to 9/5/82' );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'WARNING: Sentinel date (09/05/1982) returned - No order found for user ' . $user_id . ' and products: ' . implode(', ', $product_ids), 'warning' );
+
+			return Carbon::parse( '09/05/1982' )->locale( get_user_locale() );
+		}
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  - Last Purchase Date Order ID: ' . $order_id );
+
+		/** @noinspection PhpUnnecessaryCurlyVarSyntaxInspection */
+		/** @noinspection PhpUnnecessaryCurlyVarSyntaxInspection */
+		if ( Woocommerce_Pay_Per_Post_Helper::hops_enabled() ) {
+			$sql = $wpdb->prepare(
+				"SELECT `date_paid_gmt` as completed_date FROM {$wpdb->prefix}wc_order_operational_data WHERE `order_id` = %d",
+				$order_id
+			);
+		} else {
+			$sql = $wpdb->prepare(
+				"SELECT `meta_value` as completed_date FROM {$wpdb->postmeta} WHERE `meta_key` = '_paid_date' AND `post_id` = %d",
+				$order_id
+			);
+		}
+
+		$sql = apply_filters( 'wc_pay_per_post_override_purchase_date_sql', $sql, $order_id, $post_id, $product_ids );
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  - Last Purchase Date Order SQL: ' . $sql );
+
+		$order_date = $wpdb->get_var( $sql );
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  - Last Purchase Date Order: ' . $order_date );
+
+
+		if ( is_null( $order_date ) ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  - Last Purchase Date IS NULL ABORTING - Setting Date to 9/5/82' );
+			Woocommerce_Pay_Per_Post_Helper::logger( 'WARNING: Sentinel date (09/05/1982) returned - Order ' . $order_id . ' has no paid date', 'warning' );
+
+			return Carbon::parse( '09/05/1982' )->locale( get_user_locale() );
+		}
+
+		$last_purchase_date = Carbon::parse( $order_date )->locale( get_user_locale() );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_last_purchase_date__premium_only  -Last Purchase Carbon: ' . $last_purchase_date );
+
+		return $last_purchase_date;
+
+	}
+
+	/***
+	 * Expiration Protection Functions
+	 */
+
+	/**
+	 * @param $user_id
+	 * @param $post_id
+	 *
+	 * @return bool|int
+	 */
+	protected function save_page_view__premium_only( $user_id, $post_id ) {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/save_page_view__premium_only - Called.' );
+
+		global $wpdb;
+
+		if ( apply_filters( 'wc_pay_per_post_disable_in_the_loop', false ) ) {
+			$check = is_singular() && ! is_admin();
+		} else {
+			$check = is_singular() && in_the_loop() && ! is_admin();
+		}
+
+		if ( $check ) {
+
+			$allowed_page_views = (int) get_post_meta( $post_id, WC_PPP_SLUG . '_page_view_restriction', true );
+			$action_threshold   = apply_filters( 'wc_pay_per_post_page_view_action_threshold', 3 );
+
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/save_page_view__premium_only - About to track pageview' );
+
+			$results = $wpdb->insert(
+				$wpdb->prefix . 'woocommerce_pay_per_post_pageviews',
+				[
+					'user_id'   => $user_id,
+					'post_id'   => $post_id,
+					'timestamp' => Woocommerce_Pay_Per_Post_Helper::current_time()->toDateTimeString(),
+				],
+				[
+					'user_id'   => '%d',
+					'post_id'   => '%d',
+					'timestamp' => '%s',
+				]
+			);
+
+			$total_page_views = $wpdb->get_var( $wpdb->prepare(
+			"SELECT COUNT(*) FROM `{$wpdb->prefix}woocommerce_pay_per_post_pageviews` WHERE `user_id` = %d AND `post_id` = %d",
+			$user_id,
+			$post_id
+		) );
+
+			if ( $total_page_views == ( $allowed_page_views - $action_threshold ) ) {
+				do_action( 'wc_pay_per_post_page_view_threshold_reached', $user_id, $post_id, $total_page_views, $allowed_page_views );
+			}
+
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/save_page_view__premium_only - Pageview Tracked' );
+
+			return $results;
+		}
+
+		return false;
+
+	}
+
+	/**
+	 * @param        $user_id
+	 * @param        $post_id
+	 * @param null   $args
+	 *
+	 * @return string|null
+	 */
+	protected function get_users_page_views__premium_only( $user_id, $post_id, $args = null ): ?string {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_users_page_views__premium_only - Called.' );
+
+		global $wpdb;
+
+		// Use prepared statement to prevent SQL injection
+		if ( ! empty( $args ) ) {
+			$sql = $wpdb->prepare(
+				"SELECT COUNT(*) AS pageviews FROM {$wpdb->prefix}woocommerce_pay_per_post_pageviews
+				WHERE `user_id` = %d AND `post_id` = %d AND `timestamp` BETWEEN %s AND %s",
+				$user_id,
+				$post_id,
+				$args['start_time'],
+				$args['end_time']
+			);
+		} else {
+			$sql = $wpdb->prepare(
+				"SELECT COUNT(*) AS pageviews FROM {$wpdb->prefix}woocommerce_pay_per_post_pageviews
+				WHERE `user_id` = %d AND `post_id` = %d",
+				$user_id,
+				$post_id
+			);
+		}
+
+		$result = $wpdb->get_var( $sql );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_users_page_views__premium_only - SQL ' . $sql );
+
+		return ( $result );
+	}
+
+	/**
+	 * @param null $post_id
+	 *
+	 * @return bool
+	 */
+	protected function has_access_expiry_protection__premium_only( $post_id = null ): bool {
+		if ( is_null( $post_id ) ) {
+			$post_id = $this->post_id;
+		}
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'has_access_expiry_protection__premium_only() called' );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_expiry_protection__premium_only - Called.' );
+
+		if ( 'expire' != Woocommerce_Pay_Per_Post_Helper::is_protected( $post_id )['protection_type'] ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_expiry_protection__premium_only - Post is not protected by Expiration Protection, returning TRUE' );
+
+			return true;
+		}
+
+		if ( ! $this->check_if_logged_in() ) {
+			return false;
+		}
+
+		if ( ! $this->check_if_purchased() ) {
+			return false;
+		}
+
+
+		$this->user_post_info = [];
+		$current_user         = $this->current_user;
+		$user_id              = $current_user->ID;
+		$last_purchase_time   = $this->get_last_purchase_date__premium_only( $post_id, $user_id );
+
+		if ( ! $last_purchase_time ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_expiry_protection__premium_only - Last Purchase Date FALSE Aborting NO ACCESS' );
+
+			return false;
+		}
+
+		$expire_restriction_amount                  = get_post_meta( $post_id, WC_PPP_SLUG . '_expire_restriction', true );
+		$expire_restriction_frequency               = get_post_meta( $post_id, WC_PPP_SLUG . '_expire_restriction_frequency', true );
+		$this->user_post_info['last_purchase_date'] = $last_purchase_time;
+
+
+		$this->user_post_info['expiration_date'] = $this->get_expiration_time__premium_only( $last_purchase_time, $expire_restriction_amount, $expire_restriction_frequency );
+		$this->user_post_info['time_remaining']  = $this->get_remaining_time__premium_only( $last_purchase_time, $expire_restriction_amount, $expire_restriction_frequency );
+		$difference                              = $this->get_time_difference( $expire_restriction_frequency, $last_purchase_time );
+
+		if ( $expire_restriction_amount <= $difference ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_expiry_protection__premium_only - User has purchased product, but access has expired by ' . ( $difference - $expire_restriction_amount ) . ' ' . $expire_restriction_frequency );
+
+			return false;
+		}
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/has_access_expiry_protection__premium_only - User HAS access from expiry_protection__premium_only() as ' . ( $difference - $expire_restriction_amount ) . ' ' . $expire_restriction_frequency );
+
+
+		return true;
+	}
+
+	/**
+	 * @param $last_purchase_date
+	 * @param $amount
+	 * @param $frequency
+	 *
+	 * @return mixed
+	 */
+	protected function get_expiration_time__premium_only( $last_purchase_date, $amount, $frequency ) {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_expiration_time__premium_only - Called' );
+
+		if ( ! $last_purchase_date ) {
+			return false;
+		}
+
+		$method_name = Woocommerce_Pay_Per_Post_Helper::carbon_add_method( $frequency );
+
+		return $last_purchase_date->copy()->$method_name( $amount );
+
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Delay Protection Checks
+	|--------------------------------------------------------------------------
+	|
+	*/
+
+	/**
+	 * @param $last_purchase_date
+	 * @param $amount
+	 * @param $frequency
+	 *
+	 * @return array|bool
+	 */
+	protected function get_remaining_time__premium_only( $last_purchase_date, $amount, $frequency ) {
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_remaining_time__premium_only - Called' );
+
+		if ( ! $last_purchase_date ) {
+			return false;
+		}
+
+		$add_method  = Woocommerce_Pay_Per_Post_Helper::carbon_add_method( $frequency );
+		$diff_method = Woocommerce_Pay_Per_Post_Helper::carbon_diff_method( $frequency );
+
+		$current_time = Woocommerce_Pay_Per_Post_Helper::current_time();
+		$expires      = $last_purchase_date->copy()->$add_method( $amount );
+		$diff         = $expires->copy()->$diff_method( $current_time, CarbonInterface::DIFF_RELATIVE_TO_NOW );
+		$human        = $expires->copy()->diffForHumans( $current_time, CarbonInterface::DIFF_RELATIVE_TO_NOW );
+
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_remaining_time__premium_only - $last_purchase_date ' . print_r( $last_purchase_date->format( 'm/d/Y g:ia' ), true ) );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_remaining_time__premium_only - $expires ' . print_r( $expires->format( 'm/d/Y g:ia' ), true ) );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_remaining_time__premium_only - $diff ' . print_r( $diff, true ) );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/get_remaining_time__premium_only - $human ' . print_r( $human, true ) );
+
+		return [
+			'human'      => $human,
+			'difference' => $diff,
+			'frequency'  => $frequency,
+		];
+
+
+	}
+
+	protected function enable_delay_protection_paywall__premium_only(): bool {
+		$post_date = Carbon::createFromFormat( 'Y-m-d H:i:s', get_the_time( 'Y-m-d H:i:s', $this->post_id ) );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/enable_delay_protection_paywall__premium_only - Delay Protection POST DATE ' . $post_date );
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/enable_delay_protection_paywall__premium_only - Delay Protection CURRENT TIME = ' . Woocommerce_Pay_Per_Post_Helper::current_time() );
+
+		$delay_restriction_amount    = get_post_meta( $this->post_id, WC_PPP_SLUG . '_delay_restriction', true );
+		$delay_restriction_frequency = get_post_meta( $this->post_id, WC_PPP_SLUG . '_delay_restriction_frequency', true );
+
+		$difference = $this->get_time_difference( $delay_restriction_frequency, $post_date );
+
+		if ( $delay_restriction_amount > $difference ) {
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/enable_delay_protection_paywall__premium_only - Delay Protection ' . $delay_restriction_amount . ' is greater than ' . $difference . ' DO NOT SHOW paywall' );
+
+			return false;
+		}
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/enable_delay_protection_paywall__premium_only - Delay Protection ' . $delay_restriction_amount . ' is LESS than ' . $difference . ' SHOW paywall' );
+
+		return true;
+
+	}
+
+	/**
+	 * @param $frequency
+	 * @param $date
+	 *
+	 * @return int
+	 */
+	protected function get_time_difference( $frequency, $date ): int {
+		$current_time = Woocommerce_Pay_Per_Post_Helper::current_time();
+		$diff_method  = Woocommerce_Pay_Per_Post_Helper::carbon_diff_method( $frequency );
+
+		return $date->copy()->$diff_method( $current_time, CarbonInterface::DIFF_RELATIVE_TO_NOW );
+	}
+
+	protected function countdown_refresh() {
+		if ( ! empty( $this->user_post_info['expiration_date'] ) ):
+			?>
+            <script>
+              const countDownDate = new Date('<?php echo $this->user_post_info['expiration_date']->format( Woocommerce_Pay_Per_Post_Helper::date_time_format() ); ?>').getTime()
+              const x = setInterval(function () {
+                const now = new Date().getTime()
+                const distance = countDownDate - now
+                //console.log('remaining', Math.floor(distance / 1000 / 60));
+                if (distance < 0) {
+                  clearInterval(x)
+                  location.reload()
+                }
+              }, 1000)
+            </script>
+		<?php
+		endif;
+	}
+
+	protected function shortcode_pageview_status( $template ) {
+		ob_start();
+		$user_info = $this->user_post_info;
+		Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/shortcode_pageview_status - Showing Pageview Status Warnings' );
+
+		$number_of_allowed_pageviews = get_post_meta( $this->post_id, WC_PPP_SLUG . '_page_view_restriction', true );
+		require Woocommerce_Pay_Per_Post_Helper::locate_template( $this->available_templates[ $template ], '', WC_PPP_PATH . 'public/partials/' );
+
+		return ob_get_clean();
+
+	}
+
+	protected function shortcode_expiration_status( $template ) {
+
+		$user_info = $this->user_post_info;
+		if ( isset( $user_info['last_purchase_date'] ) ) {
+			ob_start();
+			Woocommerce_Pay_Per_Post_Helper::logger( 'Post ID: ' . $this->post_id . ' - Woocommerce_Pay_Per_Post_Restrict_Content/shortcode_expiration_status - Showing Expiration Status Warnings' );
+
+			require Woocommerce_Pay_Per_Post_Helper::locate_template( $this->available_templates[ $template ], '', WC_PPP_PATH . 'public/partials/' );
+
+			return ob_get_clean();
+		}
+
+		return false;
+
+	}
+
+	/**
+	 * @return string[]
+	 */
+	private function available_status_templates(): array {
+		return [
+			'pageview-status'   => 'pageview-status.php',
+			'expiration-status' => 'expiration-status.php',
+		];
+	}
+}

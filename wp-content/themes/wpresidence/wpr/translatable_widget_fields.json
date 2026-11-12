@@ -1,0 +1,2162 @@
+{
+  "Agency_Single_Detail": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Agent_Single_Detail": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Details_as_Accordion": [
+    {
+      "amenities_features": {
+        "type": "text"
+      }
+    },
+    {
+      "description": {
+        "type": "text"
+      }
+    },
+    {
+      "floor_plans": {
+        "type": "text"
+      }
+    },
+    {
+      "property_address": {
+        "type": "text"
+      }
+    },
+    {
+      "property_details": {
+        "type": "text"
+      }
+    }
+  ],
+  "Details_as_Tabs": [
+    {
+      "amenities_features": {
+        "type": "text"
+      }
+    },
+    {
+      "description": {
+        "type": "text"
+      }
+    },
+    {
+      "floor_plans": {
+        "type": "text"
+      }
+    },
+    {
+      "property_address": {
+        "type": "text"
+      }
+    },
+    {
+      "property_details": {
+        "type": "text"
+      }
+    }
+  ],
+  "Developer_Single_Detail": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Properties_By_Category": [
+    {
+      "Title": {
+        "type": "text"
+      }
+    },
+    {
+      "taxonomy": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Property_Single_Detail": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_agency_agents": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_agency_call_button": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_agency_listings": [
+    {
+      "agent_listings_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_agency_name": [
+    {
+      "html_tag": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Single_agency_whatsapp_button": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_agent_call_button": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_agent_listings": [
+    {
+      "agent_listings_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_agent_name": [
+    {
+      "html_tag": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Single_agent_send_mail": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_agent_whatsapp_button": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_developer_agents": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_developer_call_button": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_developer_listings": [
+    {
+      "agent_listings_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_developer_name": [
+    {
+      "html_tag": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Single_developer_whatsapp_button": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_post_author_box": [
+    {
+      "author_bio": {
+        "type": "textarea"
+      }
+    },
+    {
+      "author_name": {
+        "type": "text"
+      }
+    },
+    {
+      "author_name_tag": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "link_text": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_post_navigation": [
+    {
+      "in_same_term": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "next_label": {
+        "type": "text"
+      }
+    },
+    {
+      "prev_label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_post_related_posts": [
+    {
+      "title": {
+        "type": "text"
+      }
+    }
+  ],
+  "Single_post_title": [
+    {
+      "html_tag": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Site_Create_Listing": [
+    {
+      "button_label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Site_Login": [
+    {
+      "label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Site_Logo": [
+    {
+      "caption": {
+        "type": "text"
+      }
+    }
+  ],
+  "Term Documents": [
+    {
+      "documents_title": {
+        "type": "text"
+      }
+    },
+    {
+      "icon_type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidenc_Items_Slider": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    },
+    {
+      "type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidenc_Items_Slider_v1": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidenc_Items_Slider_v2": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidenc_Items_Slider_v3": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidenc_Items_Slider_v4": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidenc_Items_Slider_v5": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidenc_Items_Slider_v6": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidenc_Items_Slider_v7": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_Category_Slider": [
+    {
+      "place_list": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidence_Contact_Form_Builder": [
+    {
+      "email_subject": {
+        "type": "text"
+      }
+    },
+    {
+      "email_to": {
+        "type": "text"
+      }
+    },
+    {
+      "field_label": {
+        "type": "text"
+      }
+    },
+    {
+      "field_type": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "gdpr_text": {
+        "type": "textarea"
+      }
+    },
+    {
+      "placeholder": {
+        "type": "text"
+      }
+    },
+    {
+      "submit_button_text": {
+        "type": "text"
+      }
+    },
+    {
+      "wpresidence_form_id": {
+        "type": "id"
+      }
+    },
+    {
+      "wpresidence_submit_button_elementor": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_Display_Categories": [
+    {
+      "place_list": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "place_type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidence_Featured_Agency_Developer": [
+    {
+      "status": {
+        "type": "text"
+      }
+    },
+    {
+      "user_role_id": {
+        "type": "id"
+      }
+    }
+  ],
+  "WpResidence_Featured_Agent": [
+    {
+      "notes": {
+        "type": "textarea"
+      }
+    }
+  ],
+  "WpResidence_Google_Map": [
+    {
+      "propertyid": {
+        "type": "id"
+      }
+    }
+  ],
+  "WpResidence_Items_List": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    },
+    {
+      "type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidence_Items_List_card_v1": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_Items_List_card_v2": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_Items_List_card_v3": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_Items_List_card_v4": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_Items_List_card_v5": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidence_Items_List_card_v6": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_Items_List_card_v7": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidence_List_Agents": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_List_Items_By_Id": [
+    {
+      "ids": {
+        "type": "id"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    },
+    {
+      "type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidence_Membership_Package": [
+    {
+      "package_content": {
+        "type": "text"
+      }
+    },
+    {
+      "package_id": {
+        "type": "id"
+      }
+    }
+  ],
+  "WpResidence_Property_Slider": [
+    {
+      "propertyid": {
+        "type": "id"
+      }
+    }
+  ],
+  "WpResidence_Property_Slider_v2": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "propertyid": {
+        "type": "id"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidence_Property_Slider_v3": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "propertyid": {
+        "type": "id"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "WpResidence_Search_Form_Builder": [
+    {
+      "county_data": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "action_data": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_data": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_data": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_data": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "field_label": {
+        "type": "text"
+      }
+    },
+    {
+      "field_type": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "form_field_section_title_text": {
+        "type": "text"
+      }
+    },
+    {
+      "placeholder": {
+        "type": "text"
+      }
+    },
+    {
+      "status_data": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "submit_button_text": {
+        "type": "text"
+      }
+    }
+  ],
+  "WpResidence_Testimonial": [
+    {
+      "client_name": {
+        "type": "text"
+      }
+    },
+    {
+      "stars_client": {
+        "type": "text"
+      }
+    },
+    {
+      "testimonial_text": {
+        "type": "textarea"
+      }
+    },
+    {
+      "testimonial_title": {
+        "type": "text"
+      }
+    },
+    {
+      "testimonials_type": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_client": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Accordions": [
+    {
+      "accordion_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Agent_Grids": [
+    {
+      "grid_taxonomy": {
+        "type": "id"
+      }
+    }
+  ],
+  "Wpresidence_Blog_Post_List": [
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Content_Grid": [
+    {
+      "item_ids": {
+        "type": "id"
+      }
+    }
+  ],
+  "Wpresidence_Display_Categories_As_Tabs": [
+    {
+      "field_label": {
+        "type": "text"
+      }
+    },
+    {
+      "field_type": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "show_zero_terms": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Favorite_List": [
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "features_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_advanced": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_v1": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_v2": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_v3": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_v4": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_v5": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_v6": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_v7": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Filter_List_Properties_v8": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Full_Map": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Grids": [
+   
+    {
+        "property_category": { "type": "taxonomy_slug" },
+        "property_action_category": { "type": "taxonomy_slug" },
+        "property_city": { "type": "taxonomy_slug" },
+        "property_area": { "type": "taxonomy_slug" },
+        "property_county_state": { "type": "taxonomy_slug" },
+        "property_features": { "type": "taxonomy_slug" },
+        "property_status": { "type": "taxonomy_slug" }
+                  
+    }
+
+
+    
+  ],
+  "Wpresidence_HotSpots": [
+    {
+      "hotspot_label": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Properties_Top_Bar": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "features_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "field_label": {
+        "type": "text"
+      }
+    },
+    {
+      "field_type": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Recent_Items_Card_V8": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_border_radius": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_tax_padding": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "control_terms_id": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Recent_Items_SLider_v8": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "title_residence": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Sliding_Box": [
+    {
+      "content": {
+        "type": "textarea"
+      }
+    },
+    {
+      "read_me": {
+        "type": "text"
+      }
+    },
+    {
+      "title": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Tabs": [
+    {
+      "tab_title": {
+        "type": "text"
+      }
+    },
+    {
+      "type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Term_List_Properties": [
+    {
+      "action_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "area_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "category_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "city_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "features_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "state_ids": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "status_ids": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "Wpresidence_Testimonial_Slider": [
+    {
+      "testimonial_job": {
+        "type": "text"
+      }
+    },
+    {
+      "testimonial_name": {
+        "type": "text"
+      }
+    },
+    {
+      "testimonial_stars": {
+        "type": "text"
+      }
+    },
+    {
+      "testimonial_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "Wpresidence_Video_Player": [
+    {
+      "video_id": {
+        "type": "id"
+      }
+    },
+    {
+      "video_type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "hello-worldxxx": [
+    {
+      "title": {
+        "type": "text"
+      }
+    }
+  ],
+  "inline-editing-example": [
+    {
+      "description": {
+        "type": "textarea"
+      }
+    },
+    {
+      "title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_address_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_calculator_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_description_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_details_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_features_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_floorplans_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_map_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_overview_section": [
+    {
+      "field_type": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "icon_type": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "label_plural": {
+        "type": "text"
+      }
+    },
+    {
+      "label_singular": {
+        "type": "text"
+      }
+    },
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_reviews_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_similar_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    },
+    {
+      "unit_type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "property_show_statistics_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_subunits_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    },
+    {
+      "section_title2": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_video_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_virtual_tour_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_walkcore_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "property_show_yelp_section": [
+    {
+      "section_title": {
+        "type": "text"
+      }
+    }
+  ],
+  "term_gallery": [
+    {
+      "wpresidence_grid_type": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "wpresidence-call-to-action": [
+    {
+      "button": {
+        "type": "text"
+      }
+    },
+    {
+      "description": {
+        "type": "textarea"
+      }
+    },
+    {
+      "description_tag": {
+        "type": "taxonomy"
+      }
+    },
+    {
+      "ribbon_title": {
+        "type": "text"
+      }
+    },
+    {
+      "title": {
+        "type": "text"
+      }
+    },
+    {
+      "title_tag": {
+        "type": "taxonomy"
+      }
+    }
+  ],
+  "wpresidence_scroll_spy": [
+    {
+      "image_desc": {
+        "type": "textarea"
+      }
+    },
+    {
+      "image_title": {
+        "type": "text"
+      }
+    },
+    {
+      "item_title": {
+        "type": "text"
+      }
+    }
+  ]
+}

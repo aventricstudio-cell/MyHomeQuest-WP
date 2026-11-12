@@ -1,0 +1,81 @@
+/** MILLDONE
+ * WpResidence Theme - Multi Units Styles
+ * src: libs\property_page_functions\property_multi_units_functions.php
+ * This file contains styles for the multi units section in the WpResidence theme.
+ * It defines the layout and appearance of subunits, their details, and pricing.
+ *
+ * Package: WpResidence
+ * Dependency: None
+ *
+ * Usage: Import this file into the main theme stylesheet or enqueue it specifically
+ * on pages where the multi units section is displayed.
+ */
+
+ .multi_units_wrapper_v2 {
+    // Styles for the main wrapper
+
+
+    .subunit_wrapper {
+        width: 100%;
+        padding: 15px;
+        float: left;
+        background-color: #f8f8f8;
+        display: flex;
+        gap:15px;
+        // Alternate background for even subunits
+        &:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .subunit_thumb {
+           
+            margin-top: 0px;
+            float: left;
+
+            img {
+                max-height: 67px;
+                border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+            }
+        }
+
+        .subunit_details {
+            display: inline-block;
+            line-height: 1.65em;
+
+            .subunit_title {
+                font-weight: 500;
+
+                a {
+                    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+                    &:hover{
+                        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                    }
+                }
+
+                .subunit_price {
+                    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                }
+            }
+
+            .subunit_extra_details_wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                strong{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+.multi_units_wrapper {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+    padding: 30px;
+    float: left;
+    background-color: #fff;
+}

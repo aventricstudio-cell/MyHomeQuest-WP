@@ -1,0 +1,135 @@
+// MILLDONE
+// Blog Card Version 2 Styles
+// This file contains styles specifically for the second version of blog cards in the WPResidence theme.
+// src scss\blog_card\_blog_card_v2.scss
+.property_listing_blog {
+    
+    @include card-base; // Replace repeated properties
+    line-height: 1.6em;
+    width: 100%;
+    @include smooth-transition-shorter;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+    // Styles for the blog post title
+    h4 {
+        padding: 0px 20px;
+        margin-bottom: 10px;
+        float: left;
+        width: 100%;
+    }
+
+    // Styles for the blog post featured image container
+    .blog_unit_image {
+        display: inline;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        background-color: #fff;
+        margin: 6px;
+        margin-bottom: 20px;
+    }
+
+    .listing_details.the_grid_view {
+        margin: 5px 0px 50px 0px;
+        padding: 0px 20px;
+    }
+    
+    // Styles for the main content area of the blog card
+    .blog_unit_content {
+        padding: 10px 30px 30px 30px;
+        font-size: 13px;
+        line-height: 22px;
+        float: left;
+        width: 100%;
+
+        p {
+            margin-bottom: 15px;
+            word-wrap: break-word;
+        }
+    }
+
+    // Styles for meta information (e.g., date, author)
+    .blog_unit_meta {
+        font-size: 13px;
+    }
+
+    // Styles for wider meta information layout
+    .widemeta {
+        float: left;
+        width: 100%;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        i {
+            font-size: 13px;
+            margin-right: 5px;
+        }
+
+        a.read_more{
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+    }
+}
+
+// Specific styles for the second version of blog cards
+.blog2v .property_listing_blog {
+    // Ensure the entire card is visible
+    overflow: hidden;
+    width: 100%;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    
+    // Larger font size for the title
+    h4 {
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+
+    // Adjust meta information layout
+    .blog_unit_meta {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 0px 20px;
+
+        a:hover {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+    
+    // Style the "Continue Reading" link
+    .read_more {
+        color: var(--wp_estate_link_color-option, var(--wp_estate_link_color));
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &:hover {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+}
+
+
+.blog_unit_title {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+.blog_unit_image img,
+.property_listing.places_listing img {
+    border: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}

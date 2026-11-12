@@ -1,0 +1,13 @@
+// blog list page
+// from Template Name: Blog list page
+// src page-templates\blog_list.php
+
+.blog_list_wrapper {
+    margin: 0 -15px;
+    float: left;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

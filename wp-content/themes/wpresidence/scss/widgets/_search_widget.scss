@@ -1,0 +1,65 @@
+/* =Search Widget
+------------------------------------------------
+   Package: WpResidence Theme
+   File: _search_widget.scss
+   Dependencies: Bootstrap SCSS, WpResidence base styles
+   Purpose: Styles for the Search Widget, focusing on layout and responsive
+            design within the WpResidence theme.
+   Usage: Intended for use with search widget markup, providing styling for
+          form controls, submit buttons, and layout adjustments.
+          
+   This file organizes form elements and submit buttons, ensuring the search widget
+   is styled consistently across the theme. Each element is structured for clarity
+   and adaptability, allowing easy integration with Bootstrap and custom themes.
+
+   Notes: 
+      - This file does not use SCSS variables or mixins for customization.
+      - It arranges styles in a tree format for modularity and readability.
+      - Floating elements and flexbox are utilized for layout, creating compatibility
+        across different screen sizes and devices.
+------------------------------------------------*/
+
+/* Root Search Widget Container */
+.widget_search {
+    #searchform {
+        display: flex;                    // Enables vertical stacking of form elements
+        flex-direction: column;           // Aligns items in a column layout
+        gap: 10px;                        // Adds space between form elements
+
+        /* Search Input Field Styling */
+        .form-control {
+            margin-right: 5px;            // Adjusts spacing on the right
+            float: left;                  // Aligns form-control to the left for layout
+            width: 100%;                  // Full width for responsive scaling
+            min-width: auto;              // Removes any minimum width constraints
+        }
+    }
+}
+
+/* Submit Button Styles */
+#submit-form {
+    margin-bottom: 0px !important;        // Prevents bottom margin for seamless stacking
+    width: 100%;                          // Ensures button takes full width of container
+    min-width: 90px;                      // Sets minimum width for button sizing
+
+    .searchform & {                       // Overrides for submit button within .searchform
+        width: auto;                      // Auto width to fit content
+        margin-left: 13px;                // Adds left margin for visual spacing
+    }
+}
+
+/* Input and Field Positioning */
+#s,
+.searchform .field {
+    float: left;                          // Aligns search field to the left
+}
+
+/* Field Styling within Search Form */
+.searchform {
+    margin-left: 15px;                    // Adds left margin to position search form
+
+    .field {
+        height: 48px;                     // Sets height for input field consistency
+        width: 250px;                     // Fixed width for layout consistency
+    }
+}

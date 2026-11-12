@@ -1,0 +1,8 @@
+.elementor-panel .elementor-tab-control-wc_pay_per_post_protection a:before,
+button.elementor-component-tab.elementor-panel-navigation-tab.elementor-tab-control-wc_pay_per_post_protection span:before {
+    font-family: eicons, sans-serif;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 6px;
+    content: "\e96f";
+}

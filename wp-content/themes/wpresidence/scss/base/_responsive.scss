@@ -1,0 +1,894 @@
+
+
+
+  
+  // Small tablets and large phones (576px and up)
+  @media screen and (max-width: 576px) {
+
+    //content as grid sh
+    .wpestate_content_grid_wrapper_second_col_image {
+      width: 100%;
+      height: 189px;
+    }
+
+     //contact map container
+    .contact_map_container {
+        display: none;
+    }
+
+    //search form
+    #google_map_prop_list_sidebar .search_wrapper .extended_search_check_wrapper .extended_search_checker,
+    .extended_search_check_wrapper .extended_search_checker {
+      width: 100%;
+    }
+
+    .property_slider_carousel_elementor_v3 {
+        margin-bottom: 30px;
+        height: auto;
+        .item{
+          height: auto;
+        }
+
+        .property_slider_carousel_elementor_v3_image_wrapper{
+          width: 100%;
+          height:  265px;
+        
+        }
+
+        .property_slider_carousel_elementor_v3_content_wrapper{
+          width: 100%;
+          height:auto;
+          padding: 30px;
+          
+          .property_listing_details,
+          .property_slider_carousel_elementor_v3_excerpt,
+          .property_agent_wrapper{
+            position: relative;
+          }
+          
+          .property_listing_details{
+            margin-bottom: 15px;
+          }
+
+          .property_agent_wrapper{
+            bottom: unset;
+            
+          }
+      }
+
+      .property_slider_carousel_elementor_v3_image_container{
+        width: 100%;
+      }
+    }
+
+  
+    .pack-name{
+      display: block;
+      width: 100%;
+      padding: 0px;
+    }
+
+
+    .sliding-image,
+    .wpestate_sliding_box{
+      width: 100%!important;
+    }
+    .wpestate_sliding_box_wrapper{
+      flex-direction: column;
+      gap:10px;
+    }
+
+    // featured agent
+    .featured_agent_listings.wpresidence_button {
+      left: 20px;
+      right: 20px;
+      width: auto;
+    }
+
+    // theme slider 1
+    .theme_slider_1 .theme_slider_contact_form_wrapper_visible{
+      width: auto;
+      left: 10px!important;
+      right: 10px;
+    }
+
+
+    //yelp
+    .yelp_bussines_wrapper .yelp_unit {
+      align-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      .yelp_stars {
+        margin-left: 0px;
+        margin-bottom: 10px;
+      }  
+    }
+    
+    [dir=rtl] .yelp_bussines_wrapper .yelp_unit .yelp_stars {
+      margin-right: unset;
+    }
+
+    .multi_units_wrapper_v2 .subunit_wrapper .subunit_details .subunit_extra_details_wrapper {
+      gap: 5px;
+    }
+    .single-estate_agent .wpestate_agent_details_wrapper .agent_details {
+      padding: 0px 15px 0px 15px;
+  }
+  
+
+    .copyright,
+    .subfooter_menu .menu > li {
+      line-height: 30px;
+   }
+
+    .contact-box, 
+    .backtop {
+      bottom: 70px;
+
+    }
+    .morgage_chart_wrapper.onfirst .morgage_legend{
+      position: relative;
+      text-align: center;
+      width: 100%;
+    }
+    .wpestate_display_schedule_tour_option ,
+    #wpestate_schedule_tour_time,
+    .wpestate_display_schedule_tour_options_wrapper,
+    .realtor-contact-buttons{
+      width: 100%;
+    }
+    .contact_form_flex_wrapper .contact_form_flex_input_wrapper{
+      flex-direction: column;
+    }
+    #gmap-control span {
+      padding: 0px 7px;
+    }
+    .agency_unit .agency_unit_wrapper{
+      position: relative;
+    }
+
+    .wpresidence_dropdown.wpresidence_filters_dropdown{
+      width: 100%;
+      .dropdown-toggle {
+        width: 100%;
+      }
+    }
+    .add_review_wrapper #edit_review, 
+    .add_review_wrapper #submit_review,
+    .header_agency_wrapper .header_agency_container .developer_contact_button, 
+    .header_agency_wrapper .header_agency_container .agency_contact_but,
+    .wpresidence_button {
+      width: 100%;
+      text-align: center;
+    }
+
+    .agent_card_my_listings,
+    .wpestate_list_grid_filter_wiew_wrapper{
+      display: none;
+    }
+
+    .theme_slider_1 .slider-content-wrapper .slider-content {
+      position: absolute;
+      width: 100%;
+      right: 0px;
+      left: 0px;
+      bottom: 50px;
+    }
+
+    
+    .listing_wrapper.col-md-12 .property_listing {
+        flex-direction: column;
+        
+        .carousel-inner,
+        .listing-unit-img-wrapper{
+          max-width: 100%;
+        }
+     
+    }
+    
+
+    .property_header_gallery_wrapper{
+      .col-md-6.gallery-left-column{
+        height: 350px;
+        border-left: none;
+        width: 50%;
+
+        .image_gallery {
+          height: 175px;
+          min-height: 150px;
+        }
+
+      }
+
+      .col-md-6.image_gallery  {
+        height: 350px;
+        border-left: none;
+        width: 50%;
+      }  
+    }
+
+    .property_header_gallery_wrapper{
+      .col-md-6.gallery-left-column{
+        height: auto;
+      }
+    }
+
+
+
+
+    .featured_article_type2.featured_prop_type5 .featured_article_type5_title_wrapper {
+      height: 250px;
+      width: 300px;
+      left:5%;
+    }
+    .featured_article_type2.featured_prop_type5{
+      .property_header_gallery_wrapper .col-md-6.gallery-left-column{
+        display: none;
+      }
+    }
+    .featured_property.featured_property_type2 .featured_secondline h2{
+      width: auto;
+    }
+ 
+
+  }  
+  // END Small tablets and large phones (576px and up)
+  
+
+
+  // Small tablets and large phones (768px and up)
+  @media screen and (max-width: 768px) {
+
+    .col-md-five{
+      flex: auto;
+    }
+
+    .wpresidence_half_map_filter_wrapper .half_map_toggle_group{
+      display: none;
+    }
+
+    
+    #modal_login_wrapper {
+      .modal_login_container{
+        
+        width:100%;
+        max-width: 400px;
+        .login-register-modal-form-wrapper {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0%;
+        }
+        .login-register-modal-image{
+          display: none;
+        }
+      }
+    }
+
+
+    .comment-respond {
+      .comment-form-url,
+      .comment-form-email, 
+      .comment-form-author {
+        width: 100%;
+      }
+    }
+
+    // featured agency/developer shortcode
+    .user_role_unit .featured_user_role_unit_details{
+         height: auto;
+        .button_user_role {
+          position: relative;
+          left: unset;
+          bottom: unset;
+          margin-top: 15px;
+        }
+    }
+
+
+    // tabs elmentor 
+    #tab_prpg.wpestate_elementor_tabs.wpestate_tab_class_vertical {
+      .wpestate-elementor-nav-tabs,
+      .tab-content {
+        width: 100%;
+      }
+    }
+
+
+    .wpestate_location{
+      width: 100%;
+    }
+    .listing_wrapper.col-md-12 .listing-unit-img-wrapper{
+      min-height: auto;
+    }
+
+    #colophon .xoxo {
+      padding-top: 0px;
+    }
+
+ 
+    
+    // property slider - version1 
+    .section {
+      height: 100%!important;
+      flex-direction: column;
+    }
+
+    // proeprty slider v2
+    .property_slider2_wrapper.owl-theme {
+    
+      .image_div{
+        width: 100%;
+        height: 250px;
+        padding: 0px;
+        margin-top: 0px;
+      }
+  
+      .property_slider2_info_wrapper {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+      }
+      .owl-nav {
+        margin-top: -0px;
+        width: 10%;
+        height: 250px;
+        top: 0px;
+        .nextright,
+        .nextleft{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+
+          i:before{
+            margin: 0px;
+          }
+        }
+      }
+    }
+
+
+
+    // testimonial slider
+    .wpestate_testimonial_slider.owl-theme {
+      width: 100%!important;
+      .item_testimonal_image {
+        display: none;
+      }
+      .item_testimonial_content {
+        width: 100%;
+      }
+  
+      .owl-nav {
+        top: 0%;
+        width: 100%;
+        margin-top: -25px;
+        .owl-prev {
+          left: 0px;
+        }
+        .owl-next{
+          right: unset;
+          left: 50px;
+        }
+      }
+      
+    }
+
+
+
+    .listing_filters_head_directory, .adv_listing_filters_head, .listing_filters_head, .listing_filters{
+      gap:5px;
+    }
+    .agency_title{
+      margin-top: 15px;
+    }
+
+    .half_mobile_hide {
+      display: none;
+  }
+    .wpestate_agent_header2_content .wpestate_single_agent_details_wrapper_type2 .agentpict {
+      width: 100%;
+    }
+
+    .listing_wrapper.col-md-12 .listing-unit-img-wrapper{
+      max-width: 50%;
+    }
+
+    #google_map_prop_list_wrapper, 
+    #google_map_prop_list_wrapper.half_type1{
+      height: 550px;
+    }
+
+    body.wpresidence_half_map_body_class,
+    #google_map_prop_list_sidebar{
+      overflow: auto;
+    }
+    body.wpresidence_half_map_body_class{
+      height: auto;
+    }
+
+
+    // agent unit declarations
+    .agency_unit{
+        .agency_unit_img{
+          max-width: 100%;
+        }
+    }
+        
+   
+     
+
+    //reviews
+    .listing-review .review-list-content {
+      .review-content{
+        padding-left: 0px;
+      }
+      .property_ratings{
+        width: 100%;
+      }
+      .review-date{
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+    }
+
+
+    //developer & agency
+    .developer_map{
+      margin: 0;
+      padding: 0!important;
+    }
+    .developer_content .col-md-9, 
+    .developer_content .col-md-8,
+    .developer_content .col-md-4{
+      padding: 0;
+    }
+    .agency_contact_padding {
+      padding-top: 0px;
+    }
+
+
+    // property page title section
+    .wpresidence_property_page_title_area {
+      gap:10px;
+      margin-top: 15px;
+      .single_property_labels {
+        position: relative;
+        left: unset;
+        top: unset
+      }
+      
+      .entry-prop{
+        max-width: 100%;
+      }
+      
+      .property_categs {
+        flex-basis: unset;
+        width: 100%;
+      }
+      
+      .price_area {     
+        float: unset;
+        position: relative;
+        margin-top: 0px;
+        min-width: 130px;
+        text-align: unset;
+        width: 100%;
+        max-width: 100%;
+        .second_price_area {
+          position: relative;
+          top: unset;
+        }
+      }
+    }
+
+    //property page gallery
+    .gallery_wrapper {
+      .image_gallery {
+          width: 50% !important;
+          
+         
+      }
+      .col-md-8.image_gallery {
+        width: 100% !important;
+      }
+
+      // Reset Bootstrap columns
+      .col-md-8,
+      .col-md-4 {
+          width: 50% !important;
+          
+          &:first-of-type {
+              width: 100% !important;
+          }
+      }
+      .gallery-right-column.image_gallery{
+        width: 100% !important;
+      }
+
+      // Handle nested column case
+      .wpresidence_gallery_first_col {
+          width: 100% !important;
+          
+          .image_gallery {
+              width: 50% !important;
+              float: left;
+          }
+      }
+      .special_border_top{
+        border-top: none;
+        border-left: 6px solid #ffffff;
+      }
+    }
+    .property_header_gallery_wrapper{
+      .special_border_top {
+        border-top: none;
+        border-left: 0px solid #ffffff;
+      }
+      .col-md-6.gallery-left-column {
+        width: 100%;
+      }
+    }
+
+
+    .listing-content .wpestate_single_agent_details_wrapper .col-md-6.agent_details ,
+    .wpestate_shedule_tour_wrapper_type2 .wpestate_shedule_tour_wrapper_type2_content, .wpestate_property_schedule_dates_wrapper {
+      padding: 0px 0px 0px 0px;
+    } 
+  
+
+    // morgage calculator property page
+    .morgage_chart_wrapper,
+    .morgage_data_wrapper {
+      width: 100%;
+    }
+
+    .morgage_legend{
+      position: relative;
+    }
+
+    .lightbox_property_wrapper_floorplans .owl-theme .owl-nav, .lightbox_property_wrapper_floorplans .owl-nav,
+    .lightbox_property_wrapper_floorplans .owl-carousel .owl-item .item .itemimage {
+      width: 100%;
+    }
+    
+    #carousel-indicators-vertical,
+    .lightbox_floor_details{
+      display: none;
+    }
+    .wpestate_property_carousel.carouselvertical .carousel-inner{
+      margin-right: 0px;
+    }
+
+
+    //property tabs
+    #tab_prpg > ul li{
+      width: 33.33%;
+    }
+
+
+    //overview section property layout 5
+    .wpestate_property_header_extended .single-overview-section{
+      position: relative;
+      bottom: 30px!important;
+    }
+    .wpestate_property_header_extended.wpestate_lay6_header-masonry-gallery, 
+    .wpestate_property_header_extended.wpestate_lay6_gallery, 
+    .wpestate_property_header_extended.wpestate_lay6_multi-image-slider, 
+    .wpestate_property_header_extended.wpestate_lay6_full-width-header {
+      margin-bottom: 0px;
+    }
+
+  }
+  // END Small tablets and large phones (768px and up)
+
+
+  // Small tablets and large phones (992px and up)
+  @media screen and (max-width: 992px) {
+     //content grid
+     .wpestate_content_grid_wrapper_first_col .property_listing{
+      height: 400px;
+    }
+    #heading_accordion_property_multi_units_collapse{
+      .accordion-button{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+
+    .theme_slider_1 .theme_slider_contact_form_wrapper_visible {
+      opacity: 1;
+      left: 21px;
+      top: -312px;
+      z-index: 99;
+    }
+
+    .theme_slider_1 .slider-content-wrapper .slider-content{
+      bottom: 50px;
+    }
+
+    .featured_article_type2 {
+      height: 350px;
+      .featured_article_type2_title_wrapper {
+        width: auto;
+      }
+    }
+
+    .featured_prop_type5{
+      .gallery_wrapper{
+        height: 100%;
+      }
+
+  
+      .property_header_gallery_wrapper .col-md-6.image_gallery {
+        height: 350px;
+      }
+    }
+
+  
+
+
+    .featured_property.featured_property_type3{
+      .featured_secondline .property_listing_details{
+        position: relative;
+        &:before {
+          border-top: 0px;
+        }
+      }
+    } 
+
+
+  }
+  // END Small tablets and large phones (992px and up)
+
+
+  @media screen and (max-width:1024px) {
+
+    #google_map_prop_list_sidebar{
+      .extended_search_check_wrapper .extended_search_checker {
+        float: left;
+        width: 33%;
+      }
+    }
+
+
+    .property_slider_carousel_elementor_v3.owl-theme {
+      margin-top: 35px;
+      .owl-nav {
+        top:-35px;
+        max-width: 840px;
+
+        .owl-next{
+          top:0px;
+          right: 0px;
+          left:unset;
+        }
+        .owl-prev{
+          top:0px;
+          right: 45px;
+          left: unset;
+        }
+      }
+    }
+
+
+    //sliding box
+    .wpestate_sliding_box { 
+      flex-direction: column;  
+    }
+    .wpestate_sliding_box .sliding-image{
+      width: 100%;
+    }
+    .wpestate_sliding_box.active-element,
+    .wpestate_sliding_box {
+      width: 49%;
+      margin-right: 2%;
+    }
+    .wpestate_sliding_box.slider_box_size_3 .sliding-content-wrapper,
+    .wpestate_sliding_box.slider_box_size_5 .sliding-content-wrapper, 
+    .wpestate_sliding_box .sliding-content-wrapper {
+      position: relative;
+      left: auto;
+      width: 100%;
+      padding: 25px;
+      justify-content: flex-start;
+    }
+    
+    // property slider - version1
+    .property_slider_carousel_elementor_v2.owl-carousel .owl-nav {
+      position: absolute;
+      top: -50px;
+      left: auto;
+      display: flex;
+      flex-direction: row;
+      right: auto;
+      margin-left: 5px;
+    }
+
+  
+    .wpestate-hide-menu-mobile,
+    .wpestate-hide-menu-tablet {
+      display: none;
+    }
+
+  }
+
+
+  // Small tablets and large phones (1200px and up)
+  @media screen and (max-width: 1200px) {
+
+
+    .compar-1 .compare_legend_head, .compar-1 .compare_legend_head_in, .compar-2 .compare_legend_head, .compar-2 .compare_legend_head_in, .compar-3 .compare_legend_head, .compar-3 .compare_legend_head_in {
+      width: 0%;
+    }
+
+
+    .wpresidence_shortcode_listings_wrapper, 
+    .wpestate_latest_listings_sh{
+      margin: 0px;
+      overflow: hidden;
+    }
+   
+
+
+
+
+    // top bar showing on mobile
+    .topbar_show_mobile_yes {
+
+      &.d-none.top_bar_wrapper {
+          background-color: var(--wp-estate-mobile-header-background-color-option, var(--wp-estate-mobile-header-background-color));
+      
+          position: relative;
+          display: block!important;
+          height: auto;
+          .top_bar {
+              display: flex;
+              flex-direction: column;
+              height: auto;
+              .xoxo{
+                  display: flex;
+                  flex-direction: column;
+                  .widget-container{
+                    border: none;
+                  }
+                  .social_sidebar_internal a{
+                    border: none;
+                  }
+                   .wpresidence_dropdown{
+                    text-align: center;
+                  }
+              }
+          }
+      }
+    }
+
+    .contact_map_container {
+      left: 0%;
+      margin-left:30px;
+    }
+
+
+    .wpestate_agent_header2{
+      height: auto;
+    }
+    .wpestate_agent_header2_content.wpresidence-content-container-wrapper{
+      margin-top: unset;
+    }
+    .wpresidence_wrapper_for_header_type4 .wpresidence_wrapper_for_header_4_colum {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .lightbox_property_wrapper{
+      .lightbox_property_slider {
+        max-width: 100% !important;
+        width: 100%;
+      }
+      .lightbox_property_sidebar {
+        display: none!important;
+      }
+      
+      
+  
+    }
+
+    .wpestate_top_property_navigation {
+      display: none;
+    }
+  }
+
+  // END Small tablets and large phones (1200px and up)
+
+
+  @media screen and (max-width: 1300px) {
+    // slider
+    .slider_container .shortcode_slider_wrapper{
+      margin: 50px 0px 0px 0px;
+    }
+    .arrow_class_sideways button.slick-prev.slick-arrow, 
+    .arrow_class_sideways button.slick-next.slick-arrow {
+      top: 0%;
+      margin-top: -50px;
+      right: 10px;
+    }
+    .arrow_class_sideways button.slick-prev.slick-arrow{
+      right: 60px;
+      lefT: auto;
+    }
+
+    [dir="rtl"] {
+      /* RTL Support */
+      body.rtl .arrow_class_sideways button.slick-prev.slick-arrow,
+      body.rtl .arrow_class_sideways button.slick-next.slick-arrow {
+          left: 10px;
+          right: auto;
+      }
+
+      body.rtl .arrow_class_sideways button.slick-prev.slick-arrow {
+          left: 60px;
+          right: auto;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+  @media (min-width: 750px) and (max-width: 1250px) {
+  
+    #google_map_prop_list_sidebar{
+      .col-md-12.listing_wrapper{
+        .property_listing {
+          flex-direction: column;
+           .listing-unit-img-wrapper {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+   
+    .listing_wrapper.col-md-12 .listing-unit-img-wrapper{
+      min-height: auto;
+    }
+  }
+
+
+
+
+
+
+@include media-breakpoint-down(xl) {
+  #all_wrapper {
+    .wpresidence-content-container-wrapper{
+      padding-right: calc(var(--bs-gutter-x)* 0.5);
+      padding-left: calc(var(--bs-gutter-x)* 0.5);
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  //   styles for large devices and down
+  #all_wrapper {    
+    .wpresidence-content-container-wrapper{
+      width: 100%;
+    }
+
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  #google_map_prop_list_sidebar [class*="col-md-"] {
+      width: 100%;
+  }
+}

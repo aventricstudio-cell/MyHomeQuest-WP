@@ -1,0 +1,322 @@
+/** MILLDONE
+ * Floor Plans Styles
+ * src: scss\property_page\_floor_plans.scss
+ * This file contains all styles for the floor plans feature in the WpResidence theme.
+ * It includes styles for the accordion view, lightbox gallery view, and additional
+ * floor plan management features.
+ *
+ * Package: WpResidence
+ * Dependency: None (Pure CSS/SCSS)
+ *
+ * @since 3.0.3
+ */
+
+// General Floor Plan Styles
+.front_plan_row,
+.front_plan_row_image {
+  float: left;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.front_plan_row {
+  background-color: #f8f8f8;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  &:hover {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  }
+
+  .floor_title {
+    width: 29%;
+    display: inline;
+    float: left;
+    font-weight: 500;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+  }
+
+  .floor_details {
+    width: 15%;
+    display: inline;
+    float: right;
+    text-align: right;
+
+    &.floor_price_details {
+      width: 25%;
+    }
+
+    .bold_detail {
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.front_plan_row_image {
+  display: none;
+
+  .floor_image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+    img {
+      margin: 0px auto;
+      width: 100%; /* Make sure the image fits the container width */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 100%; /* Ensure the image doesn't exceed container width */
+      display: block; /* Remove any extra space below the image */
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+  }
+
+  .floor_description {
+    margin: 10px 0; 
+  }
+}
+
+// Lightbox Styles
+.lightbox_property_wrapper_floorplans,
+.lightbox_property_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999999;
+  overflow: hidden;
+  display: none;
+
+  &.is_visible {
+    overflow-x: hidden;
+    overflow-y: auto;
+    visibility: visible;
+  }
+}
+
+.lightbox_property_content.row {
+  margin: 0px;
+}
+
+.lightbox_property_wrapper_floorplans {
+  .owl-wrapper-outer,
+  .owl-carousel .owl-item .item {
+    background-color: #f8f8f8 !important;
+  }
+
+  .lightbox_property_content.row {
+    height: 100%;
+  }
+
+  .lightbox_property_wrapper_level2 {
+    max-width: 1150px;
+  }
+
+  .lightbox_property_slider {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .owl-theme .owl-nav,
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 75%;
+    padding: 0px 15px;
+  }
+
+
+  .owl-carousel .owl-item .item .itemimage {
+    min-height: 100%;
+    @include background-cover; 
+    width: 75%;
+    height: 100%;
+    float: left;
+    background: #fff;
+    padding: 55px;
+    max-height: 580px;
+    display: flex;
+  }
+}
+
+// Lightbox Close Button
+.lighbox-image-close-floor {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  border-bottom-left-radius: 4px;
+
+  i {
+    color: #222;
+    cursor: pointer;
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    margin: 0px auto;
+    line-height: 35px;
+
+    &:hover {
+      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+  }
+}
+
+// Owl Carousel Styles
+#owl-demo-floor {
+  max-width: 1150px;
+
+  img {
+ 
+    object-fit: contain;   /* Crop the image to fit within its container */
+    max-width: 100%;     /* Ensure it doesn’t grow beyond the container’s width */
+  }
+
+  .owl-prev,
+  .owl-next {
+    margin-right: 0px;
+    font-style: initial;
+    background: transparent;
+    border: none;
+    margin: 0px;
+  }
+
+  .owl-wrapper-outer {
+    background-color: #ffffff;
+  }
+
+  .bold_detail {
+    font-weight: 500;
+  }
+}
+
+// Lightbox Floor Details
+.lightbox_floor_details {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 25%;
+  max-width: 200px;
+
+  .floor_light_desc,
+  .floor_title,
+  .floor_details {
+    float: left;
+    width: 100%;
+    text-align: left;
+  }
+
+  .floor_title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0px;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+  }
+}
+
+.floor_light_desc {
+  margin: 10px 0px;
+}
+
+// Floor Plan Management Styles
+#add_new_plan_front_end {
+  margin: 10px 0px 30px 0px;
+  cursor: pointer;
+  background-color: #4ecb8f;
+  color: #fff;
+  padding: 5px;
+}
+
+.plan_row {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #f0f0f0;
+  padding: 20px;
+}
+
+.floor_container {
+  width: 100%;
+  max-width: 100% !important;
+  border: 1px solid #f0f0f0;
+  padding: 0px;
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 0px !important;
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  .floor_p {
+    width: 33%;
+  }
+
+  input {
+    float: left;
+    width: 95%;
+  }
+
+  i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #a51e6c;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+  }
+}
+
+.floor_p {
+  float: left;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.floor_full {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.plan_image,
+.plan_description {
+  width: 97.5%
+}
+
+.floor_upload_but {
+  width: 220px !important;
+}
+
+#floor_submit {
+  margin-left: 10px;
+  margin-top: 0px;
+  display: inline-block;
+}
+
+#use_floor_plans {
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 1px;
+  margin-right: 5px;
+}
+
+.manage_floor {
+  float: left;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+  margin-left: 15px;
+
+  &:hover {
+    color: #fff;
+  }
+}

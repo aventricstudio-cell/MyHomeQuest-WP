@@ -1,0 +1,109 @@
+/** MILLDONE
+ * WpResidence Theme - Shortcode Contact Form Styles
+ * src: scss/shortocdes_and_blocks/_contact_forms_simple_and_builder.scss
+ * This file contains styles for the shortcode contact form used in the WpResidence theme.
+ * It provides styling for various form alignments and elements within the contact form.
+ *
+ * Package: WpResidence
+ * Dependencies: WpResidence core styles
+ * 
+ * Usage: Include this file in your theme's stylesheet compilation process
+ * or enqueue it directly in your theme's functions.php file.
+ */
+
+// Main container for the shortcode contact form
+.shortcode_contact_form {
+    padding: 26px 0;
+    width: 100%;
+    max-width: 600px;
+
+    // Styles for form inputs and textarea
+    textarea,
+    input {
+        background-color: #ffffff;
+        border: 1px solid #e7e7e7;
+        font-style: normal;
+        text-transform: none;
+        margin-bottom: 10px;
+    }
+
+
+    // Centered form alignment
+    &.sh_form_align_center {
+        margin: 0 auto;
+
+        input,
+        textarea {
+            text-align: center;
+        }
+
+        #btn-cont-submit_sh {
+            margin: 13px auto 0;
+            text-align: center;
+            width: auto;
+            float: none;
+            display: block;
+        }
+
+        // Full-width button for centered alignment
+        #btn-cont-submit_sh.sh_but_full {
+            width: 100%;
+        }
+    }
+
+    // Right-aligned form
+    &.sh_form_align_right {
+        input,
+        textarea {
+            text-align: right;
+        }
+
+        #btn-cont-submit_sh {
+            float: right;
+        }
+    }
+}
+
+// Styles for GDPR checkbox wrapper
+.gpr_wrapper {
+    width: 100%;
+    display: flex;
+    float: left;
+    line-height: 1em;
+
+    label {
+        font-weight: normal;
+        margin: 0;
+    }
+
+    input[type="checkbox"]{
+        flex: 0 0 15px; /* fixed width */
+    }
+}
+
+/*=GDPR check*/
+
+.wpestate_gdpr_label {
+    cursor: pointer;
+}
+
+// Styles not directly related to the provided markup (kept at the end as requested)
+.shortcode_contact_form {
+    &.sh_form_align_left {
+        .gpr_wrapper {
+            float: left;
+            text-align: left;
+        }
+
+        #btn-cont-submit_sh {
+            width: 100%;
+        }
+    }
+}
+
+
+.wpresidence_elementor_form{
+    .gpr_wrapper{
+        text-align: left;
+    }
+}

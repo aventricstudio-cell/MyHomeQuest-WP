@@ -1,0 +1,18 @@
+// MILLDONE
+// Related Blog Cards Styles
+// This file contains styles for related blog post cards in the WPResidence theme.
+// These styles are typically used to display related posts at the end of a blog post or in sidebars.
+// src : scss\blog_card\_blog_card_related.scss
+
+.related_posts {
+    margin: 15px -15px 30px -15px;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .blog_unit {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,244 @@
+/** MILLDONE
+ * Property Reviews Styles
+ * src: scss\property_page\_reviews_section.scss
+ * This file contains all styles for the property reviews section in the WpResidence theme.
+ * It includes styles for the reviews wrapper, individual reviews, rating stars, and review form.
+ *
+ * Package: WpResidence
+ * Dependency: None (Pure CSS/SCSS)
+ * Usage: This file should be compiled and included in the theme's main stylesheet.
+ *
+ * @since 3.0.3 
+ */
+
+// Main wrapper styles
+.property_reviews_wrapper {
+    margin-bottom: 30px;
+    background: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+  
+    h4:after{
+      content: "";
+    }
+    // Reviews container
+    .property_page_container {
+      &.for_reviews {
+        .listing_reviews_wrapper {
+          .listing_reviews_container {
+            // Reviews summary title
+            #listing_reviews {
+              color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .property_ratings {
+    margin-left: 10px;
+
+    i {
+      color: #FFCC80;
+      margin-right: 2px;
+    }
+  }
+  
+  // Individual review styles
+  .listing-review {
+    float: left;
+    width: 100%;
+    margin: 5px 0px 20px 0px;
+  
+    .review-list-content {
+      position: relative;
+      padding-left: 0px;
+  
+      // Reviewer image
+      .reviewer_image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        @include background-cover; 
+        display: inline-block;
+        position: relative;
+        float: left;
+      }
+  
+      // Reviewer name
+      .reviwer-name {
+        color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+        margin-bottom: 0px;
+        margin-top: 7px;
+        width: auto;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 500;
+        padding-left: 15px;
+        display: inline-block;
+        float: left;
+      }
+  
+      // Review title
+      .review-title {
+        float: left;
+        left: 0px;
+        margin-left: 75px;
+        margin-top: 13px;
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        margin-bottom: 0px;
+        top: 16px;
+        font-size: 14px;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        font-weight: 500;
+      }
+  
+      // Review ratings
+      .property_ratings {
+        margin-top: 9px;
+        padding-right: 0px;
+        float: right;
+        right: 0px;
+  
+        i {
+  
+          &.fa-star-o {
+            color: #FFCC80;
+            font-size: 14px;
+          }
+        }
+  
+        .ratings-star {
+          margin-left: 3px;
+          margin-right: 0px;
+          font-size: 13px;
+          color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));
+          font-family: 'Roboto', sans-serif;
+        }
+      }
+  
+      // Review date
+      .review-date {
+        margin-top: 30px;
+        color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));
+        font-size: 12px;
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        float: right;
+      }
+  
+      // Review content
+      .review-content {
+        float: left;
+        margin-top: 5px;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 26px;
+        width: 100%;
+        padding-left: 75px;
+        line-height: 22px;
+      }
+    }
+  
+    &:last-of-type .review-content {
+      border: none;
+    }
+  }
+  
+  // Review form styles
+  .add_review_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  
+    // Rating stars
+    .rating {
+      .rating_legend {
+        margin-right: 5px;
+      }
+  
+      .empty_star {
+        float: none;
+        display: inline-block;
+        margin-top: 0px;
+        margin-right: 2px;
+        color: #8593a9;
+        font-size: 16px;
+        font-family: "Font Awesome 5 Free";
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        cursor: pointer;
+  
+        &:before {
+          content: "\f005";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 500;
+        }
+  
+        &:hover:before {
+          content: "\f005";
+          color: #FFCC80;
+        }
+      }
+  
+      .starselected_click,
+      .starselected {
+        color: #FFCC80;
+  
+        &:before {
+          content: "\f005";
+          font-weight: 600;
+        }
+      }
+    }
+  
+   
+  
+    // Submit button
+    #edit_review,
+    #submit_review {
+      width: auto;
+    }
+  }
+  
+  // Login trigger
+  #login_trigger_modal {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  // Review tag
+  .review_tag {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+
+  #submit_review {
+    width: auto;
+  }
+  
+  .wpestate_single_agent_details_wrapper .property_ratings {
+    margin: 0px;
+  }
+  
+  .review_notice {
+    padding: 10px;
+    background-color: #f8f8f8;
+    display: inline-block;
+    width: 100%;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+  }
+  
+ 

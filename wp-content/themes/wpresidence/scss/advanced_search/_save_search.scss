@@ -1,0 +1,99 @@
+/*
+File: _save_search.scss
+Package: WpResidence Theme
+Dependencies: This SCSS file is part of the advanced search module in the WpResidence theme. 
+It styles the "Save Search" feature in the user dashboard, specifically in the "Searches" section.
+Usage: This file controls the layout and appearance of the saved search wrapper, search form elements, and search notices.
+*/
+
+//= Saved Search Wrapper
+//-------------------------------------------------------
+
+// Wrapper for the entire saved search form.
+.messagebox_text,
+.saved_search_wrapper {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wpb_column > .wpb_wrapper *:last-child .messagebox_text{
+    margin-bottom: 30px;
+  }
+  
+  //= Save Search Button
+  //-------------------------------------------------------
+  
+  // Styles for the save search button.
+  #save_search_button {
+    margin-bottom: 0px !important;  // Overrides margin with !important
+    line-height: 1.1em;             // Controls the vertical alignment of text
+    width: 25%;                     // Button width is 25% of the wrapper
+    padding: 10px;             // Padding inside the button for size and spacing
+  }
+  
+  //= Save Search Notice
+  //-------------------------------------------------------
+  
+  // Wrapper for the save search notice.
+  #save_search_notice {
+    float: left;                    // Aligns to the left side
+    width: 100%;                    // Full width of the container
+    font-size: 14px;                // Font size for the notice
+    margin-bottom: 5px;             // Spacing below the notice
+    font-weight: 500;               // Medium font weight for emphasis
+    padding-right: 5px;             // Space to the right for alignment
+  }
+  
+  //= Search Name Input Field
+  //-------------------------------------------------------
+  
+  // Styles for the input field where users enter their search name.
+  #search_name {
+    width: calc(75% - 15px);        // 75% width minus margin for alignment with button
+    margin-right: 15px;             // Spacing to the right of the input
+    padding: 0px 13px;              // Padding inside the input field
+    line-height: 48px;              // Ensures the input field is tall enough for text
+  }
+  
+  //= Search Parameter
+  //-------------------------------------------------------
+  
+  // Styling for text within search parameters, emphasizing the strong tag.
+  .search_param strong {
+    text-transform: capitalize;     // Capitalizes the first letter of each word
+  }
+  
+  //= Search Unit Wrapper
+  //-------------------------------------------------------
+  
+  // Ensures the search unit wrapper is not clickable.
+  .dashboard-margin .search_unit_wrapper {
+    cursor: default;                // Disables pointer events (non-clickable)
+  }
+  
+  //= Advanced Search Notice
+  //-------------------------------------------------------
+  
+  // Styles the advanced search notice to remove any default margins.
+  .advanced_search_notice {
+    margin: 0px;                    // Eliminates any margin
+  }
+  
+
+  //= Search Unit Wrapper Heading
+  //-------------------------------------------------------
+  
+  // Styles for the h4 heading inside the search unit wrapper.
+  .search_unit_wrapper h4 {
+    padding: 0px 13px;              // Adds space inside the heading
+    margin-top: 10px;               // Space above the heading
+    margin-bottom: 6px;             // Space below the heading
+    float: left;                    // Aligns the heading to the left
+    width: 100%;                    // Full width of the container
+  }

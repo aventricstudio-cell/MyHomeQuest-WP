@@ -1,0 +1,339 @@
+
+
+/*=Submit Listing
+-------------------------------------------------------------------------------------*/
+
+
+.web {
+    display: inline;
+}
+
+#new_post .alert-warning {
+    line-height: 18px;
+}
+
+.page-template-user_dashboard_add_agent select,
+.page-template-user_dashboard_profile select,
+.page-template-front_property_submit select,
+#new_post select {
+    width: 100%;
+    border: 1px solid #eee;
+    font-size: 13px;
+}
+
+.featurescol {
+    width: 33%;
+    float: left;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.submit_container {
+    border: 0px solid #dde4e9;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    float: left;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0px 15px;
+}
+
+.submit_container label {
+    width: auto;
+}
+
+.submit_container input[type="checkbox"] {
+    margin: 4px 10px 0px 0px;
+    float: left;
+}
+
+.featurescol label {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submit_container_header {
+    padding: 14px 0px 14px 13px;
+    background-color: #263238;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #FFF !important;
+    margin: 0px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#google_capture {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#form_submit_1 {
+    margin-right: 10px;
+}
+
+#front_submit_form .wp-editor-wrap,
+.submit_container .wp-editor-wrap {
+    float: left;
+    width: 100%;
+}
+
+.full_form {
+    width: 100%;
+    float: left;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.full_form_image {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.half_form {
+    width: 50%;
+    float: left;
+    margin-right: 0px;
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-bottom: 0px;
+    min-height: 78px;
+}
+
+.half_form_last {
+    margin-left: 4%;
+}
+
+.submit_container input[type=text],
+.submit_container input[type=password],
+.submit_container input[type=email],
+.submit_container input[type=url],
+.submit_container input[type=number],
+.submit_container textarea {
+    width: 100%;
+}
+
+.submit_container .col-md-8 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+#add-new-image {
+    margin-top: 13px;
+}
+
+#googleMapsubmit {
+    width: 100%;
+    height: 300px;
+    float: left;
+    margin: 9px 0px 30px 0px;
+    border: 1px solid #dde4e9;
+}
+
+.page-template-user_dashboard_profile #googleMapsubmit {
+    width: 100%;
+    height: 300px;
+    float: left;
+    margin: 0px 0px 20px 0px;
+    border: 1px solid #dde4e9;
+}
+
+#new_post {
+    margin-bottom: 26px;
+}
+
+.showmod {
+    z-index: 999999;
+}
+
+.edit-images {
+    position: relative;
+    float: left;
+    margin: 0px 13px 13px 0px;
+}
+
+.delete_image {
+    font-size: 12px;
+    cursor: pointer;
+    background: #d9534f;
+    color: white;
+    padding: 4px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 143px;
+    text-align: center;
+}
+
+#add-new-image {
+    background-color: #f7f7f7;
+    color: #222;
+    padding: 9px 11px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    float: left;
+}
+
+
+#imagelist {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+.image_max_warn {
+    color: #fff;
+    font-size: 13px;
+    line-height: 22px;
+    background-color: #ED5565;
+    margin-bottom: 13px;
+    padding: 1px 5px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    margin-left: 13px;
+    width: auto !important;
+}
+
+#imagelist .uploaded_images {
+    float: left;
+    margin: 0px 0% 5px 5px;
+    position: relative;
+    max-width: 200px;
+    overflow: hidden;
+    width: 32.3%;
+}
+
+#imagelist .uploaded_images i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #ff754c;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    margin: 5px
+}
+
+#imagelist .image_caption.form_control {
+    padding: 5px 0px 5px 5px;
+    margin: 5px 0px !important;
+}
+
+#imagelist .uploaded_images i.image_caption_button {
+    left: 33px;
+}
+
+#imagelist .uploaded_images i.image_caption_button.active_caption {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+#imagelist .uploaded_images .thumber {
+    left: auto;
+    right: 0px;
+    cursor: none;
+}
+
+#imagelist .uploaded_images img {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+.image_caption_wrapper {
+    display: none;
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    @include smooth-transition-shorter;
+    position: absolute;
+    top: 34px;
+    left: 0px;
+    padding: 3px;
+}
+
+input.image_caption {
+    font-size: 12px;
+    padding: 3px 0px 3px 3px;
+    height: auto !important;
+    margin: 0px !important;
+}
+
+
+.submit_container #aaiu-upload-imagelist {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+.submit_container #aaiu-upload-imagelist div {
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+#aaiu-upload-imagelist:empty {
+    height: 0px;
+}
+
+.aaiu-upload-list:empty {
+    margin: 0px;
+}
+
+
+#imagelist .moxie-shim.moxie-shim-html5 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.submit_container #aaiu-uploader {
+    margin: 72px auto 0px auto !important;
+    display: block;
+    float: none;
+    min-width: 160px;
+}
+
+#drag-and-drop {
+    background-color: #efefef;
+    border: 1px dashed #dfdfdf;
+    position: relative;
+    min-height: 140px;
+    float: left;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.drag-drop-msg {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 10px;
+}
+
+.drag-drop-msg .fas {
+    font-size: 35px;
+    color: #a5c2de;
+    display: inherit;
+}
+
+.aaiu_button {
+    background-color: #f7f7f7;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+}
+
+#aaiu-upload-imagelist {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+#embed_video_type,
+#prop_category_submit {
+    margin-bottom: 13px;
+}

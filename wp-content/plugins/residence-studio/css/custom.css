@@ -1,0 +1,28 @@
+wpestate-library-template-name{
+    font-size: 30px;
+}
+
+.wpresidence-studio-preview{
+    background-color: #0000008c !important;
+    color: #fff !important;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.wpresidence-studio-preview i{ 
+    position: relative!important;
+    top: auto!important;
+    left: auto!important;
+    transform: none!important;                         
+}
+
+.wpresidence-elementor-button-title{
+    padding: 6px;
+}

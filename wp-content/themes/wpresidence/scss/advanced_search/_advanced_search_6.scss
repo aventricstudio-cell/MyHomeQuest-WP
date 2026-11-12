@@ -1,0 +1,156 @@
+
+.search_wrapper.search_wr_6 {
+
+    #results {
+        top: 1px;
+    }
+
+    .adv-search-1{
+        margin: 0px auto;
+    }
+
+    .adv6-holder {
+    }
+
+    .residence_adv_extended_options_text {
+        margin-bottom: 15px;
+    }
+
+    &.without_search_form_float{
+        .nav-tabs {
+            top: -50px;
+        }
+    }
+}
+
+// general tab stylere
+.adv_search_tab {
+    position: relative;
+
+    .nav-tabs {
+        border: none;
+        margin: 0px 0px 0px 0px;
+        position: absolute;
+        top: -50px;
+        
+        .adv_search_tab_item {
+            float: none;
+            text-align: center;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            position: relative;
+            display: inline-block;
+            border: 1px solid color-mix(in srgb, var(--wp-estate-adv-search-tab-font-color-option, var(--wp_estate_adv_search_tab_font_color)) 15%, transparent);
+            background-color: color-mix(
+                in srgb,
+                var(--wp-estate-adv-search-tab-font-color-option, var(--wp_estate_adv_search_tab_font_color, #ffffff)) 15%, 
+                #ffffff
+            );
+            color: var(--wp-estate-adv-search-tab-font-color-option, var(--wp_estate_adv_search_tab_font_color));
+            line-height: 1.65em;
+            font-size: 13px;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+            a{
+                color: var(--wp-estate-adv-search-tab-font-color-option, var(--wp_estate_adv_search_tab_font_color));
+                float: left;
+                text-transform: capitalize;
+                line-height: 14px;
+                font-size: 14px;
+            }
+
+            &.active {
+                background-color: var(--wp-estate-adv-search-tab-font-color-option, var(--wp_estate_adv_search_tab_font_color));
+                border: 1px solid var(--wp-estate-adv-search-tab-font-color-option, var(--wp_estate_adv_search_tab_font_color));
+                color: #fff;
+                a ,button{
+                    color: #fff;
+                }
+            }
+        
+            &.active:before {
+                background-color: var(--wp-estate-adv-search-tab-font-color-option, var(--wp_estate_adv_search_tab_font_color));
+                content: "";
+                height: 12px;
+                position: absolute;
+                top: 30px;
+                width: 12px;
+                margin-left: -6px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                left: 50%;
+            }
+        }
+               
+    }
+
+ 
+}
+
+
+.wpestate_search_tab_align_center{
+    .nav-tabs {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+// when search type 6 is fload
+.search_wr_6.with_search_form_float{
+    .adv6-holder {
+        padding: 15px 15px 0px 15px;
+        .nav-tabs {
+            left: 0;
+        }
+    }
+}
+
+
+.search_wrapper.search_wr_6.with_search_on_start.without_search_form_float {
+    padding-top: 65px;
+}
+
+#google_map_prop_list_sidebar {
+    .nav-tabs {
+        text-align: left;
+        margin-bottom: 5px;
+        border-bottom: 0px;
+        position: relative;
+        top:auto;
+        left:auto;
+        
+        .adv6_tab_head {
+            padding: 10px 10px !important;
+        }
+    }
+}
+
+
+
+#adv-search-mobile .adv_search_tab_item.active:before,
+#advanced_search_shortcode .adv_search_tab_item.active:before,
+.advanced_search_sidebar .adv_search_tab_item.active:before,
+#google_map_prop_list_sidebar .adv_search_tab_item.active:before {
+    display: none;
+}
+
+
+
+.search_wr_6.with_search_form_float #results {
+    left: 0px;
+    top: 0px;
+}
+
+.search_wr_6.with_search_on_start.without_search_form_float #results {
+    left: 7px;
+    top: auto;
+    bottom: -13px;
+    transform: translate(0, 100%);
+}

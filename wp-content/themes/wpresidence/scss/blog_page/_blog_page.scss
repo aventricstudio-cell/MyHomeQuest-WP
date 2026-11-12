@@ -1,0 +1,89 @@
+/** MILLDONE
+ * WPResidence Blog Page Styling
+ * scss\blog_page\_blog_page.scss
+ * This SCSS file defines the styles for blog pages and related elements
+ * in the WPResidence theme. It covers various aspects of blog post presentation,
+ * including single blog posts, galleries, and carousels.
+ *
+ *
+ * Note: This file is crucial for maintaining consistent styling across blog-related pages.
+ */
+
+/* Single Blog Post Container
+   This is the main wrapper for single blog post content. */
+   .single-content.single-blog {
+    margin-bottom: 30px;
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+/* Gallery Styling
+   Applies to galleries within blog posts and widgets. */
+.gallery img {
+    border: 3px solid #f0f0f0 !important;
+}
+
+.widget_media_gallery .gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/* Blog Post Carousel
+   Styles for the main blog post carousel. */
+#wpresidence-blog-post-carousel-bootstrap {
+    margin-bottom: 30px;
+    overflow: hidden;
+    background: #222;
+}
+
+/* Video Embedding
+   Ensures proper sizing for embedded videos in various contexts. */
+.wpestate_slider_enable_video_wrapper iframe,
+.wpestate_property_slider_v3 iframe,
+.post-carusel iframe {
+    width: 100%;
+    min-height: 443px;
+}
+
+/* Elementor-specific Adjustments
+   These styles ensure proper rendering within Elementor widgets. */
+.elementor-widget {
+    .post-carusel {
+        margin-bottom: 0;
+    }
+
+    &-container {
+        .post-carusel .item img {
+            max-height: 100%;
+        }
+    }
+}
+
+.wp-block-list,
+.single-blog{
+    .carousel-item a{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul{
+        list-style-type: square;
+        margin: 0px 0px 25px 25px;
+    }
+
+    ol {
+        list-style-type: decimal;
+        margin: 0px 0px 25px 25px;
+    }
+
+   
+    
+}

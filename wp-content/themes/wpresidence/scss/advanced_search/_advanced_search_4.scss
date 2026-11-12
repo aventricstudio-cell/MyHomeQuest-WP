@@ -1,0 +1,35 @@
+ 
+.search_wr_4{
+    &.with_search_on_start {
+        .adv-search-header-1 {
+            display: none;
+        }
+    }
+
+    &.with_search_form_float  {
+        .adv4-holder{
+            padding: 15px 0px;
+        }
+    }
+
+    .adv4-holder {
+        float: left;
+        padding: 0px;
+        width: 100%;
+
+        .advanced_submit_4,
+        #advanced_submit_4 {
+            width: 100%;
+        }
+
+    }
+}
+
+.search_wr_4.with_search_form_float #results {
+    left: 0px;
+    top: 0px;
+}
+
+.wpresidence_note_half_search  .adv-search-header-1{
+    display: none;
+}

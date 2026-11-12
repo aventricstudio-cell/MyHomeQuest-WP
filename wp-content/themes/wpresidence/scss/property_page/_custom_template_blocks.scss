@@ -1,0 +1,52 @@
+/*elementor custom property template with full width option */
+
+.wpestate_content_wrapper_custom_template_wrapper {
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: var(--wp-estate-background-color-option, var(--wp-estate-background-color)); 
+    >.row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.wpestate_wide_elementor_page .wpestate_content_wrapper_custom_template_wrapper,
+.container.content_wrapper.wpestate_content_wrapper_custom_template.wpestate_wide_elementor_page{
+    max-width: 100%;
+}
+ 
+/*bakery custom property template agent card widget & contact forms */
+
+.vc_row {
+    .property_desing_agent_one_col{
+        .col-md-6.agent_details,
+        .col-md-6.agentpic-wrapper {
+            width: 100%;
+        }
+        .col-md-6.agent_details{
+            padding: 0;
+        }
+    }
+
+    .schedule_wrapper,
+    .wpestate_single_agent_details_header_wrapper{
+        margin-bottom: 10px;
+    }
+}
+
+.elementor-widget-container #wpestate_single_agent_details_wrapper,
+.elementor-widget .property_energy_saving_info .row,
+.elementor-widget-property_show_features_section .row,
+.elementor-widget-property_show_address_section .row,
+.elementor-widget-property_show_details_section .row,
+.wpestate_estate_property_details_section .row{
+    margin-left: 0;
+}
+
+.wpestate_estate_property_design_agent_details_intext_details img{
+    max-width: 100%;
+}
+
+.elementor-widget-container .wpestate_property_description{
+    margin-bottom: 0;
+}

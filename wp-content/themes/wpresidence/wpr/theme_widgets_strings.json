@@ -1,0 +1,49 @@
+{
+  "wpresidence-widgets": {
+    "advanced_search_widget.title":"Advanced Search",
+    "Featured_Agent.title": "Featured Agent",
+    "Multiple_currency_widget.title": "Change Your Currency",
+    "ag_ag_dev_search_widge.title":"Agents Search",
+    "contact_widget.title":"Contact us",
+    "contact_widget.address_info":"contact address info",
+    "facebook_widget.title":"Our Facebook",
+    "featured_widget.title":"Featured Listing",
+    "featured_widget.second_line":"",
+    "footer_latest_widget.title":"Latest Listing",
+    "measurement_unit_widget.title":"Measurement Unit",
+    "mortgage_widge.title":"Mortgage",
+    "property_categories.title":"Our Listings",
+    "social_widget.title":"Social Links",
+    "twitter-widget.title":"Latest Tweets",
+    "zillow_estimate_widget.title":"Estimate your home",
+    "text.title": "Text",
+    "text.text": "",
+
+    "recent-posts.title": "Recent Posts",
+    "recent-comments.title": "Recent Comments",
+    "categories.title": "Categories",
+    "archives.title": "Archives",
+    "meta.title": "Meta",
+    "pages.title": "Pages",
+    "calendar.title": "Calendar",
+    "search.title": "Search",
+    "tag_cloud.title": "Tags",
+
+    "rss.title": "RSS",
+    "rss.url": "",
+    "rss.items": "",
+    "rss.show_summary": "",
+    "rss.show_author": "",
+    "rss.show_date": "",
+
+    "custom_html.title": "Custom HTML",
+    "custom_html.content": "",
+
+    "nav_menu.title": "Menu",
+
+    "audio.title": "Audio",
+    "video.title": "Video",
+    "image.title": "Image",
+    "gallery.title": "Gallery"
+  }
+}

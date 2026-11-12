@@ -1,0 +1,178 @@
+
+.shortcode_slider_list{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    .listing_wrapper {
+        display: none;
+    }
+
+    &.slick-initialized {
+        .listing_wrapper{
+            display: block;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+/*=shortcodes carousel
+--------------------------------------------------------------------*/
+.wpestate_carousel .post-thumb {
+    float: left;
+    margin-right: 13px;
+} 
+
+.wpestate_carousel .vc-carousel-control .icon-next:before {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f105";
+    position: relative;
+    top: 0px;
+    color: #222;
+}
+
+.wpestate_carousel .vc-carousel-control .icon-prev:before {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f104";
+    position: relative;
+    top: 0px;
+    color: #222;
+}
+
+
+
+
+/*
+* Items slider shortcode
+*
+*
+*/
+
+.slider_container{
+    width: 100%;
+    flex: 0 0 100%;
+    .shortcode_slider_wrapper{
+        margin: 0px -15px;
+        
+        .slick-track {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: initial;
+            min-width: 100%;
+        }
+
+        .slick-slide {
+            margin: 0 10px;
+            height: auto;
+            padding-bottom: 10px;
+        }
+
+    }
+
+
+    .slick-dots {
+        text-align: center;
+        margin: 20px 0px;
+        list-style: none;
+        text-align: center;
+        
+        li {
+            position: relative;
+            display: inline-block;
+            margin: 0 5px;
+            
+            &.slick-active button:before {
+                opacity: .75;
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+            
+            button {
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                width: 20px;
+                height: 20px;
+                padding: 5px;
+                cursor: pointer;
+                color: transparent;
+                border: 0;
+                outline: none;
+                background: 0 0;
+                
+                &:before {
+                    font-family: "font awesome 5 free";
+                    font-size: 10px;
+                    line-height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    content: "\f111";
+                    text-align: center;
+                    opacity: .25;
+                    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                    -webkit-font-smoothing: antialiased;
+                    font-weight: 700;
+                }
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+ 
+
+
+.slider_container .property_listing_blog,
+.slider_container .agent_unit,
+.slider_container .listing_wrapper .property_listing {
+    box-shadow: 0 -1px 19px 0 rgba(7, 152, 255, 0.09);
+}
+
+.slider_container .property_listing_blog:hover,
+.slider_container .agent_unit:hover,
+.slider_container .listing_wrapper .property_listing:hover {
+    box-shadow: 0 -1px 19px 0 rgba(7, 152, 255, 0.14);
+}
+
+.slider_container .agent_unit.agent_unit_type_4,
+.slider_container .listing_wrapper .property_listing.property_unit_type8,
+.slider_container .blog4v .property_listing_blog{
+    box-shadow: none;
+}
+
+.slider_container .agent_unit {
+    margin-bottom: 20px !important;
+}
+
+.items_shortcode_wrapper_grid .agent_card_2{
+    padding: 0px;
+}
+
+.slick-list .blog_unit:hover {
+    transform: translate(0%, 0px);
+}

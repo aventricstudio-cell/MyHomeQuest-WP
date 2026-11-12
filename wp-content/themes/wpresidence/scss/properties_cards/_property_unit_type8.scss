@@ -1,0 +1,151 @@
+// MILLDONE
+// _property_unit_type8.scss
+// src: scss\properties_cards\_property_unit_type8.scss
+// This file contains styles specific to Property Unit Type 8 in the WpResidence theme.
+// It defines the layout and appearance of Type 8 property cards displayed in various views.
+.elementor-widget-container .listing_wrapper .property_listing.property_unit_type8  {
+    box-shadow: none;     
+}
+.property_listing.property_unit_type8 {
+    // Base styles for the property listing
+    @include smooth-transition-shorter;
+    @include card-base; // Replace duplicate properties
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+
+  
+    &:hover{
+        box-shadow: none;        
+    }
+    
+    // Carousel styles
+    .carousel {
+        width: 100%;
+    }
+
+  
+    .tag-wrapper{
+        padding: 0 15px;
+    }
+
+    // Favorite icon styles
+    .icon-fav {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        width: auto;
+        height: auto;
+        padding-top: 0;
+        z-index: 12;
+        color: #fff;
+        border:none;
+
+        &:before {
+            content: "";
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    // Property agent wrapper styles
+    .property_agent_wrapper {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        color: #fff;
+
+        a {
+            color: #fff;
+            font-weight: 500;
+            display: block;
+        }
+    }
+
+    // Property agent image styles
+    .property_agent_image {
+        z-index: 1;
+        width: 45px;
+        height: 45px;
+        background-position: top;
+        border: 2px solid #fff;
+    }
+
+    // Title styles
+    h4 {
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 8px;
+        line-height: 1.3em;
+        padding: 0;
+    }
+
+    // Property categories wrapper styles
+    .property_card_categories_wrapper {
+        padding: 0;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        font-size:  var(--wp-estate-card-details-font-size-option,var(--wp-estate-card-unit-font-size));
+        font-weight:var(--wp-estate-card-details-font-weight-option,var(--wp-estate-card-unit-font-weight));
+        margin-bottom: 2px;
+
+        a {
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        }
+    }
+
+    // Property unit information wrapper styles
+    .property-unit-information-wrapper {
+        padding-top: 15px;
+    }
+
+    // Property details wrapper styles
+    .property_details_type1_wrapper {
+        padding: 0;
+        gap: 3px;
+        margin-bottom: 8px;
+    }
+
+    // Price wrapper styles
+    .listing_unit_price_wrapper {
+        padding: 0;
+        position: relative;
+        z-index: 10;
+        font-size: 15px;
+        bottom: auto;
+        left: auto;
+        margin-top: 0;
+    }
+
+    // Price label styles
+    .price_label {
+        font-size: 13px;
+    }
+
+    // Image wrapper styles
+    .listing-unit-img-wrapper {
+        border-radius: 10px;
+    }
+
+    // Contact wrapper and property details styles
+    .wpestate_property_card_contact_wrapper,
+    .property_listing_details_v2,
+    .listing_details {
+        padding: 1px;
+    }
+}
+
+// Full width layout styles
+.listing_wrapper.col-md-12 .property_listing.property_unit_type8 {
+    .listing-unit-img-wrapper {
+        max-width: 260px;
+        min-height: auto;
+        margin-right: 15px;
+        height: 165px;
+    }
+}
+

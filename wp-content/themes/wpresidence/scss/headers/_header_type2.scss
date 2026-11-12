@@ -1,0 +1,72 @@
+// MILLDONE
+// components/_header_type2.scss
+// This file contains styles for the header type 2 component of the website.
+// It includes styles for the main header, navigation, and related elements.
+
+// ==========================================================================
+// Sticky Header for Type 2
+// ==========================================================================
+
+.master_header {
+    .header_wrapper.header_type2 {
+        min-height: 188px;    
+    }
+    &.master_header_sticky{
+        .header_wrapper.header_type2 {
+            min-height: auto;    
+        }
+    } 
+}
+
+
+.master_header_sticky {
+    .header_type2 {
+        // Styles for the inner wrapper of the header when sticky
+        .header_wrapper_inside {
+            width: 100%; // Set the width of the inner wrapper to 100%
+            justify-content: space-between; // Space out the child elements evenly
+
+            // Styles for the menu wrapper within the header
+            .wpresidence-header2-menu-wrapper {
+                flex: 1; // Allow the menu wrapper to grow and fill the available space
+                .wpresidence-navigation-menu {
+                    margin: 0px auto; // Center the navigation menu horizontally
+                }
+            }
+
+            // Utility class for width adjustment
+            .w-100 {
+                width: auto !important; // Override any other width setting and set it to auto
+            }
+        }
+    }
+}
+
+// ==========================================================================
+// Logo Alignment Center for Header Type 2
+// ==========================================================================
+
+// When the logo is aligned center for header type 2
+.wpresidence_header_logo_align_center {
+    .header_type2 {
+        // Center align the logo container
+        .wpresidence-logo-container {
+            text-align: center; // Center the text within the logo container
+        }
+    }
+}
+
+// ==========================================================================
+// Logo Alignment Right for Header Type 2
+// ==========================================================================
+
+// When the logo is aligned right for header type 2
+.wpresidence_header_logo_align_right {
+    .header_type2 {
+        // Right align the logo container
+        .wpresidence-logo-container {
+            text-align: right; // Align the text within the logo container to the right
+        }
+    }
+}
+

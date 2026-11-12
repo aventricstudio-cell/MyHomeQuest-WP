@@ -1,0 +1,161 @@
+/** MILLDONE
+ *Featured Agency/developer Styles for WpResidence Theme
+ * src: scss/shortocdes_and_blocks/_featured_agents_shortcodes.scss
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - WpResidence theme core styles
+ * - Font Awesome for icons
+ *
+ * Usage:
+ * These styles are applied to featured agency/devleoper 
+ */
+
+/*=shortcodes featured agent/agency
+--------------------------------------------------------------------*/
+
+// Featured Agent
+.featured_agent {
+    margin-bottom: 30px;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    overflow: hidden;
+    background-color: #fdfdfd;
+    position: relative;
+    padding-bottom: 94px;
+    max-width: 255px;
+    height: 220px;
+  
+    .featured_agent_details_wrapper {
+      padding: 0 0 13px 0;
+      position: absolute;
+      bottom: -157px;
+      width: 100%;
+      background-color: #fdfdfd;
+      cursor: pointer;
+      border-top: 3px solid #0761b7;
+  
+      h4, h4 a {
+        padding: 0 6px;
+        margin-top: 13px;
+        margin-bottom: 3px;
+        font-size: 18px;
+      }
+  
+      .agent_position {
+        line-height: 13px;
+      }
+  
+      .agent_unit_social {
+        left: 0;
+        padding: 11px 0 0 0;
+        position: relative;
+        margin-top: 16px;
+      }
+  
+      .social-wrapper {
+        margin: 0 auto;
+        max-width: 137px;
+      }
+    }
+  
+    .featured_agent_details {
+      display: block;
+    }
+  }
+  
+  // User Role Unit
+  .user_role_unit {
+    border: 1px solid #f1f8ff;
+    height: auto;
+    background-color: #ffffff;
+    @include smooth-transition-shorter;
+  
+    .featured_user_role_unit_details {
+      position: relative;
+     
+      float: left;
+      padding: 20px;
+      height: 250px;
+  
+      h4 {
+        padding-left: 110px;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 24px;
+      }
+  
+      .user_role_email,
+      .user_role_phone {
+        padding-left: 110px;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 13px;
+  
+        a {
+          font-size: 13px;
+        }
+      }
+  
+      i {
+        font-size: 11px;
+        background: #efefef;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+    }
+  
+    .user_role_featured_image {
+  
+      height: 248px;
+      overflow: hidden;
+      position: relative;
+      background-color: #222;
+  
+      .user_role {
+       
+        height: 250px;
+        width: auto;
+        @include background-cover; 
+        @include smooth-transition;
+      }
+    }
+  
+    &:hover .user_role_featured_image .user_role {
+      @include image-hover-zoom;
+    }
+  
+    .user_role_status {
+      position: absolute;
+      top: -11px;
+      color: #fff;
+      background-color: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+      padding: 0 10px;
+      font-size: 12px;
+    }
+  
+    .button_user_role {
+      position: absolute;
+      left: 20px;
+      bottom: 7px;
+    }
+  
+    .user_role_content {
+      float: left;
+      padding-top: 10px;
+    }
+  }
+  
+  .user_role_image {
+    height: 90px;
+    width: 90px;
+    @include background-cover; 
+    position: absolute;
+  }

@@ -1,0 +1,70 @@
+.wpestate_crm_lead_status,
+.wpestate_crm_lead_agent_in_charge,
+.wpestate_crm_lead_from,
+.wpestate_crm_lead_date,
+.wpestate_crm_lead_id,
+.wpestate_crm_contact_status,
+.wpestate_crm_contact_added_on,
+.wpestate_crm_contact_phone,
+.wpestate_crm_contact_email,
+.wpestate_crm_contact_name{
+  font-size: 14px;
+  color: #222;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  line-height: 1.3em;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+#westate_crm_create_contact,
+#westate_crm_create_lead{
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  padding: 6px 30px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.wpestate_crm_list_leads h2,
+.wpestate_crm_display_contact_info_wrapper h2,
+.wpestate_crm_add_coment_contact_wrapper h2{
+  color: #222;
+  font-size: 17px;
+  line-height: 1.6em;
+  font-weight: 500;
+}
+
+.comment_item{
+  margin-bottom: 15px;
+}
+.comment_name,
+.comment_date{
+  margin-bottom: 5px;
+}
+
+.contact_crm_detail{
+  width: 100%;
+  float: left;
+  margin: 5px 0px;
+}
+
+#crm_private,
+#crm_new_commnet,
+#crm_private{
+  height: 100px;
+}
+
+
+.contact_crm_detail label{
+  font-weight: 600;
+
+
+}
+.page-template-user_dashboard .ui-menu.ui-autocomplete li.ui-menu-item .ui-menu-item-wrapper {
+  padding: 10px 15px 10px!important;
+}
+

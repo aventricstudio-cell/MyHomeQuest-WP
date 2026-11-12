@@ -1,0 +1,708 @@
+// MILLDONE
+// components/_menus.scss
+
+// This file contains styles for various menu components including the main navigation,
+// mobile menus, and user menus. It focuses on the layout and appearance of menu items.
+
+// ==========================================================================
+// Main Navigation
+// ==========================================================================
+
+:root {
+  --scrollbar-width: calc(100vw - 100%); // Calculate scrollbar width for cross-browser compatibility.
+}
+
+.master_header_sticky {
+    .header_wrapper {
+        background-color: var(--wp-estate-header-color-option, var(--wp-estate-header-color)); // Set the header background color with a CSS variable fallback.
+
+        .wpresidence-navigation-menu {
+            // Main and Mega menu containers
+            .menu-main-menu-container,
+            .menu-mega-menu-updated-container {
+                ul > li {
+                    line-height: var(--wp-estate-sticky-header-height-option, var(--wp-estate-sticky-header-height)); // Set line height for sticky header.
+                }
+            }
+
+            // Hover effect for second-level menu items
+            ul li:hover > ul {
+                top: var(--wp-estate-sticky-header-height-option, var(--wp-estate-sticky-header-height)); // Position sub-menu under the sticky header.
+            }
+
+            // Hover effect for third-level menu items
+            ul ul li:hover > ul {
+                top: 0px; // Align sub-menu at the top of its parent.
+            }
+
+            // Fourth-level menu positioning
+            ul ul ul {
+                top: 30px; // Position the fourth-level menu 30px from the top.
+            }
+
+            // Hover effect type 3 for first-level menu items
+            .hover_type_3 ul.menu > li:hover > a {
+                color: var(--wp-estate-top-menu-hover-font-color-option, #fff); // Change text color to white on hover.
+            }
+
+            // Hover effect type 4 for first-level menu items
+            .hover_type_4 ul.menu > li > a:hover {
+                color: var(--wp-estate-top-menu-hover-font-color-option, #fff); // Change text color to white on hover.
+            } 
+        }
+
+        .navicon,
+        .navicon:before,
+        .navicon:after {
+            background: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the navigation icon and its pseudo-elements' background to dark gray.
+        }
+
+        .header_phone {
+            a {
+                color: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the link color based on a variable.
+                
+                &:hover {
+                    color: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Set the color of the header phone on hover based on a variable.
+                }
+            }
+
+            svg {
+                fill: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the icon fill color based on a variable.
+
+                &:hover {
+                    fill: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Set the icon fill color on hover based on a variable.
+                }
+            }
+        }
+
+        .submit_action {
+            svg {
+                fill: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the icon fill color based on a variable.
+
+                &:hover {
+                    fill: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Set the icon fill color on hover based on a variable.
+                }
+            }
+        }
+    }
+}
+
+
+
+.master_header_sticky .header_wrapper .wpresidence-navigation-menu .menu-mega-menu-updated-container ul > li.no-megamenu{
+    ul li:hover > ul {
+        top: -25px;
+    }
+} 
+
+.wpresidence-navigation-menu {
+    width: auto;
+    position: static;
+    
+ font-family: var(--wp-estate-menu-font-family-option, var(--wp-estate-menu-font-family));
+ font-weight: var(--wp-estate-menu-font-weight-option, var(--wp-estate-menu-font-weight));
+
+    // Top-level menu containers
+    .menu-header-6-secondary-container,
+    .menu-main-menu-container,
+    .menu-mega-menu-updated-container {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+
+            // First level menu item
+            li {
+                display: inline-block;
+                text-align: left;
+                position: relative;
+                @include smooth-transition-shorter;
+                line-height: var(--wp-estate-header-height-option, var(--wp-estate-header-height)); // Set line height based on header height variable.
+                font-size: var(--wp-estate-top-menu-font-size-option, var(--wp-estate-top-menu-font-size)); // Set font size based on variable.
+                // First level menu item link
+                a {
+                    display: block;
+                    text-decoration: none;
+                    font-size: var(--wp-estate-top-menu-font-size-option, var(--wp-estate-top-menu-font-size)); // Set font size based on variable.
+                    font-weight: 500;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    @include no-transition;
+                    color: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set text color based on variable.
+                    cursor: pointer;
+                    backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
+                }
+
+                // Hover effect for first level menu item
+                &:hover > ul {
+                    top: var(--wp-estate-header-height-option, var(--wp-estate-header-height)); // Position sub-menu under the header.
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                    border: var(--wpestate-border-size-for-menu-border-color) solid var(--wp-estate-menu-border-color-option, var(--wp-estate-menu-border-color)); // Set border color based on variable.
+                }
+
+                // Hover effect for first level menu item link
+                &:hover > a,
+                &:hover > a:active,
+                &:hover > a:focus {
+                    color: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Change text color on hover based on variable.
+                }
+
+                // Additional hover effect for first level menu item link
+                &:hover a {
+                    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+                    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+                    transform: matrix(1, 0, 0, 1, 0, 0);
+                }
+
+                // Second level menu
+                ul {
+                    float: left;
+                    margin: 0;
+                    position: absolute;
+                    left: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    pointer-events: none;
+                    top: 100px; // Position second-level menu.
+                    padding: 25px 0px;
+                    width: 285px;
+                    background-color: var(--wp-estate-menu-item-back-color-option, var(--wp-estate-menu-item-back-color)); // Set background color based on variable.
+                    @include smooth-transition-shorter;
+                    line-height: 0px;
+                    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+                    z-index: 9;
+                    @include main-box-shadow(); // Include main box shadow.
+
+                    // Before pseudo-element for second level menu
+                    ul:before {
+                        content: '';
+                        display: none;
+                    }
+
+                    // Second level menu item
+                    & > li {
+                        border-bottom: 1px solid var(--wp-estate-menu-border-color-option, var(--wp-estate-menu-border-color)); // Set bottom border color based on variable.
+                    }
+
+                    li {
+                        width: 100%;
+                        padding: 0px 30px;
+
+                        // Second level menu item link
+                        a {
+                            -webkit-transform: matrix(1, 0, 0, 1, 0, 20);
+                            -ms-transform: matrix(1, 0, 0, 1, 0, 20);
+                            transform: matrix(1, 0, 0, 1, 0, 20);
+                            @include smooth-transition-shorter;
+                            color: var(--wp-estate-menu-items-color-option, var(--wp-estate-menu-items-color)); // Set text color based on variable.
+                            font-size: var(--wp-estate-menu-item-font-size-option, var(--wp-estate-menu-item-font-size)); // Set font size based on variable.
+                            font-weight: 500;
+                            height: auto;
+                            line-height: 1.4em;
+                            padding: 12px 13px 13px 13px;
+                            text-transform: none;
+                        }
+
+                        // Hover effect for second level menu item
+                        &:hover {
+                            color: var(--wp-estate-menu-hover-font-color-option, var(--wp-estate-menu-hover-font-color)); // Change text color on hover based on variable.
+                            background-color: var(--wp-estate-menu-hover-back-color-option,var(--wp-estate-menu-hover-back-color));
+                        }
+
+                        // Hover effect for second level menu item link
+                        &:hover > a,
+                        &:hover > a:active,
+                        &:hover > a:focus {
+                            color: var(--wp-estate-menu-hover-font-color-option, var(--wp-estate-menu-hover-font-color)); // Change text color on hover based on variable.
+                            -webkit-transform: matrix(1, 0, 0, 1, 10, 0);
+                            -ms-transform: matrix(1, 0, 0, 1, 10, 0);
+                            @include smooth-transition-shorter;
+                        }
+
+                        // Hover effect for third level menu
+                        &:hover > ul {
+                            top: -25px;
+                        }
+
+                        // Last child link
+                        &:last-child > a {
+                            border-bottom: none;
+                        }
+
+                        // Third level menu
+                        ul {
+                            left: 100%;
+                            top: 30px;
+                            margin-left: 0px;
+
+                            // Third level menu item
+                            li {
+                                // Fourth level menu
+                                ul {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Active menu item styling
+
+.wpresidence-navigation-menu ul li.current-menu-parent > a[class*="menu"],
+.wpresidence-navigation-menu ul li.current-menu-item > a[class*="menu"],
+.wpresidence-navigation-menu ul li.current-menu-ancestor > a[class*="menu"] {
+    color: var(--wp-estate-active-menu-font-color-option, var(--wp-estate-active-menu-font-color));
+}
+
+
+// Sub-menu indicator for items with children
+.sub-menu .menu-item-has-children > a:after {
+    content: "\f105"; // FontAwesome icon.
+    font-family: "Font Awesome 5 Free"; // Set font family to FontAwesome.
+    float: right;
+    font-weight: 700;
+}
+
+// ==========================================================================
+// Mega Menu
+// ==========================================================================
+
+.wpresidence-navigation-menu {
+    .menu-mega-menu-updated-container {
+        ul {
+            // First level menu item with mega menu
+            li.with-megamenu {
+                position: static;
+            }
+
+            // First level sub-menu
+            li.with-megamenu > ul {
+                top: var(--wp-estate-header-height-option, var(--wp-estate-header-height)); // Position sub-menu based on header height variable.
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                width: calc(100vw - 17px); // Adjust width for scrollbar.
+                padding: 25px 15vw;
+
+                li {
+                    border: none;
+
+                    ul {
+                        visibility: visible;
+                        opacity: 1;
+                        left: 0px;
+                        padding-top: 0px;
+                        margin-left: 1px;
+                        position: relative;
+                        left: 0px;
+                        margin: 0px;
+                        top: 0px;
+                        width: 100%;
+                        border: none !important;
+                        box-shadow: none;
+                        background: transparent;
+                        padding: 0px;
+                        border: 1px solid var(--wp-estate-menu-border-color-option, var(--wp-estate-menu-border-color)); // Set border color based on variable.
+                    }
+                }
+            }
+
+            // Transition delays for sub-menu items
+            li.with-megamenu:hover > ul.sub-menu li {
+  //              transition-delay: 0.3s;
+                opacity: 1;
+            }
+/*
+            li.with-megamenu:hover > ul.sub-menu li:nth-of-type(2) {
+                transition-delay: 0.4s;
+            }
+
+            li.with-megamenu:hover > ul.sub-menu li:nth-of-type(3) {
+                transition-delay: 0.55s;
+            }
+
+            li.with-megamenu:hover > ul.sub-menu li:nth-of-type(4) {
+                transition-delay: 0.7s;
+            }
+
+            li.with-megamenu:hover > ul.sub-menu li:nth-of-type(5) {
+                transition-delay: 0.85s;
+            }
+
+            li.with-megamenu:hover > ul.sub-menu li:nth-of-type(6) {
+                transition-delay: 0.9s;
+            }
+*/
+            li {
+                // Second level sub-menu
+                ul {
+                    li {
+                        color: var(--wp-estate-menu-items-color-option, var(--wp-estate-menu-items-color)); // Set text color based on variable.
+                        font-size: 14px;
+                        height: auto;
+                        line-height: 1.4em;
+                        padding: 7px 15px;
+                        text-transform: none;
+
+                        a {
+                            padding: 5px;
+                        }
+                    }
+
+                    // Mega menu column hover effect
+                    li.wpestate_megamenu_column {
+                        ul {
+                            li {
+                                padding: 7px 0px;
+
+                                &:hover {
+                                    background-color: transparent;
+                                    a{
+                                        color:var(--wp-estate-menu-hover-back-color-option, var(--wp-estate-menu-hover-back-color) );
+                                    }
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            background: transparent!important;      
+                        }
+                    }
+
+                    // Reset transition delay for sub-menu items
+                    li > ul.sub-menu li {
+                        transition-delay: 0s !important;
+                    }
+                }
+            }
+        }
+
+        // First level sub-menu visibility and positioning
+        ul > .with-megamenu:hover ul ul {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// Mega menu specific styles for header type 2
+.header_type2 .wpresidence-navigation-menu {
+    position: relative;
+
+    .menu-mega-menu-updated-container ul li.with-megamenu > ul,
+    .menu-mega-menu-updated-container ul li.with-megamenu:hover > ul {
+        margin-left: -3rem !important; // Adjust left margin for better alignment.
+    }
+}
+
+.master_header_sticky{
+    .header_type2 .wpresidence-navigation-menu {
+        position: static;
+    
+        .menu-mega-menu-updated-container ul li.with-megamenu > ul,
+        .menu-mega-menu-updated-container ul li.with-megamenu:hover > ul {
+            margin-left: 0 !important; // Adjust left margin for better alignment.
+            margin-right: 0!important;
+        }
+    }
+    
+}
+
+
+
+
+
+// Mega menu title styling
+.wpresidence-navigation-menu .menu-mega-menu-updated-container ul li ul li .megamenu-title  a,
+.megamenu-title a {
+    text-transform: uppercase; 
+    font-weight: 600;
+    margin: 5px 0px;
+    pointer-events: none;
+    padding-top: 0;
+    color: var(--wp-estate-menu-items-color-option, var(--wp-estate-menu-items-color));
+    font-size: var(--wp-estate-menu-item-font-size-option, var(--wp-estate-menu-item-font-size));
+}
+
+// Mega menu border styling
+.mega_menu_border {
+    border-right: 1px solid #f0f0f0;
+}
+
+// Mega menu icon styling
+.wpresidence-navigation-menu .with-megamenu i {
+    margin-right: 9px;
+    height: 100%;
+    line-height: 1.3em;
+    @include smooth-transition-shorter;
+    color: #9eb5d6;
+}
+
+// Menu label styling
+.menu_label {
+    background: #e9b97b;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 9px;
+    color: #fff;
+    padding: 0px 5px;
+    line-height: 12px;
+    height: 12px;
+    vertical-align: text-top;
+    font-weight: 400;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    transform: translate(0px, -3px);
+}
+
+// Boxed layout styling for mega menu
+.is_boxed .wpestate_megamenu_class:before {
+    display: none;
+}
+
+// Sticky header menu item color styling
+.master_header_sticky .wpresidence-navigation-menu ul.menu > li > a {
+    color: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set menu item color for sticky header based on variable.
+
+    &:hover {
+        color: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Change menu item color on hover based on variable.
+    }
+}
+
+.master_header_sticky .wpresidence-navigation-menu ul li {
+    // Common selectors for current states
+    &.current-menu-parent,
+    &.current-menu-item,
+    &.current-menu-ancestor {
+        // Base state for current menu items
+        > a[class*="menu"] {
+           // color: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color));
+        }
+
+        // Hover state for current menu items
+        &:hover > a[class*="menu"] {
+            //color: var(--wp-estate-menu-hover-font-color-option, var(--wp-estate-menu-hover-font-color));
+        }
+    }
+}
+
+// Hover effects for various hover types over the main menu bar
+.hover_type_1 .wpresidence-navigation-menu a,
+.hover_type_2 .wpresidence-navigation-menu a,
+.hover_type_2.wpresidence-navigation-menu a {
+    @include transition(all 0.3s ease);
+}
+
+// Hover effect for type 2 with transparent header
+.header_transparent .hover_type_2.wpresidence-navigation-menu .menu > li:hover > a:before 
+.header_transparent .hover_type_2 .wpresidence-navigation-menu .menu > li:hover > a:before {
+    border-top: 3px solid var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Add top border on hover.
+}
+
+// Hover effect for type 2
+.hover_type_2.wpresidence-navigation-menu .menu > li:hover > a:before, 
+.hover_type_2 .wpresidence-navigation-menu .menu > li:hover > a:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    border-top: 3px solid var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Add top border on hover.
+    width: 100%;
+}
+
+// Hover effect for type 3
+
+.wpresidence-navigation-menu .hover_type_3 .menu-mega-menu-updated-container ul li:hover > a, .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li:hover > a:active,
+.master_header_sticky .hover_type_3 .wpresidence-navigation-menu ul li.current-menu-ancestor > a[class*="menu"]:hover,
+.master_header_sticky .hover_type_3 .wpresidence-navigation-menu ul li.current-menu-parent > a[class*="menu"]:hover,
+.master_header_sticky .hover_type_3 .wpresidence-navigation-menu ul.menu > li > a:hover,
+.header_transparent .hover_type_3 .wpresidence-navigation-menu .menu > li:hover > a{
+    color: var(--wp-estate-top-menu-hover-font-color-option, #fff);
+}
+
+.hover_type_3 .wpresidence-navigation-menu .menu > li:hover > a {
+    background: var(--wp-estate-top-menu-hover-back-font-color-option, var(--wp-estate-top-menu-hover-back-font-color)); // Set background color on hover.
+    color: var(--wp-estate-top-menu-hover-font-color-option, #fff);
+    display: inline;
+    padding: 7px 15px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    @include smooth-transition-shorter;
+
+}
+
+.hover_type_3.wpresidence-navigation-menu .menu > li:hover > a::before {
+    width: 100%;
+    background: var(--wp-estate-top-menu-hover-back-font-color-option, var(--wp-estate-top-menu-hover-back-font-color)); // Set background color on hover.
+    /* z-index: 10; */
+    position: absolute;
+    height: 33px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 3px;
+    content: " ";
+    z-index: -1;
+    @include smooth-transition-shorter;
+
+}
+
+
+
+
+// Hover effect for type 4
+.header_transparent .hover_type_4.wpresidence-navigation-menu .menu > li:hover > a,
+.header_transparent .hover_type_4 .wpresidence-navigation-menu .menu > li:hover > a,
+.hover_type_4.wpresidence-navigation-menu .menu > li:hover > a,
+.hover_type_4 .wpresidence-navigation-menu .menu > li:hover > a {
+    background: var(--wp-estate-top-menu-hover-back-font-color-option, var(--wp-estate-top-menu-hover-back-font-color)); // Set background color on hover.
+    color: var(--wp-estate-top-menu-hover-font-color-option, #fff);
+    &:focus{
+        color: var(--wp-estate-top-menu-hover-font-color-option, #fff);
+    }
+}
+
+// Hover effect for type 4 with transparent header
+.master_header_sticky .hover_type_4 .wpresidence-navigation-menu .menu > li:hover > a,
+.master_header_sticky .hover_type_3 .wpresidence-navigation-menu ul.menu > li > a:hover,
+.header_transparent.hover_type_4 .wpresidence-navigation-menu ul.menu > li > a:hover,
+.header_transparent .hover_type_4 .wpresidence-navigation-menu ul.menu > li > a:hover {
+    color: var(--wp-estate-top-menu-hover-font-color-option, #fff);// Set text color to white on hover.
+}
+
+// Hover effect for type 5
+
+.hover_type_5 .wpresidence-navigation-menu .menu > li:hover > a {
+    border-bottom: 3px solid var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Add bottom border on hover.
+    padding: 7px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline;
+}
+
+
+.hover_type_5.wpresidence-navigation-menu .menu > li{
+     &:hover > a:before {    
+        width: 100%;
+        background: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color));
+        position: absolute;
+        height: 2px;
+        content: " ";
+        z-index: -1;
+        left: 0px;
+        right: 0px;
+        bottom: 10px;
+        margin-bottom: 10px
+    }
+}
+
+
+
+// Hover effect for type 6
+
+.hover_type_6 .wpresidence-navigation-menu .menu > li{
+    border: 2px solid transparent;  
+    &:hover > a {
+        border: 2px solid var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Add border on hover.
+        color: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color));
+        display: inline;
+        padding: 7px 13px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+}
+
+// hover 6 for studio menu
+.hover_type_6.wpresidence-navigation-menu .menu > li{
+    &:hover > a:before {
+        border: 2px solid var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Add border on hover.
+        width: 100%;
+        background: transparent;
+        border-radius: 3px;
+        position: absolute;
+        height: 33px;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        content: " ";
+        z-index: -1;
+    }
+}
+
+
+
+// Hover effect for type 6 with transparent header
+.header_transparent .wpresidence-navigation-menu ul.menu > li > a:hover,
+.header_transparent .hover_type_6 .wpresidence-navigation-menu .menu > li:hover > a {
+    color: var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Change text color on hover based on variable.
+}
+
+// Hover effect for type 6 with transparent header
+.header_transparent .hover_type_6 .wpresidence-navigation-menu .menu > li:hover > a {
+    border:2px solid var(--wp-estate-top-menu-hover-font-color-option, var(--wp-estate-top-menu-hover-font-color)); // Add border on hover.
+}
+
+// Mega menu icon styling
+.menu-item-link i {
+    margin-right: 8px;
+}
+
+// Mega menu item icon styling
+.wpresidence-navigation-menu .menu > li > a i {
+    line-height: var(--wp-estate-header-height-option, var(--wp-estate-header-height)); // Set line height based on header height variable.
+}
+
+// Mega menu widget title styling
+.wpresidence-navigation-menu .with-megamenu .widget-title-sidebar {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+// Mega menu widget list item styling
+.with-megamenu .widget li,
+.with-megamenu .widget-container li {
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    margin-bottom: 0px;
+    padding-bottom: 8px;
+}
+
+// Mega menu widget list item pseudo-element styling
+.with-megamenu .widget_nav_menu li:before,
+.with-megamenu .widget_pages li:before,
+.with-megamenu .widget_rss li:before,
+.with-megamenu .widget_text li:before,
+.with-megamenu .widget_recent_entries li:before {
+    margin: 7px 13px 0px 0px;
+}
+
+
+// for type 4/ex type 5
+
+.header_wrapper_inside_type_4  {
+    .wpresidence-navigation-menu .menu-main-menu-container ul li ul, 
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li ul{
+        top:0px;
+        left:240px;
+    }
+    .wpresidence-navigation-menu .menu-header-6-secondary-container ul li a, 
+    .wpresidence-navigation-menu .menu-main-menu-container ul li a, 
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li a {
+        -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+        -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+        /* transform: matrix(1, 0, 0, 1, 0, 0); */
+    }
+}
+
+
+.wpestate-hide-menu-desktop {
+    display: none;
+}

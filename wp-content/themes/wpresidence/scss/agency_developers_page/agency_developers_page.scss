@@ -1,0 +1,289 @@
+/** MILLDONE
+ * Agency & Developer Styles
+ * src: scss\agency_developers_page\agency_developers_page.scss
+ * This file contains styles for agency-related components in the WpResidence theme.
+ * It defines the layout and appearance of agency headers, contact information,
+ * social icons, maps, and related elements for both agencies and developers.
+ *
+ * @package WpResidence
+ * @subpackage CSS
+ * @version 1.1
+ */
+
+// Agency Header Styles
+.header_agency_wrapper {
+    background: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 3%, transparent);
+    width: 100%;
+  
+    // Container for agency header content
+    .header_agency_container {
+      width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 60px 15px;
+      position: relative;
+      min-height: 300px;
+  
+      // Ensure all images within the container are full-width
+      img {
+        width: 100%;
+      }
+  
+      // Style for contact buttons
+      .developer_contact_button,
+      .agency_contact_but {
+        width: auto;
+
+        clear: both;
+        margin-top: 15px;
+        margin-bottom: 0;
+        padding: 4px 34px;
+        font-size: 14px;
+      }
+  
+      .agency_contact_but {
+        margin-left: 10px;
+        margin-top: auto;
+      }
+    }
+  }
+  
+  // Agency Title Styles
+  .agency_title {
+    text-transform: capitalize;
+    margin-top: 0;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  // Agency Details Styles
+  .agency_detail {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    line-height: 1.6em;
+  
+    a {
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    }
+  
+    strong {
+      font-weight: 600;
+    }
+  }
+  
+  // Agency Social Icons
+  .agency_social_wrapper {
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    text-align: right;
+  }
+  
+  .agency_social_icon {
+    width: 30px;
+    height: 30px;
+    background-color: #20c063;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: left;
+    line-height: 31px;
+  
+    i {
+      font-size: 17px;
+    }
+  }
+  
+  // Agency Map
+  #agency_map {
+    width: 100%;
+    height: 450px;
+  }
+  
+  .single-estate_developer #agency_map {
+    height: 265px;
+  }
+  
+  // Agency Content Wrapper
+  .agency_content_wrapper {
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    margin-bottom: 30px;
+    line-height: 1.65em;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  // Agency Contact Wrapper
+  .agency_contact_wrapper {
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    float: left;
+    margin-bottom: 30px;
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 45px;
+  
+    #agency_contact {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  // Agency Social Page Wrapper
+
+  .agency_socialpage_wrapper{
+    display: flex;
+    gap:15px;
+    a.agency_social {  
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+  
+
+
+  // Developer Styles
+  .single-estate_developer {
+    .agency_social {
+      margin-bottom: 15px;
+  
+      i {
+        font-size: 16px;
+      }
+    }
+  
+    #agent_comment {
+      height: 175px;
+    }
+  }
+  
+  // Single Estate Agency Styles
+  .single-estate_agency {
+    #agent_comment {
+      height: 175px;
+    }
+  
+    .agent_contanct_form {
+      margin: 0;
+      box-shadow: none;
+    }
+  
+    .agency_contact {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+  
+  // Agency Taxonomy Styles
+  .agency_taxonomy,
+  .developer_taxonomy {
+    width: 100%;
+    float: left;
+
+  
+    a {
+      border-radius: 17px;
+      padding: 5px 17px;
+      margin-right: 10px;
+      margin-top: 10px;
+      font-size: 13px;
+      float: left;
+      text-transform: capitalize;
+      line-height: 1.65em;
+      @include no-transition;
+      border: 1px solid color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 10%, transparent);;
+      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 10%, transparent);;
+  
+      &:hover {
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        color: #ffffff;
+        border: 1px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      }
+    }
+  }
+  
+  // Developer Content Styles
+  .developer_content {
+    margin-top: 30px;
+    padding: 0 25px;
+  
+    .col-md-9,
+    .col-md-8 {
+      padding-left: 0;
+      line-height: 1.6em;
+    }
+  }
+  
+  // Developer Contact Wrapper
+  .developer_contact_wrapper {
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    margin-bottom: 30px;
+    line-height: 1.65em;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    h4{
+      margin-bottom: 15px!important;
+    }
+  }
+  
+  // Developer Map
+  .developer_map {
+    margin-top: 40px;
+    padding-right: 30px;
+  }
+  
+  // Agency Contact Padding
+  .agency_contact_padding {
+    padding-top: 35px;
+  
+    .agency_detail,
+    .agency_detail a {
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    }
+  }
+  
+  // Agent Taxonomy
+  .developer_taxonomy.agent_taxonomy a {
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  // Single Estate Agent Styles
+  .single-estate_agent {
+    .developer_taxonomy a {
+      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 10%, transparent);
+  
+      &:hover {
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        color: #fff;
+      }
+    }
+  }

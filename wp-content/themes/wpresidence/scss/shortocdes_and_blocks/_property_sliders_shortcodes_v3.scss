@@ -1,0 +1,227 @@
+/** MILLDONE
+ * WPEstate Property Slider Carousel Elementor V3 Styles
+ *src: scss/shortcodes_and_blocks/_property_sliders_shortcodes_v3.scss
+ * This file contains the styles for the Property Slider Carousel Elementor V3 component in the WPResidence theme.
+ *
+ * @package WPEstate
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - Owl Carousel (for slider functionality)
+ *
+ * Usage:
+ * These styles are applied to the property slider with the class 'property_slider_carousel_elementor_v3'.
+ */
+
+ .property_slider_carousel_elementor_v3 {
+    height: 530px;
+    width: 100%;
+    max-width: 840px;
+    display: block;
+
+    padding: 0px !important;
+    border-radius: 10px;
+    margin: 0px auto;
+    overflow: hidden;
+
+    // Owl Carousel overrides
+    &.owl-carousel.owl-loaded {
+        display: block;
+        overflow: initial;
+    }
+
+    .owl-carousel .owl-stage-outer {
+        padding: 30px 0px;
+    }
+
+    .owl-item {
+        width: 100%;
+    }
+
+    // Item styles
+    .item {
+        width: 100%;
+        height: 530px;
+        display: inline-block;
+        position: relative;
+        background: #fff;
+        margin: auto;
+        max-width: 840px;
+        overflow: hidden;
+        padding: 0px !important;
+        border-radius: 10px;
+        @include box-shadow(card);
+    }
+
+    // Image wrapper styles
+    &_image_wrapper {
+        width: 50%;
+        height: 100%;
+        float: left;
+        position: relative;
+    }
+
+    // Content wrapper styles
+    &_content_wrapper {
+        width: 50%;
+        height: 100%;
+        float: left;
+        position: relative;
+        padding: 45px;
+        background-color: #fff;
+
+        .property_listing_details {
+            padding: 0px;
+            display: flex;
+            gap: 30px;
+        }
+    }
+
+    // Places cover styles
+    .places_cover {
+        width: 100%;
+        height: 100%;
+        background-color: #1D293E;
+        opacity: 0.15;
+        top: 0px;
+        left: 0px;
+        @include smooth-transition;
+        cursor: pointer;
+        position: absolute;
+        pointer-events: none;
+        z-index: 7;
+    }
+
+    .tag-wrapper {
+        z-index: 8;
+    }
+
+    // Price styles
+    &_price {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        font-family: 'Roboto', sans-serif;
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    // Title styles
+    &_title {
+        color: #222222;
+        font-family: 'Roboto', sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        float: left;
+        min-height: auto !important;
+        line-height: 1.1em;
+    }
+
+    // Address styles
+    &_address {
+        border-bottom: 1px solid rgba(202, 202, 202, 0.23);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: inline-block;
+    }
+
+    // Excerpt styles
+    &_excerpt {
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+
+    // Image container styles
+    &_image_container {
+        width: 100%;
+        height: 100%;
+        @include box-shadow(card);
+        @include background-cover;
+        @include smooth-transition;
+    }
+
+    // Property details styles
+    .inforoom,
+    .infobath,
+    .infosize {
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        font-size: 15px;
+        display: flex;
+        gap:10px;
+        align-items: center;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+
+    // Agent wrapper styles
+    .property_agent_wrapper {
+        position: absolute;
+        bottom: 30px;
+
+        a {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 47px;
+        }
+
+        .property_agent_image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    // Navigation styles
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-top: -20px;
+    }
+
+    &.owl-theme .owl-nav {
+        .owl-prev,
+        .owl-next {
+            background-color: rgba(119, 122, 242, 0.07);
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+
+            &:hover {
+                color: #fff;
+                background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+
+        .owl-prev {
+            left: -65px;
+            position: absolute;
+        }
+
+        .owl-next {
+            right: -65px;
+            position: absolute;
+        }
+    }
+
+    // Dots styles
+    .owl-dots {
+        margin-top: 15px;
+
+        .owl-dot {
+            &.active span,
+            &:hover span {
+                background: #1f80e4;
+                opacity: 1;
+            }
+        }
+    }
+}
+

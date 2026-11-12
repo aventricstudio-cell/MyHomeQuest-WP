@@ -1,0 +1,353 @@
+/** MILLDONE
+ * Schedule Tour Styles
+ * src: scss\property_page\_schedule_tour.scss
+ * This file contains all styles for the schedule tour feature in the WpResidence theme.
+ * It includes styles for both the standard and alternative layouts of the tour scheduling form,
+ * as well as variations for sidebar and other contexts.
+ *
+ * Package: WpResidence
+ * Dependency: None (Pure CSS/SCSS)
+ * Usage: This file should be compiled and included in the theme's main stylesheet.
+ *
+ * @since 3.0.3
+ */
+
+// Main wrapper styles
+.wpestate_schedule_tour_wrapper_content {
+    width: 100%;
+}
+  
+.wpestate_schedule_tour_wrapper {
+    background: var(--wp-estate-sidebar-widget-color-option, var(--wp_estate_sidebar_widget_color));
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+  
+// Schedule wrapper styles
+.schedule_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    
+    .contact_form_flex_input_wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+  
+// Date selection slider styles
+.wpestate_property_schedule_dates_wrapper {
+display: flex;
+margin-bottom: 15px;
+padding: 0px 50px;
+
+.slick-list {
+    max-height: 115px;
+}
+
+// Slider navigation buttons
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+    position: absolute;
+    top: 35px;
+    width: 40px;
+    height: 40px;
+    background-color: #f7f8f8;
+    border: none;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    @include smooth-transition-shorter;
+    font-size: 0px;
+    z-index: 9;
+
+    &:hover {
+    color: #fff;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+
+    &:before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    line-height: 40px;
+    opacity: 1;
+    font-weight: 900;
+    }
+}
+
+button.slick-prev.slick-arrow {
+    left: 0px;
+    &:before {
+    content: '\f060';
+    }
+}
+
+button.slick-next.slick-arrow {
+    right: 0px;
+    &:before {
+    content: '\f061';
+    }
+}
+}
+
+// Individual date option styles
+.wpestate_property_schedule_singledate_wrapper {
+    min-width: 80px;
+    min-height: 90px;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    margin-right: 10px;
+    padding: 10px 0px;
+    color: var(--wp-estate-font-color-option, #222);
+    font-size: 15px;
+    cursor: pointer;
+    @include smooth-transition-shorter;
+    margin-bottom: 25px;
+    display: none;
+
+    &.shedule_day_option_selected,
+    &:hover {
+        @include box-shadow(card);
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+
+        .wpestate_day_unit_day_number {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+
+.wpestate_property_schedule_singledate_wrapper_display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    line-height: 15px;
+    height: 68px;
+
+    .wpestate_day_unit_day_number {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+}
+
+.wpestate_day_unit_day_number_selected{
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+    
+
+
+// Time selection dropdown styles
+#wpestate_schedule_tour_time {
+width: 229px;
+display: inline-block;
+margin-bottom: 10px;
+}
+
+// Tour options (In Person / Video Chat) styles
+.wpestate_display_schedule_tour_options_wrapper {
+display: flex;
+width: 50%;
+float: right;
+justify-content: flex-end;
+gap: 10px;
+
+.wpestate_display_schedule_tour_option {
+    border: 1px solid #f0f0f0;
+    padding: 7px 20px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    gap:5px;
+
+    &.shedule_option_selected {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    border: 1px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+
+    svg {
+    width: 16px;
+    height: 16px;
+    }
+}
+}
+
+// Contact form styles
+.contact_form_flex_wrapper {
+.contact_form_flex_input_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+}
+
+// Styles for the alternative layout (with image)
+.wpestate_shedule_tour_wrapper_type2 {
+justify-content: space-between;
+
+.wpestate_shedule_tour_wrapper_type2_image {
+    @include background-cover; 
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.wpestate_shedule_tour_wrapper_type2_content {
+    padding: 0px 0px 0px 30px;
+ 
+
+    .contact_form_flex_input_wrapper {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .wpestate_display_schedule_tour_options_wrapper {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .wpestate_display_schedule_tour_option {
+        width: 100%;
+    }
+    }
+
+    #wpestate_schedule_tour_time {
+    width: 100%;
+    }
+
+    .contact_form_flex_wrapper {
+    flex-direction: column;
+    width: 100%;
+
+    .form-control {
+        margin-bottom: 0px;
+    }
+
+    .wpresidence_button.agent_submit_class {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    }
+}
+
+.wpestate_property_schedule_dates_wrapper {
+    padding: 0px;
+}
+
+.slick-slide.wpestate_property_schedule_singledate_wrapper {
+    min-width: 72px;
+}
+
+.wpestate_property_schedule_dates_wrapper {
+    
+    button.slick-next.slick-arrow {
+    right: -20px;
+    }
+
+    button.slick-prev.slick-arrow {
+    left: -20px;
+    }
+}
+}
+  
+// Sidebar and other context variations
+#sidebar_schedule,
+#primary_sidebar_wrapper,
+.property_page_agent_form_v2_section {
+.wpestate_property_schedule_dates_wrapper {
+    padding: 0px 0px;
+    margin-bottom: 0px;
+    height: 105px;
+    ul.xoxo{
+        clear: both;
+    }
+}
+
+.slick-slide.wpestate_property_schedule_singledate_wrapper {
+    min-width: 54px;
+    min-height: 70px;
+    height: 75px;
+}
+
+.wpestate_property_schedule_singledate_wrapper_display {
+    height: 54px;
+}
+
+.wpestate_display_schedule_tour_options_wrapper {
+    width: 100%;
+    float: left;
+    justify-content: flex-start;
+}
+
+.wpestate_display_schedule_tour_option {
+    padding: 11px 11px;
+    width: 50%;
+    font-size: 13px;
+    line-height: 1em;
+}
+
+#wpestate_schedule_tour_time {
+    width: 100%;
+    font-size: 13px;
+}
+
+.wpestate_tour_info_headline {
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.wpresidence_button.agent_submit_class {
+    width: 100%;
+}
+
+.contact_form_flex_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wpestate_property_schedule_dates_wrapper {
+    button.slick-prev.slick-arrow,
+    button.slick-next.slick-arrow {
+    width: 30px;
+    height: 30px;
+
+    &:before {
+        line-height: 30px;
+    }
+    }
+}
+}
+  
+
+.wpestate_tour_info_headline {
+margin: 10px 0px 10px 0px;
+font-size: 15px;
+display: inline-block;
+width: 100%;
+}
+
+
+
+.agent_contanct_form_sidebar .wpresidence_button.agent_submit_class {
+width: 100%;
+}
+
+#sidebar_schedule{
+    .contact_form_flex_wrapper .contact_form_flex_input_wrapper {
+        flex-direction: column;
+    } 
+}

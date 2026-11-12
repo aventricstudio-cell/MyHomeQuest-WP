@@ -1,0 +1,56 @@
+@media screen and (max-width: 768px) {
+    .wpresidence_dropdown.wpestate_dashhboard_filter{
+        width: 100%;
+        max-width: 100%;
+    }
+    .wpestate_dashboard_list_header form{
+        margin-left: 0px;
+        width: 100%;
+    }
+    .wpestate-dashboard-select,
+    .wpestate_dashboard_content_wrapper input[type=text].wpestate_dashboard_input_type, 
+    #prop_name {
+        width: 100%;
+    }
+
+    .property_dashboard_price .price_label, .property_dashboard_price, .property_dashboard_status, .property_dashboard_types{
+        height: 30px;
+    }
+
+    .wpestate_crm_lead_actions,
+    .property_dashboard_action {
+        justify-content: flex-start;
+    }
+    .delete_search {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    #accordion_prop_details .row {
+        flex-direction: column;
+    }
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+  
+
+    .dashboard-wrapper-form {
+        padding: 0px 0px!important;
+        justify-content: space-between;
+        margin: 0px;
+    }
+
+    .col-md-12.top_dahsboard_wrapper.dashboard_package_row{
+        padding: 0px 15px;
+    }
+    .col-md-12.dashboard_hello_section{
+        padding: 15px 15px;
+    }
+    .col-md-9.dashboard-margin {
+        padding: 0px;
+        margin: 0px;
+    }
+   
+}

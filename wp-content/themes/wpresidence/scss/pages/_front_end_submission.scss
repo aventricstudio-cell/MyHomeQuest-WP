@@ -1,0 +1,216 @@
+/**
+ * Front Property Submit Styles for WpResidence Theme
+ *
+ * This file contains styles for the front property submission page in the WpResidence WordPress theme.
+ * It defines the layout and appearance of the multi-step submission form and its components.
+ *
+ * Package: WpResidence
+ * Dependency: None (standalone SCSS file)
+ * Usage: Import this file in the main theme stylesheet or compile separately for front property submit styles.
+ */
+
+// Main container styles
+.col-md-12.page-template-front_property_submit.wpestate_inside_container {
+    // Form styles
+    #front_submit_form {
+        .navigation_container {
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: stretch;
+
+            a {
+                font-weight: 500;
+                font-size: 16px;
+                flex: 1 1 auto;
+                padding: 20px 30px;
+                background: #f2f2f2;
+                text-align: center;
+
+                &.active {
+                    background: #fff;
+                    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                }
+            }
+        }
+
+        // Submit wrapper styles
+        .submit_property_front_wrapper {
+            width: 100%;
+            padding: 30px;
+            background-color: #fff;
+            float: left;
+            margin-bottom: 45px;
+
+            // Step container styles
+            .single_step {
+                overflow: hidden;
+                display: none;
+
+                &.step_1 {
+                    display: block;
+                }
+                // Section title styles
+                .wpestate_dashboard_section_title {
+                    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+                    font-size: 18px;
+                    line-height: 1.6em;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+
+                // Form field styles
+                .profile-onprofile {
+                    .col-md-6, .col-md-12 {
+                        float: left;
+                    }
+
+                    label {
+                        float: left;
+                        width: 100%;
+
+                        &.wpestate_check_label,
+                        &.features_amm_label {
+                            width: auto;
+                            float: none;
+                        }
+                    }
+
+                    input[type="text"],
+                    input[type="number"],
+                    textarea,
+                    select {
+                        font-size: 14px;
+                        padding: 15px 0 15px 9px;
+                        border: 1px solid #eee;
+                        box-shadow: none;
+                        background: #E4E4E4;
+                        opacity: 0.5;
+                        height: 56px;
+                        border-radius: 8px;
+                        float: left;
+                        width: 100%;
+                        margin-bottom: 15px;
+
+                        &:focus {
+                            background: #fff;
+                            border: 2px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                            opacity: 1;
+                        }
+                    }
+
+                    select {
+                        padding: 0 6px;
+                        background: #E4E4E4;
+                        opacity: 0.5;
+                        color: rgb(17 20 45 / 1);
+                    }
+
+                    textarea {
+                        height: auto;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                }
+
+                // Features submit styles
+                .features_submit p{
+                    margin-bottom: 10px;
+                }
+            }
+
+            // Navigation footer styles
+            .navigation_container_footer {
+                button {
+                    margin: 30px 20px 0 0;
+                }
+
+                #front_submit_prev_step,
+                #submit_property {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// Styles for elements not found in the provided markup (moved to the end)
+.page-template-front_property_submit {
+    .navigation_buttons_wrapper_top {
+        display: inline-block;
+        opacity: 0;
+        height: 1px;
+    }
+
+    .add-estate.profile-page.profile-onprofile.row:first-child {
+        border: none;
+    }
+
+    .login_row,
+    #facebookloginsidebar_mobile,
+    #googleloginsidebar_mobile,
+    #twitterloginsidebar_mobile {
+        display: none;
+    }
+
+    .login_header_text {
+        margin-bottom: 20px;
+        color: #222222;
+        font-size: 16px;
+        line-height: 1.6em;
+        font-weight: 500;
+    }
+
+    .submit_mandatory {
+        background: #ff754c;
+        margin: 0px 0px 15px 0px;
+        color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        line-height: 1.5em;
+    }
+
+    #embed_video_type,
+    #embed_video_id {
+        max-width: 50%;
+    }
+
+    .page-template-front_property_submit.wpestate_inside_container {
+        margin-top: 30px;
+    }
+
+    .quicktags-toolbar {
+        padding: 10px;
+        border: 0;
+    }
+
+    .wp-editor-container {
+        border: 0;
+    }
+
+    .feature_chapter_name {
+        width: 100%;
+        margin: 10px 0px 5px 15px;
+    }
+
+    .listing_detail.row{
+        row-gap: 5px;
+    }
+
+    .features_submit.features_submit{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: 3px;
+    }
+    
+    .features_amm_label{
+        margin-bottom: 0px;
+        font-weight: 400;
+    }
+
+}

@@ -1,0 +1,273 @@
+// MILLDONE
+// components/_header_type5.scss
+// This file contains styles for the header type 5 components of the website.
+// It includes styles for the main header, navigation, and related elements.
+
+// ==========================================================================
+// Main Header Wrapper for Header Type 5
+// ==========================================================================
+
+
+
+// ==========================================================================
+// Header Type 5
+// ==========================================================================
+
+
+.wpresidence_boxed_header  {
+    .header5_top_row,
+    .header5_bottom_row_internal {
+        max-width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+        margin: 0px auto !important;
+        padding: 0 15px !important;
+    }
+}
+
+.wpresidence_wrapper_for_header_type5 {
+    .master_header_sticky{
+        background-color: var(--wp-estate-header-color-option, var(--wp-estate-header-color)); // Set the background color with a CSS variable fallback
+    }
+}
+
+.master_header .header_wrapper.header_type5{
+    height: var(--wp-estate-header-height-option, auto);
+}
+
+.header_type5 {
+    flex-direction: column; // Set the flex direction to column.
+
+
+    &.master_header.header_wrapper {
+        height: auto; // Set the height to auto for the main header wrapper.
+    }
+
+    .header5_top_row {
+        height: 115px; // Set the height of the top row.
+        background-color: var(--wp-estate-header-color-option, var(--wp-estate-header-color)); // Set the background color with a CSS variable fallback.
+
+        .header_5_widget_wrap {
+            width: 50%; // Set the width to 50%.
+
+            .header_5_widget {
+                font-weight: 500; // Set the font weight.
+
+                .header_5_widget_icon {
+                    color: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color));
+                    
+                    i {
+                        font-size: 26px; // Set the font size for icons.
+                        margin-right: 10px;
+                    }
+                }
+
+                .header_5_widget_text {
+                    font-size: 15px; // Set the font size.
+                    line-height: 1.4em;
+                    color: var(--wp-estate-menu-font-color-option, var(--wp-estate-menu-font-color)); // Set text color based on variable.
+                }
+            }
+        }
+    }
+
+    .header5_bottom_row {
+        // backgorund color
+        background: var(--wp-estate-header4-back-color-option, var(--wp_estate_header4_back_color));
+
+        .wpresidence-navigation-menu { 
+            .menu-main-menu-container,
+            .menu-mega-menu-updated-container {
+                > ul > li {
+                    line-height: 55px; // Set the line height for menu items.
+                    
+                    >a {
+                        // Set the link color 
+                        color: var(--wp-estate-header4-font-color-option, var(--wp_estate_header4_font_color)); 
+
+                        &:hover{
+                            color: var(--wp-estate-top-menu-hover-font-color-option, #fff);
+                        }
+                    }
+                }
+                
+                > ul > li.no-megamenu:hover > ul {
+                    top: 55px; // Set the top position for sub-menus.
+                }
+
+                > ul > li:hover > ul {
+                    top: 170px; // Set the top position for sub-menus.
+                    top: var(--wp-estate-header-height-option, 170px);
+                }
+            }
+        }
+
+        .header_phone {
+            a, svg {
+                color: var(--wp-estate-header4-font-color-option, var(--wp_estate_header4_font_color));  // Set the text and icon color to white.
+            }
+
+            svg {
+                fill: var(--wp-estate-header4-font-color-option, var(--wp_estate_header4_font_color));  // Set the fill color for SVG icons to white.
+            }
+        }
+
+        .submit_listing:hover {
+            border-color: var(--wp-estate-header4-font-color-option, var(--wp_estate_header4_font_color));  // Set the border color to white on hover.
+            background: var(--wp-estate-header4-font-color-option, var(--wp_estate_header4_font_color));  // Set the background color to white on hover.
+        }
+
+        .submit_action {
+            svg {
+                fill: var(--wp-estate-header4-font-color-option, var(--wp_estate_header4_font_color));  // Set the fill color for SVG icons to white.
+            }
+
+            &:hover {
+                svg {
+                    fill: #222; // Set the fill color to dark gray on hover.
+                    opacity: 1; // Set the opacity to 100% on hover.
+                }
+            }
+        }
+
+        .menu_user_picture {
+            width: 35px; // Set the width of the user picture.
+            height: 35px; // Set the height of the user picture.
+        }
+    }
+
+    .navicon,
+    .navicon:after,
+    .navicon:before {
+        background: var(--wp-estate-header4-font-color-option, var(--wp_estate_header4_font_color)); // Set the background color for the navigation icon to white.
+    }
+
+    #shopping-cart_icon path {
+        fill: var(--wp-estate-header4-font-color-option, var(--wp_estate_header4_font_color)); // Set the fill color for the shopping cart icon to white.
+    }
+
+    .wpresidence-navigation-menu a {
+        font-weight: 500; // Set the font weight for navigation links.
+    }
+}
+
+// ==========================================================================
+// Transparent Header for Header Type 5
+// ==========================================================================
+
+.master_header_sticky {
+    .header_type5 {
+        flex-direction: row; // Set the flex direction to row.
+        height: var(--wp-estate-sticky-header-height-option, var(--wp-estate-sticky-header-height)); // Set the height with a CSS variable fallback.
+
+        .header5_top_row {
+            height: auto; // Set the height to auto.
+            justify-content: flex-start !important; // Align items to the start.
+            width: auto !important; // Set the width to auto.
+
+            .header_5_widget_wrap {
+                display: none !important; // Hide the widget wrap.
+            }
+           
+        }
+        #shopping-cart_icon path {
+            fill: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color));
+        }
+        .header5_bottom_row {
+            background: var(--wp-estate-header-color-option, var(--wp-estate-header-color));// Set the background color to white.
+
+            .wpresidence-navigation-menu {
+                margin: 0px auto; // Center the navigation menu.
+
+                .menu-main-menu-container,
+                .menu-mega-menu-updated-container {
+                    > ul > li {
+                        line-height: 70px; // Set the line height for menu items.
+                        line-height: var(--wp-estate-sticky-header-height-option, 70px)!important;
+
+                        >a {
+                            color: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the link color to dark gray.
+                        }
+                    }
+
+                    > ul > li.no-megamenu:hover > ul {
+                        top: var(--wp-estate-sticky-header-height-option, var(--wp-estate-sticky-header-height)); // Set the top position for sub-menus with a CSS variable fallback.
+                    }
+
+                    > ul > li:hover > ul {
+                        top: var(--wp-estate-sticky-header-height-option, var(--wp-estate-sticky-header-height)); // Set the top position for sub-menus with a CSS variable fallback.
+                    }
+                }
+            }
+
+            .header_phone {
+                a, svg {
+                    color: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the text and icon color to dark gray.
+                }
+
+                svg {
+                    fill: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the fill color for SVG icons to blue.
+                }
+            }
+
+            .submit_action {
+                svg {
+                    fill: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the fill color for SVG icons to blue.
+                }
+            }
+        }
+    }
+
+    .navicon,
+    .navicon:after,
+    .navicon:before {
+        background: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color));; // Set the background color for the navigation icon to dark gray.
+    }
+
+    #user_menu_open {
+        margin-top: 8px !important; // Add top margin.
+        right: 28px; // Set the right position.
+    }
+
+    .submit_action {
+        color: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the text color to dark gray.
+
+        &::grammar-error {
+            color: #888888; // Set the color for grammar errors.
+        }
+
+        svg {
+            fill: var(--wp-estate-sticky-menu-font-color-option, var(--wp-estate-sticky-menu-font-color)); // Set the fill color for SVG icons to blue.
+        }
+    }
+}
+
+// ==========================================================================
+// Header Type 5 for Developer or Agency Page
+// ==========================================================================
+
+.single-estate_developer .has_header_type5 .master_header,
+.single-estate_agency .has_header_type5 .master_header {
+    border-bottom: 1px solid #f0f0f0; // Add a bottom border for developer or agency pages.
+}
+
+// ==========================================================================
+// Logo Align Right for Header Type 1
+// ==========================================================================
+
+.wpresidence_header_logo_align_right {
+    .header5_top_row {
+        .logo {
+            order: 6; // Set the order of the logo.
+        }
+
+        .header_5_widget_wrap {
+            order: -1; // Set the order of the widget wrap.
+        }
+    }
+}
+
+.wpresidence_boxed_header {
+    .master_header_sticky .header_wrapper.header_type5  {
+        width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width))!important;
+        margin: 0px auto;
+    }
+}

@@ -1,0 +1,179 @@
+
+// search slider
+
+.adv_search_slider{
+    height: 40px;
+
+    p:not(.elementor-widget-container p){
+        margin-bottom: 5px;
+        line-height: 1em;
+    }
+
+    label{
+         font-weight: normal;
+         margin-bottom: 5px;
+         padding-top: 4px;
+    }
+
+    .ui-slider {
+        margin: 0 10px;
+        height: 4px;
+    }
+
+    .ui-slider.ui-widget-content{
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        background: #efefef;
+        background-image: none;
+        border: 0px solid #efefef;
+    }
+
+    .ui-slider-handle.ui-state-default{
+        margin-top: -2px;
+        width: 18px;
+        height: 18px;
+        background-image: none;
+        background-color: #fff;
+    }
+}
+
+.page-template-front_property_submit .adv_search_slider .ui-slider {
+    margin-top: 10px;
+}
+
+.wpresidence_slider_price {
+    border: 0;
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    font-weight: 500;
+    font-size: 13px;
+}
+
+
+/*=search slider
+===================================================*/
+
+#advanced_search_shortcode .wpestate-price-component-popoup-done_v3, 
+#advanced_search_shortcode .wpestate-price-component-popoup-reset_v3, 
+#advanced_search_shortcode .wpestate-price-component-popoup-done, 
+#advanced_search_shortcode .wpestate-price-component-popoup-reset, 
+#advanced_search_shortcode .wpestate-beds-baths-popoup-done, 
+#advanced_search_shortcode .wpestate-beds-baths-popoup-reset,
+#advanced_search_shortcode .wpestate_pricev2_component_adv_search_wrapper input{
+    line-height:1em;
+}
+
+.slide_mobile {
+    width: 100%;
+}
+
+
+.geolocation_search_radius_wrapper,
+.wpestate_slider_radius_search {
+    width: 100%;
+}
+
+.wpestate_slider_radius_search.ui-slider-horizontal {
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 4px;
+}
+
+.adv_search_geo_radius_wrapper{
+    margin-bottom: 5px;
+}
+
+.elementor-field-group .wpestate_slider_radius_search.ui-slider-horizontal {
+    margin-bottom: 0px;
+}
+
+.wpestate_slider_radius_search .ui-slider-handle.ui-corner-all.ui-state-default,
+.wpestate_slider_radius_search .ui-slider-handle{
+    margin-top: -2px;
+    width: 18px;
+    height: 18px;
+    background-image: none;
+    background-color: #fff;
+}
+
+.ui-widget-header {
+    border: 1px solid #e7e7e7;
+    background: var(--wp-estate-main-color-option, var(--wp-estate-main-color)) !important;
+}
+
+.ui-slider .ui-slider-handle .ui-state-focus,
+.ui-slider .ui-slider-handle .ui-state-hover,
+.ui-slider .ui-slider-handle {
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    border: 1px solid #e7e7e7!important;
+    background-color: #ffffff !important;
+}
+
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    border: 1px solid #e7e7e7!important;
+    background-color: #ffffff !important;
+    background-image: none!important;
+    font-weight: 500;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color))!important;
+}
+
+.ui-autocomplete.ui-widget-content {
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    background: #fff;
+    background-image: none;
+    border: 1px solid #e7e7e7;
+    padding: 0px;
+}
+
+
+/*price slider*/
+
+.wpestate_slider_radius_search.ui-widget-content {
+    max-width: 100%;
+}
+
+.adv_search_widget {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.adv_search_sh {
+    display: inline-block;
+    width: 48%;
+}
+
+.adv_search_sh p {
+    margin-bottom: 0px;
+    margin-top: -10px;
+    float: left;
+}
+ 
+
+#primary #slider_price_widget {
+    margin-top: 0px;
+}
+
+
+#slider_price_mobile {
+    height: 4px;
+}
+
+#slider_price_sh {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 7px;
+    height: 4px;
+}
+
+#amount_sh {
+    height: 32px;
+    margin-bottom: 0px !important;
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+}
+
+#amount_mobile {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+}

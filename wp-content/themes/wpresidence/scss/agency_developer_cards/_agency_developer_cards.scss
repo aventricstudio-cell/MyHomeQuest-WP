@@ -1,0 +1,152 @@
+// MILLDONE
+// Agency and Developer Unit Styles
+// src: scss\agency_developer_cards\_agency_developer_cards.scss
+.agency_unit {
+    // Basic layout and appearance
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    border: var(--wp-estate-unit-border-size-option, --wp_estate_unit_border_size ) solid var(--wp-estate-unit-border-color-option,--wp-estate-unit-border-color);
+    background-color: var(--wp-estate-property-unit-color-option, var(--wp_estate_property_unit_color));
+    overflow: hidden;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    
+
+    // Flexbox layout for better structure
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    // Smooth transition for hover effects
+    @include smooth-transition-shorter;
+
+    // Agency image styles
+    .agency_unit_img {
+        overflow: hidden;
+        max-width: 320px;
+
+        img {
+            width: 100%;
+            @include smooth-transition;
+            background-color: #222;
+            overflow: hidden;
+        }
+    }
+
+    // Hover effect for agency image
+    &:hover .agency_unit_img img {
+        @include image-hover-zoom;
+    }
+
+    // Agency information wrapper
+    .agency_unit_wrapper {
+        padding: 15px 0px;
+        font-size: 14px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        // Social media wrapper
+        .agency_social-wrapper {
+            width: 100%;
+            padding-top: 15px;
+
+            .agent_detail {
+                line-height: 1em;
+                margin-bottom: 10px;
+                i{
+                    width: 13px;;
+                }
+                a{
+                    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+                    &:hover{
+                        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                    }
+                }
+            }
+        }
+
+        // Agency name styling
+        h4 {
+            margin-bottom: 5px;
+            width: 75%;
+        }
+
+        // Social icons positioning and styling
+        .social-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+
+            a {
+                margin-left: 9px;
+                font-size: 14px;
+            }
+
+            i {
+                color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            }
+        }
+    }
+}
+
+// Additional agency content styling
+.agency-dev_content {
+    border-bottom: 1px solid #f1f8ff;
+    padding-bottom: 20px;
+}
+
+// Profile view button positioning
+.view_agency_profile {
+    position: absolute;
+    bottom: 30px;
+    margin-bottom: 0;
+}
+
+// Sub-agents list positioning
+.agency_users {
+    margin-top: auto;
+}
+
+// Sub-agent thumbnail styling
+.sub_agent {
+    width: 30px;
+    height: 30px;
+    @include background-cover; 
+    border-radius: 50%;
+
+    img {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+    }
+
+    &:hover img {
+        border-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));;
+    }
+}
+
+// Agency list wrapper spacing
+.agency_unit_list_wrapper {
+    margin: 0 15px;
+    width: 100%;
+}
+
+// Listings count positioning
+.agent_card_my_listings {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 12px;
+    background-color: rgb(105 193 125 / 85%);
+    color: #ffffff;
+    float: right;
+    padding: 4px 15px;
+    margin-top: 4px;
+    line-height: 12px;
+    z-index: 1;
+}

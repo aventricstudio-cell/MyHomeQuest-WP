@@ -1,0 +1,71 @@
+// components/_icons.scss
+
+// This file contains styles for icons used throughout the website.
+// It includes styles for social media icons, action icons, and other decorative elements.
+
+
+
+// ==========================================================================
+// Action Icons
+// ==========================================================================
+
+
+
+// Favorite icon
+.icon-fav {
+    color: #c2cbd9;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border: 1px solid #eef3f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &.icon-fav-on {
+        color: var(--wp-estate-main-color-option , var(--wp-estate-main-color));
+    }
+
+    &:before {
+        content: "\f004";
+        font-size: 12px;
+        font-family: "Font Awesome 5 Free" !important;
+        font-weight: 500 !important;
+    }
+
+    &.icon-fav-on:before {
+        font-weight: 600 !important;
+    }
+}
+
+// Compare icon
+.compare-action {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    float: left;
+    border: 1px solid #eef3f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c2cbd9;
+    border-radius: 2px;
+
+    &:before {
+        content: "\f067";
+        font-size: 14px;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    &:hover {
+        background-image: none !important;
+        color: var(--wp-estate-main-color-option , var(--wp-estate-main-color));
+        border: 1px solid #d8e0e5;
+    }
+}

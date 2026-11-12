@@ -1,0 +1,103 @@
+
+---Downloaded files---
+The import files for: Main Demo were successfully downloaded!
+Initial max execution time = 3000
+Files info:
+Site URL = https://wpestate1.wpestate.info
+Data file = /home/nfu9d/wpestate1/wp-content/uploads/2025/02/demo-content-import-file_2025-02-13__08-20-11.xml
+Widget file = /home/nfu9d/wpestate1/wp-content/uploads/2025/02/demo-widgets-import-file_2025-02-13__08-20-11.json
+Customizer file = not defined!
+Redux files:
+wpresidence_admin -> /home/nfu9d/wpestate1/wp-content/uploads/2025/02/demo-redux-import-file_0-2025-02-13__08-20-11.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Primary Widget Area : 
+
+WpEstate: Multiple Currency Widget - Change Currency - Imported
+WpEstate: Measurement Unit Widget - Change Measurement - Imported
+Wp Estate: Advanced Search - Advanced Search - Imported
+Wp Estate: List Properties by Categories - Our Listings - Imported
+Wp Estate: Latest Listing  - Featured Properties - Imported
+Wp Estate: Mortgage - No Title - Imported
+Wp Estate: Login &amp; Register - No Title - Imported
+Wp Estate: Social Links for Sidebar - Social Links: - Imported
+
+Secondary Widget Area : 
+
+WpEstate: Agents Agencies Developers Search - Search Widget for Agents, Agencies &amp; Developers - Imported
+WpEstate: Measurement Unit Widget - Change Measurement - Imported
+WpEstate: Multiple Currency Widget - Change Currency - Imported
+Wp Estate: Advanced Search - Properties Search Widget - Imported
+Wp Estate: List Properties by Categories - Our Listings - Imported
+Wp Estate: Latest Listing  - Featured Properties - Imported
+
+First Footer Widget Area : 
+
+Wp Estate: Contact - Contact us - Imported
+Wp Estate: Social Links for Sidebar - No Title - Imported
+
+Second Footer Widget Area : 
+
+Wp Estate: List Properties by Categories - Lists by Category - Imported
+
+Third Footer Widget Area : 
+
+Wp Estate: Latest Listing  - Latest Properties - Imported
+
+Top Bar Left Widget Area : 
+
+Wp Estate:  Social Links for Header / Footer - No Title - Imported
+
+Top Bar Right Widget Area : 
+
+Custom HTML - No Title - Imported
+Custom HTML - No Title - Imported
+
+Dashboard Top Bar Left Widget Area : 
+
+Text - No Title - Imported
+
+Dashboard Top Bar Right Widget Area : 
+
+Wp Estate:  Social Links for Header / Footer - No Title - Imported
+
+Splash Page Bottom Right Widget Area : 
+
+Text - No Title - Imported
+
+Splash Page Bottom Left Widget Area : 
+
+Wp Estate: Social Links for Sidebar - Social Links: - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: wpresidence_admin finished successfully!
+
+---ocdi/after_import---
+

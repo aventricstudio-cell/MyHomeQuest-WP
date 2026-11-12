@@ -1,0 +1,191 @@
+/**MILLDONE
+ * Featured Property Type 3 Styles for WpResidence Theme
+ * src: scss/shortocdes_and_blocks/_featured_property_type3.scss
+ * This SCSS file contains styles for the featured property type 3 component
+ * in the WpResidence WordPress theme.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - None (all styles are self-contained)
+ *
+ * Usage:
+ * This file should be compiled to CSS and enqueued in the theme.
+ * It styles the featured property type 3 component, including its layout,
+ * image display, property details, and interactive elements.
+ */
+
+ .featured_property.featured_property_type3 {
+    min-height: 330px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    margin-bottom: 0px;
+    overflow: hidden;
+    display: flex;
+  flex-wrap: wrap;
+    // Main container styles
+    .featured_img {
+      position: relative;
+  
+      // Agent image styles
+      .featured_property_type3_agent {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        background-position: top center;
+        z-index: 10;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        border: 2px solid #ffffff;
+        border: 1px solid #a6b3bb;
+      }
+  
+      // Tag wrapper styles
+      .tag-wrapper {
+        .featured_div {
+          z-index: 99;
+          float: left;
+          bottom: auto;
+        }
+  
+        .ribbon-wrapper-default {
+          position: relative;
+          top: 0;
+          right: 0;
+        }
+      }
+  
+      // Carousel styles
+      .property_unit_featured_carousel {
+        .carousel-inner {
+          .carousel-item {
+            min-height: 328px;
+            height: 100%;
+            @include background-cover; 
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  
+    // Featured secondline styles
+    .featured_secondline {
+      position: relative;
+      background-color: #fff;
+      color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+      z-index: 11;
+      padding: 0px;
+      font-size: 14px;
+      cursor: pointer;
+      height: auto;
+      margin-top: 0px;
+  
+      h2 {
+        font-size: 18px;
+        line-height: 1.3em;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+  
+        a {
+          font-size: 18px;
+          line-height: 1.3em;
+        }
+      }
+  
+      .featured_prop_price {
+        position: relative;
+        float: left;
+        left: 0px;
+        padding: 0px 30px;
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        font-size: 17px;
+        font-weight: 500;
+        right: auto;
+        top: 0px;
+        width: 100%;
+  
+        .price_label {
+          position: relative;
+          right: auto;
+          left: 0px;
+          top: 0px;
+          color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+          word-break: break-all;
+          width: 100px;
+          text-align: right;
+          float: none;
+          margin: 0px 0px;
+        }
+      }
+  
+      .listing_details {
+        float: left;
+        padding: 0px 30px;
+        margin: 15px 0px 0px 0px;
+        font-size: 14px;
+        line-height: 1.6em;
+      }
+  
+      .listing_actions {
+        float: left;
+        left: 0px;
+        padding-left: 30px;
+        padding-right: 22px;
+        width: 100%;
+        margin-top: 22px;
+        justify-content: flex-start;
+  
+        .share_unit {
+          left: 29px;
+        }
+  
+        .share_list {
+          margin-left: 0px;
+        }
+      }
+  
+      .property_listing_details {
+        position: absolute;
+        padding: 20px 30px;
+        bottom: 0px;
+        width: 100%;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+  
+        &:before {
+          content: " ";
+          border-top: 1px solid #eef3f6;
+          position: absolute;
+          right: 30px;
+          left: 30px;
+          top: -5px;
+        }
+  
+        .infobath,
+        .inforoom,
+        .infosize {
+            display: flex;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+        }
+  
+        .inforoom {
+            svg{        
+                width: 19px;
+            }
+        }
+  
+      }
+    }
+  }
+  

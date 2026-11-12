@@ -1,0 +1,142 @@
+/** MILLDONE
+ * WpEstate Sliding Box Styles
+ * src: scss\shortocdes_and_blocks\_sliding_box.scss
+ * This file contains the styles for the sliding box component in the WpResidence theme.
+ * It defines the layout and appearance of sliding boxes used for showcasing content.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - None (standalone SCSS file)
+ *
+ * Usage:
+ * This SCSS should be compiled and included in the theme's main stylesheet.
+ * It styles the .wpestate_sliding_box elements and their child components.
+ */
+
+// Main wrapper for sliding boxes
+.wpestate_sliding_box_wrapper {
+    min-height: 1px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+// Individual sliding box
+.wpestate_sliding_box {
+    position: relative;
+    float: left;
+    width: 265px;
+    padding: 0;
+    border: 1px solid #f1f8ff;
+    border-radius: 7px;
+    overflow: hidden;
+    z-index: 1;
+    @include smooth-transition-shorter;
+    box-shadow: 0 10px 35px rgba(38, 41, 77, 0.1);
+    background: #fff;
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    // Last child in the row
+    &:last-child {
+        margin-right: 0 !important;
+        margin-bottom: 0;
+    }
+
+    // Active state
+    &.active-element {
+        width: 560px;
+    }
+
+    // Image container
+    .sliding-image {
+        width: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 265px;
+        @include background-cover; 
+        position: relative;
+        z-index: 1;
+    }
+
+    // Content wrapper
+    .sliding-content-wrapper {
+        padding: 50px;
+        position: absolute;
+        top: 0;
+        left: 280px;
+        width: 280px;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        // Heading inside content wrapper
+        h4 {
+            font-size: 22px;
+        }
+    }
+
+    // Action link
+    .sliding-content-action {
+        font-weight: 500;
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+}
+
+// Styles for layouts not present in the provided markup
+// These are kept at the end as per instructions
+
+// 3-column layout
+.wpestate_sliding_box.slider_box_size_3 {
+    width: 358px;
+
+    &.active-element {
+        width: 747px;
+    }
+
+    .sliding-image {
+        width: 373px;
+    }
+
+    .sliding-content-wrapper {
+        left: 373px;
+        width: 373px;
+    }
+
+    &:last-child {
+        margin-right: 0 !important;
+    }
+}
+
+// 5-column layout
+.wpestate_sliding_box.slider_box_size_5 {
+    width: 209px;
+
+    &.active-element {
+        width: 448px;
+    }
+
+    .sliding-image {
+        width: 224px;
+    }
+
+    .sliding-content-wrapper {
+        left: 224px;
+        width: 224px;
+    }
+
+    &:last-child {
+        margin-right: 0 !important;
+    }
+}

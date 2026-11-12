@@ -1,0 +1,105 @@
+ 
+// scss\advanced_search\_advanced_search_1.scss
+// advanced search type 1
+
+ .adv-search-1 {
+    position: relative;
+    width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width)); // Set width based on a variable.
+    max-width: 100%;
+    @include smooth-transition-shorter;
+
+    .adv-search-header-1 {
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        height: 40px;
+        margin: 0px;
+        line-height: 40px;
+        padding: 0 15px;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: -40px;
+        left: 0px;
+        font-size: 15px;
+        width: 228px;
+        pointer-events: auto; 
+        font-weight: 500;
+        border-top-left-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        border-top-right-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        
+        // search header when search before header media
+        &.with_search_on_start {
+            display: none;
+        }
+
+        // close icon on search header
+        &:after {
+            content: "\f0d7";
+            position: absolute;
+            right: 15px;
+            font-size: 17px;
+            font-family: "Font Awesome 5 Free";
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+
+    .adv1-holder {
+        width: 85%;
+        margin-top: calc(var(--bs-gutter-y) * -1);   
+    }
+    
+    // preview results window
+    #results {
+        left: 0px;
+    }
+
+    .residence_advanced_submit_button_search_1{
+        width: 15%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, var(--wp-estate-main-color-option, var(--wp-estate-main-color))));
+        background-image: linear-gradient(to right, transparent 50%, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 50%);      
+        border: none;
+        font-size: 16px;
+        white-space: normal;
+        line-height: 1.45em;
+        font-weight: 500;
+        margin-right: 0px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        padding: 6px 34px;
+        &:hover{
+            background-color: var(--wp-estate-hover-button-color-option, var(--wp_estate_hover_button_color));
+            color: #fff;
+        }
+    }
+ }
+
+
+
+
+
+// search header when search is floating
+.with_search_on_end.with_search_form_float .adv-search-header-1,
+.with_search_on_start.with_search_form_float .adv-search-header-1 {
+    top: -40px;
+    display: block;
+}
+
+
+
+.fullscreen_search {
+    position: fixed !important;
+    bottom: 0px;
+    left: 0px;
+    border-bottom: none;
+}
+
+.fullscreen_search_open {
+    bottom: 0px;
+}

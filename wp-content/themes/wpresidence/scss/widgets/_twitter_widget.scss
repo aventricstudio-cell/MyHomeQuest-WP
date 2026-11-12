@@ -1,0 +1,91 @@
+//scss\widgets\_twitter_widget.scss
+
+
+
+/* =Twitter Widget
+------------------------------------------------*/
+
+#primary .widget-container.twitter_wrapper {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    border: none;
+}
+
+.twitter_wrapper {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    color: #fff;
+    padding: 30px;
+    height: 250px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.wpestate_tweet_icon {
+    color: #fff;
+    font-size: 49px;
+    margin: 0px auto;
+    margin-bottom: 13px;
+    width: 50px;
+}
+
+.twitter_wrapper a {
+    color: #fff !important;
+}
+
+.twitter_wrapper li {
+    border: none;
+    color: #fff;
+}
+
+#colophon .twitter_wrapper li a,
+.twitter_wrapper li a {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.twitter_time {
+    font-weight: normal !important;
+}
+
+
+.tweet_circle {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#tw_control {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+}
+
+#tw_control li {
+    border: 1px solid #fff;
+    width: 12px;
+    height: 12px;
+    margin: 0px;
+    margin-left: 12px;
+}
+
+.wpestate_recent_tweets .item {
+    height: 140px;
+}
+
+.presenttw {
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    border: 1px solid #fff;
+}
+
+#colophon .twitter_wrapper a {
+    color: #fff;
+}
+
+#colophon #tw_control li {
+    border: 1px solid #fff;
+}

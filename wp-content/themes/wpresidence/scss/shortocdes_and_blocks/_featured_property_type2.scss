@@ -1,0 +1,169 @@
+/** MILLDONE
+ * Featured Property Type 2 Styles for WpResidence Theme
+ * src: scss/shortocdes_and_blocks/_featured_property_type2.scss
+ * This SCSS file contains styles for the featured property type 2 component
+ * in the WpResidence WordPress theme.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - None (all styles are self-contained)
+ *
+ * Usage:
+ * This file should be compiled to CSS and enqueued in the theme.
+ * It styles the featured property type 2 component, including its carousel,
+ * price display, agent information, and overall layout.
+ */
+
+ .featured_property.featured_property_type2 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0px;
+    overflow: hidden;
+  
+    // Main container styles
+    .featured_img {
+      // Styles for the main image container
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+      .tag-wrapper {
+        // Styles for tag wrapper
+  
+        .featured_div {
+          z-index: 99;
+          float: left;
+          bottom: auto;
+          position: relative;
+        }
+  
+        .status-wrapper {
+          // Styles for status wrapper
+  
+          .ribbon-wrapper-default {
+            z-index: 99;
+            left: 0px;
+            top: 0px;
+            position: relative;
+            margin-top: 0px;
+            line-height: 0px;
+            background: transparent;
+            padding: 0px;
+            float: left;
+          }
+        }
+      }
+  
+      // Carousel styles
+      .property_unit_featured_carousel {
+        .carousel-control-prev,
+        .carousel-control-next {
+          z-index: 99;
+        }
+  
+        .carousel-inner {
+          .featured_gradient {
+            // Styles for featured gradient
+          }
+  
+          .carousel-item {
+            // Styles for carousel items
+          }
+        }
+      }
+    }
+  
+    // Featured secondline styles
+    .featured_secondline {
+      background: transparent;
+      position: absolute;
+      bottom: 0px;
+
+      padding: 0px;
+      width: 100%;
+        
+      .agent_face {
+        height: 68px;
+        width: 68px;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        border-radius: 50%;
+        background-size: cover;
+      }
+  
+      h2 {
+        color: #ffffff;
+        line-height: 1.6em;
+        position: absolute;
+        bottom: 50px;
+        width: 400px;
+        left: 100px;
+    
+  
+        a {
+          color: #ffffff;
+          &:hover {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+          }
+        }
+        
+      }
+  
+      .featured_prop_price {
+        position: absolute;
+        right: auto;
+        left: 100px;
+        bottom: 26px;
+        top: auto;
+        font-size: 13px;
+        line-height: 1.5em;
+        color: white !important;
+        background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        display: inline-block;
+        padding: 2px 10px;
+        font-weight: 500;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+        .price_label {
+          &:not(.price_label_before) {
+            float: none;
+            margin-top: 0px;
+            position: relative;
+            color: white !important;
+            text-align: left;
+            right: auto;
+            top: auto;
+            bottom: 0px;
+            display: inline;
+            font-size: 14px;
+          }
+  
+          &.price_label_before {
+            position: relative;
+            float: left;
+            right: auto;
+            left: 0px;
+            color: #fff !important;
+            text-align: left;
+            top: 0px;
+            font-size: 16px;
+            word-break: break-all;
+            padding: 0px;
+            margin: 0px 4px 0px 0px;
+          }
+        }
+      }
+    }
+  
+    // Hover effects
+    &:hover {
+      .featured_secondline {
+        background-color: transparent;
+      }
+  
+      h2 a {
+        color: white !important;
+      }
+    }
+  }

@@ -1,0 +1,108 @@
+// MILLDONE
+// _property_unit_type4.scss
+// src: scss\properties_cards\_property_unit_type4.scss
+// This file contains styles specific to Property Unit Type 4 in the WpResidence theme.
+// It defines the layout and appearance of Type 4 property cards displayed in various views.
+
+.property_listing.property_unit_type4 {
+    // Featured gradient overlay
+    .featured_gradient {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0) 59%);
+    }
+
+    // Hide list view details by default
+    .listing_details.the_list_view {
+        display: none !important;
+    }
+
+    // Listing actions positioning
+    .listing_actions {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        justify-content: flex-start;
+        z-index: 99;
+    }
+
+    // Agent image styles
+    .property_agent_image {
+        width: 40px;
+        height: 40px;
+        float: right;
+        background-size: cover;
+        margin-right: 0;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        background-position: top;
+    }
+
+    // Property details layout
+    .property_listing_details {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    // Property agent wrapper styles
+    .property_agent_wrapper {
+        position: absolute;
+        right: 0;
+        padding: 10px;
+        border-left: 1px solid #f7f7f7;
+        line-height: normal;
+    }
+
+    // Property location styles
+    .property_location {
+        margin: 0;
+        margin-top: auto;
+        position: relative;
+        padding: 19px 20px;
+        min-height: 60px;
+    }
+}
+
+// Show list view details for full-width listings
+.listing_wrapper.col-md-12 > .property_listing.property_unit_type4 .listing_details.the_list_view {
+    display: block !important;
+}
+
+// Carousel control styles for full-width listings
+.listing_wrapper.col-md-12 .property_listing.property_unit_type4 .carousel-control {
+    width: 45px;
+}
+
+// Property details styles
+.inforoom_unit_type4,
+.infobath_unit_type4,
+.infosize_unit_type4 {
+    font-size: 14px;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+}
+
+// Remove border from size info
+.infosize_unit_type4 {
+    border: none;
+}
+
+// Price grid styles
+.propery_price4_grid {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+
+    span {
+        font-size: 13px;
+    }
+}
+
+// Media styles
+.property_unit_type4 {
+    .property_media {
+        right: auto;
+        left: 15px;
+        bottom: 15px;
+
+        .fa {
+            font-size: 17px;
+        }
+    }
+}

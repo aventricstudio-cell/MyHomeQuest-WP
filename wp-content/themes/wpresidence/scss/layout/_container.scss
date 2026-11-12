@@ -1,0 +1,159 @@
+// MILLDONE
+// components/container.scss
+// This file contains styles for the website's main containers and wrappers.
+
+// ==========================================================================
+// Adjustments for Admin Bar
+// ==========================================================================
+
+.admin-bar {
+    margin-top: 32px; // Add top margin when the admin bar is present.
+}
+
+// ==========================================================================
+// Main Website Container
+// ==========================================================================
+
+#all_wrapper {
+    @include smooth-transition-shorter;
+    min-height: 100vh; // Ensure the wrapper covers the full viewport height.
+    touch-action: pan-y; // Enable vertical scrolling.
+    width: 100%; // Full width.
+    @extend .position-relative; // Use relative positioning.
+    @extend .z-1; // Set z-index to 1.
+  
+
+    &.wpresidence_is_boxed {
+        max-width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width)); // Set width based on a variable.
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .1); // Add box shadow.
+        margin: 0px auto; // Center the container.
+
+ 
+        .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li.with-megamenu > ul {
+            width: 100%; // Full width for mega menu.
+            padding: 25px; // Add padding to mega menu.
+        }
+    }
+
+    .content_wrapper {
+    
+        padding: 0px; // Remove padding.
+        position: relative; // Use relative positioning.
+    }
+
+    .wpresidence_page_content_wrapper{
+        width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+        margin: 0px auto !important;
+        max-width: 100%; // Full width.
+        padding: 0px 15px;
+        background-color: var(--wp_estate_content_back_color-option, var(--wp_estate_content_back_color));
+    }
+
+}
+
+#elementor-preview{
+    .page-template-default{
+        #all_wrapper {
+            background: red;
+            .content_wrapper {
+                max-width: 100%;
+                padding: 0 15px;
+                width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+            
+            }       
+        }
+    }
+   
+}
+
+// ==========================================================================
+// Content Container
+// ==========================================================================
+
+.wpresidence-content-container-wrapper {
+    width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width)); // Set max width based on a variable.
+    max-width: 100%; // Full width.
+    margin: 0px auto; // Center the container.
+    padding: 0px 15px;
+    background-color: var(--wp_estate_content_back_color-option, var(--wp_estate_content_back_color)); 
+}
+
+// ==========================================================================
+// Fixed Positioning for Snap.js
+// ==========================================================================
+
+.snapjs-left .website-wrapper {
+    position: fixed; // Fix the position for Snap.js left swipe.
+}
+
+// ==========================================================================
+// Elementor Full Width Template Adjustments
+// ==========================================================================
+
+.elementor-template-full-width .container.content_wrapper {
+    max-width: 100%; // Full width for Elementor templates.
+}
+
+.pre_search_wrapper {
+    padding: 0px; // Remove padding.
+    display: inline; // Display as inline element.
+}
+
+.elementor-template-full-width .content_wrapper {
+    padding: 0px; // Remove padding.
+}
+
+// ==========================================================================
+// Splash Page Template Adjustments
+// ==========================================================================
+
+.page-template-splash_page .container.c {
+    display: none; // Hide the container for splash page template.
+}
+
+// ==========================================================================
+// Fixed Header Adjustments
+// ==========================================================================
+
+.fixed_header .content_wrapper {
+    background-color: transparent; // Make background transparent when header is fixed.
+}
+
+.fixed_header {
+    position: fixed; // Fix the position of the header.
+    z-index: 999; // Ensure the header is above other elements.
+}
+
+.search_wrapper{
+    .tab-pane.container{
+        padding: 0px;
+        max-width: 100%;
+    }
+}
+
+.page-template .single-content {
+    margin-bottom: 15px;
+}
+.rev_slider_wrapper {
+    z-index: 0 !important;
+}
+
+.single-estate_agent .widget-area-sidebar {
+    margin-top: 0px;
+}
+
+
+// custom sizes for conent container
+.wpestate_column_content,
+#primary {
+    width: 100%; /* or you could create another variable like --wp-estate-main-content-width-mobile-option */
+}
+/* Desktop and larger screens */
+@media (min-width: 992px) { /* 992px is Bootstrap's lg breakpoint */
+    .wpestate_column_content.col-lg-8 {
+        width: var(--wp-estate-main-content-width-option, 66.66667%); /* 66.66667% is Bootstrap's col-8 default */
+    }
+    #primary{
+        width: calc(100% - var(--wp-estate-main-content-width-option, 66.66667%) ); /* 33.33333% is Bootstrap's col-4 default */
+    }
+}

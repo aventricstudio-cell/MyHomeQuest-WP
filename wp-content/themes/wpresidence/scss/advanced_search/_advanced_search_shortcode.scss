@@ -1,0 +1,108 @@
+/**
+ * WpResidence Advanced Search CSS/SCSS
+ *
+ * This file contains styles for the advanced search functionality
+ * in the WpResidence theme. It includes styles for shortcode layout,
+ * form elements, dropdowns, and extended options.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ */
+
+/* Advanced Search Shortcode Styles */
+.advanced_search_shortcode {
+    width: 100%;
+    font-size: 13px;
+    background-color: #ffffff;
+    padding: 25px 25px;
+    margin-top: 30px;
+    display: inline-block;
+    min-height: 1px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+    /* Styles for sliders within search */
+    .adv_search_slider {
+        p {
+            margin-bottom: 0;
+        }
+        label {
+            margin-bottom: 7px;
+        }
+    }
+
+    /* Styles for geo radius wrapper */
+    .adv_search_geo_radius_wrapper {
+        label {
+            margin-bottom: 5px;
+        }
+    }
+
+    .adv_search_geo_radius_wrapper {
+        margin-bottom: 0px;
+        margin-top: -5px;
+    }
+
+    /* Styles for extended search checker */
+    .extended_search_checker {
+        line-height: 13px;
+
+        input {
+            margin-bottom: 0px !important;
+        }
+    }
+
+    /* Styles for dropdowns */
+    .dropdown-menu {
+        left: 0px;
+    }
+
+    .filter_menu {
+        margin-top: 1px;
+        margin-left: 0px;
+        width: 100%;
+        padding-bottom: 0px;
+        overflow-x: hidden;
+
+        li {
+            min-width: 168px;
+            padding-top: 10px;
+        }
+    }
+}
+
+/* Styles for advanced search shortcode within specific layouts */
+#advanced_search_shortcode {
+    .nav-tabs {
+        text-align: left;
+        margin-top: 15px;
+    }
+}
+
+/* Styles for submit button */
+#advanced_submit_shorcode {
+    margin-top: 0px;
+    float: left;
+    width: 100%;
+}
+
+/* Adjustments for specific layouts */
+.vc_span6 #advanced_submit_shorcode {
+    margin-top: 0px;
+}
+
+/* Styles for input fields */
+.adv_shortcode_input {
+    display: inline;
+}
+
+/* Styles for close buttons in various forms */
+#adv_extended_close_shortcode,
+#adv_extended_close_half,
+#adv_extended_close_mainform,
+#adv_extended_close_short {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    cursor: pointer;
+}

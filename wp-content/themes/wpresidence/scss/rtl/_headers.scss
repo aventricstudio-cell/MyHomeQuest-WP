@@ -1,0 +1,157 @@
+
+[dir="rtl"] {
+    .wpresidence_header_menu_type1_align_left.wpresidence_header_logo_align_left .header_wrapper_inside .user_menu_wrapper {
+        margin-right: auto;
+        margin-left: unset;
+    }
+
+    .wpresidence_header_menu_type1_align_right .header_wrapper_inside .logo {
+        margin-right: unset;
+        margin-left: auto;
+    }
+
+    .wpresidence_header_logo_align_center .header_type2 .wpresidence-logo-container {
+        text-align: center!important;
+        .logo{
+            text-align: center!important; 
+        }
+    }
+
+    .wpresidence_header_logo_align_right .header_type2 .wpresidence-logo-container{
+        text-align: left!important;
+        .logo{
+            text-align: left!important; 
+        }
+    }
+
+    #user_menu_open a svg {
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+    #user_menu_open .unread_mess{
+        left:15px;
+        right: unset
+
+    }
+    .mobilewrapper,
+    .mobile-trigger{
+        left:0px;
+    }
+
+
+
+
+    //user menu
+    #user_menu_open {
+        left: 35px;
+        right: 0px;
+    }
+    .wpresidence_wrapper_for_header_type6 {
+        #user_menu_open {
+            left: 0;
+            right: unset;
+            translate: 5% 0px;
+        }
+    }
+    
+    // menu
+    .wpresidence_header_logo_align_right .wpresidence-navigation-menu .menu-main-menu-container ul li:hover > ul, 
+    .wpresidence_header_logo_align_right .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li:hover > ul {
+        left: auto !important;
+        right: 0px;
+    }
+
+    .sub-menu .menu-item-has-children > a:after {
+        float: left;
+    }
+
+    .wpresidence-navigation-menu .menu-header-6-secondary-container ul li ul li ul{
+        right: 100%;
+    }
+
+   .no-megamenu ul ul{
+    right: 100%!important;
+   }
+
+    .wpresidence-navigation-menu .menu-header-6-secondary-container ul li ul, 
+    .wpresidence-navigation-menu .menu-main-menu-container ul li ul, 
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li ul {
+        right: 0;
+    }
+   
+
+    .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li ul.submenu{
+        right: 100%;
+
+        
+    }
+
+    
+
+    .header_type2 .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li.with-megamenu > ul, 
+    .header_type2 .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li.with-megamenu:hover > ul {
+        margin-right: -3rem ;
+    }
+
+    .wpresidence_header_6_secondary_menu.justify-content-end   {
+        justify-content: flex-end!important;
+    }
+    .header_type6 .logo{
+        text-align: center!important;
+    }
+
+
+
+    .header_wrapper_inside_type_4 .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li.with-megamenu > ul, 
+    .header_wrapper_inside_type_4 .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li.with-megamenu:hover > ul{
+        right: unset;
+    }
+    .wpresidence_wrapper_for_header_type4 .header_wrapper_inside_type_4 .wpresidence-navigation-menu .menu-main-menu-container ul li:hover > ul, 
+    .wpresidence_wrapper_for_header_type4 .header_wrapper_inside_type_4 .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li:hover > ul{
+        right: unset;
+
+    }
+
+    .wpresidence_wrapper_for_header_type4 .header_wrapper_inside_type_4 .wpresidence-navigation-menu .menu-main-menu-container ul li ul li:hover > ul, 
+    .wpresidence_wrapper_for_header_type4 .header_wrapper_inside_type_4 .wpresidence-navigation-menu .menu-mega-menu-updated-container ul li ul li:hover>ul{
+        right: -285px !important;
+        
+    }
+
+
+    //map
+    #openmap,
+    #google_map_prop_list_wrapper #gmap-control,
+    #gmap-control {
+        right: unset;
+        left:15px;
+    }
+    .gmapzoomminus_sh, #gmapzoomminus_sh, #gmapzoomminus,
+    .gmapzoomplus_sh, #gmapzoomplus_sh, #gmapzoomplus{
+        left:unset;
+        right: 15px;
+    }
+    #openmap i {
+        margin-right: unset;
+        margin-left: 5px;
+    }
+
+    .show_hide_password {
+        right: unset;
+        left:10px;
+    }
+    .wpestate_login_form_wrapper label, .wpestate_register_form_wrapper label, .wpestate_forgot_form_wrapper label {
+        text-align: right;
+    }
+
+    .mobilex-menu .menu-item-has-children > a:after {
+        left:15px;
+        right: unset;
+        margin-right: unset;
+        margin-left: 15px;
+    }
+
+    .breadcrumb > li + li:before {
+      float: right;
+    }
+}

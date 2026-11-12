@@ -1,0 +1,33 @@
+// MILLDONE
+// components/_header_type6.scss
+// This file contains styles for the header type 6 components of the website.
+// It includes styles for the main header, navigation, and related elements.
+
+// ==========================================================================
+// Main Header for Header Type 6
+// ==========================================================================
+
+.header_type6 {
+    .wpresidence_header_6_secondary_menu,
+    .wpresidence_header_6_firs_menu {
+        width: 40%; // Set the width of the secondary and first menus to 40%.
+        gap:15px;
+    }
+
+    .logo {
+        width: 20%; // Set the width of the logo to 20%.
+        text-align: center; // Center align the logo.
+    }
+}
+
+// ==========================================================================
+// Transparent Header for Header Type 6
+// ==========================================================================
+
+.master_header_sticky {
+    .wpresidence-navigation-menu {
+        .menu-header-6-secondary-container ul li {
+            line-height: 70px; // Set the line height for the secondary menu items to 70px.
+        }
+    }
+} 

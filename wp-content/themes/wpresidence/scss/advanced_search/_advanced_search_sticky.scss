@@ -1,0 +1,41 @@
+
+.search_wrapper {
+  
+    // works when search form is not floating
+    &.search_wrapper_sticky_search{
+        position: sticky;
+        top: 0px;
+        z-index: 100;
+        &.with_search_form_float{
+            position: absolute;
+        }
+    }
+
+    // works when search form is floating
+    &.sticky_adv_anime {
+        top: 0px!important;
+        position: fixed!important;
+        width: 100%!important;
+        max-width: 100%;
+        @include no-transition;
+    }
+    
+}
+
+
+.header_media {
+    .search_wrapper {
+        top: var(--wp-estate-float-form-top-option,var(--wp_estate_float_form_top));
+    }
+}
+
+.archive {
+    .header_media {
+        .search_wrapper {
+            top: var(--wp-estate-float-form-top-tax-option,var(--wp_estate_float_form_top_tax));
+            &.search_wrapper_sticky_search{
+                top:var(--wp-estate-float-form-top-tax-option,var(--wp_estate_float_form_top_tax))
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+
+.dashboard_agent_listing_image{
+    position: relative;
+    max-width: 105px;
+  }
+  
+  .dashboard_agent_listing_image:after {
+    content: " ";
+    position: absolute;
+    height: 10px;
+    width: 90%;
+    background-color: #cfc8ff80;
+    bottom: -7px;
+    left: 5%;
+    border-radius: 9px;
+    z-index: 0;
+  }
+  

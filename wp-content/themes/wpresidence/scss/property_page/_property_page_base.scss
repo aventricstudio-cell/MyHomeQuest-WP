@@ -1,0 +1,575 @@
+
+// sticky property menu
+.wpestate_top_property_navigation {
+    z-index: 999;
+    font-weight: 500;
+    font-size: 13px;
+    background-color: #fff;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: -50px;
+    @include smooth-transition-shorter;
+    @include main-box-shadow();
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &.sticky_property_menu_visible {
+        top: 0px;
+    }
+
+    /* For admin-bar adjustments */
+    .admin-bar &.sticky_property_menu_visible {
+        top: 32px;
+    }
+
+
+    .wpestate_top_property_navigation_link {
+        padding: 0 5px; /* Combined padding-right and padding-left */
+    
+        &.item_active {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+    
+}
+
+
+
+
+.wpestate_property_header_extended {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+// end of page property disclaimer
+.wpestate_property_disclaimer {
+    text-align: center;
+    max-width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+    padding: 15px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+//property title
+.entry-prop {
+    margin-bottom: 0px;
+    display: inline;
+    width: auto;
+    max-width: 75%;
+    font-size: var(--wp-estate-h1-font-size-option, var(--wp-estate-h1-font-size));
+    line-height: var(--wp-estate-h1-line-height-option, 1.1); 
+    font-weight: var(--wp-estate-h1-font-weight-option, var(--wp-estate-h1-font-weight));
+}
+
+// property header section - title, price, categories and social icons
+
+.wpresidence_property_page_title_area {
+    margin-bottom: 30px;
+    position: relative;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    .entry-prop{
+        margin-right: auto;
+        margin-bottom: 5px;
+    }
+
+    .price_label {
+        font-size: 22px;
+        margin-top: 0px;
+    }
+
+    .property_categs{
+        flex-basis: 65%;
+
+        i {
+            margin-right: 3px;
+            font-size: 12px;
+        }
+    }
+
+    .prop_social{
+        position: relative;
+        gap: 10px;
+        display: flex;
+    }
+}
+
+.single_property_labels {
+    position: absolute;
+    left: 0px;
+    top: -30px;
+}
+
+//header labels
+.property_title_label {
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 85%, transparent);
+    padding: 0px 10px;
+    display: inline-block;
+    color: #fff;
+    line-height: 22px;
+    &:hover {
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+
+    a {
+        color: #ffffff;
+        font-size: 13px;
+    }
+}
+
+// media section wrapper
+.wpestate_property_media_section_wrapper {
+    position: relative;
+    margin-bottom: 30px;
+    .status-wrapper {
+        position: absolute;
+        top:0px;
+        right: 15px;
+    }
+
+    .status-wrapper.verticalstatus {
+        right: 160px;
+    }
+}
+
+
+
+
+
+.single-estate_property {
+    #listing_ajax_container {
+        width: 100%;
+        float: left;
+    }
+}
+
+
+// accordion temapltes
+
+
+#accordion_prop_addr {
+    display: inline-block;
+    width: 100%;
+}
+
+.elementor-widget-container #accordion_prop_addr {
+    margin-top: 0px;
+}
+
+.elementor-widget-container>.property-panel h4:after {
+    display: none;
+}
+
+
+// property address google maps button
+.acc_google_maps {
+    background-color: var(--wp-estate-second-color-option, var(--wp-estate-second-color));
+    color: #fff !important;
+    padding: 1px 6px;
+    clear: both;
+    display: inline-block;
+    margin-top: 5px;
+    @include smooth-transition-short;
+    font-size: 13px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    line-height: 1.65em;
+    width: auto;
+    &:hover{
+        background-color: color-mix(in srgb, var(--wp-estate-second-color-option, var(--wp-estate-second-color)) 80%, transparent);
+    }
+}
+
+.wpestate_property_description {
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+    display: inline-block;
+    width: 100%;
+    min-height: 1px;
+    line-height: 1.6em;
+    margin-bottom: 30px;
+
+    ul,ol{
+        list-style-type: inherit;
+        margin: 0px 0px 15px 15px;
+    }
+
+    h4.panel-title:after{
+        content: '';
+    }
+    
+    &.property-panel{
+        .panel-body{
+            padding: 0px;
+        }
+    }
+}
+.accordion-item:first-of-type,
+.accordion-item:first-of-type > .accordion-header .accordion-button {
+    border-top-left-radius:  var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    border-top-right-radius:  var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+.accordion-item:last-of-type,
+.accordion-item:last-of-type > .accordion-collapse {
+    border-bottom-right-radius:  var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    border-bottom-left-radius:  var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+.accordion-item{
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    border: none;
+    border-radius: 0px;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    .accordion-header{
+        .accordion-button{
+            padding: 20px 30px;
+            padding-top:    calc(var(--wp-estate-contentarea-internal-padding-top-option, 30px) - 10px);
+            padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+            padding-bottom: calc(var(wp-estate-contentarea-internal-padding-bottom-option, 30px) - 10px);
+            padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+            
+            color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+            background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+            box-shadow: none;
+            border-bottom-right-radius:0px;
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            font-weight: 500;
+        }
+    }
+
+    .accordion-body{
+        padding: 0px 30px 30px 30px;
+        padding-top:    0px;
+        padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+        padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+        padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+
+
+        .row{
+            margin: 0px;
+        }
+    }
+}
+
+
+
+
+
+.property-panel {
+    margin-bottom: 30px;
+    width: 100%;
+    min-height: 1px;
+    display: inline-block;
+    line-height: 1.65em;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    .panel {
+        border: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+    .panel-body {
+        border: none;
+        padding: 0px 30px 30px;
+    }
+    .panel-heading {
+        background-color: #ffffff;
+        background-image: none;
+        padding: 30px 30px 15px 30px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+    h4 {
+        width: 100%;
+        position: relative;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        a {
+            width: 100%;
+            position: relative;
+            &:hover{
+                text-decoration: none;  
+            }
+        }
+        &:after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f106";
+            position: absolute;
+            top:0px;
+            right: 0px;
+            font-weight: 600;
+            margin-right: 0px;
+            @include smooth-transition-shorter;
+        }
+    }
+        
+}
+
+/* only when alignment is Space Between */
+.wpresidence-fields-align-space-between .property_default_price strong,
+.wpresidence-fields-align-space-between .property_default_second_price strong {
+    margin-right: auto;
+}
+
+.wpestate_property_header_extended.wpestate_lay6_header-masonry-gallery,
+.wpestate_property_header_extended.wpestate_lay6_gallery,
+.wpestate_property_header_extended.wpestate_lay6_multi-image-slider,
+.wpestate_property_header_extended.wpestate_lay6_full-width-header {
+    margin-bottom: 75px;
+}
+
+
+
+// body for accordion mortgage calculator
+#accordion_property_payment_calculator {
+    .accordion-body{
+        padding: 0px 15px 30px 15px;
+        padding-top:    0px;
+        padding-left:   calc(var(--wp-estate-contentarea-internal-padding-left-option,30px) - 15px);
+        padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+        padding-right:   calc(var(--wp-estate-contentarea-internal-padding-right-option,30px) - 15px);
+
+    }   
+}
+
+#tab_prpg {
+    .tab-pane{
+        .row{
+            margin: 0px;
+        }
+    }
+
+}
+
+#myChartacc,
+.my_chart_dash,
+#myChart {
+    width: 100% !important;
+}
+
+.tab-pane #myChart {
+    height: 400px !important;
+    width: 100% !important;
+}
+
+.my_chart_dash {
+    margin-top: 15px;
+    max-width: 988px;
+    margin-bottom: 15px;
+
+}
+
+.statistics_wrapper {
+    float: left;
+    width: 100%;
+    display: none;
+
+}
+
+.property-panel .carusel_closed:after {
+    font-family: "Font Awesome 5 Free";
+    position: relative;
+    float: right;
+    transform: rotate(180deg);
+}
+
+
+
+#accordion_walkscore .panel-body {
+    padding: 0px 30px 30px 20px;
+}
+
+
+/* property video sections
+===================================================*/
+.property_video_wrapper {
+    background-color: #222;
+    position: relative;
+    line-height: 1.65em;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    img {
+        opacity: 0.8;
+        @include smooth-transition-shorter;
+        cursor: pointer;
+        width: 100%;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    #property_video_wrapper_player {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 49px;
+        color: #fff;
+        z-index: 10;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: -50px 0px 0px -50px;
+        opacity: 0.8;
+        pointer-events: none;
+        &:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f04b";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -12PX;
+            margin-left: -17PX;
+            font-weight: 700;
+        }
+    }
+}
+
+
+.listing_detail {
+    padding: 3px 3px 3px 0px;
+}
+
+.single-estate_property .listing_detail {
+    padding: 0px 0px 7px 0px;
+    min-height: 32px;
+    word-break: break-word;
+    &.listing_detail_energy {
+        padding: 0px 0px 7px 0px;
+    }
+
+    strong {
+        color: var(--wp-estate-font-color-option, #222);
+        font-weight: 500;
+    }
+}
+
+
+
+
+
+.listing_detail svg,
+.property_features_svg_icon {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    width: 20px;
+    height: 20px;
+    fill: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    margin: 0px 10px 0px 0px;
+    line-height: 26px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+
+.listing-content .agent_contanct_form {
+    margin-left: 0px;
+    float: left;
+    width: 100%;
+}
+
+.single-estate_property .listing-content .agent_contanct_form {
+    padding: 0px 30px 30px 30px;
+    background-color: #fff;
+}
+
+
+/* walk score 
+===================================================*/
+
+
+
+.walk_details {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    
+    img {
+        display: inline-block;
+        float: left;
+    }
+    span {
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 1px;
+        float: left;
+        line-height: 1.65em;
+    }
+
+    a{
+        background-color: #fafafa;
+        padding: 2px 8px;
+        margin-left: 5px;
+        font-weight: 500;
+    }
+    
+}
+
+
+
+/*=Download
+===================================================*/
+.download_docs {
+    width: 100%;
+    font-weight: 500;
+    float: left;
+    margin: 15px 0px;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+}
+
+.document_down {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    svg,
+    i {
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
+.subunit_title .price_label {
+    font-size: 14px;
+}
+
+.price_label {
+    font-size: 15px;
+}
+
+
+
+.listing_detail .price_label {
+    margin-top: 0px;
+    font-size: 13px;
+}
+
+
+

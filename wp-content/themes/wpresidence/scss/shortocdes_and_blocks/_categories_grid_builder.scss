@@ -1,0 +1,16 @@
+/* MILLDONE
+* Categories Grid Builder
+* This file contains styles for the Categories Grid Builder widget in the WPResidence theme.
+* src: scss\shortocdes_and_blocks\_categories_grid_builder.scss
+*/
+.elementor_wpresidece_grid{
+    margin-left: 0px;
+    margin-right: 0px;
+    
+ .listing_wrapper {
+    width: 100%;
+    .places_background_image{
+        max-width: 100%;
+    }
+ }   
+}

@@ -1,0 +1,506 @@
+// src: scss\components\modals\_login_modal.scss
+//
+// This file contains styles for the login modal components in a WordPress theme.
+// It's designed to create a responsive, visually appealing login/register modal
+// that overlays the main content when activated.
+
+// Main wrapper for the login modal
+// This element covers the entire viewport when the modal is active
+#modal_login_wrapper {
+    display: none; // Hidden by default, shown via JavaScript
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed; // Fixed positioning to cover the entire viewport
+    z-index: 9999; // High z-index to ensure it's on top of other elements
+  
+    // Semi-transparent background overlay
+    // This darkens the rest of the page when the modal is active
+    .modal_login_back {
+      background-color: #111;
+      opacity: 0.5;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      z-index: 1;
+    }
+  
+    // Styles for alert messages within the modal login container
+    .modal_login_container {
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        top: 8%; // Positioned slightly below the top of the viewport
+        width: 750px;
+        height: 550px;
+        z-index: 1;
+        position: absolute;
+        margin: 0px auto; // Centered horizontally
+        box-shadow: 3px 5px 13px 0px rgba(29, 29, 29, 0.05); // Subtle shadow for depth
+        border-radius: 10px; // Rounded corners
+        overflow: hidden;
+        position: relative;
+  
+        // Extra height when reCAPTCHA is present
+        &.wpestare_recaptcha_extra_class {
+        height: 610px !important;
+        }
+  
+        // Alert messages inside the modal login container
+        .alert-message,
+        .login-alert {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+  
+    // Left side of the modal - decorative image
+    .login-register-modal-image {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      @include background-cover; 
+        // Text overlay on the decorative image
+        .login-register-modal-image_text {
+            position: absolute;
+            bottom: 45px;
+            left: 45px;
+            font-size: 31px;
+            font-weight: 500;
+            color: #fff;
+            z-index: 2;
+            line-height: 1.25em;
+            right: 45px;
+        }
+    }
+  
+  
+    // Right side of the modal - form container
+    .login-register-modal-form-wrapper {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0px;
+      left: 50%;
+    }
+  
+    // Close button for the modal
+    #login-modal_close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      text-align: center;
+      cursor: pointer;
+      z-index: 999999;
+      i{
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+        font-size: 16px;
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+        }
+      }
+    }
+  
+    // Bottom navigation links (register, forgot password, back to login)
+    .login_modal_control {
+      padding: 0px 45px;
+      color: var(--wp_estate_link_color-option, var(--wp_estate_link_color));
+      width: 100%;
+      float: left;
+      font-size: 14px;
+      position: absolute;
+      bottom: 30px;
+    }
+    
+    .wpestate_login_form_wrapper,
+    .wpestate_register_form_wrapper,
+    .wpestate_forgot_form_wrapper{
+        padding: 0px 45px 0px 45px;
+        text-align: left;
+        float: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        
+    }
+}
+  
+.wpestate_register_form_wrapper,
+.wpestate_forgot_form_wrapper{
+    display: none;
+}
+
+.wpestate_login_form_wrapper,
+.wpestate_register_form_wrapper,
+.wpestate_forgot_form_wrapper{
+
+    width: 100%;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+    input[type=checkbox]{
+        margin-bottom: 0px;
+    }
+
+    label {
+        font-weight: normal;
+        line-height: 1.2em;
+    }
+    .form-select,
+    .form-control{
+        margin-bottom: 10px;
+    }
+
+    .login_register_div_title {
+        padding: 0px 0px 15px 0px;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        font-size: 23px;
+        line-height: 1.3em;
+        text-align: left;
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+    
+
+    // Style for submit buttons
+    .wpestate_register_submit_button,
+    .wpestate_login_submit_button,
+    .wpestate_forgot_password_submit_button {
+      width: 100%;
+      margin-bottom: 0px;
+    }
+    
+}
+
+
+// switch links
+.login_modal_control{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+    .wpestate_login_form_switch_login,
+    .wpestate_login_form_switch_register,
+    .wpestate_login_form_switch_forgot {
+        font-weight: 500;
+    }
+
+    .wpestate_login_form_switch_login {
+        display: none;
+    }
+}
+
+.wpestate_register_form_agree_terms_label_wrapper{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+// Checkbox for accepting terms and conditions
+.wpestate_register_form_agree_terms {
+    margin: 0px 5px 0px 0px;
+
+}
+
+// Label for terms and conditions checkbox
+.wpestate_register_form_agree_terms_label {
+    cursor: pointer;
+    margin-bottom: 0px;
+
+    a {
+        padding: 0px;  
+    }
+}
+
+.password_holder {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.show_hide_password {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 17px;
+    opacity: 0.7;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    } 
+}
+
+.or_social {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+}
+
+ /* Common styles for all social login buttons */
+ #facebookloginsidebar_topbar,
+ #googleloginsidebar_topbar,
+ #twitterloginsidebar_topbar {
+     width: 100%;
+     margin: 10px 0 0;
+     padding: 0 15px;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 40px;
+     text-align: center;
+     border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+     cursor: pointer;
+     @include smooth-transition-shorter;
+ }
+ 
+ #facebookloginsidebar_topbar,
+ #googleloginsidebar_topbar,
+ #twitterloginsidebar_topbar {
+     display: inline-block;
+ }
+ 
+ #facebookloginsidebar_topbar::before,
+ #googleloginsidebar_topbar::before,
+ #twitterloginsidebar_topbar::before {
+     font-family: "Font Awesome 5 Brands";
+     font-weight: 700;
+     padding-right: 10px;
+ }
+ 
+ /* Facebook button styles */
+ #facebookloginsidebar_topbar {
+     background-color: #39579a;
+     color: #fff;
+ }
+ 
+ #facebookloginsidebar_topbar:hover {
+     background-color: #2d4373;
+ }
+ 
+ #facebookloginsidebar_topbar::before {
+     content: "\f39e";
+ }
+ 
+ /* Google button styles */
+ #googleloginsidebar_topbar {
+     background-color: #fff;
+     color: #222;
+     border: 1px solid #f0f0f0;
+     line-height: 38px;
+ }
+ 
+ #googleloginsidebar_topbar:hover {
+     background-color: #e8f0fa;
+ }
+ 
+ #googleloginsidebar_topbar::before {
+     content: "\f1a0";
+     background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+     -webkit-text-fill-color: transparent;
+ }
+ 
+ /* Twitter button styles */
+ #twitterloginsidebar_topbar {
+     background-color: #00aced;
+     color: #fff;
+ }
+ 
+ #twitterloginsidebar_topbar:hover {
+     background-color: #0090c6;
+ }
+ 
+ #twitterloginsidebar_topbar::before {
+     content: "\e61b";
+ }
+ 
+/*Login and Register Widget on Sidebar
+===============================================================================*/
+
+.wd_user_menu{
+    width: 100%;
+ 
+    li {
+        border: none;
+        padding-bottom: 0px;
+        cursor: pointer;
+        position: relative;
+    }
+ 
+    i {
+        margin-right: 13px;
+        width: 13px;
+    }
+ 
+    .unread_mess {
+     top: 10px; // Position the unread message indicator from the top.
+     border-radius: 50%; // Make the unread message indicator round.
+     min-width: 20px; // Set the width of the unread message indicator.
+     width: auto;
+     height: 20px; // Set the height of the unread message indicator.
+     background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Set the background color of the unread message indicator to blue.
+     line-height: 20px; // Set the line height for vertical centering.
+     text-align: center; // Center the text horizontally.
+     font-size: 12px; // Set the font size of the unread message indicator.
+     position: absolute; // Position the unread message indicator absolutely.
+     right: 0px; // Position the unread message indicator from the right.
+     color: #fff; // Set the text color of the unread message indicator to white.
+    }
+   
+    a {
+       padding: 5px 0px;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       @include smooth-transition-shorter;
+    }
+   
+    li svg {
+       height: 15px;
+       width: 15px;
+       margin-right: 10px;
+       @include smooth-transition-shorter;
+    }
+ }
+   
+   
+/*Logged in widget view - Hides all My Properties Sub-menus on Sidebar
+===============================================================================*/
+ul.secondary_menu_sidebar {
+    display: none;
+}
+   
+.agent_sidebar_mobile svg {
+    color: #8a959e;
+    height: 21px;
+    fill: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    vertical-align: middle;
+}
+ 
+/*Mobile Login Form
+===============================================================================*/
+.mobilewrapper-user {
+    .wpestate_login_form_wrapper .login_register_div_title, 
+    .wpestate_register_form_wrapper .login_register_div_title, 
+    .wpestate_forgot_form_wrapper .login_register_div_title{
+        color: var(--wp-estate-mobile-menu-font-color-option, var(--wp_estate_mobile_menu_font_color)); // Set the link color with a fallback.
+        font-size: 16px;
+    }
+
+    .login_modal_control,
+    .wpestate_login_form_wrapper, 
+    .wpestate_register_form_wrapper, 
+    .wpestate_forgot_form_wrapper{
+        padding: 10px;
+    }
+}
+
+// Styles for general alerts, success messages, and login alerts
+.wpestate_success,
+.alert-message,
+.login-alert {
+    color: #fff;
+    font-size: 12px;
+    background-color: #f44336;
+    margin-bottom: 10px;
+    padding: 3px 10px;
+    line-height: 1.5em;
+    width: 100%;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    display: inline-block;
+
+    // Success alert specific style
+    &.wpestate_success {
+    background-color: #3c9f7e;
+    }
+
+    &:empty {
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        display: none;
+    }
+}
+
+.alert-danger {
+    background-image: none;
+    border: none;
+    color: #fff;
+    background-color: #ED5565;
+    line-height: 1.3em;
+    clear: both;
+
+    &:empty {
+        padding: 0;
+    }
+}
+
+.wpestate_succes,
+.wpestate-agent-contact-sent {
+    background-color: #3c9f7e;
+}
+
+.video_modal_login_close,
+#property_details_modal_close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 999999;
+    background-image: url(./css/css-images/closeicon4.png);
+    @include background-cover; 
+    width: 25px;
+    height: 25px;
+    opacity: 0.3;
+}
+
+#modal_login_wrapper .featured_gradient {
+    opacity: 0.35;
+    background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0) 56%);
+}
+
+#property_details_modal_close {
+    top: 15px;
+    right: -30px;
+    opacity: 1;
+}
+
+.wpestate_alert_box_wrapper {
+    display: inline-block;
+    width: 100%;
+    display: none;
+}
+
+.page-template-user_dashboard_add_agent .login-alert {
+    width: 100%;
+}
+
+.listing-submit {
+    height: 120px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #222;
+}
+
+.login_alert_full {
+    color: #fff;
+    font-size: 13px;
+    line-height: 21px;
+    background-color: #ED5565;
+    padding: 6px 5px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    z-index: 99999999999999999;
+    position: fixed;
+}

@@ -1,0 +1,13 @@
+#add_feature2{
+    margin: 10px 0px 10px 0px;
+    background-color: #4ecb8f;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.redux_add_new_feature{
+    display: inline-block;
+    width: 100%;
+}

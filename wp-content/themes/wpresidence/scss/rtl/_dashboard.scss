@@ -1,0 +1,85 @@
+[dir="rtl"] {
+    .user_dashboard_links svg {
+        margin-right: unset;
+        margin-left: 15px;
+    }
+    .col-md-3.user_menu_wrapper {
+        border-left: 1px solid #E4E4E4;
+        border-right: 0px;
+    }
+
+
+    .user_menu{
+        justify-content: flex-end;
+    }
+
+    .dashboard_package_row,
+    .dashboard_hello_section {
+        padding-left: unset;
+        padding-right: 50px;
+
+    }
+    .wpestate_dashboard_account_summary .dasboard_widget_row {
+        margin-right: unset;
+        margin-left: 2%;
+        float: right;
+    }
+    .wpestate_dash_delete_plan {
+        right: unset;
+        left:20px;
+    }
+    #form_submit_1 {
+        margin-right: unset;
+        margin-left: 10px;
+    }
+    #add_new_floor_plan {
+        margin-left: unset;
+        margin-right: 15px;
+    }
+    .wpestate_bell_note {
+        right: unset;
+        left: 95px;
+    }
+
+    .property_dashboard_location_wrapper {
+        padding-left: unset;
+        padding-right: 20px;
+    }
+    .blog_listing_image .featured_div {
+        left: unset;
+        right: 10px;
+    }
+
+    .unread_mess {
+        right: unset;
+        left: 15px;
+    }
+    .delete_search {
+        margin-right: 10px;
+        margin-left: unset
+    }
+    
+    .search_unit_wrapper h4, 
+    .page-template-user_dashboard_searches .search_param {
+        padding: 0px 15px 0px 0px;
+    }
+    .wpestate_dashboard_input_type,
+    .wpestate-dashboard-select {
+        margin-right: unset;
+        margin-left: 15px;
+        text-align: right;
+    }
+    .wpestate_crm_contact_status .property_list_status_label.anycrm:before, .wpestate_crm_contact_status .property_list_status_label.anycrm.new:before, .property_dashboard_status .property_list_status_label.pending:before, .property_dashboard_status .property_list_status_label.waitingforapproval:before, .property_list_status_label.notpaid:before, .property_dashboard_status .property_list_status_label.disabled:before, .property_dashboard_status .property_list_status_label.expired:before, .property_dashboard_status .property_list_status_label.draft:before, .property_list_status_label.paid:before, .property_dashboard_status .property_list_status_label.publish:before, .property_dashboard_status .property_list_status_label.published:before {
+        left: unset;
+        right: 0px;
+    }
+    .property_list_status_label {
+        padding: 0px 30px 0px 0px;
+    }
+    .mess_unread {
+        margin: 8px 0px 0px 10px;
+    }
+    .message_listing .mess_content {
+        margin: 30px 0px 0px 0px;
+    }
+}

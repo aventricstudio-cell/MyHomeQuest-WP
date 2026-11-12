@@ -1,0 +1,246 @@
+/** MILLDONE
+ * Featured Article Styles for WpResidence Theme
+ * src: scss/shortocdes_and_blocks/_featured_article_shortcodes.scss
+ * This file contains styles for featured articles and properties in the WpResidence theme.
+ * It defines the appearance of featured article cards and full-width featured article sections.
+ *
+ * Package: WpResidence
+ * Version: 1.0.0
+ * 
+ * Dependencies:
+ * - Base WpResidence styles
+ * - Font Awesome for icons
+ *
+ * It relies on the HTML structure defined in the featured-article.php and featured-property.php template files.
+ *
+ * Note: This file uses nested SCSS syntax. Ensure your build process supports SCSS compilation.
+ */
+
+// Main featured article card styles
+.featured_article {
+    width: 100%;
+    position: relative;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    overflow: hidden;
+    @include smooth-transition-shorter;
+    background-color: #ffffff;
+
+    // Featured image container
+    .featured_img {
+        display: inline;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        background-color: #fff;
+        margin: 6px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+        // Image transition effect
+        img {
+            @include smooth-transition;
+        }
+    }
+
+    // Hover effects for the entire article card
+    &:hover {
+        // Image zoom effect on hover
+        .featured_img img {
+            @include image-hover-zoom;
+        }
+
+    
+
+        // Change colors on hover
+        .featured_article_right {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+
+        h2 a {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+
+    // Article title section
+    .featured_article_title {
+        display: inline;
+        font-size: 18px;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 80px;
+        background-color: #fff;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        a:hover{
+            color:#0073e1
+        }
+    }
+
+    // Article content section
+    .featured_article_content {
+        display:none;
+    }
+
+    // Author image styles
+    .blog_author_image {
+        width: 55px;
+        height: 55px;
+        margin: 10px;
+        display: inline-block;
+        float: left;
+    }
+
+    // Right arrow or icon in the featured article
+    .featured_article_right {
+        position: absolute;
+        bottom: 50%;
+        margin-bottom: -18px !important;
+        right: 13px;
+        color: #8593a9;
+        font-size: 36px;
+    }
+}
+
+// Full-width featured article styles (type 2)
+.featured_article_type2 {
+    width: 100%;
+    height: 650px;
+    float: left;
+    position: relative;
+
+    // Background image container
+    .featured_img_type2 {
+        background-color: #3b444f;
+        @include background-cover; 
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        .featured_gradient {
+            @include smooth-transition-shorter;
+        }
+
+        // Increase gradient opacity on hover
+        &:hover .featured_gradient {
+            opacity: 0.6;
+        }
+    }
+
+    // Gradient overlay for better text visibility
+    .featured_gradient {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.67;
+        z-index: 1;
+        background-image: linear-gradient(to right top, #000, rgba(0, 0, 0, 0) 56%);
+    }
+
+    // Container for title and read more link
+    .featured_article_type2_title_wrapper {
+        position: absolute;
+        width: 1100px;
+        margin: 0px auto;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        z-index: 1;
+    }
+
+    // "Featured Article" label
+    .featured_article_label {
+        color: #fff;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    // Article title
+    h2 {
+        line-height: 1.2em;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-left: 0;
+        font-size: 40px;
+        color: #fff;
+      
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    // "Read more" link styles
+    .featured_read_more {
+        font-size: 13px;
+        line-height: 22px;
+        color: #fff;
+        border-bottom: 1px solid rgba(189, 206, 227, 0.30);
+        margin-top: 0px;
+        width: 150px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        text-transform: capitalize;
+
+        a {
+            color: #fff;
+            font-size: 15px;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        // Right arrow icon
+        i {
+            font-size: 11px;
+            margin-left: 5px;
+        }
+    }
+}
+
+// Additional classes not present in the provided markup
+// These may be used in other parts of the theme or for dynamic content
+
+// Alternative title style, possibly for featured properties
+.featured_type_2 {
+    font-size: 20px;
+    line-height: 1.6em;
+    margin-top: 13px;
+    margin-bottom: -3px;
+}
+
+// Secondary line of text in featured articles
+.featured_article_secondline {
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+
+
+// Styles for featured property types 1 and 2
+// These share some hover effects with the featured article and featured property
+.featured_property.featured_property_type1,
+.featured_property.featured_property_type2 {
+    .featured_img img {
+        @include smooth-transition;
+    }
+
+    &:hover .featured_img img {
+        @include image-hover-zoom;
+    }
+}

@@ -1,0 +1,148 @@
+/**MILLDONE
+ * WPEstate Property Slider Carousel Elementor V2 Styles
+ * src: scss/shortcodes_and_blocks/_property_sliders_shortcodes_v2.scss
+ * This file contains the styles for the Property Slider Carousel Elementor V2 component in the WPResidence theme.
+ *
+ * @package WPEstate
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - Owl Carousel (for slider functionality)
+ *
+ * Usage:
+ * These styles are applied to the property slider with the class 'property_slider_carousel_elementor_v2'.
+ */
+
+ .property_slider_carousel_elementor_v2 {
+    &.owl-carousel {
+        .owl-item {
+            opacity: 1;
+            width: 290px !important;
+
+            .item {
+                min-height: 100%;
+                @include background-cover; 
+                width: 100%;
+                height: auto;
+                background-color: transparent;
+                position: relative;
+                padding: 10px;
+            }
+        }
+
+        // Navigation styles
+        .owl-nav {
+            position: absolute;
+            top: 40%;
+            left: -60px;
+            display: flex;
+            flex-direction: column;
+
+            .owl-prev,
+            .owl-next {
+                background-color: #777AF212;
+                width: 40px;
+                height: 40px;
+                border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+
+                &:hover {
+                    color: #fff;
+                    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                }
+            }
+        }
+    }
+
+    // Image wrapper styles
+    &_image_wrapper {
+        position: relative;
+        overflow: hidden;
+        border: 0px solid #000;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+        &:hover {
+            .property_slider_carousel_elementor_v2_image_container {
+                transform: scale(1.05);
+                -moz-transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                -o-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+            }
+
+            .places_cover {
+                opacity: 0;
+            }
+        }
+    }
+
+    // Image container styles
+    &_image_container {
+        width: 100%;
+        height: 370px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        
+        @include box-shadow(card);
+        @include background-cover;
+        @include smooth-transition;
+    }
+
+    // Title styles
+    &_title {
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: 500;
+        display: inline-block;
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    }
+
+    // Price styles
+    &_price {
+        background-color: color-mix(in srgb, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 85%, transparent);
+        color: #fff;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        position: absolute;
+        left: 9px;
+        bottom: 10px;
+        z-index: 9;
+        padding: 4px 7px;
+        font-size: 13px;
+        line-height: 1.5em;
+
+        .price_label {
+            font-size: 13px;
+            line-height: 1.5em;
+        }
+    }
+
+    // Places cover styles
+    .places_cover {
+        width: 100%;
+        height: 100%;
+        background-color: #1D293E;
+        opacity: 0.15;
+        top: 0px;
+        left: 0px;
+        cursor: pointer;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        position: absolute;
+        pointer-events: none;
+        z-index: 7;
+        @include smooth-transition;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+}
+
+// Classes not found in the provided markup (moved to the end)
+.slider_orientation_yes {
+    float: right;
+
+    &.property_slider_carousel_elementor_v2 .owl-nav {
+        left: auto;
+        right: -60px;
+    }
+}

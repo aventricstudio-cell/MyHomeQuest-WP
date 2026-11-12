@@ -1,0 +1,1555 @@
+{
+  "custom_fields": [
+    {
+      "key": "agent_custom_label",
+      "value": "translate",
+      "label": "Label: agent_custom_label",
+      "post": "estate_agent"
+    },
+ {
+      "key": "agent_custom_data",
+      "value": "translate",
+      "label": "Label: agent_custom_data",
+      "post": "estate_agent"
+    },
+
+    
+    {
+      "key": "agent_custom_value",
+      "value": "copy",
+      "label": "Label: agent_custom_value",
+      "post": "estate_agent"
+    },
+    {
+      "key": "developer_email",
+      "value": "copy",
+      "label": "Label: developer_email",
+      "post": "estate_developer"
+    },
+    {
+      "key": "agency_email",
+      "value": "copy",
+      "label": "Label: agency_email",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_long",
+      "value": "copy",
+      "label": "Label: agency_long",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_lat",
+      "value": "copy",
+      "label": "Label: agency_lat",
+      "post": "estate_agency"
+    },
+    {
+      "key": "dir_bathrooms_max",
+      "value": "copy",
+      "label": "Label: dir_bathrooms_max",
+      "post": "page"
+    },
+    {
+      "key": "dir_bedrooms_max",
+      "value": "copy",
+      "label": "Label: dir_bedrooms_max",
+      "post": "page"
+    },
+    {
+      "key": "dir_bathrooms_min",
+      "value": "copy",
+      "label": "Label: dir_bathrooms_min",
+      "post": "page"
+    },
+    {
+      "key": "dir_bedrooms_min",
+      "value": "copy",
+      "label": "Label: dir_bedrooms_min",
+      "post": "page"
+    },
+    {
+      "key": "dir_rooms_min",
+      "value": "copy",
+      "label": "Label: dir_rooms_min",
+      "post": "page"
+    },
+    {
+      "key": "dir_rooms_max",
+      "value": "copy",
+      "label": "Label: dir_rooms_max",
+      "post": "page"
+    },
+    {
+      "key": "dir_max_lot_size",
+      "value": "copy",
+      "label": "Label: dir_max_lot_size",
+      "post": "page"
+    },
+    {
+      "key": "dir_min_lot_size",
+      "value": "copy",
+      "label": "Label: dir_min_lot_size",
+      "post": "page"
+    },
+    {
+      "key": "dir_max_size",
+      "value": "copy",
+      "label": "Label: dir_max_size",
+      "post": "page"
+    },
+    {
+      "key": "dir_min_size",
+      "value": "copy",
+      "label": "Label: dir_min_size",
+      "post": "page"
+    },
+    {
+      "key": "review_stars",
+      "value": "copy",
+      "label": "Label: review_stars",
+      "post": "estate_review"
+    },
+    {
+      "key": "review_title",
+      "value": "translate",
+      "label": "Label: review_title",
+      "post": "estate_review"
+    },
+    {
+      "key": "user_meda_id",
+      "value": "copy",
+      "label": "Label: user_meda_id",
+      "post": "estate_agent"
+    },
+    {
+      "key": "user_meda_id",
+      "value": "copy",
+      "label": "Label: user_meda_id",
+      "post": "estate_agency"
+    },
+    {
+      "key": "user_meda_id",
+      "value": "copy",
+      "label": "Label: user_meda_id",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_taxes",
+      "value": "copy",
+      "label": "Label: developer_taxes",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_address",
+      "value": "copy",
+      "label": "Label: developer_address",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_phone",
+      "value": "copy",
+      "label": "Label: developer_phone",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_mobile",
+      "value": "copy",
+      "label": "Label: developer_mobile",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_skype",
+      "value": "copy",
+      "label": "Label: developer_skype",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_facebook",
+      "value": "copy",
+      "label": "Label: developer_facebook",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_twitter",
+      "value": "copy",
+      "label": "Label: developer_twitter",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_linkedin",
+      "value": "copy",
+      "label": "Label: developer_linkedin",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_pinterest",
+      "value": "copy",
+      "label": "Label: developer_pinterest",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_instagram",
+      "value": "copy",
+      "label": "Label: developer_instagram",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_website",
+      "value": "copy",
+      "label": "Label: developer_website",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_lat",
+      "value": "copy",
+      "label": "Label: developer_lat",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_long",
+      "value": "copy",
+      "label": "Label: developer_long",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_license",
+      "value": "copy",
+      "label": "Label: developer_license",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_languages",
+      "value": "copy",
+      "label": "Label: developer_languages",
+      "post": "estate_developer"
+    },
+    {
+      "key": "developer_opening_hours",
+      "value": "copy",
+      "label": "Label: developer_opening_hours",
+      "post": "estate_developer"
+    },
+    {
+      "key": "first_name",
+      "value": "copy",
+      "label": "Label: first_name",
+      "post": "estate_agent"
+    },
+    {
+      "key": "last_name",
+      "value": "copy",
+      "label": "Label: last_name",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agency_address",
+      "value": "copy",
+      "label": "Label: agency_address",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_phone",
+      "value": "copy",
+      "label": "Label: agency_phone",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_mobile",
+      "value": "copy",
+      "label": "Label: agency_mobile",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_skype",
+      "value": "copy",
+      "label": "Label: agency_skype",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_facebook",
+      "value": "copy",
+      "label": "Label: agency_facebook",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_twitter",
+      "value": "copy",
+      "label": "Label: agency_twitter",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_linkedin",
+      "value": "copy",
+      "label": "Label: agency_linkedin",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_pinterest",
+      "value": "copy",
+      "label": "Label: agency_pinterest",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_instagram",
+      "value": "copy",
+      "label": "Label: agency_instagram",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_website",
+      "value": "copy",
+      "label": "Label: agency_website",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_languages",
+      "value": "copy",
+      "label": "Label: agency_languages",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_license",
+      "value": "copy",
+      "label": "Label: agency_license",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_opening_hours",
+      "value": "copy",
+      "label": "Label: agency_opening_hours",
+      "post": "estate_agency"
+    },
+    {
+      "key": "agency_taxes",
+      "value": "copy",
+      "label": "Label: agency_taxes",
+      "post": "estate_agency"
+    },
+   
+
+    {
+      "key": "page_header_title_over_video",
+      "value": "translate",
+      "label": "Label: page_header_title_over_video",
+      "post": "page"
+    },
+    {
+      "key": "page_custom_video",
+      "value": "copy",
+      "label": "Label: page_custom_video",
+      "post": "page"
+    },
+
+   
+    {
+      "key": "page_header_image_height",
+      "value": "copy",
+      "label": "Label: page_header_image_height",
+      "post": "page"
+    },
+   
+  
+    {
+      "key": "use_float_search_form_local_set",
+      "value": "copy",
+      "label": "Label: use_float_search_form_local_set",
+      "post": "page"
+    },
+    {
+      "key": "property_theme_slider",
+      "value": "copy",
+      "label": "Label: property_theme_slider",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_has_subunits",
+      "value": "copy",
+      "label": "Label: property_has_subunits",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_subunits_list",
+      "value": "copy",
+      "label": "Label: property_subunits_list",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_subunits_list_manual",
+      "value": "copy",
+      "label": "Label: property_subunits_list_manual",
+      "post": "estate_property"
+    },
+    {
+      "key": "image_to_attach",
+      "value": "copy",
+      "label": "Label: image_to_attach",
+      "post": "estate_property"
+    },
+    {
+      "key": "sidebar_option",
+      "value": "copy",
+      "label": "Label: sidebar_option",
+      "post": "page"
+    },
+    {
+      "key": "sidebar_option",
+      "value": "copy",
+      "label": "Label: sidebar_option",
+      "post": "post"
+    },
+    {
+      "key": "sidebar_option",
+      "value": "copy",
+      "label": "Label: sidebar_option",
+      "post": "estate_property"
+    },
+    {
+      "key": "sidebar_option",
+      "value": "copy",
+      "label": "Label: sidebar_option",
+      "post": "estate_agent"
+    },
+    {
+      "key": "sidebar_option",
+      "value": "copy",
+      "label": "Label: sidebar_option",
+      "post": "estate_agency"
+    },
+    {
+      "key": "sidebar_option",
+      "value": "copy",
+      "label": "Label: sidebar_option",
+      "post": "estate_developer"
+    },
+    {
+      "key": "sidebar_select",
+      "value": "copy",
+      "label": "Label: sidebar_select",
+      "post": "page"
+    },
+    {
+      "key": "sidebar_select",
+      "value": "copy",
+      "label": "Label: sidebar_select",
+      "post": "post"
+    },
+    {
+      "key": "sidebar_select",
+      "value": "copy",
+      "label": "Label: sidebar_select",
+      "post": "estate_property"
+    },
+    {
+      "key": "sidebar_select",
+      "value": "copy",
+      "label": "Label: sidebar_select",
+      "post": "estate_agent"
+    },
+    {
+      "key": "sidebar_select",
+      "value": "copy",
+      "label": "Label: sidebar_select",
+      "post": "estate_agency"
+    },
+    {
+      "key": "sidebar_select",
+      "value": "copy",
+      "label": "Label: sidebar_select",
+      "post": "estate_developer"
+    },
+    {
+      "key": "post_show_title",
+      "value": "copy",
+      "label": "Label: post_show_title",
+      "post": "post"
+    },
+    {
+      "key": "group_pictures",
+      "value": "copy",
+      "label": "Label: group_pictures",
+      "post": "post"
+    },
+    {
+      "key": "embed_video_id",
+      "value": "copy",
+      "label": "Label: embed_video_id",
+      "post": "estate_property"
+    },
+    {
+      "key": "embed_virtual_tour",
+      "value": "copy",
+      "label": "Label: embed_virtual_tour",
+      "post": "estate_property"
+    },
+    {
+      "key": "embed_video_type",
+      "value": "copy",
+      "label": "Label: embed_video_type",
+      "post": "estate_property"
+    },
+    {
+      "key": "page_show_title",
+      "value": "copy",
+      "label": "Label: page_show_title",
+      "post": "page"
+    },
+    {
+      "key": "adv_filter_search_action",
+      "value": "copy",
+      "label": "Label: adv_filter_search_action",
+      "post": "page"
+    },
+    {
+      "key": "adv_filter_search_category",
+      "value": "copy",
+      "label": "Label: adv_filter_search_category",
+      "post": "page"
+    },
+    {
+      "key": "current_adv_filter_city",
+      "value": "copy",
+      "label": "Label: current_adv_filter_city",
+      "post": "page"
+    },
+    {
+      "key": "current_adv_filter_area",
+      "value": "copy",
+      "label": "Label: current_adv_filter_area",
+      "post": "page"
+    },
+    {
+      "key": "current_adv_filter_county",
+      "value": "copy",
+      "label": "Label: current_adv_filter_county",
+      "post": "page"
+    },
+    {
+      "key": "listing_filter",
+      "value": "copy",
+      "label": "Label: listing_filter",
+      "post": "page"
+    },
+    {
+      "key": "show_featured_only",
+      "value": "copy",
+      "label": "Label: show_featured_only",
+      "post": "page"
+    },
+    {
+      "key": "show_filter_area",
+      "value": "copy",
+      "label": "Label: show_filter_area",
+      "post": "page"
+    },
+    {
+      "key": "header_type",
+      "value": "copy",
+      "label": "Label: header_type",
+      "post": "page"
+    },
+    {
+      "key": "header_type",
+      "value": "copy",
+      "label": "Label: header_type",
+      "post": "post"
+    },
+    {
+      "key": "header_type",
+      "value": "copy",
+      "label": "Label: header_type",
+      "post": "estate_property"
+    },
+    {
+      "key": "header_type",
+      "value": "copy",
+      "label": "Label: header_type",
+      "post": "estate_agent"
+    },
+    {
+      "key": "header_type",
+      "value": "copy",
+      "label": "Label: header_type",
+      "post": "estate_agency"
+    },
+    {
+      "key": "header_type",
+      "value": "copy",
+      "label": "Label: header_type",
+      "post": "estate_developer"
+    },
+    {
+      "key": "header_transparent",
+      "value": "copy",
+      "label": "Label: header_transparent",
+      "post": "page"
+    },
+    {
+      "key": "header_transparent",
+      "value": "copy",
+      "label": "Label: header_transparent",
+      "post": "post"
+    },
+    {
+      "key": "header_transparent",
+      "value": "copy",
+      "label": "Label: header_transparent",
+      "post": "estate_property"
+    },
+    {
+      "key": "header_transparent",
+      "value": "copy",
+      "label": "Label: header_transparent",
+      "post": "estate_agent"
+    },
+    {
+      "key": "header_transparent",
+      "value": "copy",
+      "label": "Label: header_transparent",
+      "post": "estate_agency"
+    },
+    {
+      "key": "header_transparent",
+      "value": "copy",
+      "label": "Label: header_transparent",
+      "post": "estate_developer"
+    },
+    {
+      "key": "topbar_transparent",
+      "value": "copy",
+      "label": "Label: topbar_transparent",
+      "post": "page"
+    },
+    {
+      "key": "topbar_transparent",
+      "value": "copy",
+      "label": "Label: topbar_transparent",
+      "post": "post"
+    },
+    {
+      "key": "topbar_transparent",
+      "value": "copy",
+      "label": "Label: topbar_transparent",
+      "post": "estate_property"
+    },
+    {
+      "key": "topbar_transparent",
+      "value": "copy",
+      "label": "Label: topbar_transparent",
+      "post": "estate_agent"
+    },
+    {
+      "key": "topbar_transparent",
+      "value": "copy",
+      "label": "Label: topbar_transparent",
+      "post": "estate_agency"
+    },
+    {
+      "key": "topbar_transparent",
+      "value": "copy",
+      "label": "Label: topbar_transparent",
+      "post": "estate_developer"
+    },
+    {
+      "key": "topbar_border_transparent",
+      "value": "copy",
+      "label": "Label: topbar_border_transparent",
+      "post": "page"
+    },
+    {
+      "key": "topbar_border_transparent",
+      "value": "copy",
+      "label": "Label: topbar_border_transparent",
+      "post": "post"
+    },
+    {
+      "key": "topbar_border_transparent",
+      "value": "copy",
+      "label": "Label: topbar_border_transparent",
+      "post": "estate_property"
+    },
+    {
+      "key": "topbar_border_transparent",
+      "value": "copy",
+      "label": "Label: topbar_border_transparent",
+      "post": "estate_agent"
+    },
+    {
+      "key": "topbar_border_transparent",
+      "value": "copy",
+      "label": "Label: topbar_border_transparent",
+      "post": "estate_agency"
+    },
+    {
+      "key": "topbar_border_transparent",
+      "value": "copy",
+      "label": "Label: topbar_border_transparent",
+      "post": "estate_developer"
+    },
+    {
+      "key": "page_custom_lat",
+      "value": "copy",
+      "label": "Label: page_custom_lat",
+      "post": "page"
+    },
+    {
+      "key": "page_custom_lat",
+      "value": "copy",
+      "label": "Label: page_custom_lat",
+      "post": "estate_property"
+    },
+    {
+      "key": "page_custom_lat",
+      "value": "copy",
+      "label": "Label: page_custom_lat",
+      "post": "estate_agent"
+    },
+    {
+      "key": "page_custom_lat",
+      "value": "copy",
+      "label": "Label: page_custom_lat",
+      "post": "estate_agency"
+    },
+    {
+      "key": "page_custom_lat",
+      "value": "copy",
+      "label": "Label: page_custom_lat",
+      "post": "estate_developer"
+    },
+    {
+      "key": "page_custom_long",
+      "value": "copy",
+      "label": "Label: page_custom_long",
+      "post": "page"
+    },
+    {
+      "key": "page_custom_long",
+      "value": "copy",
+      "label": "Label: page_custom_long",
+      "post": "estate_property"
+    },
+    {
+      "key": "page_custom_long",
+      "value": "copy",
+      "label": "Label: page_custom_long",
+      "post": "estate_agent"
+    },
+    {
+      "key": "page_custom_long",
+      "value": "copy",
+      "label": "Label: page_custom_long",
+      "post": "estate_agency"
+    },
+    {
+      "key": "page_custom_long",
+      "value": "copy",
+      "label": "Label: page_custom_long",
+      "post": "estate_developer"
+    },
+    {
+      "key": "page_custom_zoom",
+      "value": "copy",
+      "label": "Label: page_custom_zoom",
+      "post": "page"
+    },
+    {
+      "key": "page_custom_zoom",
+      "value": "copy",
+      "label": "Label: page_custom_zoom",
+      "post": "estate_property"
+    },
+    {
+      "key": "page_custom_zoom",
+      "value": "copy",
+      "label": "Label: page_custom_zoom",
+      "post": "estate_agent"
+    },
+    {
+      "key": "page_custom_zoom",
+      "value": "copy",
+      "label": "Label: page_custom_zoom",
+      "post": "estate_agency"
+    },
+    {
+      "key": "page_custom_zoom",
+      "value": "copy",
+      "label": "Label: page_custom_zoom",
+      "post": "estate_developer"
+    },
+  
+   
+    {
+      "key": "keep_min",
+      "value": "copy",
+      "label": "Label: keep_min",
+      "post": "page"
+    },
+    {
+      "key": "keep_min",
+      "value": "copy",
+      "label": "Label: keep_min",
+      "post": "estate_property"
+    },
+    {
+      "key": "keep_min",
+      "value": "copy",
+      "label": "Label: keep_min",
+      "post": "estate_agent"
+    },
+    {
+      "key": "keep_min",
+      "value": "copy",
+      "label": "Label: keep_min",
+      "post": "estate_agency"
+    },
+    {
+      "key": "keep_min",
+      "value": "copy",
+      "label": "Label: keep_min",
+      "post": "estate_developer"
+    },
+    {
+      "key": "keep_max",
+      "value": "copy",
+      "label": "Label: keep_max",
+      "post": "page"
+    },
+    {
+      "key": "keep_max",
+      "value": "copy",
+      "label": "Label: keep_max",
+      "post": "estate_property"
+    },
+    {
+      "key": "keep_max",
+      "value": "copy",
+      "label": "Label: keep_max",
+      "post": "estate_agent"
+    },
+    {
+      "key": "keep_max",
+      "value": "copy",
+      "label": "Label: keep_max",
+      "post": "estate_agency"
+    },
+    {
+      "key": "keep_max",
+      "value": "copy",
+      "label": "Label: keep_max",
+      "post": "estate_developer"
+    },
+   
+    
+    {
+      "key": "sidebar_agent_option",
+      "value": "copy",
+      "label": "Label: sidebar_agent_option",
+      "post": "estate_property"
+    },
+    {
+      "key": "local_pgpr_slider_type",
+      "value": "copy",
+      "label": "Label: local_pgpr_slider_type",
+      "post": "estate_property"
+    },
+    {
+      "key": "local_pgpr_content_type",
+      "value": "copy",
+      "label": "Label: local_pgpr_content_type",
+      "post": "estate_property"
+    },
+    {
+      "key": "agent_position",
+      "value": "translate",
+      "label": "Label: agent_position",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_email",
+      "value": "copy",
+      "label": "Label: agent_email",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_phone",
+      "value": "copy",
+      "label": "Label: agent_phone",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_mobile",
+      "value": "copy",
+      "label": "Label: agent_mobile",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_skype",
+      "value": "copy",
+      "label": "Label: agent_skype",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_facebook",
+      "value": "copy",
+      "label": "Label: agent_facebook",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_twitter",
+      "value": "copy",
+      "label": "Label: agent_twitter",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_linkedin",
+      "value": "copy",
+      "label": "Label: agent_linkedin",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_pinterest",
+      "value": "copy",
+      "label": "Label: agent_pinterest",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_instagram",
+      "value": "copy",
+      "label": "Label: agent_instagram",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_youtube",
+      "value": "copy",
+      "label": "Label: agent_youtube",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_tiktok",
+      "value": "copy",
+      "label": "Label: agent_tiktok",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_telegram",
+      "value": "copy",
+      "label": "Label: agent_telegram",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_vimeo",
+      "value": "copy",
+      "label": "Label: agent_vimeo",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_website",
+      "value": "copy",
+      "label": "Label: agent_website",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_private_notes",
+      "value": "translate",
+      "label": "Label: agent_private_notes",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_member",
+      "value": "copy",
+      "label": "Label: agent_member",
+      "post": "estate_agent"
+    },
+    {
+      "key": "agent_address",
+      "value": "copy",
+      "label": "Label: agent_address",
+      "post": "estate_agent"
+    },
+    {
+      "key": "item_id",
+      "value": "copy",
+      "label": "Label: item_id",
+      "post": "wpestate_invoice"
+    },
+    {
+      "key": "item_price",
+      "value": "copy",
+      "label": "Label: item_price",
+      "post": "wpestate_invoice"
+    },
+    {
+      "key": "purchase_date",
+      "value": "copy",
+      "label": "Label: purchase_date",
+      "post": "wpestate_invoice"
+    },
+    {
+      "key": "buyer_id",
+      "value": "copy",
+      "label": "Label: buyer_id",
+      "post": "wpestate_invoice"
+    },
+    {
+      "key": "biling_period",
+      "value": "copy",
+      "label": "Label: biling_period",
+      "post": "wpestate_invoice"
+    },
+    {
+      "key": "billing_freq",
+      "value": "copy",
+      "label": "Label: billing_freq",
+      "post": "wpestate_invoice"
+    },
+    {
+      "key": "pack_listings",
+      "value": "copy",
+      "label": "Label: pack_listings",
+      "post": "membership_package"
+    },
+    {
+      "key": "mem_list_unl",
+      "value": "copy",
+      "label": "Label: mem_list_unl",
+      "post": "membership_package"
+    },
+    {
+      "key": "pack_featured_listings",
+      "value": "copy",
+      "label": "Label: pack_featured_listings",
+      "post": "membership_package"
+    },
+    {
+      "key": "pack_image_included",
+      "value": "copy",
+      "label": "Label: pack_image_included",
+      "post": "membership_package"
+    },
+    {
+      "key": "pack_price",
+      "value": "copy",
+      "label": "Label: pack_price",
+      "post": "membership_package"
+    },
+    {
+      "key": "pack_visible",
+      "value": "copy",
+      "label": "Label: pack_visible",
+      "post": "membership_package"
+    },
+    {
+      "key": "pack_visible_user_role",
+      "value": "copy",
+      "label": "Label: pack_visible_user_role",
+      "post": "membership_package"
+    },
+    {
+      "key": "pack_stripe_id",
+      "value": "copy",
+      "label": "Label: pack_stripe_id",
+      "post": "membership_package"
+    },
+    {
+      "key": "property_address",
+      "value": "copy",
+      "label": "Label: property_address",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_zip",
+      "value": "copy",
+      "label": "Label: property_zip",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_state",
+      "value": "translate",
+      "label": "Label: property_state",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_country",
+      "value": "translate",
+      "label": "Label: property_country",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_status",
+      "value": "translate",
+      "label": "Label: property_status",
+      "post": "estate_property"
+    },
+    {
+      "key": "prop_featured",
+      "value": "copy",
+      "label": "Label: prop_featured",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_price",
+      "value": "copy",
+      "label": "Label: property_price",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_label",
+      "value": "translate",
+      "label": "Label: property_label",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_label_before",
+      "value": "translate",
+      "label": "Label: property_label_before",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_second_price_label",
+      "value": "translate",
+      "label": "Label: property_second_price_label",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_second_price",
+      "value": "copy",
+      "label": "Label: property_second_price",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_label_before_second_price",
+      "value": "translate",
+      "label": "Label: property_label_before_second_price",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_year_tax",
+      "value": "copy",
+      "label": "Label: property_year_tax",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_hoa",
+      "value": "copy",
+      "label": "Label: property_hoa",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_size",
+      "value": "copy",
+      "label": "Label: property_size",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_lot_size",
+      "value": "copy",
+      "label": "Label: property_lot_size",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_rooms",
+      "value": "copy",
+      "label": "Label: property_rooms",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_bedrooms",
+      "value": "copy",
+      "label": "Label: property_bedrooms",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_bathrooms",
+      "value": "copy",
+      "label": "Label: property_bathrooms",
+      "post": "estate_property"
+    },
+    {
+      "key": "owner_notes",
+      "value": "translate",
+      "label": "Label: owner_notes",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_latitude",
+      "value": "copy",
+      "label": "Label: property_latitude",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_longitude",
+      "value": "copy",
+      "label": "Label: property_longitude",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_google_view",
+      "value": "copy",
+      "label": "Label: property_google_view",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_hide_map_marker",
+      "value": "copy",
+      "label": "Label: property_hide_map_marker",
+      "post": "estate_property"
+    },
+    {
+      "key": "google_camera_angle",
+      "value": "copy",
+      "label": "Label: google_camera_angle",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_agent",
+      "value": "copy",
+      "label": "Label: property_agent",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_user",
+      "value": "copy",
+      "label": "Label: property_user",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_agent_secondary",
+      "value": "copy",
+      "label": "Label: property_agent_secondary",
+      "post": "estate_property"
+    },
+    {
+      "key": "use_floor_plans",
+      "value": "copy",
+      "label": "Label: use_floor_plans",
+      "post": "estate_property"
+    },
+        {
+      "key": "plan_title",
+      "value": "copy",
+      "label": "Label: plan_title",
+      "post": "estate_property"
+    },
+        {
+      "key": "plan_description",
+      "value": "copy",
+      "label": "Label: plan_description",
+      "post": "estate_property"
+    },
+        {
+      "key": "plan_image",
+      "value": "copy",
+      "label": "Label: plan_image",
+      "post": "estate_property"
+    },
+           {
+      "key": "plan_size",
+      "value": "copy",
+      "label": "Label: plan_size",
+      "post": "estate_property"
+    },
+           {
+      "key": "plan_rooms",
+      "value": "copy",
+      "label": "Label: plan_rooms",
+      "post": "estate_property"
+    },
+             {
+      "key": "plan_bath",
+      "value": "copy",
+      "label": "Label: plan_bath",
+      "post": "estate_property"
+    },
+             {
+      "key": "plan_price",
+      "value": "copy",
+      "label": "Label: plan_price",
+      "post": "estate_property"
+    },
+               {
+      "key": "plan_image_attach",
+      "value": "copy",
+      "label": "Label: plan_image_attach",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_page_desing_local",
+      "value": "copy",
+      "label": "Label: property_page_desing_local",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_list_second_content",
+      "value": "copy",
+      "label": "Label: property_list_second_content",
+      "post": "estate_property"
+    },
+    {
+      "key": "energy_class",
+      "value": "copy",
+      "label": "Label: energy_class",
+      "post": "estate_property"
+    },
+    {
+      "key": "energy_index",
+      "value": "copy",
+      "label": "Label: energy_index",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_custom_video",
+      "value": "copy",
+      "label": "Label: property_custom_video",
+      "post": "estate_property"
+    },
+    {
+      "key": "co2_index",
+      "value": "copy",
+      "label": "Label: co2_index",
+      "post": "estate_property"
+    },
+    {
+      "key": "co2_class",
+      "value": "copy",
+      "label": "Label: co2_class",
+      "post": "estate_property"
+    },
+    {
+      "key": "renew_energy_index",
+      "value": "copy",
+      "label": "Label: renew_energy_index",
+      "post": "estate_property"
+    },
+    {
+      "key": "building_energy_index",
+      "value": "copy",
+      "label": "Label: building_energy_index",
+      "post": "estate_property"
+    },
+    {
+      "key": "epc_current_rating",
+      "value": "copy",
+      "label": "Label: epc_current_rating",
+      "post": "estate_property"
+    },
+    {
+      "key": "epc_potential_rating",
+      "value": "copy",
+      "label": "Label: epc_potential_rating",
+      "post": "estate_property"
+    },
+    {
+      "key": "realtor_order",
+      "value": "copy",
+      "label": "Label: realtor_order",
+      "post": "page"
+    },
+    {
+      "key": "realtor_order_by",
+      "value": "copy",
+      "label": "Label: realtor_order_by",
+      "post": "page"
+    },
+    {
+      "key": "local_show_hide_price",
+      "value": "copy",
+      "label": "Label: local_show_hide_price",
+      "post": "estate_property"
+    },
+    {
+      "key": "property_internal_id",
+      "value": "copy",
+      "label": "Label: property_internal_id",
+      "post": "estate_property"
+    },
+    {"key":"page_header_type","value":"copy","label":"Label page_header_type","post":"page"},
+  {"key":"page_header_type","value":"copy","label":"Label page_header_type","post":"post"},
+  {"key":"page_header_type","value":"copy","label":"Label page_header_type","post":"estate_property"},
+  {"key":"page_header_type","value":"copy","label":"Label page_header_type","post":"estate_agent"},
+  {"key":"page_header_type","value":"copy","label":"Label page_header_type","post":"estate_agency"},
+  {"key":"page_header_type","value":"copy","label":"Label page_header_type","post":"estate_developer"},
+
+  {"key":"page_custom_image","value":"copy","label":"Label page_custom_image","post":"page"},
+  {"key":"page_custom_image","value":"copy","label":"Label page_custom_image","post":"post"},
+  {"key":"page_custom_image","value":"copy","label":"Label page_custom_image","post":"estate_property"},
+  {"key":"page_custom_image","value":"copy","label":"Label page_custom_image","post":"estate_agent"},
+  {"key":"page_custom_image","value":"copy","label":"Label page_custom_image","post":"estate_agency"},
+  {"key":"page_custom_image","value":"copy","label":"Label page_custom_image","post":"estate_developer"},
+
+  {"key":"page_header_image_full_screen","value":"copy","label":"Label page_header_image_full_screen","post":"page"},
+  {"key":"page_header_image_full_screen","value":"copy","label":"Label page_header_image_full_screen","post":"post"},
+  {"key":"page_header_image_full_screen","value":"copy","label":"Label page_header_image_full_screen","post":"estate_property"},
+  {"key":"page_header_image_full_screen","value":"copy","label":"Label page_header_image_full_screen","post":"estate_agent"},
+  {"key":"page_header_image_full_screen","value":"copy","label":"Label page_header_image_full_screen","post":"estate_agency"},
+  {"key":"page_header_image_full_screen","value":"copy","label":"Label page_header_image_full_screen","post":"estate_developer"},
+
+  {"key":"page_header_image_back_type","value":"copy","label":"Label page_header_image_back_type","post":"page"},
+  {"key":"page_header_image_back_type","value":"copy","label":"Label page_header_image_back_type","post":"post"},
+  {"key":"page_header_image_back_type","value":"copy","label":"Label page_header_image_back_type","post":"estate_property"},
+  {"key":"page_header_image_back_type","value":"copy","label":"Label page_header_image_back_type","post":"estate_agent"},
+  {"key":"page_header_image_back_type","value":"copy","label":"Label page_header_image_back_type","post":"estate_agency"},
+  {"key":"page_header_image_back_type","value":"copy","label":"Label page_header_image_back_type","post":"estate_developer"},
+
+  {"key":"page_header_title_over_image","value":"translate","label":"Label page_header_title_over_image","post":"page"},
+  {"key":"page_header_title_over_image","value":"translate","label":"Label page_header_title_over_image","post":"post"},
+  {"key":"page_header_title_over_image","value":"translate","label":"Label page_header_title_over_image","post":"estate_property"},
+  {"key":"page_header_title_over_image","value":"translate","label":"Label page_header_title_over_image","post":"estate_agent"},
+  {"key":"page_header_title_over_image","value":"translate","label":"Label page_header_title_over_image","post":"estate_agency"},
+  {"key":"page_header_title_over_image","value":"translate","label":"Label page_header_title_over_image","post":"estate_developer"},
+
+  {"key":"page_header_subtitle_over_image","value":"translate","label":"Label page_header_subtitle_over_image","post":"page"},
+  {"key":"page_header_subtitle_over_image","value":"translate","label":"Label page_header_subtitle_over_image","post":"post"},
+  {"key":"page_header_subtitle_over_image","value":"translate","label":"Label page_header_subtitle_over_image","post":"estate_property"},
+  {"key":"page_header_subtitle_over_image","value":"translate","label":"Label page_header_subtitle_over_image","post":"estate_agent"},
+  {"key":"page_header_subtitle_over_image","value":"translate","label":"Label page_header_subtitle_over_image","post":"estate_agency"},
+  {"key":"page_header_subtitle_over_image","value":"translate","label":"Label page_header_subtitle_over_image","post":"estate_developer"},
+
+  {"key":"page_header_image_height","value":"copy","label":"Label page_header_image_height","post":"page"},
+  {"key":"page_header_image_height","value":"copy","label":"Label page_header_image_height","post":"post"},
+  {"key":"page_header_image_height","value":"copy","label":"Label page_header_image_height","post":"estate_property"},
+  {"key":"page_header_image_height","value":"copy","label":"Label page_header_image_height","post":"estate_agent"},
+  {"key":"page_header_image_height","value":"copy","label":"Label page_header_image_height","post":"estate_agency"},
+  {"key":"page_header_image_height","value":"copy","label":"Label page_header_image_height","post":"estate_developer"},
+
+  {"key":"page_header_overlay_color","value":"copy","label":"Label page_header_overlay_color","post":"page"},
+  {"key":"page_header_overlay_color","value":"copy","label":"Label page_header_overlay_color","post":"post"},
+  {"key":"page_header_overlay_color","value":"copy","label":"Label page_header_overlay_color","post":"estate_property"},
+  {"key":"page_header_overlay_color","value":"copy","label":"Label page_header_overlay_color","post":"estate_agent"},
+  {"key":"page_header_overlay_color","value":"copy","label":"Label page_header_overlay_color","post":"estate_agency"},
+  {"key":"page_header_overlay_color","value":"copy","label":"Label page_header_overlay_color","post":"estate_developer"},
+
+  {"key":"page_header_overlay_val","value":"copy","label":"Label page_header_overlay_val","post":"page"},
+  {"key":"page_header_overlay_val","value":"copy","label":"Label page_header_overlay_val","post":"post"},
+  {"key":"page_header_overlay_val","value":"copy","label":"Label page_header_overlay_val","post":"estate_property"},
+  {"key":"page_header_overlay_val","value":"copy","label":"Label page_header_overlay_val","post":"estate_agent"},
+  {"key":"page_header_overlay_val","value":"copy","label":"Label page_header_overlay_val","post":"estate_agency"},
+  {"key":"page_header_overlay_val","value":"copy","label":"Label page_header_overlay_val","post":"estate_developer"},
+
+  {"key":"rev_slider","value":"copy","label":"Label rev_slider","post":"page"},
+  {"key":"rev_slider","value":"copy","label":"Label rev_slider","post":"post"},
+  {"key":"rev_slider","value":"copy","label":"Label rev_slider","post":"estate_property"},
+  {"key":"rev_slider","value":"copy","label":"Label rev_slider","post":"estate_agent"},
+  {"key":"rev_slider","value":"copy","label":"Label rev_slider","post":"estate_agency"},
+  {"key":"rev_slider","value":"copy","label":"Label rev_slider","post":"estate_developer"},
+
+  {"key":"min_height","value":"copy","label":"Label min_height","post":"page"},
+  {"key":"min_height","value":"copy","label":"Label min_height","post":"post"},
+  {"key":"min_height","value":"copy","label":"Label min_height","post":"estate_property"},
+  {"key":"min_height","value":"copy","label":"Label min_height","post":"estate_agent"},
+  {"key":"min_height","value":"copy","label":"Label min_height","post":"estate_agency"},
+  {"key":"min_height","value":"copy","label":"Label min_height","post":"estate_developer"},
+
+  {"key":"max_height","value":"copy","label":"Label max_height","post":"page"},
+  {"key":"max_height","value":"copy","label":"Label max_height","post":"post"},
+  {"key":"max_height","value":"copy","label":"Label max_height","post":"estate_property"},
+  {"key":"max_height","value":"copy","label":"Label max_height","post":"estate_agent"},
+  {"key":"max_height","value":"copy","label":"Label max_height","post":"estate_agency"},
+  {"key":"max_height","value":"copy","label":"Label max_height","post":"estate_developer"},
+
+  {"key":"keep_min","value":"copy","label":"Label keep_min","post":"page"},
+  {"key":"keep_min","value":"copy","label":"Label keep_min","post":"post"},
+  {"key":"keep_min","value":"copy","label":"Label keep_min","post":"estate_property"},
+  {"key":"keep_min","value":"copy","label":"Label keep_min","post":"estate_agent"},
+  {"key":"keep_min","value":"copy","label":"Label keep_min","post":"estate_agency"},
+  {"key":"keep_min","value":"copy","label":"Label keep_min","post":"estate_developer"},
+
+  {"key":"keep_max","value":"copy","label":"Label keep_max","post":"page"},
+  {"key":"keep_max","value":"copy","label":"Label keep_max","post":"post"},
+  {"key":"keep_max","value":"copy","label":"Label keep_max","post":"estate_property"},
+  {"key":"keep_max","value":"copy","label":"Label keep_max","post":"estate_agent"},
+  {"key":"keep_max","value":"copy","label":"Label keep_max","post":"estate_agency"},
+  {"key":"keep_max","value":"copy","label":"Label keep_max","post":"estate_developer"},
+
+  {"key":"page_custom_video","value":"copy","label":"Label page_custom_video","post":"page"},
+  {"key":"page_custom_video","value":"copy","label":"Label page_custom_video","post":"post"},
+  {"key":"page_custom_video","value":"copy","label":"Label page_custom_video","post":"estate_property"},
+  {"key":"page_custom_video","value":"copy","label":"Label page_custom_video","post":"estate_agent"},
+  {"key":"page_custom_video","value":"copy","label":"Label page_custom_video","post":"estate_agency"},
+  {"key":"page_custom_video","value":"copy","label":"Label page_custom_video","post":"estate_developer"},
+
+  {"key":"page_custom_video_webbm","value":"copy","label":"Label page_custom_video_webbm","post":"page"},
+  {"key":"page_custom_video_webbm","value":"copy","label":"Label page_custom_video_webbm","post":"post"},
+  {"key":"page_custom_video_webbm","value":"copy","label":"Label page_custom_video_webbm","post":"estate_property"},
+  {"key":"page_custom_video_webbm","value":"copy","label":"Label page_custom_video_webbm","post":"estate_agent"},
+  {"key":"page_custom_video_webbm","value":"copy","label":"Label page_custom_video_webbm","post":"estate_agency"},
+  {"key":"page_custom_video_webbm","value":"copy","label":"Label page_custom_video_webbm","post":"estate_developer"},
+
+  {"key":"page_custom_video_ogv","value":"copy","label":"Label page_custom_video_ogv","post":"page"},
+  {"key":"page_custom_video_ogv","value":"copy","label":"Label page_custom_video_ogv","post":"post"},
+  {"key":"page_custom_video_ogv","value":"copy","label":"Label page_custom_video_ogv","post":"estate_property"},
+  {"key":"page_custom_video_ogv","value":"copy","label":"Label page_custom_video_ogv","post":"estate_agent"},
+  {"key":"page_custom_video_ogv","value":"copy","label":"Label page_custom_video_ogv","post":"estate_agency"},
+  {"key":"page_custom_video_ogv","value":"copy","label":"Label page_custom_video_ogv","post":"estate_developer"},
+
+  {"key":"page_custom_video_cover_image","value":"copy","label":"Label page_custom_video_cover_image","post":"page"},
+  {"key":"page_custom_video_cover_image","value":"copy","label":"Label page_custom_video_cover_image","post":"post"},
+  {"key":"page_custom_video_cover_image","value":"copy","label":"Label page_custom_video_cover_image","post":"estate_property"},
+  {"key":"page_custom_video_cover_image","value":"copy","label":"Label page_custom_video_cover_image","post":"estate_agent"},
+  {"key":"page_custom_video_cover_image","value":"copy","label":"Label page_custom_video_cover_image","post":"estate_agency"},
+  {"key":"page_custom_video_cover_image","value":"copy","label":"Label page_custom_video_cover_image","post":"estate_developer"},
+
+  {"key":"page_header_video_full_screen","value":"copy","label":"Label page_header_video_full_screen","post":"page"},
+  {"key":"page_header_video_full_screen","value":"copy","label":"Label page_header_video_full_screen","post":"post"},
+  {"key":"page_header_video_full_screen","value":"copy","label":"Label page_header_video_full_screen","post":"estate_property"},
+  {"key":"page_header_video_full_screen","value":"copy","label":"Label page_header_video_full_screen","post":"estate_agent"},
+  {"key":"page_header_video_full_screen","value":"copy","label":"Label page_header_video_full_screen","post":"estate_agency"},
+  {"key":"page_header_video_full_screen","value":"copy","label":"Label page_header_video_full_screen","post":"estate_developer"},
+
+  {"key":"page_header_title_over_video","value":"translate","label":"Label page_header_title_over_video","post":"page"},
+  {"key":"page_header_title_over_video","value":"translate","label":"Label page_header_title_over_video","post":"post"},
+  {"key":"page_header_title_over_video","value":"translate","label":"Label page_header_title_over_video","post":"estate_property"},
+  {"key":"page_header_title_over_video","value":"translate","label":"Label page_header_title_over_video","post":"estate_agent"},
+  {"key":"page_header_title_over_video","value":"translate","label":"Label page_header_title_over_video","post":"estate_agency"},
+  {"key":"page_header_title_over_video","value":"translate","label":"Label page_header_title_over_video","post":"estate_developer"},
+
+  {"key":"page_header_subtitle_over_video","value":"translate","label":"Label page_header_subtitle_over_video","post":"page"},
+  {"key":"page_header_subtitle_over_video","value":"translate","label":"Label page_header_subtitle_over_video","post":"post"},
+  {"key":"page_header_subtitle_over_video","value":"translate","label":"Label page_header_subtitle_over_video","post":"estate_property"},
+  {"key":"page_header_subtitle_over_video","value":"translate","label":"Label page_header_subtitle_over_video","post":"estate_agent"},
+  {"key":"page_header_subtitle_over_video","value":"translate","label":"Label page_header_subtitle_over_video","post":"estate_agency"},
+  {"key":"page_header_subtitle_over_video","value":"translate","label":"Label page_header_subtitle_over_video","post":"estate_developer"},
+
+  {"key":"page_header_video_height","value":"copy","label":"Label page_header_video_height","post":"page"},
+  {"key":"page_header_video_height","value":"copy","label":"Label page_header_video_height","post":"post"},
+  {"key":"page_header_video_height","value":"copy","label":"Label page_header_video_height","post":"estate_property"},
+  {"key":"page_header_video_height","value":"copy","label":"Label page_header_video_height","post":"estate_agent"},
+  {"key":"page_header_video_height","value":"copy","label":"Label page_header_video_height","post":"estate_agency"},
+  {"key":"page_header_video_height","value":"copy","label":"Label page_header_video_height","post":"estate_developer"},
+
+  {"key":"page_header_overlay_color_video","value":"copy","label":"Label page_header_overlay_color_video","post":"page"},
+  {"key":"page_header_overlay_color_video","value":"copy","label":"Label page_header_overlay_color_video","post":"post"},
+  {"key":"page_header_overlay_color_video","value":"copy","label":"Label page_header_overlay_color_video","post":"estate_property"},
+  {"key":"page_header_overlay_color_video","value":"copy","label":"Label page_header_overlay_color_video","post":"estate_agent"},
+  {"key":"page_header_overlay_color_video","value":"copy","label":"Label page_header_overlay_color_video","post":"estate_agency"},
+  {"key":"page_header_overlay_color_video","value":"copy","label":"Label page_header_overlay_color_video","post":"estate_developer"},
+
+  {"key":"page_header_overlay_val_video","value":"copy","label":"Label page_header_overlay_val_video","post":"page"},
+  {"key":"page_header_overlay_val_video","value":"copy","label":"Label page_header_overlay_val_video","post":"post"},
+  {"key":"page_header_overlay_val_video","value":"copy","label":"Label page_header_overlay_val_video","post":"estate_property"},
+  {"key":"page_header_overlay_val_video","value":"copy","label":"Label page_header_overlay_val_video","post":"estate_agent"},
+  {"key":"page_header_overlay_val_video","value":"copy","label":"Label page_header_overlay_val_video","post":"estate_agency"},
+  {"key":"page_header_overlay_val_video","value":"copy","label":"Label page_header_overlay_val_video","post":"estate_developer"},
+
+  {"key":"page_show_adv_search","value":"copy","label":"Label page_show_adv_search","post":"page"},
+  {"key":"page_show_adv_search","value":"copy","label":"Label page_show_adv_search","post":"post"},
+  {"key":"page_show_adv_search","value":"copy","label":"Label page_show_adv_search","post":"estate_property"},
+  {"key":"page_show_adv_search","value":"copy","label":"Label page_show_adv_search","post":"estate_agent"},
+  {"key":"page_show_adv_search","value":"copy","label":"Label page_show_adv_search","post":"estate_agency"},
+  {"key":"page_show_adv_search","value":"copy","label":"Label page_show_adv_search","post":"estate_developer"},
+
+  {"key":"page_use_float_search","value":"copy","label":"Label page_use_float_search","post":"page"},
+  {"key":"page_use_float_search","value":"copy","label":"Label page_use_float_search","post":"post"},
+  {"key":"page_use_float_search","value":"copy","label":"Label page_use_float_search","post":"estate_property"},
+  {"key":"page_use_float_search","value":"copy","label":"Label page_use_float_search","post":"estate_agent"},
+  {"key":"page_use_float_search","value":"copy","label":"Label page_use_float_search","post":"estate_agency"},
+  {"key":"page_use_float_search","value":"copy","label":"Label page_use_float_search","post":"estate_developer"},
+
+  {"key":"page_wp_estate_float_form_top","value":"copy","label":"Label page_wp_estate_float_form_top","post":"page"},
+  {"key":"page_wp_estate_float_form_top","value":"copy","label":"Label page_wp_estate_float_form_top","post":"post"},
+  {"key":"page_wp_estate_float_form_top","value":"copy","label":"Label page_wp_estate_float_form_top","post":"estate_property"},
+  {"key":"page_wp_estate_float_form_top","value":"copy","label":"Label page_wp_estate_float_form_top","post":"estate_agent"},
+  {"key":"page_wp_estate_float_form_top","value":"copy","label":"Label page_wp_estate_float_form_top","post":"estate_agency"},
+  {"key":"page_wp_estate_float_form_top","value":"copy","label":"Label page_wp_estate_float_form_top","post":"estate_developer"}
+
+  ]
+}

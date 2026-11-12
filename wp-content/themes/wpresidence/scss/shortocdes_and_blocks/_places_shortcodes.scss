@@ -1,0 +1,260 @@
+.places_wrapper_type_1 {
+    display: flex;
+    flex-shrink: 0;
+    min-width: 240px;
+    margin-bottom: 25px;
+    
+  
+    .places_cover {
+      @include absolute-background;
+      @include smooth-transition-shorter;
+    }
+  
+    h4 {
+      position: relative;
+      z-index: 10;
+      padding-top: 20px;
+      padding-left: 20px;
+
+      a{
+        color: #fff;
+        @include smooth-transition-shorter;
+
+        &:hover {
+            opacity: 0.9;
+            color: #fff;
+        }
+      }
+    }
+  
+    .property_location {
+      z-index: 10;
+    }
+}
+
+.elementor_residence_grid{
+    .places_wrapper_type_1{
+        min-width: 100px;
+    }
+}
+
+.col-md-12.listing_wrapper.places_wrapper_type_1 .property_listing{
+    flex-direction: column;
+    
+    .property_location{
+        margin-left: 0;
+        color: #fff
+    }
+}
+
+.places_wrapper_type_4.col-md-12,
+.places_wrapper_type_2.col-md-12,
+.places_wrapper_type_1.col-md-12{
+    margin-bottom: 0; 
+    padding: 0 ;
+  }
+
+.places_wrapper_type_2,
+.places_wrapper_type_4 {
+    height: 400px; 
+    margin-bottom: 25px;
+    
+    .places_cover {
+        width: 100%;
+        height: 100%;
+        background-color: #1D293E;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        @include smooth-transition-shorter;
+        cursor: pointer;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    &:hover .places_cover {
+        opacity: 0.15;
+    }
+
+    h4 {
+        margin-bottom: 5px;
+
+        a {
+            font-size: 28px;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            @include smooth-transition-shorter;
+                &:hover {
+                    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                }
+        }
+    }
+}
+
+.single_slide_container {
+    .places_wrapper_type_2{
+        margin-bottom: 0px;
+    }
+}    
+  
+.places_wrapper_type_2 {
+    position: relative;
+    .places_type_2_content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 13%;
+        text-align: center;
+        color: #fff;
+
+        h4{
+            &:hover{
+            color: #fff;
+            opacity: 0.9;
+            }
+        }
+    }
+
+    .places_type_2_listings_no {
+        font-size: 14px;
+        text-transform: capitalize;
+        text-align: center;
+        color: #ffffff;
+        background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        display: inline-block;
+        padding: 1px 9px;
+        margin-top: 7px;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    .places_type_2_tagline {
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+    }
+
+    h4{
+        &:hover{
+        color: #ffffff;
+        opacity: 0.9;
+        }
+    }
+}
+  
+
+// places inline type - the square box
+.places_wrapper_type_3 {
+    display: flex;
+    gap:15px;
+    .places_cover {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        @include smooth-transition-shorter;
+    }
+
+    .property_listing_square_details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+
+    .places_square_backgorund_image {
+        height: 75px;
+        width: 75px;
+        @include background-cover; 
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        display: inline-block;
+ 
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    
+    h4 {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    .property_location_type_3 {
+        color: #8593a9;
+        line-height: 16px;
+    }
+}
+
+.places_wrapper_type_4 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    .places_cover {
+        border-radius: 10px;
+        opacity: 0.1;
+    }
+
+    .places_type_4_content {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+
+        h4 {
+        margin-bottom: 5px;
+        margin-top: 15px;
+        font-size: 16px;
+
+        a {
+            font-size: 16px;
+            font-weight: 500;
+            color:#222;
+            @include smooth-transition-shorter;
+
+            &:hover {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+        }
+    }
+
+    .places_type_4_listings_no {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    }
+}
+
+.featured_property_type2 {
+    &:hover .places_cover {
+        opacity: 0.15;
+    }
+}
+  
+.places_cover {
+    &.agent_grid_elementor {
+        @include absolute-background;
+        background-color: transparent;
+        background-image: linear-gradient(194deg, rgba(255, 255, 255, 0%) 0%, rgba(2, 2, 2, 20%) 100%);
+        opacity: 1;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+}
+
+// backgound image class for type 1,2,3
+.places_background_image {
+    height: 100%; /* Ensure this is set correctly */
+    @include background-cover; 
+    background-size: cover;
+    @include smooth-transition;
+    position: relative;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    
+    &:hover {
+        opacity: 0.9; /* Slight fade on hover */
+    }
+}
+
+.places_wrapper_type_1_grid{
+    h4{
+        text-align: left;
+    }
+}
+

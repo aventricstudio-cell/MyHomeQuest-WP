@@ -1,0 +1,82 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+
+
+.wpresidence_editor_label {
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+}
+.wpresidence_editor_label.inspector_label{
+/*    max-width: 100%;*/
+}
+.wpresidence_editor_select{
+    width:200px;
+    
+}
+.wpresidence_editor_label_explaining{
+    color: #999;
+    font-size: 12px;
+}
+
+.autocomplete_p{
+    font-size: 12px;
+}
+
+.components-autocomplete{
+    border: 1px solid #ddd;
+}
+
+
+.wpresidence_editor_title{
+    background: #1CA8DD;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+
+.wp-block-residence-gutenberg-block-testimonialchild,
+.wp-block-residence-gutenberg-block-places-slider,
+.wp-block-residence-gutenberg-block-testimonial-slider,
+.wp-block-residence-gutenberg-block-contact-us-form,
+.wp-block-residence-gutenberg-block-advanced-search,
+.wp-block-residence-gutenberg-block-register-form,
+.wp-block-residence-gutenberg-block-login-form,
+.wp-block-residence-gutenberg-block-list-items-by-id,
+.wp-block-residence-gutenberg-block-list-agents,
+.wp-block-residence-gutenberg-block-places-list,
+.wp-block-residence-gutenberg-block-listings-per-agent,
+.wp-block-residence-gutenberg-block-google-map-property,
+.wp-block-residence-gutenberg-block-featured-property,
+.wp-block-residence-gutenberg-block-featured-article,
+.wp-block-residence-gutenberg-block-featured-agent,
+.wp-block-residence-gutenberg-block-recentitems,
+.wp-block-residence-gutenberg-block-slider-items,
+.wp-block-residence-gutenberg-block-testimonial,
+.wp-block-residence-gutenberg-block-featured-agency,
+.wp-block-residence-gutenberg-block-membership-package-settings{
+    background-color: #fafafa;
+    padding: 10px;
+    box-shadow: 0 5px 40px rgba(0,0,0,0.05);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.wp-block-residence-gutenberg-block-membership-package-settings .autocomplete_p{
+    font-size: 12px;
+}
+
+.wp-block-residence-gutenberg-block-membership-package-settings .components-autocomplete{
+    border: 1px solid #ddd;
+}
+
+.wp_estate_side_image{
+    float: left;
+    max-height: 100px;
+}

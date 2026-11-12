@@ -1,0 +1,264 @@
+# Copyright (C) 2021 wpestate
+# This file is distributed under the same license as the WpEstate CRM plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WpEstate CRM 3.6.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpestate-crm\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-04-05T09:11:13+00:00\n"
+"PO-Revision-Date: 2021-04-05 12:15+0300\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Domain: wpestate-crm\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
+
+#. Plugin Name of the plugin
+msgid "WpEstate CRM"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpestate.org"
+msgstr ""
+
+#. Description of the plugin
+msgid "WpEstate Customer Relationship Management"
+msgstr ""
+
+#. Author of the plugin
+msgid "wpestate"
+msgstr ""
+
+#: libs/hubspot/hubspot.php:18
+msgid "Message sent from "
+msgstr ""
+
+#: libs/metaboxes.php:96
+msgid "added manually"
+msgstr ""
+
+#: libs/metaboxes.php:160
+msgid "Add a new comment"
+msgstr ""
+
+#: libs/metaboxes.php:162
+msgid "Add Comment"
+msgstr ""
+
+#: libs/metaboxes.php:176 post-types/leads.php:12
+msgid "Lead"
+msgstr ""
+
+#: libs/metaboxes.php:196
+msgid "from"
+msgstr ""
+
+#: post-types/contacts.php:11 wpestate-crm.php:71
+msgid "Contacts"
+msgstr ""
+
+#: post-types/contacts.php:12
+msgid "Contact"
+msgstr ""
+
+#: post-types/contacts.php:13 wpestate-crm.php:72
+msgid "Add New Contact"
+msgstr ""
+
+#: post-types/contacts.php:14
+msgid "Add Contact"
+msgstr ""
+
+#: post-types/contacts.php:15 post-types/leads.php:15
+msgid "Edit"
+msgstr ""
+
+#: post-types/contacts.php:16
+msgid "Edit Contact"
+msgstr ""
+
+#: post-types/contacts.php:17
+msgid "New Contact"
+msgstr ""
+
+#: post-types/contacts.php:18 post-types/leads.php:18
+msgid "View"
+msgstr ""
+
+#: post-types/contacts.php:19
+msgid "View Contact"
+msgstr ""
+
+#: post-types/contacts.php:20
+msgid "Search Contact"
+msgstr ""
+
+#: post-types/contacts.php:21 post-types/contacts.php:22
+msgid "No Contacts found"
+msgstr ""
+
+#: post-types/contacts.php:23
+msgid "Parent Contacts"
+msgstr ""
+
+#: post-types/contacts.php:48 wpestate-crm.php:73
+msgid "Contact Status"
+msgstr ""
+
+#: post-types/contacts.php:49
+msgid "Add New Contact Status"
+msgstr ""
+
+#: post-types/contacts.php:50
+msgid "New  Status"
+msgstr ""
+
+#: post-types/contacts.php:69
+msgid "Contacts Settings"
+msgstr ""
+
+#: post-types/contacts.php:152
+msgid "Lead from Contact"
+msgstr ""
+
+#: post-types/contacts.php:166 post-types/contacts.php:172 wpestate-crm.php:90
+msgid "Full Name"
+msgstr ""
+
+#: post-types/contacts.php:174 post-types/contacts.php:208
+#: post-types/leads.php:351 wpestate-crm.php:96 wpestate-crm.php:163
+#: wpestate-crm.php:198
+msgid "Status"
+msgstr ""
+
+#: post-types/contacts.php:175 post-types/contacts.php:206 wpestate-crm.php:103
+msgid "Email"
+msgstr ""
+
+#: post-types/contacts.php:176 post-types/contacts.php:207 wpestate-crm.php:134
+msgid "Phone"
+msgstr ""
+
+#: post-types/contacts.php:177 wpestate-crm.php:108
+msgid "Address"
+msgstr ""
+
+#: post-types/contacts.php:178 wpestate-crm.php:114
+msgid "City"
+msgstr ""
+
+#: post-types/contacts.php:179 wpestate-crm.php:119
+msgid "County"
+msgstr ""
+
+#: post-types/contacts.php:180 wpestate-crm.php:124
+msgid "State"
+msgstr ""
+
+#: post-types/contacts.php:183
+msgid "full details"
+msgstr ""
+
+#: post-types/contacts.php:205
+msgid "Photo"
+msgstr ""
+
+#: post-types/leads.php:11 wpestate-crm.php:70
+msgid "Leads"
+msgstr ""
+
+#: post-types/leads.php:13 wpestate-crm.php:75
+msgid "Add New Lead"
+msgstr ""
+
+#: post-types/leads.php:14
+msgid "Add Lead"
+msgstr ""
+
+#: post-types/leads.php:16
+msgid "Edit Lead"
+msgstr ""
+
+#: post-types/leads.php:17
+msgid "New Lead"
+msgstr ""
+
+#: post-types/leads.php:19
+msgid "View Lead"
+msgstr ""
+
+#: post-types/leads.php:20
+msgid "Search Lead"
+msgstr ""
+
+#: post-types/leads.php:21 post-types/leads.php:22
+msgid "No Leads found"
+msgstr ""
+
+#: post-types/leads.php:23
+msgid "Parent Leads"
+msgstr ""
+
+#: post-types/leads.php:48 wpestate-crm.php:76
+msgid "Lead Status"
+msgstr ""
+
+#: post-types/leads.php:49
+msgid "Add New Lead Status"
+msgstr ""
+
+#: post-types/leads.php:50
+msgid "New Status"
+msgstr ""
+
+#: post-types/leads.php:74
+msgid "Lead Settings"
+msgstr ""
+
+#: post-types/leads.php:349
+msgid "From Name"
+msgstr ""
+
+#: post-types/leads.php:350
+msgid "Image"
+msgstr ""
+
+#: post-types/leads.php:352 wpestate-crm.php:156
+msgid "Agent in Charge"
+msgstr ""
+
+#: post-types/leads.php:353
+msgid "Details"
+msgstr ""
+
+#: wpestate-crm-dashboard_contacts.php:117 wpestate-crm-dashboard_leads.php:88
+msgid "You are not allowed to edit this!"
+msgstr ""
+
+#: wpestate-crm.php:73
+msgid "Edit Contact Statuses"
+msgstr ""
+
+#: wpestate-crm.php:76
+msgid "Edit Lead Statuses"
+msgstr ""
+
+#: wpestate-crm.php:129
+msgid "Mobile"
+msgstr ""
+
+#: wpestate-crm.php:140 wpestate-crm.php:169
+msgid "Notes"
+msgstr ""
+
+#: wpestate-crm.php:176
+msgid "Sent From"
+msgstr ""
+
+#: wpestate-crm.php:183
+msgid "Message"
+msgstr ""

@@ -1,0 +1,331 @@
+/**
+ * Print Styles for WpResidence Theme
+ *
+ * This file contains the print-specific styles for the WpResidence WordPress theme.
+ * It defines the layout and appearance of various elements when the page is printed.
+ *
+ * Package: WpResidence
+ * Dependency: None (standalone SCSS file)
+ * Usage: Import this file in the main theme stylesheet or enqueue separately for print media.
+ */
+
+/* Main print body styles */
+.print_body {
+    width: 100%;
+    padding: 20px 40px 40px 40px;
+    background: #ffffff;
+    float: left;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    .overview_map{
+        width: 500px;
+        height: 500px;
+    }
+
+    .printlogo {
+        max-height: 54px;
+        align-self: flex-start;
+        width: auto;
+    }
+
+    /* Property title */
+    .print_title {
+        font-size: 25px;
+        border-top: 1px solid #f0f0f0;
+        padding: 20px 0px 0px 0px;
+    }
+
+    /* Property price and address */
+    .print-price,
+    .print-addr {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 0px;
+    }
+
+    .print-addr {
+        margin-bottom: 30px;
+    }
+
+    /* Section headers */
+    .print_header {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        display: inline-block;
+
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 0px;
+        }
+    }
+
+    /* Content sections */
+    .print-content {
+        width: 100%;
+        line-height: 1.6em;
+        border: 1px solid #f0f0f0;
+        padding: 20px;
+        font-size: 14px;
+        float: left;
+
+        .listing_detail{
+            padding-right: calc(var(--bs-gutter-x)* 0.5);
+            padding-left: calc(var(--bs-gutter-x)* 0.5);
+        }
+
+        .col-md-4 {
+            width: 33.3%;
+            display: inline-block;
+        }
+
+        .listing_detail svg,
+        .property_features_svg_icon {
+            fill: #222;
+            color: #222;
+        }
+    }
+
+
+    // features and ammenities
+    .wpestate-print-listing-features{
+        svg,
+        i{
+            margin-right: 10px;     
+        }
+
+        .listing_detail{
+            .col-md-3,
+            .col-md-4{
+                padding-left: 0px;
+            }
+        }
+    }
+
+
+    /* Agent information */
+    .print_agent_wrapper {
+        display: inline-block;
+        width: 50%;
+
+        .listing_detail_agent {
+            margin-bottom: 5px;
+            line-height: 1.3em;
+            font-size: 14px;
+
+            &.col-md-4 {
+                width: 100%;
+            }
+        }
+    }
+
+    
+    .agent_print_image {
+        max-width: 175px;
+        display: inline-block;
+        float: left;
+        width: 50%;
+    }
+
+    /* Property images */
+    .print-col-img {
+        position: relative;
+        margin-right: 20px;
+        padding: 0px;
+        img {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+    }
+
+    /* QR code */
+    .print_qrcode {
+        position: absolute;
+        top: -120px;
+        right: 0px;
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    .print_property_subunits_wrapper{
+        padding: 0px;
+    }
+
+    /* Floor plans */
+    .front_plan_row.floor_print_class {
+        background-color: transparent;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 30px;
+        pointer-events: none;
+
+        &:first-of-type {
+            border: none;
+        }
+
+        .floor_title {
+            padding: 0px;
+        }
+      
+
+        .front_plan_row_image,
+        &.front_plan_row_image {
+            background-color: transparent;
+            display: inline-block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .floor_image{
+        img{
+            width: 100%;
+        }
+    }
+
+    /* Property subunits */
+    .print_property_subunits_wrapper {
+        .subunit_wrapper {
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            background-color: #f8f8f8;
+            padding: 10px;
+            margin-bottom: 10px;
+            
+            &:nth-child(even) {
+                background-color: #fff;
+            }
+        }
+
+        .subunit_details {
+            margin-top: 10px;
+        }
+
+        img {
+            max-height: 100%;
+            border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        }
+
+        .subunit_price {
+            margin: 6px 0px;
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+
+        .subunit_size, .subunit_bathrooms, .subunit_rooms, .subunit_type {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        h4.panel-title {
+            display: none;
+        }
+
+        .print-content {
+            float: left;
+        }
+
+        .print_qrcode_subunit {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 83px;
+            height: 83px;
+        }
+    }
+
+
+
+
+    /* Page break and spacing */
+    .printbreak {
+        page-break-after: always;
+        page-break-inside: avoid;
+        width: 100%;
+    }
+
+    .print_spacer {
+        margin-bottom: 40px;
+        float: left;
+        width: 100%;
+    }
+
+    .front_plan_row_image{
+        display: block;
+    }
+
+    .property-page-overview-details-wrapper {
+        gap: 10px;
+    }
+
+    .overview_element {
+        flex-grow: 1;
+    }
+
+    .listing_detail i {
+        margin-right: 5px;
+    }
+}
+
+/* Print-specific styles */
+@media print {
+    body,
+    html,
+    #wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    marquee {
+        -moz-binding: none;
+    }
+
+    body {
+        overflow: visible !important;
+    }
+}
+
+/* Unused selectors (moved to the end) */
+.multi_units_wrapper {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.subunit_wrapper {
+    padding-left: 0px;
+}
+
+.agent_name {
+    font-size: 22px;
+}
+
+.printimg {
+    margin-bottom: 20px;
+
+    img {
+        width: 100%;
+    }
+}
+
+
+.row.floor_print_class {
+    width: 100%;
+    line-height: 1.6em;
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+    font-size: 14px;
+    float: left;
+    margin: 0px;
+}
+

@@ -1,0 +1,502 @@
+
+
+.overview_wrapper {
+    min-height: 100px;
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    margin-bottom: 30px;
+}
+
+
+.single-overview-section {
+    background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    padding: 30px;
+    padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+    padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+
+    
+}
+
+.wpestate_property_header_extended .single-overview-section {
+    max-width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+    border-radius: 10px;
+    padding: 30px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 9;
+    margin: 0px auto;
+    box-shadow: 0 10px 31px 0 rgb(7 152 255 / 9%);
+    opacity: 0.95;
+}
+
+.wpestate_property_header_extended .single-overview-section .panel-title {
+    display: none;
+}
+
+.wpestate_property_header_extended.wpestate_lay6_classic .single-overview-section {
+    bottom: 140px;
+}
+
+.wpestate_property_header_extended.wpestate_lay6_vertical .single-overview-section {
+    bottom: 60px;
+}
+
+.wpestate_property_header_extended.wpestate_lay6_horizontal .single-overview-section {
+    bottom: 165px;
+}
+
+.wpestate_property_header_extended.wpestate_lay6_full-width-header .single-overview-section {
+    bottom: -25px;
+    padding: 20px;
+}
+
+.wpestate_property_header_extended.wpestate_lay6_header-masonry-gallery .single-overview-section,
+.wpestate_property_header_extended.wpestate_lay6_multi-image-slider .single-overview-section {
+    bottom: -50px;
+}
+
+.wpestate_property_header_extended.wpestate_lay6_gallery .single-overview-section {
+    bottom: -25px;
+}
+
+.elementor-widget .single-overview-section {
+    margin-bottom: 0px;
+}
+
+.elementor-widget-wrap .property_categs i.fas,
+.elementor-widget-wrap .prop_social .single_property_action i.fas {
+    font-weight: 700 !important;
+    font-family: 'Font Awesome 5 Free' !important;
+}
+
+.elementor-widget-wrap .prop_social .single_property_action i.far {
+    font-weight: 400 !important;
+    font-family: 'Font Awesome 5 Free' !important;
+}
+
+.elementor-widget .single-overview-section,
+.property-page-overview-details-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap:30px;
+}
+
+#tab_prpg .tab-pane .overview_element li.first_overview_left,
+.overview_element li.first_overview_left {
+    text-align: left;
+}
+
+#tab_prpg .tab-pane .overview_element,
+.overview_element {
+    list-style: none;
+    margin: 0px;
+}
+
+.overview_element:first-of-type li {
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.single-overview-section h4:after {
+    display: none;
+}
+
+.overview_element_type2 {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+
+    .overview_value{
+        font-weight: 400;
+    }
+
+    .overview_icon_col svg{
+        width: 24px;
+        height: 24px;
+    }
+
+    .first_overview_date {
+        display: flex;
+        gap: 5px;
+    }
+
+    .overview_icon_col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .overview_content_col {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .overview_element li{
+        margin-bottom: 0; 
+    }
+
+}
+
+.overview_element.overview_element_type4 li,
+.overview_element.overview_element_type3 li,
+.overview_element.overview_element_type2 li{
+    text-align: left;
+    margin-top: 0px;
+}
+
+.overview_element_type3 .first_overview   {
+    display: flex;
+    font-size: 15px;
+    gap: 5px;
+}
+
+
+#tab_prpg .tab-pane .overview_element li,
+.overview_element li {
+    text-align: center;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    margin-bottom: 4px;
+    i{
+        margin-right: 0;
+    }
+}
+
+#tab_prpg .overview_element li a,
+#tab_prpg .tab-pane .overview_element li:first-of-type {
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+}
+
+.overview_element img {
+    height: 20px;
+    margin-bottom: 6px;
+}
+
+.overview_element i {
+    margin-bottom: 6px;
+    font-size: 20px;
+    margin-right: 0px;
+}
+
+.overview_element svg {
+    width: 19px;
+    height: 19px;
+}
+
+.elementor_prop_social {
+    position: relative;
+    top: auto!important;
+    right: auto;
+    min-height: 1px;
+}
+
+.no_views {
+    float: left;
+    font-size: 15px;
+    color: #a6b3bb;
+    display: none;
+}
+
+.no_views i {
+    margin-right: 5px;
+}
+
+.prop_social i {
+    font-size: 14px;
+    margin-left: 13px;
+    width: 13px;
+    display: inline;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+}
+
+.single_property_action {
+    background: #fff;
+    padding: 7px 14px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+    font-weight: 500;
+    line-height: 10px;
+    font-size: 12px;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    float: left;
+    cursor: pointer;
+    text-transform: capitalize;
+    width: auto;
+    display: flex;
+    align-content: center;
+    gap: 5px;
+    align-items: center;
+  
+    .share_list {
+      width: auto;
+      height: auto;
+      border: none;
+    }
+  
+    i {
+      margin-left: 0;
+      color: inherit;
+      font-size: 12px;
+      @include smooth-transition-shorter;
+    &:before {
+        font-size: 12px;
+    }  
+      &:hover {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      }
+    }
+  
+    &:hover,
+    #print_page:hover,
+    .prop_social a:hover i {
+      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      border: none;
+    }
+  }
+  
+  .prop_social {
+    .share_unit {
+      background-color: #fff;
+      width: 120px;
+      color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+      font-size: 12px;
+      padding: 10px;
+      top: 28px;
+      z-index: 99;
+  
+      &:after {
+        display: none;
+      }
+  
+      a {
+        height: auto;
+        color: inherit; /* Inherits the color from the parent */
+        font-size: 13px;
+        font-weight: 500;
+        vertical-align: initial;
+        line-height: 1em;
+        width: 100%;
+        float: left;
+        text-align: left;
+        padding: 5px 10px 5px 22px;
+        @include smooth-transition-shorter;
+  
+        &:hover {
+          color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+      }
+  
+      .social_facebook:after,
+      .social_tweet:after,
+      .social_pinterest:after,
+      .social_whatsup:after,
+      .social_email:after {
+        position: absolute;
+        left: 10px;
+        font-size: 13px;
+        @include smooth-transition-shorter;
+      }
+    }
+  
+    .property_title_label a {
+      color: #ffffff;
+      height: auto;
+      font-size: 14px;
+      padding: 5px 5px;
+      margin: 0;
+    }
+  
+    #add_favorites.isfavorite {
+      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  
+      i {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      }
+    }
+  }
+  
+.title_share.share_list.single_property_action {
+    height: 26px;
+    border: none;
+
+    &:hover {
+        border: none;
+    }
+
+    &:before{
+        font-size: 12px;
+    }
+
+}
+  
+.prop_social a {
+color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+text-decoration: none;
+padding: 3px 0 0;
+height: 30px;
+margin-left: 2px;
+float: left;
+box-sizing: border-box;
+font-size: 1.333em;
+line-height: 0.75em;
+vertical-align: -15%;
+}
+  
+.prop_social a:hover {
+text-decoration: none;
+}
+
+.price_area {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    font-size: 30px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+    font-weight: 500;
+    min-height: 1px;
+    line-height: 1.1;
+    position: relative;
+    margin-top: -5px;
+    min-width: 130px;
+    text-align: right;
+    max-width: 25%;
+}
+
+.second_price_area {
+    position: absolute;
+    top: -30px;
+    font-size: 20px;
+    right: 0px;
+    font-weight: normal;
+}
+
+.second_price_area .price_label {
+    font-size: 15px;
+}
+
+.elementor-widget-container_price_area {
+    float: none;
+    display: inline-block;
+    min-height: 1px;
+}
+
+.pricelabel {
+    float: left;
+    font-size: 15px;
+    padding: 14px 0px 3px 7px;
+}
+
+.wpresidence_action_button {
+    background-color: #fff;
+    float: left;
+    margin: 5px;
+    padding: 6px 15px;
+    font-size: 13px;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    @include box-shadow(card);
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    cursor: pointer;
+}
+
+.adres_area {
+    clear: both;
+    float: left;
+    font-size: 13px;
+    width: calc(100% - 240px);
+}
+
+.adres_area i {
+    font-size: 12px;
+    color: #a6b3bb;
+}
+
+
+
+.social_share_title {
+    border: 1px solid #dfdfdf;
+    width: 30px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.social_share_title i {
+    font-size: 14px;
+    margin: 0px;
+    text-align: center;
+    display: inline-block;
+    padding: 0px;
+    width: auto;
+    line-height: 30px;
+    color: #c2ccda;
+}
+
+.agent_listings_title_similar {
+    padding-left: 15px;
+}
+
+.overview_map{
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    img#overview_map {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // keeps the image inside the box nicely
+    border-radius: inherit; // optional: inherits the parent border radius
+    }
+}
+
+#wpestate_overview_map_modal{
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+}
+#wpestate_overview_map_modal .modal-dialog{
+    width: 100%;
+    height: 100%;
+    margin: 0px;;
+}
+
+#wpestate_overview_map_modal .close{
+    opacity: 1;
+    background: #222;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    top: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 9;
+}
+
+#wpestate_overview_map_modal .modal-body,
+#wpestate_overview_map_modal .modal-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#wpestate_overview_map_modal  .googleMap_shortcode_class,
+#wpestate_overview_map_modal .google_map_shortcode_wrapper{
+
+    height: 100%;
+}
+
+#wpestate_overview_map_modal h3{
+    margin-top: 10px;
+}

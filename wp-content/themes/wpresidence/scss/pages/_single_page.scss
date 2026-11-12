@@ -1,0 +1,160 @@
+/**MILLDONE
+ * WPResidence Single Page Styling
+ *
+ * This SCSS file defines the styles for single content pages, primarily focusing on blog posts
+ * and related elements in the WPResidence theme.
+ *
+ * Key Components:
+ * 1. Single Content Container
+ * 2. Post Title
+ * 3. Meta Information
+ * 4. Social Sharing
+ * 5. Content Paragraphs
+ * 6. 404 Page Styling
+ *
+ * Note: This file is crucial for maintaining consistent styling across individual post pages.
+ */
+
+/* Single Content Container
+   This is the main wrapper for single post content. */
+.single-content {
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.65em;
+    width: 100%;
+
+    /* Handle empty content gracefully */
+    &:empty {
+        margin-bottom: 0;
+        height: 0;
+    }
+
+    /* Post Title Styling */
+    .single-title {
+        word-break: normal;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        margin: 0 0 10px 0;
+    }
+
+    /* Meta Information Styling
+       This includes author, date, categories, etc. */
+    .meta-info {
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        gap: 5px;
+        
+        a {
+            @include smooth-transition-shorter;
+            
+            &:hover {
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+            .fa {
+                margin-right: 2px;
+            }
+        }
+        
+        .meta-element {
+            .meta_icon {
+                font-size: 12px;
+                background: #f7f8f8;
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 50%;
+                margin-left: 10px;
+                line-height: 25px;
+                &.firsof {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    /* Social Sharing Buttons */
+    .prop_social_single {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        gap: 10px;
+        a {
+            font-size: 13px;
+            background: #f7f8f8;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            justify-content: center;
+            align-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            display: flex;
+            &:hover{
+                color: #0073e6
+            }
+        }
+    }
+
+    /* Content Paragraphs */
+    p { 
+        margin-bottom: 15px;
+        word-break: break-word;
+        
+        a {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            @include smooth-transition-shorter;
+            
+            &:hover {
+                color: #0761b7;
+            }
+        }
+    }
+}
+
+//checkout page
+.woocommerce-checkout{
+    .single-content{
+        float:left
+    }
+}
+
+
+
+
+/* After Content Area
+   This styles any content that appears after the main content. */
+.wpestate_after_content {
+    padding: 0 30px;
+}
+
+
+
+
+/* 404 Page Styling */
+
+.list404 {
+   margin-bottom: 60px;
+ 
+}
+
+
+
+.entry-title {
+    margin: 0px 0px 25px 0px;
+    width: 100%;
+
+    word-break: break-word;
+}
+
+.home .entry-title {
+    margin-top: 30px;
+}
+

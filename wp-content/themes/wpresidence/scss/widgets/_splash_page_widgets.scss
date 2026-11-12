@@ -1,0 +1,55 @@
+/** MILLDONE *a
+//scss\widgets\_splash_page_widgets.scss
+
+/* = Splash Page Widgets
+------------------------------------------------*/
+
+.splash_page_widgets_wrapper {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 15px;
+    padding: 0 30px;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .widget-container {
+        width: auto;
+        margin: 0;
+
+        .widget-title-topbar {
+            display: none;
+        }
+    }
+
+    .splash_page_widget {
+        color: #fff;
+
+        a {
+            color: #fff;
+            
+            &:hover{
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+
+        p{
+            margin-bottom: 0;
+        }
+
+        .social_sidebar_internal a {
+            font-size: 14px;
+            width: 20px;
+            height: 30px;
+            float: left;
+            box-sizing: border-box;
+            background-color: transparent;
+
+            &:hover i{
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+        }
+    }
+}

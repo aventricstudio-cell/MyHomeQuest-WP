@@ -1,0 +1,422 @@
+/**
+ * Property Details Modal Styles for WpResidence Theme
+ *
+ * This file contains styles for the property details modal in the WpResidence WordPress theme.
+ * It defines the layout and appearance of various elements within the modal, including
+ * images, content sections, agent details, and interactive elements.
+ *
+ * Package: WpResidence
+ * Dependency: None (standalone SCSS file)
+ * Usage: Import this file in the main theme stylesheet or compile separately for modal styles.
+ */
+
+// Main modal container
+#property_details_modal_wrapper {
+ 
+
+    // Modal background
+    .property_details_modal_back {
+        background-color: #111;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    // Modal content container
+    .property_details_modal_container {
+        background-color: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 1250px;
+        height: 100%;
+        min-height: 100vh;
+        position: absolute;
+        margin: 0px auto;
+        box-shadow: 3px 5px 13px 0px rgba(29, 29, 29, 0.05);
+        line-height: 1.65em;
+        z-index: 1;
+    }
+
+    // Close button
+    #property_details_modal_close {
+        background-color: #222;
+        position: absolute;
+        cursor: pointer;
+        z-index: 999999;
+        width: 40px;
+        height: 40px;
+        top: 0px;
+        right: -40px;
+        opacity: 1;
+        i{
+            color: #fff;
+            font-size: 18px;
+            line-height: 40px;
+        }
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+
+    // Modal images section
+    #property_modal_images {
+        width: 60%;
+        overflow-y: scroll;
+        float: left;
+        background: #222;
+
+        img {
+            width: 50%;
+            display: inline-block;
+            opacity: 0.75;
+            cursor: pointer;
+            @include smooth-transition-shorter;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:first-of-type {
+                width: 100%;
+                border: none !important;
+            }
+
+            &:nth-of-type(2n+1) {
+                border-top: 2px solid #fff;
+                border-left: 1px solid #fff;
+            }
+
+            &:nth-of-type(2n+2) {
+                border-top: 2px solid #fff;
+                border-right: 1px solid #fff;
+            }
+        }
+    }
+
+    // Modal header section
+    #property_modal_header {
+        width: 40%;
+        float: left;
+        padding: 0px 20px 10px 20px;
+        background-color: var(--wp_estate_content_back_color-option, var(--wp_estate_content_back_color));
+
+        #property_modal_top_bar {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 6px;
+            position: relative;
+            border-bottom: 1px solid #e9e9e9;
+            display: flex;
+            float: left;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-between;
+            align-items: center;
+
+            #add_favorites {
+                top: 0px;
+                left: 0px;
+                right: auto;
+                font-size: 13px;
+                cursor: pointer;
+                border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+                display: inline-block;
+
+                &.isfavorite {
+                    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                    color: #fff;
+                    padding: 0px 10px;
+
+                    i {
+                        display: none;
+                    }
+                }
+
+                &.isnotfavorite {
+                    background-color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+                    color: #fff;
+                    padding: 0px 10px;
+                }
+
+                &:hover {
+                    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                    color: #fff;
+                    padding: 0px 10px;
+                }
+            }
+
+            .prop_social {
+                a,i {
+                    height: auto;
+                    padding: 0;
+                    line-height: 40px;
+                    &:hover {
+                      color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                    }
+                }
+            }
+        }
+
+        .modal_property_title {
+            position: relative;
+            float: left;
+            margin-top: 5px;
+            width: 100%;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .modal_property_price {
+            float: left;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            margin-right: 30px;
+        }
+
+        .modal_property_bed {
+            float: left;
+            line-height: 26px;
+        }
+
+        .modal_bedrooms,
+        .modal_bathrooms,
+        .modal_size {
+            margin-right: 10px;
+            font-size: 15px;
+        }
+
+        .modal_property_addr {
+            clear: both;
+            float: left;
+            font-size: 15px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        #modal_contact_agent {
+            float: left;
+        }
+    }
+
+    // Modal content section
+    #property_modal_content {
+        width: 40%;
+        overflow-y: scroll;
+        float: left; 
+        padding: 20px 0px;
+        display: inline-block;
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .modal_content_block {
+            padding: 15px 20px;
+            display: inline-block;
+            width: 100%;
+
+            &:empty {
+                display: none;
+            }
+
+            &:nth-of-type(odd) {
+                background: var(--wp_estate_content_back_color-option, var(--wp_estate_content_back_color));
+            }
+        }
+
+        // Agent details
+        #modal_property_agent {
+            background: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color))!important;
+            padding-bottom: 0px;
+            .schedule_wrapper, 
+            .contact_form_flex_wrapper,
+            .custom_details_container{
+                padding: 0;
+                .realtor-contact-buttons{
+                    margin-bottom: 10px;
+                }
+            }
+
+
+            .wpestate_agent_details_wrapper {
+                padding: 0 13px;
+                row-gap: 10px;
+            }
+
+            .wpestate_single_agent_details_header_wrapper {
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+
+            .agent_details h3 {
+                font-size: 20px;
+            }
+
+            .agentpict {
+                height: 210px;
+            }
+
+            .schedule_meeting {
+                margin-left: 0px;
+            }
+
+            .agent_detail {
+                font-size: 13px;
+                margin-bottom: 5px;
+            }
+
+            .agent_unit_social_single {
+                width: 85%;
+
+                .fa {
+                    font-size: 14px;
+                }
+            }
+
+            .agent_details,
+            .agentpic-wrapper {
+                width: 50%;
+            }
+
+
+        }
+
+        // Property details
+        .wpestate_property_description,
+        .wpestate_property_modal_addr,
+        .wpestate_property_modal_details,
+        .wpestate_property_modal_features,
+        .wpestate_property_modal_videos,
+        .wpestate_property_modal_walkscore,
+        .wpestate_property_modal_yelp {
+            width: 100%;
+            float: left;
+            margin: 10px 0px;
+
+            .row{
+                margin: 0;
+            }
+        }
+
+
+        .wpestate_property_description {
+            box-shadow: none !important;
+            padding: 0px;            
+        }
+
+        .panel-title {
+            margin-bottom: 10px;
+        }
+
+        .listing_detail strong {
+            color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+            font-weight: 500;
+        }
+
+        // Floor plans
+        .wpestate_property_modal_floor_plans {
+            .floor_title {
+                width: 100%;
+                color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+                margin-bottom: 5px;
+            }
+
+            .floor_details {
+                width: 50%;
+                text-align: left;
+            }
+
+            .floor_image img {
+                width: 100%;
+            }
+        }
+
+        // Mortgage calculator
+        #modal_property_mortgage {
+            margin-bottom: 30px;
+            .row{
+                padding: 0;
+            }
+
+            .morg_momth_pay {
+                margin-top: 0px;
+                font-size: 13px;
+            }
+
+            .morg_month_wrap {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// Styles for specific modal sections
+.modal_property_description,
+.modal_property_adress,
+.modal_property_details,
+.modal_property_features,
+.modal_property_video,
+.modal_property_video_tour {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+// Styles for column layouts
+.wpestate_property_modal_details .col-md-4,
+.wpestate_property_modal_addr .listing_detail.col-md-4,
+.wpestate_property_modal_features .col-md-4 {
+    width: 50%;
+}
+
+// Lightbox styles (moved to the end as they're not directly used in the provided HTML)
+.vbox-overlay {
+    z-index: 99999999 !important;
+}
+
+.owl-demo-modal_class,
+#owl-demo-modal,
+#owl-demo-modal .owl-item {
+    width: 1200px;
+    height: 768px;
+}
+
+.owl_holder {
+    width: 100%;
+    height: 100%;
+    @include background-cover; 
+}
+
+.lightbox_property_wrapper_floorplans .owl-theme .owl-nav {
+    text-align: left;
+}
+
+.modal_lightbox_property_wrapper .lightbox_property_wrapper_level2 {
+    width: 100%;
+    max-width: 1200px;
+    background: transparent;
+    max-height: 800px;
+    min-height: 800px;
+}
+
+.modal_lightbox_property_wrapper .lightbox_property_slider {
+    max-width: 100%;
+}
+
+.modal_lightbox_property_wrapper .owl-carousel .owl-item .item {
+    height: 800px;
+}
+
+// Admin bar adjustment
+.admin-bar #property_details_modal_wrapper {
+    top: 30px;
+}

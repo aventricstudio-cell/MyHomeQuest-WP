@@ -1,0 +1,164 @@
+/**
+ * WPResidence Share Unit Styles
+ *
+ * This SCSS file defines styles for the social sharing unit in the WPResidence theme.
+ * It includes styles for the share container, individual social media buttons,
+ * and their hover states.
+ *
+ * @package WPResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ */
+
+ .share_unit {
+    position: absolute;
+    background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    color: #fff;
+    font-size: 22px;
+    width: 35px;
+    top: -149px;
+    left: -2px;
+    display: none;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    padding: 10px 0 0 0;
+    z-index: 1;
+  
+    // Triangle pointer for share unit
+    &:after {
+      content: " ";
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      bottom: -8px;
+      right: 10px;
+      position: absolute;
+    }
+  
+    // Common styles for share links
+    a {
+      padding: 0;
+      color: #fff;
+      display: block;
+      font-size: 17px;
+      text-align: center;
+      width: 35px;
+      height: 26px;
+      float: left;
+  
+      &:hover {
+        color: #ffffffd6;
+      }
+    }
+  
+    // Specific styles for each social media icon
+    .social_facebook:after {
+      font-family: "Font Awesome 5 Brands";
+      content: "\f09a";
+      font-size: 16px;
+
+    }
+  
+    .social_tweet:after {
+      font-family: "Font Awesome 5 Brands";
+      content: "\e61b";
+      font-size: 16px;
+
+    }
+  
+    .social_google:after {
+      font-family: "Font Awesome 5 Free";
+      content: "\f0d5";
+      font-size: 15px;
+    }
+  
+    .social_whatsup:after {
+      font-family: "Font Awesome 5 Brands";
+      content: "\f232";
+      font-size: 16px;
+
+    }
+  
+    .social_pinterest:after {
+      font-family: "Font Awesome 5 Brands";
+      content: "\f231";
+      font-size: 16px;
+
+    }
+  
+    .social_email:after {
+      font-family: "Font Awesome 5 Free";
+      content: "\f0e0";
+   
+    }
+  }
+
+  .share_list {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    display: flex;                /* Use flexbox for centering */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;          /* Center vertically */
+    border: 1px solid #eef3f6;
+    color: #c2cbd9;
+    border-radius: 2px;
+
+    &:before {
+              content: "";
+      width: 15px;
+      height: 15px;
+      display: block;
+      background-color: currentColor;
+      -webkit-mask: url('../../templates/svg_icons/share.svg') center / contain no-repeat;
+      mask: url('../../templates/svg_icons/share.svg') center / contain no-repeat;
+        }
+
+    &:hover {
+        color: var(--wp-estate-main-color-option , var(--wp-estate-main-color));
+        border: 1px solid #d8e0e5;
+    }
+}
+
+.property_unit_custom_element.share .share_list {
+    background-image: url('css/css-images/unitshare_custom.png') !important;
+    background-size: 40px 16px;
+    border: none;
+}
+
+.property_unit_custom_element.share .share_list.share_on,
+.property_unit_custom_element.share .share_list:hover {
+    background-image: url('css/css-images/unitshare_custom.png') !important;
+    background-position: -16px 8px;
+    background-size: 40px 16px;
+}
+
+
+
+
+.property_agent_unit_type6 .share_unit {
+    z-index: 9;
+}
+
+
+.property_listing.places_listing .share_unit {
+    z-index: 9;
+}
+
+.property_unit_custom_element.compare .compare-action {
+    border: none;
+}
+
+.compare-action:before {
+    content: "\f067";
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+}
+
+.compare-action:hover {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    border: 1px solid #d8e0e5;
+}

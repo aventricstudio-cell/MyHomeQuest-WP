@@ -1,0 +1,56 @@
+
+/*=gutenberg
+---------------------------------------------------------*/
+
+
+.wp-block-columns .wp-block-column:not(:first-child),
+.wp-block-columns .wp-block-column:nth-child(even) {
+    margin-left: 15px;
+}
+
+
+.wp-block-columns .wp-block-column:not(:last-child) {
+    margin-right: 0px;
+}
+
+.wp-block-columns .wp-block-column {
+    margin-bottom: 0px;
+}
+
+.wp-block-columns .wp-block-column:nth-child(odd) {
+    margin-right: 0px;
+}
+
+
+
+
+.residence_gutenberg_class .places_wrapper_type_2 {
+    margin: 0px 15px;
+    width: auto;
+}
+
+
+
+
+/*=gutenberg demo css
+---------------------------------------------------------*/
+
+
+.residence_demo_title {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: #333;
+    margin-top: 15px;
+}
+
+.residence_demo_title_under {
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-style: normal;
+    color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    width: 550px;
+    margin: 0px auto;
+    text-align: center;
+}

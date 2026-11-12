@@ -1,0 +1,247 @@
+// MILLDONE
+// Agent Unit Styles
+// src: scss\agent_cards\_agent_unit.scss
+// This file contains styles for individual agent units displayed in various layouts throughout the WpResidence theme.
+// File location: scss/agent_cards/_agent_unit.scss
+
+.wpresidence_agent_unit_wrapper {
+  // Wrapper for each agent unit
+  // This class is applied to the outermost container of each agent card
+
+  .agent_unit {
+    // Core styles for the agent unit
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    @include card-base;
+    @include smooth-transition-shorter;
+    padding-bottom: 50px;
+    
+    .agent_detail a {
+      word-break: break-word;
+    }
+    
+    // Styles for the agent image wrapper
+    .agent-unit-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin: 7px;
+      border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    }
+
+    // Styles for social media icons container
+    .agent_unit_social {
+      position: absolute;
+      margin-top: auto;
+      bottom: 15px;
+      font-size: 20px;
+      padding: 0px 20px 0px 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+
+      .wpestate_agent_unit_social {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-right: auto;
+      }
+    }
+
+    // Hover effects for the agent unit
+    &:hover {
+      img {
+        @include image-hover-zoom;
+      }
+
+     
+
+      h4 a {
+        // Change link color on hover
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+      }
+    }
+
+    // Remove text decoration from links
+    a {
+      text-decoration: none;
+    }
+
+    // Styles for the agent image
+    .agent-unit-img-wrapper {
+      img {
+        // Smooth transition for hover effects
+        @include smooth-transition;
+        width: 100%;
+        display: inline-block;
+      }
+    }
+
+    // Styles for agent name
+    h4 {
+      padding: 15px 20px 0px 20px;
+      margin-bottom: 0px;
+      -ms-word-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    // Styles for agent position
+    .agent_position {
+      padding: 0 20px;
+      margin-bottom: 10px;
+      line-height: 1.65em;
+      font-size: 14px;
+    }
+
+    // Styles for agent card content
+    .agent_card_content {
+      padding: 0 20px;
+      margin-bottom: 10px;
+      line-height: 1.65em;
+      font-size: 14px;
+    }
+
+    // Styles for social media icons and contact buttons
+    .agent_unit_social {
+      &.agent_list {
+        .wpestate_agent_unit_social {
+          a {
+            // Common styles for social media icons
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            font-size: 13px;
+            position: relative;
+            height: 26px;
+            line-height: 26px;
+            display: inline-block;
+     
+
+            &:hover {
+              color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+          }
+        }
+
+        // Styles for phone and email buttons
+        .agent_unit_phone,
+        .agent_unit_email {
+          float: right;
+          margin-right: 0;
+          margin-left: 10px;
+
+          a {
+            // Styles for phone and email links
+            color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+            font-size: 13px;
+            position: relative;
+            height: 26px;
+            line-height: 26px;
+            display: inline-block;
+
+            &:hover {
+              color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Styles for featured agents
+  .agent_unit_featured {
+    .agent_unit_social {
+      // Position social icons for featured agents
+      float: right;
+      left: auto;
+      right: 0;
+      width: auto;
+    }
+
+    &:hover {
+      .agent_featured_details {
+        // Show featured details on hover
+        opacity: 1;
+      }
+
+      .featured_agent_notes {
+        // Hide agent notes on hover
+        opacity: 0;
+      }
+    }
+  }
+
+  // Styles for agent unit button
+  .agent_unit_button {
+    line-height: 1em;
+    font-size: 12px;
+    float: left;
+    padding: 7px 13px;
+    position: absolute;
+    bottom: 15px;
+    right: 19px;
+    border: 1px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    background-image: linear-gradient(to right, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+
+    &:hover {
+      // Button hover effect
+      color: #fff;
+      background-position: left bottom;
+      @include smooth-transition-shorter;
+    }
+  }
+}
+
+// Styles for agent details
+.agent_detail {
+  margin: 0 0 10px;
+  padding-left: 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+// Social wrapper styles
+.agent_unit .social-wrapper {
+  width: 100%;
+  gap: 12px;
+  display: flex;
+  a:hover i {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  }
+
+}
+
+.agentpic-wrapper .social-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+// Agency specific styles
+.agency_unit_wrapper .social-wrapper a i:hover {
+  color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+.agency_social i:hover {
+  background-color: transparent;
+  color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+
+.single-estate_agency .agent_detail svg,
+.agent_detail svg{
+   width: 14px; 
+   fill: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+}

@@ -1,0 +1,30 @@
+
+/*=visual compser sidebar
+--------------------------------------------------------------------*/
+.vc_widget_sidebar a {
+    line-height: 22px;
+}
+
+.vc_widget_sidebar ul {
+    list-style: none;
+    margin-left: 0px;
+}
+
+.vc_widget_sidebar input[type=text],
+.vc_widget_sidebar input[type=password],
+.vc_widget_sidebar input[type=email],
+.vc_widget_sidebar input[type=url],
+.vc_widget_sidebar input[type=number],
+.vc_widget_sidebar textarea {
+    font-size: 13px;
+}
+
+
+
+.vc_widget_sidebar .widget_archive li:before,
+.vc_widget_sidebar .widget_recent_comments li:before,
+.vc_widget_sidebar .widget_categories li:before,
+.vc_widget_sidebar .widget_meta li:before {
+    margin-top: 1px;
+}
+

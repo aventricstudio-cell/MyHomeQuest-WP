@@ -1,0 +1,182 @@
+[dir="rtl"] {
+
+
+    .prop_social .share_unit {
+        a {
+            padding: 5px 22px 5px 10px;
+            text-align: right !important;
+            
+            &:after {
+                position: absolute;
+                left: unset;
+                right: 10px;
+            }
+        }
+      
+    }
+
+
+
+    .morgage_chart_wrapper.onfirst .morgage_legend li {      
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    .agency_taxonomy a,
+    .developer_taxonomy a {
+        margin-right: unset;
+        margin-left: 10px;
+        float: right;
+    }
+
+    .developer_map {
+        padding-right: unset;
+        padding-left: 30px;
+    }
+    
+    .single-estate_property .listing_detail strong{
+        float: right;
+        margin-left: 5px;
+    }
+
+    .listing-review .review-list-content {
+        .reviwer-name {
+            float: right;
+            padding-left: unset;
+            padding-right: 15px;
+        }
+
+        .reviewer_image {
+            float: right;
+        }
+
+        .property_ratings {
+            float: left;
+            margin-left: 0;
+        }
+
+        .review-date {
+            right: unset;
+            left: 0;
+        }
+
+        .review-title {
+            margin-right: 75px;
+            right: 0;
+        }
+    }
+
+    .add_review_wrapper .rating .rating_legend {
+        margin-right: unset;
+        margin-left: 5px;
+    }
+
+    a.agency_social {
+        margin-right: 0px;
+        margin-left: 15px;
+    }
+    .wpresidence_realtor_listings_wrapper .term_bar_wrapper{
+        margin: 0px 0px 30px 0px;
+    }
+    // property page rtl
+    .wpresidence_property_page_title_area .entry-prop {
+        margin-right: unset;
+    }
+    .single_property_labels {
+        left: unset;
+        right: 0px;
+    }
+    .agent_unit_widget_sidebar_wrapper .agent_unit_widget_sidebar_wrapper_unit .agent_unit_widget_sidebar {
+        margin-right: unset;
+        margin-left: 15px;
+    }
+    .wpestate_property_media_section_wrapper .status-wrapper {
+        right: unset;
+        left:15px;
+    }
+
+    .modal_property_features i, 
+    .wpestate_estate_property_details_section i, 
+
+    #tab_prpg i.fa-times, 
+    #tab_prpg i.fa-check-circle, 
+    #tab_prpg i.fa-check {
+        margin-right: unset;
+        margin-left: 10px;
+    }
+    .wpresidence-carousel-control i{
+        margin: 0px;
+    }
+
+    .wpestate_shedule_tour_wrapper_type2 .wpestate_shedule_tour_wrapper_type2_content {
+        padding: 0px 20px 0px 0px;
+    }
+
+    .wpestate_control_media_buttons_wrapper {
+        left: unset;
+        right: 0px;
+        padding-left: unset;
+        padding-right: 15px;
+    }
+    .lightbox_property_wrapper .lighbox-image-close {
+        right: unset;
+        left:10px;
+    }
+
+
+
+    .lightbox_property_wrapper_floorplans .owl-carousel .owl-item .item .itemimage{
+        float: right;
+    }
+    .lightbox_floor_details {
+        right: unset;
+        left:50px;
+    }
+    .lighbox-image-close-floor {
+        right: unset;
+        left:0px;
+        i{
+            margin: 0px;
+        }
+    }
+
+    .overview_element:first-of-type li{
+        text-align: right;
+    }
+
+    .image_gallery {
+        min-height: 160px;
+        border-bottom: 6px solid #ffffff;
+        border-left: 6px solid #ffffff;
+        border-right: 0px;
+    }
+    .status-wrapper{
+        right: unset;
+        left:20px;
+    }
+    .featured_div{
+        float: right;
+    }
+
+    .yelp_stars {
+        margin-left: unset;
+        margin-right: auto;
+      }
+
+      .share_unit{
+        left:unset;
+        right: -2px;
+      }
+
+      #wpestate_schedule_tour_time{
+        float: left;
+      }
+      .wpestate_display_schedule_tour_options_wrapper {
+        justify-content: flex-start;
+      }
+
+      .modal_property_features i, .wpestate_estate_property_details_section i, .property-panel i, #tab_prpg i.fa-times, #tab_prpg i.fa-check-circle, #tab_prpg i.fa-check {
+        margin-right: unset;
+        margin-left: 10px;
+    }
+}

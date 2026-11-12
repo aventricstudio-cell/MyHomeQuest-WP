@@ -1,0 +1,84 @@
+// MILLDONE
+// scss\components\_contact7_form.scss
+/*=Contact Form 7
+---------------------------------------------*/
+
+// Styles for the form control wrapper
+span.wpcf7-form-control-wrap {
+    position: relative;
+    // Ensures proper positioning for form elements
+}
+
+// Styles for textarea elements within form control wrappers
+.wpcf7-form-control-wrap {
+    textarea {
+        width: 100%;
+        // Makes textareas full width of their container
+    }
+
+    input {
+        width: 100%;
+        // Makes text inputs full width of their container
+
+        &[type="checkbox"] {
+            width: 15px;
+            // Sets a specific width for checkbox inputs
+        }
+    }
+
+    textarea {
+        border: 1px solid #dde4e9;
+        // Adds a border to textareas
+    }
+}
+
+// Styles for the submit button
+.wpcf7-form { 
+    input[type="submit"] {
+        -webkit-appearance: none;
+        min-width: 145px;
+        font-size: 14px !important;
+        text-transform: uppercase;
+        line-height: normal !important;
+       
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner))!important;
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color))!important;
+        border: none;
+        color: #fff;
+        margin-bottom: 0px !important;
+        padding: 9px 26px !important;
+        font-weight: 500;
+        // Styles the submit button with specific dimensions, colors, and text properties
+    }
+
+    // Styles for form paragraphs
+    p {
+        margin-bottom: 13px;
+        font-size: 13px;
+        line-height: 22px;
+        // Sets spacing and text properties for form paragraphs
+    }
+}
+
+// Styles for form response messages
+.wpcf7-mail-sent-ok,
+.wpcf7-validation-errors,
+.wpcf7-acceptance-missing {
+    width: auto;
+    float: left;
+    // Aligns response messages to the left and allows them to size based on content
+}
+
+// Styles specific to the contact form in the sidebar
+.agent_contanct_form_sidebar {
+    .wpcf7-form-control {
+        width: 100%;
+        border: 1px solid #dde4e9;
+        // Makes form controls full width and adds a border in the sidebar context
+    }
+
+    .wpcf7 .col-md-4 {
+        width: 100%;
+        // Makes columns full width in the sidebar context
+    }
+}

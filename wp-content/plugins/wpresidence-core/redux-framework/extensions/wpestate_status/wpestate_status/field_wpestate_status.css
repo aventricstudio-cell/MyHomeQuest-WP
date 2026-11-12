@@ -1,0 +1,13 @@
+#add_status, #add_feature {
+    margin: 10px 0px 10px 0px;
+    background-color: #4ecb8f;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.redux_new_status{
+    width:100%;
+    display: inline-block;
+}

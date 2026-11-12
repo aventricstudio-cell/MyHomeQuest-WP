@@ -1,0 +1,39 @@
+// MILLDONE
+// Blog Card Version 4 Styles
+// This file contains styles specifically for the fourth version of blog cards in the WPResidence theme.
+// Version 4 features a clean, minimalist design with focus on the content.
+// src: scss\blog_card\_blog_card_v4.scss
+
+// Styles for blog cards within Elementor widgets
+.elementor-widget-container .blog4v .property_listing_blog,
+// Global styles for Version 4 blog cards
+.blog4v .property_listing_blog {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+
+    // Styles for the blog post image
+    .blog_unit_image {
+        margin: 0px;
+        border-radius: 10px;
+    }
+
+    // Styles for the blog post title
+    h4 {
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 5px;
+        line-height: 1.3em;
+        padding: 0px 0px;
+        margin-top: 15px;
+    }
+
+    // Styles for the blog post excerpt
+    .listing_details.the_grid_view {
+        margin: 0px 0px 10px 0px;
+        padding: 0px;
+        font-size: 13px;
+    }
+}

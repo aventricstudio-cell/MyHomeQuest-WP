@@ -1,0 +1,67 @@
+// MILLDONE
+// Breadcrumb Styles
+// src: scss/breadcrumbs/_breadcrumbs.scss
+
+// Main breadcrumb container
+.breadcrumb {
+    // Reset and basic styling
+    background: none;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 12px;
+    color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+    display: inline-block;
+
+    // List item styling
+    > li {
+        display: inline-block;
+        word-break: break-word;
+
+        // Separator between items
+        + li:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f105";
+            font-weight: 600;
+            padding: 0 5px;
+            color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+        }
+    }
+
+    // Link styling
+    a {
+        color: var(--wp_estate_breadcrumbs_font_color-option, var(--wp_estate_breadcrumbs_font_color));;
+        @include smooth-transition-shorter;
+        // Hover effect can be added here if needed
+        // &:hover { color: darken(#8593a9, 15%); }
+        &:hover{
+        color:var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+
+    // Active (current) item
+    .active {
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+}
+
+// Hide breadcrumb on dashboard
+.breabcrumb_dashboard {
+    display: none;
+}
+
+// Breadcrumb container
+.breadcrumb_container {
+    min-height: 30px;
+    padding: 0px;
+
+}
+
+// Hide breadcrumb container on home page
+.home .breadcrumb_container {
+    display: none;
+}
+
+.home.blog .breadcrumb_container {
+    display: block
+}
+

@@ -1,0 +1,339 @@
+// components/_buttons.scss
+
+// This file contains styles for buttons, extending and customizing Bootstrap's button components.
+// It includes custom button styles, variants, sizes, and states.
+
+
+// ==========================================================================
+// Button Base Styles
+// ==========================================================================
+
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+  border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+  transition: $btn-transition;
+
+  // Remove the focus ring
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    box-shadow:none;
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+    border: 1px solid #e7e7e7; 
+    &:focus {
+     box-shadow: none;
+     background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+    }
+  }
+}
+
+// ==========================================================================
+// Button Variants
+// ==========================================================================
+
+// Generate button variants using a mixin
+@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+  color: color-yiq($background);
+  background-color: $background;
+  border-color: $border;
+
+  &:hover {
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+  }
+
+  &:focus,
+  &.focus {
+    background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+    border: 1px solid #e7e7e7;
+    @if $enable-shadows {
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+    &:focus {
+      @if $enable-shadows {
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      }
+    }
+  }
+}
+
+// Primary button
+.btn-primary {
+  @include button-variant($primary, $primary);
+}
+
+// Secondary button
+.btn-secondary {
+  @include button-variant($secondary, $secondary);
+}
+
+// Success button
+.btn-success {
+  @include button-variant($success, $success);
+}
+
+// Info button
+.btn-info {
+  @include button-variant($info, $info);
+}
+
+// Warning button
+.btn-warning {
+  @include button-variant($warning, $warning);
+}
+
+// Danger button
+.btn-danger {
+  @include button-variant($danger, $danger);
+}
+
+// Light button
+.btn-light {
+  @include button-variant($light, $light);
+}
+
+// Dark button
+.btn-dark {
+  @include button-variant($dark, $dark);
+}
+
+// ==========================================================================
+// Outline Buttons
+// ==========================================================================
+
+@mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+  color: $color;
+  border-color: $color;
+
+  &:hover {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    border: 1px solid #e7e7e7;
+    color: var(--wp-estate-adv-search-font-color-option, var(--wp_estate_adv_search_font_color));
+    background-color: var(--wp_estate_adv_search_background_color-option, var(--wp_estate_adv_search_background_color));
+
+    &:focus {
+      @if $enable-shadows {
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+      }
+    }
+  }
+}
+
+// Outline button variants
+.btn-outline-primary {
+  @include button-outline-variant($primary);
+}
+
+.btn-outline-secondary {
+  @include button-outline-variant($secondary);
+}
+
+.btn-outline-success {
+  @include button-outline-variant($success);
+}
+
+.btn-outline-info {
+  @include button-outline-variant($info);
+}
+
+.btn-outline-warning {
+  @include button-outline-variant($warning);
+}
+
+.btn-outline-danger {
+  @include button-outline-variant($danger);
+}
+
+.btn-outline-light {
+  @include button-outline-variant($light, $dark);
+}
+
+.btn-outline-dark {
+  @include button-outline-variant($dark, $light);
+}
+
+// ==========================================================================
+// Button Sizes
+// ==========================================================================
+
+.btn-lg {
+  padding: $btn-padding-y-lg $btn-padding-x-lg;
+  font-size: $btn-font-size-lg;
+  line-height: $btn-line-height-lg;
+  border-radius: $btn-border-radius-lg;
+}
+
+.btn-sm {
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
+  font-size: $btn-font-size-sm;
+  line-height: $btn-line-height-sm;
+  border-radius: $btn-border-radius-sm;
+}
+
+// ==========================================================================
+// Block Buttons
+// ==========================================================================
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// ==========================================================================
+// Custom Button Styles
+// ==========================================================================
+
+// Example of a custom button style
+.btn-custom {
+  @include button-variant($primary, $primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  }
+}
+
+// ==========================================================================
+// Button with Icon
+// ==========================================================================
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon {
+    margin-right: 0.5em;
+  }
+}
+
+// ==========================================================================
+// Responsive Buttons
+// ==========================================================================
+
+@include media-breakpoint-down(sm) {
+  .btn-responsive {
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+    font-size: $btn-font-size-sm;
+    line-height: $btn-line-height-sm;
+  }
+}
+
+// ==========================================================================
+// Accessibility
+// ==========================================================================
+
+// Improve accessibility by adding a focus visible style
+.btn:not(:disabled):not(.disabled) {
+  &:focus-visible {
+    background-color: #ffffff;
+  }
+}
+
+
+// ==========================================================================
+// submit listing button
+// ==========================================================================
+
+
+
+.submit_listing {
+  float: right;
+  display: inline;
+  font-size: var(--wp-estate-top-menu-font-size-option, var(--wp-estate-top-menu-font-size));
+  background: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  padding: 10px 15px;
+  font-weight: 500;
+  font-family: var(--wp-estate-menu-font-family-option, var(--wp-estate-menu-font-family));
+  font-weight: var(--wp-estate-menu-font-weight-option, var(--wp-estate-menu-font-weight));
+  line-height: 1em;;
+  color: #ffffff;
+  @include smooth-transition-short;
+  border: 1px solid;
+  border-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, var(--wp-estate-main-color-option, var(--wp-estate-main-color))));
+  background-image: linear-gradient(to right, transparent 50%, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+
+}
+
+a.submit_listing:hover {
+  text-decoration: none;
+  background-color: transparent;
+  background-position: left bottom;
+  color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  border-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+  @include smooth-transition-shorter;
+}
+
+.submit_listing:focus {
+    color: #ffffff;
+}
+
+.header_transparent a.submit_listing:hover {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #222222), color-stop(50%, var(--wp-estate-main-color-option, var(--wp-estate-main-color))));
+    background-image: linear-gradient(to right, #222222 50%, var(--wp-estate-main-color-option, var(--wp-estate-main-color)) 50%);
+    border: 1px solid #222;
+    color: #fff;
+}
+
+.mobilewrapper .submit_listing {
+    float: left;
+    margin: 25px 0px 10px 25px;
+    width: 210px;
+    text-align: center;
+}

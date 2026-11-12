@@ -1,0 +1,98 @@
+/**
+ * Yelp Integration Styles - WpResidence Theme
+ * 
+ * This file contains styles for the Yelp business listings integration
+ * Used in property details pages to display nearby businesses and amenities
+ * Dependencies: Font Awesome for icons, Bootstrap 5 for accordion structure
+ * 
+ * @package WpResidence
+ * @subpackage CSS
+ */
+
+// Main Yelp wrapper structure
+.yelp_bussines_wrapper {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+
+    // Title section with icon and category
+    .wpresidence_yelp_title {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        gap:7px;
+    }
+
+    // Individual Yelp listing units
+    .yelp_unit {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        gap:3px;
+
+        &_name {
+            display: inline-block;
+            margin: 5px 0px;
+            max-width: 60%;
+            line-height: 1.3em;
+        }
+
+        &_distance {
+            font-size: 13px;
+        }
+    }
+}
+
+// Yelp category headings
+h4.yelp_category {
+    margin: 0px;
+    font-size: 14px;
+    line-height: unset;
+
+    &:after {
+        display: none;
+    }
+}
+
+// Yelp rating stars
+.yelp_stars {
+  margin-left: auto;
+}
+
+// Yelp icons styling
+.yelp_icon {
+    i {
+        margin: 0px;
+        padding: 1px 7px;
+        background: #f06e48;
+        color: white;
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        line-height: 21px;
+        font-size: 12px;
+    }
+
+    // Icon-specific background colors
+    .fa-bicycle { background-color: #3FAF90; }
+    .fa-music { background-color: #EDB534; }
+    .fa-car { background-color: #0D2C54; }
+    .fa-female { background-color: #FF5E5B; }
+    .fa-graduation-cap { background-color: #3858AA; }
+    .fa-birthday-cake { background-color: #CE447B; }
+    .fa-money { background-color: #2F5B48; }
+    .fa-cutlery { background-color: #7C2727; }
+    .fa-medkit { background-color: #CE1C1C; }
+    .fa-wrench { background-color: #465D99; }
+    .fa-bed { background-color: #FF934F; }
+    .fa-coffee { background-color: #774E24; }
+    .fa-dot-circle-o { background-color: #7CBF9E; }
+    .fa-television { background-color: #006075; }
+    .fa-glass { background-color: #b980d0; }
+    .fa-paw { background-color: #FFCB4E; }
+    .fa-suitcase { background-color: #DD5539; }
+    .fa-university { background-color: #565EB7; }
+    .fa-building-o { background-color: #AD2E4C; }
+    .fa-cloud { background-color: #5691C9; }
+    .fa-shopping-bag { background-color: #ADC13C; }
+    .fa-bus { background-color: #DD5539; }
+}

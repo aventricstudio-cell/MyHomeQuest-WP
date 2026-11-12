@@ -1,0 +1,373 @@
+/** MILLDONE
+ * Footer Styles for WpResidence Theme
+ * src: scss\footer\_footer.scss
+ * This file contains all styles for the footer section of the WpResidence theme.
+ * It includes styles for the main footer area, widgets, sub-footer, and various interactive elements.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since WpResidence 1.0
+ *
+ * Dependencies:
+ * - WpResidence theme core styles
+ * - Bootstrap (for some utility classes and grid system)
+ *
+ * Usage:
+ * This file should be imported into the main stylesheet of the WpResidence theme.
+ */
+
+// Main footer styles
+#colophon {
+    background-color: var(--wp-estate-footer-back-color-option, var(--wp_estate_footer_back_color));
+    color: var(--wp-estate-footer-font-color-option, var(--wp_estate_footer_font_color));
+
+    p{
+        line-height: 1.6em; 
+    }
+
+    ul {
+        list-style: none;
+        margin: 0px;
+    }
+
+    ul.child_category {
+        margin-top: 10px;
+    }
+
+    .textwidget,
+    .category_list_widget li,
+    .subfooter_menu a,
+    .copyright,
+    .contact_sidebar_wrap p {
+        font-size: 14px;
+    }
+
+    a,
+    li a {
+        color: var(--wp-estate-footer-font-color-option, var(--wp_estate_footer_font_color));
+        @include smooth-transition-shorter;
+        border: none;
+        line-height: 1.4em;
+        font-size: 14px;
+
+        &:hover {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            text-decoration: none;
+        }
+    }
+
+    .xoxo {
+        padding-top: 45px;
+    }
+
+    .widget-title-footer {
+        font-size: 16px;
+        color: var(--wp-estate-footer-heading-color-option, var(--wp_estate_footer_heading_color));
+    }
+
+    .latest_listings {
+        display: block;
+        overflow: hidden;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .wpresidence_dropdown {
+        .dropdown-menu.filter_menu.list_sidebar_measure_unit,
+        .dropdown-menu.filter_menu.list_sidebar_currency {
+            width: 220px;
+        }
+    }
+
+    .subfooter_menu a {
+        padding-bottom: 0px;
+        color: var(--wp-estate-footer-copy-color-option, var(--wp_estate_footer_copy_color));
+    }
+
+    .widget_nav_menu .sub-menu li:hover {
+        background-color: transparent;
+    }
+
+    .sub-menu {
+        ul {
+            border-top: 0px solid #fff !important;
+        }
+
+        li:hover > a {
+            padding-left: 5px !important;
+        }
+    }
+
+    .widget_meta li:before,
+    .widget_categories li:before,
+    .widget_recent_comments li:before {
+        margin-top: 0px;
+    }
+
+    .widget_pages li:before,
+    .widget_rss li:before,
+    .widget_text li:before,
+    .widget_recent_entries li:before {
+        margin-top: 4px;
+    }
+
+    &.boxed_footer,
+    &.sticky_footer.boxed_footer {
+        width: 1200px;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    }
+}
+
+// Footer widget area
+#footer-widget-area {
+    width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+    margin: 0px auto !important;
+    padding: 30px 15px;
+    margin: 0px auto;
+    max-width: 100%;
+    &.wide_footer {
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+// Sub-footer styles
+.sub_footer {
+    width: 100%;
+    background-color: var(--wp-estate-footer-copy-back-color-option, var(--wp_estate_footer_copy_back_color));
+    color: var(--wp-estate-footer-copy-color-option, var(--wp_estate_footer_copy_color));
+
+    &_content {
+        width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width));
+        max-width: 100%;
+        margin: 0px auto !important;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &.wide_footer {
+            width: 100%;
+        }
+    }
+
+    a,
+    li a {
+        color: var(--wp-estate-footer-copy-color-option, var(--wp_estate_footer_copy_color));
+        @include smooth-transition-shorter;
+
+        &:hover {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+}
+
+.copyright {
+    line-height: 60px;
+}
+
+.subfooter_menu {
+    display: inline-flex;
+
+    li {
+        display: inline;
+        font-size: 13px;
+    }
+
+    .menu > li {
+        line-height: 60px;
+    }
+}
+
+// Contact form wrapper styles
+.contactformwrapper {
+    position: fixed;
+    right: 45px;
+    bottom: 80px;
+    z-index: 300;
+    @include smooth-transition-shorter;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    background-color: #fff;
+    padding: 30px;
+    width: 312px;
+
+    &.hidden {
+        display: none;
+    }
+
+    .contact_close_button {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        color: #222;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+    
+        &:hover {
+            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        }
+    }
+    
+    
+    #btn-cont-submit {
+        width: 100%;
+        margin-bottom: 0px !important;
+    }
+
+    p {
+        font-size: 13px;
+        margin: 0;
+    }
+
+    button {
+        color: #fff;
+    }
+
+    &:before {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-top: 16px solid #f0f0f0;
+        bottom: -17px;
+        right: 29px;
+        position: absolute;
+    }
+
+    &:after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #fff;
+        bottom: -15px;
+        right: 30px;
+        position: absolute;
+    }
+
+    &.wpsestate_is_contact_single {
+        &:before {
+            right: 19px;
+        }
+
+        &:after {
+            right: 20px;
+        }
+    }
+}
+
+#footer-contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .wpestate_success, 
+    .alert-message, 
+    .login-alert,
+    h4{
+        margin-bottom: 0;
+    }
+    
+}
+
+// Footer background styles
+.footer_back_repeat {
+    background-repeat: repeat;
+}
+
+.footer_back_repeat_x {
+    background-repeat: repeat-x;
+}
+
+.footer_back_repeat_y {
+    background-repeat: repeat-y;
+}
+
+.footer_back_repeat_no {
+    background-repeat: no-repeat;
+}
+
+// Additional styles
+.sticky_footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.contact-box,
+.backtop {
+    font-size: 15px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: -60px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    opacity: 0;
+    @include smooth-transition-shorter;
+    box-shadow: 0 0 27px 0 rgba(0, 0, 0, .045);
+    opacity: 0;
+    z-index: 102;
+    color: #fff;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    color: #222;
+    text-decoration: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: #5c727db3;
+    }
+
+    &.islive {
+        right: 15px;
+        opacity: 0.9;
+    }
+    
+}
+
+.contact-box {
+    bottom: 10px;
+    right: -125px;
+    z-index: 100;
+    margin-right: 60px;
+}
+
+
+.wpsestate_is_contact_single {
+    margin-right: 0px;
+}
+
+
+.wpestate_support_link {
+    line-height: 60px;
+}
+
+.menu-footer-container ul {
+    float: left;
+    width: 100%;
+}
+
+.wpestate_has_sticky_footer {
+    .wpresidence_main_wrapper_class{
+        position: relative;
+        z-index: 99;
+        min-height: 1200px;
+        background-color: var(--wp-estate-background-color-option, var(--wp-estate-background-color));
+    }
+}

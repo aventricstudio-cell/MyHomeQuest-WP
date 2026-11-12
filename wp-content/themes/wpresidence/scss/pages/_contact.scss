@@ -1,0 +1,224 @@
+/** MILLDONE
+ * Contact Page Styles for WpResidence Theme
+ * sr::afterc: scss/pages/_contact.scss
+ * This file contains styles for the contact page in the WpResidence WordPress theme.
+ * It defines the layout and appearance of company details, social links, and contact information.
+ *
+ * Package: WpResidence
+ * Dependency: None (standalone SCSS file)
+ * Usage: Import this file in the main theme stylesheet or compile separately for contact page styles.
+ */
+
+// Main contact wrapper
+.contact-wrapper {
+    margin: 0px 0px 15px 0px; 
+    width: 100%;
+    background: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    padding: 15px 15px 30px 15px; 
+
+    padding-top:    calc(var(--wp-estate-contentarea-internal-padding-top-option,30px) - 15px);
+    padding-left:   calc(var(--wp-estate-contentarea-internal-padding-left-option,30px) - 15px);
+    padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+    padding-right:   calc(var(--wp-estate-contentarea-internal-padding-right-option,30px) - 15px);
+
+
+    line-height: 1.65em;
+
+    // Company details section
+    .contact_page_company_details {
+        .company_headline {
+            width: 100%;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+
+            h3 {
+                
+                font-size: 35px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+
+            .company_headlin_addr {
+                width: 100%;
+                font-size: 18px;
+                color: var(--wp-estate-font-color-option, #222);
+            }
+
+            .header_social {
+                padding: 15px 0px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                width: 100%;
+
+                a {
+                    i {
+                  
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-size: 17px;
+                        color: var(--wp-estate-font-color-option, #222);
+                        @include smooth-transition-shorter;
+               
+                        font-size: 15px;
+                        position: relative;
+                        display: inline-block;
+                        text-align: center;
+                        margin-bottom: 5px;
+
+                        &:hover {
+                            color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact_detail {
+            margin-left: 0px !important;
+            font-size: 14px;
+            margin-bottom: 5px;
+
+            span {
+                font-weight: 500;
+                min-width: 65px;
+                float: left;
+            }
+        }
+    }
+
+    // Company content section
+    .company_headline_content {
+        display: inline-block;
+        margin: 30px 0px;
+    }
+
+    // Company picture
+    .contact_page_company_picture {
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+// Contact form styles
+.contact-content {
+    width: 100%;
+    float: left;
+
+    .agent_contanct_form {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        background: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+        padding: 30px;
+        padding-top:    var(--wp-estate-contentarea-internal-padding-top-option,var(--wp_estate_contentarea_internal_padding_top));
+        padding-left:   var(--wp-estate-contentarea-internal-padding-left-option,var(--wp_estate_contentarea_internal_padding_left));
+        padding-bottom: var(--wp-estate-contentarea-internal-padding-bottom-option,var(--wp_estate_contentarea_internal_padding_bottom));
+        padding-right:  var(--wp-estate-contentarea-internal-padding-right-option,var(--wp_estate_contentarea_internal_padding_right));
+        
+        border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .schedule_meeting {
+            display: none;
+        }
+    }
+}
+
+// Styles for elements not found in the provided markup (moved to the end)
+.contact_map_container {
+    position: absolute;
+    top: 50%;
+    margin-top: -210px;
+    left: 50%;
+    min-width: 20%;
+    width: 350px;
+    margin-left: -550px;
+    padding: 45px 45px 35px 45px;
+    background: var(--wp_estate_content_area_back_color-option, var(--wp_estate_content_area_back_color));
+    border: none;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    box-shadow: 0 44px 98px 0 rgba(0, 0, 0, .1);
+    overflow: hidden;
+    z-index: 10;
+
+   
+    h4 {
+        font-size: 20px;
+        vertical-align: middle;
+        margin-top: 0;
+        margin-bottom: 20px;
+        line-height: 20px;
+
+        &:last-of-type {
+            margin-top: 20px;
+        }
+    }
+
+    .contact_detail {
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+        gap: 10px;
+        line-height: 1.6em;
+        margin-bottom: 5px;
+        align-items: flex-start;
+        i{
+            font-size: 13px;
+            line-height: 1.7em;
+        }
+        a{
+            color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+            &:hover{
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+            } 
+        }
+    }
+}
+
+.with_open_street .contact_map_container {
+    z-index: 999;
+}
+
+.wpestate_full_map_shortcode .contact_map_container {
+    left: 50%;
+    margin-left: -555px;
+}
+
+
+
+.contact-comapany-logo {
+    float: left;
+    margin-right: 13px;
+}
+
+#contactinfobox {
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    margin-bottom: 0px;
+    margin-top: 35px;
+    font-weight: 900;
+}
+
+.contactaddr {
+    width: 100%;
+    text-align: center;
+    font-size: 14px !important;
+    line-height: 25px !important;
+    color: #444;
+    padding: 0px 10px;
+    font-weight: 500;
+}
+
+.page-template-contact_page {
+    #gmap-prev,
+    #gmap-next {
+        display: none;
+    }
+}
+
+.page-template-contact_page .agent_detail{
+    width: 100%;
+    display: flex;
+}

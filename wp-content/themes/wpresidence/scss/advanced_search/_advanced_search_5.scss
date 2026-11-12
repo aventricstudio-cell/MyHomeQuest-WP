@@ -1,0 +1,43 @@
+ 
+.search_wr_5{
+    h3{
+        font-size: 18px;
+        color:var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    }
+
+    .adv-search-header-1 {
+        left: 0px;
+    }
+
+    &.with_search_on_start {
+        h3 {
+            display: none;
+        }
+    }
+
+    &.with_search_form_float  {
+        h3{
+            margin: 15px 0px 0px 15px;
+        }
+        .adv5-holder {
+            padding: 7px 15px 15px 15px;
+        }
+    }
+
+    .adv5-holder {
+        float: left;
+        padding: 0px;
+        width: 100%;
+
+        .advanced_submit_4,
+        #advanced_submit_4 {
+            width: 100%;
+        }
+
+    }
+}
+
+.search_wr_5.with_search_form_float #results {
+    left: 0px;
+    top: 0px;
+}

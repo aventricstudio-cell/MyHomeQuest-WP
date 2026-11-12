@@ -1,0 +1,116 @@
+// MILLDONE
+// _property_unit_type6.scss
+// src: scss\properties_cards\_property_unit_type6.scss
+// This file contains styles specific to Property Unit Type 6 in the WpResidence theme.
+// It defines the layout and appearance of Type 6 property cards displayed in various views.
+
+.property_unit_type6 {
+    h4{
+        margin: 0;
+        padding: 0;
+        a{
+            color: #fff;
+        }
+    }
+
+    // Agent unit styles
+    .property_agent_unit_type6 {
+        position: absolute;
+        bottom: 0;
+        border-top: 1px solid #f7f7f7;
+        width: 100%;
+        height: 55px;
+    }
+
+    // Property location styles
+    .property_location {
+        margin: 0;
+        padding: 13px 20px;
+        margin-top: auto;
+    }
+
+    // Price wrapper styles
+    .listing_unit_price_wrapper {
+        padding: 0;
+        color: #fff;
+        z-index: 9;
+        margin-left: 0;
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    // Title wrapper styles for grid view
+    .property_unit_type6_title_wrapper {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        z-index: 9;
+    }
+
+    // Hide title wrapper for list view by default
+    .property_unit_type6_title_wrapper_list {
+        display: none;
+    }
+
+    // Featured gradient overlay
+    .featured_gradient {
+        opacity: 1;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 100%);
+    }
+
+    // Property details layout for grid view
+    .property_listing_details6_grid_view {
+        float: left;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0 20px 0;
+    }
+
+    // Property details icons
+    .inforoom_unit_type6 {
+        svg {
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin: 0 auto 10px;
+
+            path {
+                fill: #222;
+            }
+        }
+    }
+}
+
+// Styles for full-width (col-md-12) property units
+.property_unit_type6.col-md-12 {
+    .property_unit_type6_title_wrapper {
+        display: none;
+    }
+
+    .property_unit_type6_title_wrapper_list {
+        display: block;
+    }
+
+    .price_label,
+    .listing_unit_price_wrapper {
+        position: relative;
+        color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    }
+    h4 a {
+        color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    }
+    .listing_unit_price_wrapper {
+        padding: 0 20px;
+    }
+
+    .property_listing_details6_grid_view {
+        margin: 20px 0;
+    }
+}
+

@@ -1,0 +1,65 @@
+//scss\widgets\_featured_property_widget.scss
+
+/*=featured_sidebar
+------------------------------------------------*/
+
+.featured_title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+
+    a {
+        color: #ffffffcd; // Semi-transparent white for normal state
+
+        &:hover {
+            color: #ffffff; // Fully white on hover
+        }
+    }
+}
+
+.featured_second_line {
+    position: absolute;
+    top: 0;
+    padding: 5px 15px;
+    background-color: #0074e1cd;
+    color: #fff;
+    border-radius: 4px 0px 4px 0;
+}
+
+.featured_sidebar {
+    position: relative;
+
+    .featured_widget_image {
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+#colophon {
+    .featured_title {
+        a {
+            line-height: 22px;
+        }
+    }
+}
+
+#primary {
+    .featured_title {
+        a {
+            font-size: 16px;
+        }
+    }
+}
+
+.related_blog_unit_image img,
+.widget_latest_listing_image img,
+.agent-unit-img-wrapper img,
+.featured_widget_image img {
+    width: 100%;
+    @include smooth-transition;
+}

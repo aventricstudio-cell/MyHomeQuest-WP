@@ -1,0 +1,62 @@
+/** MILLDONE
+ * Featured Property Type 4 Styles for WpResidence Theme
+ * src: scss/shortocdes_and_blocks/_featured_property_type4.scss
+ * This SCSS file contains styles for the featured property type 4 component
+ * in the WpResidence WordPress theme.
+ *
+ * @package WpResidence
+ * @subpackage Styles
+ * @since 1.0.0
+ *
+ * Dependencies:
+ * - None (all styles are self-contained)
+ *
+ * Usage:
+ * 
+ * It styles the featured property type 4 component, including its layout,
+ * image display, property details, and interactive elements.
+ */
+
+ .featured_article_type2.featured_prop_type4 {
+    // Main container styles
+  
+    .featured_img_type2 {
+      // Background image container styles
+  
+ 
+      .featured_article_type2_title_wrapper {
+        // Title wrapper styles
+  
+
+  
+        .featured_property_type4_agent_wrapper {
+          vertical-align: middle;
+  
+          .featured_property_type4_agent {
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            background-position: top center;
+            z-index: 10;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            border: 1px solid #a6b3bb; /* Only keep one border property */
+            margin-top: 15px;
+            float: left;
+          }
+  
+          .featured_property_type4_agent_name {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            float: left;
+            margin: 28px 0px 0px 10px;
+            &:hover{
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+    }
+  }
+  

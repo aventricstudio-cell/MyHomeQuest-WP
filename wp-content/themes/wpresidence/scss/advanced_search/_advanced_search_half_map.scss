@@ -1,0 +1,38 @@
+#google_map_prop_list_sidebar {
+
+    .checker_wrapper_half{
+        margin-top: 10px;
+    }
+
+    .extended_search_check_wrapper .adv_extended_close_button{
+        right: 0;
+    }
+    
+    .adv-search-1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        border-top: 1px solid #e7e7e7;
+        border-bottom: 1px solid #e7e7e7;
+        padding: 15px;
+    }
+
+
+    // submit button
+    .residence_advanced_submit_button_search_1 {
+        position: relative;
+        padding: 10px 10px; 
+        height: auto;
+        width: auto;
+        margin: 15px 15px 15px 22px;
+        font-size: 14px;
+        margin-bottom: 15px !important;
+        font-weight: normal;
+        background-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+        color: #fff;
+    }
+
+
+}
+

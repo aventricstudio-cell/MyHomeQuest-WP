@@ -1,0 +1,43 @@
+/** MILLDONE
+ * Property Features and Details Styles
+ * src: scss\property_page\_features_and_ammenities.scss
+ * This CSS defines styles for property features and details sections
+ * in the WpResidence WordPress theme.
+ */
+
+/* Styles for features not present in the property */
+.not_present {
+    text-decoration: line-through;
+    color: #8997ac;
+}
+
+/* Feature chapter name styles */
+.feature_chapter_name {
+    width: 100%;
+    font-weight: 500;
+    margin: 5px 0 10px;
+    padding: 0;
+    position: relative;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+
+}
+
+/* Icon styles for property features and details */
+.modal_property_features i,
+.wpestate_estate_property_details_section i,
+.property-panel i,
+#tab_prpg i.fa-times,
+#tab_prpg i.fa-check-circle,
+#tab_prpg i.fa-check {
+    margin-right: 10px;
+}
+
+/* Specific icon color for check and check-circle icons */
+.wpestate_estate_property_details_section i.fa-check,
+.property-panel i.fa-check,
+#tab_prpg i.fa-check,
+.wpestate_estate_property_details_section i.fa-check-circle,
+.property-panel i.fa-check-circle,
+#tab_prpg i.fa-check-circle {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}

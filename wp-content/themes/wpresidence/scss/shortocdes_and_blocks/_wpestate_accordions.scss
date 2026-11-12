@@ -1,0 +1,95 @@
+
+/*=shortcodes Accordion
+--------------------------------------------------------------------*/
+.wpestate_accordion .ui-widget,
+.wpestate_accordion_tab .ui-widget {
+    font-size: 13px;
+}
+
+.wpestate_accordion_tab .ui-state-active,
+.wpestate_accordion_tab .ui-widget-content .ui-state-active,
+.wpestate_accordion_tab .ui-widget-header .ui-state-active {
+    border: 1px solid #f0f0f0;
+    background: #fdfdfd;
+    font-weight: normal;
+    color: #434953;
+}
+
+.wpestate_accordion_tab .ui-state-default a,
+.wpestate_accordion_tab .ui-state-default a:link,
+.wpestate_accordion_tab .ui-state-default a:visited,
+.wpestate_accordion_tab .ui-state-active a,
+.wpestate_accordion_tab .ui-state-active a:link,
+.wpestate_accordion_tab .ui-state-active a:visited {
+    color: #222;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.wpestate_accordion_tab .ui-state-active a,
+.wpestate_accordion_tab .ui-state-active a:link,
+.wpestate_accordion_tab .ui-state-active a:visited {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}
+
+.ui-accordion .wpestate_accordion_tab .ui-accordion-header {
+    padding: 0px 0px 0px 0px;
+}
+
+.wpestate_accordion.wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header,
+.wpestate_accordion.wpb_content_element.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab {
+    background: #f0f0f0;
+}
+
+.wpestate_accordion_tab .ui-widget-content {
+    border: 1px solid #fdfdfd;
+    background: #fff;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    line-height: 22px;
+    font-family: 'Roboto', sans-serif
+}
+
+.wpestate_accordion_tab .ui-state-default,
+.wpestate_accordion_tab .ui-widget-content .ui-state-default,
+.wpestate_accordion_tab .ui-widget-header .ui-state-default {
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    border: none;
+}
+
+.wpb_accordion.wpestate_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon,
+.wpb_accordion.wpestate_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: none;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    color: #222;
+    left: auto;
+    bottom: auto;
+    margin-top: 0px;
+    background-position: 0px 0px;
+    text-indent: 0;
+}
+
+.wpb_accordion.wpestate_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon:after,
+.wpb_accordion.wpestate_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon:after {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f107";
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.wpb_accordion.wpestate_accordion .wpb_accordion_wrapper .ui-accordion-header-active .ui-icon:after,
+.wpb_accordion.wpestate_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon:after {
+    content: "\f106";
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+}

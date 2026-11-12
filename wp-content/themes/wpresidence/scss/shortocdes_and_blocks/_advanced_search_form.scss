@@ -1,0 +1,134 @@
+/** MILLDONE
+ * WpResidence Theme - Advanced Search Form Styles
+ * src: scss/shortocdes_and_blocks/_advanced_search_form.scss
+ * This file contains styles for the advanced search form used in the WpResidence theme.
+ * It's primarily used with Elementor to create a customizable search interface.
+ *
+ * Package: WpResidence
+ * Dependencies: Elementor, WpResidence core styles
+ * 
+ */
+
+// Main container for the search form
+.search_wr_elementor {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+
+    .adv_search_slider{
+        p{
+            margin-bottom: 5px; 
+            line-height: 1em;
+        }
+    }
+
+    // Reset background for nested color wrapper
+    .search_wrapper_color {
+        background-color: transparent;
+    }
+
+    // Styles for the search tabs
+    .nav-tabs {
+        margin-bottom: 0;
+        position: static; // Changed from setting top and left to auto
+
+        .adv_search_tab_item {
+            float: none;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            margin-right: 0;
+
+            &:last-of-type {
+                border-right: solid; // Consider specifying color and width
+            }
+
+            &.active::before {
+                display: none;
+            }
+
+            a {
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+                float: left;
+                padding: 0;
+                text-transform: capitalize;
+                line-height: 14px;
+                font-size: 14px;
+                @include no-transition;
+                margin: 13px 23px;
+            }
+        }
+    }
+
+    // Ensure full width for Elementor columns in tab content
+    .tab-content .elementor-column.elementor-col-100 {
+        width: 100%;
+    }
+
+    // Styles for the search form header
+    .adv-search-header {
+        font-size: 21px;
+        font-weight: 500;
+        color: #222;
+        margin-bottom: 15px;
+    }
+
+    // Styles for the search form itself
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+
+        .elementor-field-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #222;
+            width: 100%;
+        }
+
+        // Styles for the submit button wrapper
+        .elemenentor_submit_wrapper {
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .wpresidence_button {
+                width: 100%;
+                margin-bottom: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    height: 15px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+// Styles for underlined active items
+.item_underline_active_yes a {
+    position: relative;
+
+    &.active::after {
+        content: "";
+        width: 100%;
+        background-color: #222;
+        position: absolute;
+        bottom: -7px;
+        height: 3px;
+        left: 0;
+    }
+}
+
+
+.search_button_use_hover_effect_no {
+    background-image: none !important;
+    border: none;
+}

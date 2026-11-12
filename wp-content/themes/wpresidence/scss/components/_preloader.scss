@@ -1,0 +1,117 @@
+
+//preloaders
+
+.new_prelader {
+    position: absolute;
+    left: 50%;
+    top: 63%;
+    z-index: 1001;
+    width: 80px;
+    height: 80px;
+    margin: -40px 0 0 -40px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    -webkit-animation: PreloaderSpin 2s linear infinite;
+    animation: PreloaderSpin 2s linear infinite;
+}
+
+.new_prelader:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #b07d8c;
+    -webkit-animation: PreloaderSpin 3s linear infinite;
+    animation: PreloaderSpin 3s linear infinite;
+}
+
+.new_prelader:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #0dc3f8;
+    -webkit-animation: PreloaderSpin 1.5s linear infinite;
+    animation: PreloaderSpin 1.5s linear infinite;
+
+}
+
+
+
+@-webkit-keyframes PreloaderSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes PreloaderSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+
+
+
+#listing_loader2,
+#listing_loader_maps,
+#listing_loader {
+    width: 100%;
+    float: left;
+    height: 81px;
+    text-align: center;
+    padding-top: 35px;
+    display: none;
+    position: relative;
+}
+
+#listing_loader .new_prelader {
+    top: 25%;
+}
+
+#listing_loader_maps.map_loader,
+#listing_loader.map_loader {
+    display: block;
+    margin-top: -27px !important;
+}
+
+.listing_loader_title {
+    display: none;
+    float: left;
+    width: 100%;
+    font-size: 36px;
+    line-height: 1.3em;
+    color: var(--wp_estate_headings_color-option, var(--wp_estate_headings_color));
+    font-family: 'Roboto', sans-serif
+}

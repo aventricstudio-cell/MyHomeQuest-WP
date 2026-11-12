@@ -1,0 +1,226 @@
+// MILLDONE
+// components/_top_bar.scss
+
+// This file contains styles for various top bar components.
+
+// ==========================================================================
+// Top Bar
+// ==========================================================================
+
+.top_bar_wrapper {
+    background-color: var(--wp-estate-top-bar-back-option, var(--wp-estate-top-bar-back)); // Background color with fallback
+    width: 100%; // Full width
+    height: 40px; // Fixed height
+    z-index: 99999; // Ensure top bar is above other elements
+    position: relative;
+
+    // Top Bar with Border Styles
+    &.transparent_border_topbar {
+        border-bottom: 1px solid rgba(206, 206, 206, 0.3); // Bottom border
+
+        .widget-container {
+            padding: 0 15px; // General padding
+        }
+
+        .widget-container.social_sidebar {
+            padding: 0; // Specific padding for social sidebar
+        }
+
+        .social_sidebar_internal a {
+            border-right: 1px solid rgba(206, 206, 206, 0.3); // Right border for social icons
+            i {
+                text-align: center; // Center icons
+            }
+        }
+
+        .left-top-widet {
+            .widget-container:first-of-type {
+                border-left: 1px solid rgba(206, 206, 206, 0.3); // Left border for first widget
+            }
+            .widget-container:last-of-type {
+                border-right: 1px solid rgba(206, 206, 206, 0.3); // Right border for last widget
+                border-left: 1px solid rgba(206, 206, 206, 0.3); // Left border for last widget (if intended)
+            }
+            .social_sidebar {
+                border-right: 0; // Remove right border from social sidebar
+            }
+        }
+
+        .right-top-widet {
+            .widget-container {
+                border-left: 1px solid rgba(206, 206, 206, 0.3); // Left border for widgets
+            }
+            .widget-container:last-of-type {
+                border-right: 1px solid rgba(206, 206, 206, 0.3); // Right border for last widget
+            }
+        }
+    }
+
+    // Transparent Top Bar
+    &.transparent_topbar {
+        background-color: transparent; // Transparent background
+    }
+
+    .right-top-widet {
+        .widget-container {
+            padding-left: 15px; // Padding left for right top widget
+        }
+    }
+
+    .left-top-widet {
+        .widget-container {
+            padding-right: 15px; // Padding right for left top widget
+        }
+    }
+
+    // Top Bar Content Styling
+    .top_bar {
+        height: 40px; // Fixed height
+        line-height: 40px; // Center content vertically
+        font-size: 13px; // Font size
+        color: var(--wp-estate-top-bar-font-option, var(--wp-estate-top-bar-font)); // Font color
+
+        p{
+            margin-bottom: 0px;
+            font-size: 13px; // Font size
+        }
+
+        .left-top-widet,
+        .right-top-widet {
+            ul {
+                display: flex; // Flexbox layout
+                margin-bottom: 0px;
+                &.dropdown-menu {
+                    display: none; // Hide dropdown menu
+                    &.show {
+                        display: block; // Show dropdown menu
+                    }
+                }
+
+                li {
+                    border-radius: 0; // Remove border radius
+
+                    &.widget-container {
+                        display: flex;
+                        align-items: center;
+                        
+                        .textwidget {
+                            display: flex;
+                            flex-wrap: nowrap;
+                            align-content: center;
+                            flex-direction: row;
+                            align-items: center;
+                            column-gap: 5px;
+                            line-height: normal;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        a {
+            color: var(--wp-estate-top-bar-font-option, var(--wp-estate-top-bar-font)); // Link color
+            font-size: 13px; // Font size for links
+            &:hover {
+                color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Hover color
+            }
+        }
+
+        i {
+            width: 13px; // Icon width
+        }
+
+        .widget-container {
+            width: auto;
+            display: inline; // Inline display for widgets
+            margin-bottom: 0; // Remove bottom margin
+
+            ul {
+                list-style: none; // Remove list style
+                min-width: 140px; // Minimum width
+
+                li {
+                    width: auto; // Width auto
+                }
+            }
+        }
+    }
+}
+
+// Boxed Header Styles
+.wpresidence_boxed_header {
+    .top_bar {
+        max-width: var(--wp-estate-main-grid-content-width-option, var(--wp-estate-main-grid-content-width)); // Max width with fallback
+        margin: 0 auto; // Center top bar
+        padding: 0px 15px !important; // Remove padding
+    }
+}
+
+// Border Color Settings
+.top_bar_wrapper.transparent_border_topbar,
+.transparent_border_topbar .top_bar .social_sidebar_internal a,
+.top_bar_wrapper.transparent_border_topbar .left-top-widet .widget-container:last-of-type,
+.top_bar_wrapper.transparent_border_topbar .right-top-widet .widget-container:last-of-type,
+.top_bar_wrapper.transparent_border_topbar .left-top-widet .widget-container:first-of-type,
+.top_bar_wrapper.transparent_border_topbar .right-top-widet .widget-container {
+    border-color: rgba(206, 206, 206, 0.3); // Border color
+}
+
+// Additional Top Bar Styles
+.top_bar {
+    .wpresidence_dropdown{
+        margin-bottom:0px;
+        
+        .dropdown-toggle {
+            padding: 0px 15px;
+            width: 145px;
+            line-height: 25px;
+        }
+
+        .dropdown-menu{
+            li {
+                line-height: 1.4em;
+                padding: 5px 15px;
+            }
+        }
+    }
+
+    .social_sidebar_internal {
+        flex-wrap: nowrap;
+        gap: 0;
+    
+        a {
+            height: 40px;
+            background: transparent;
+            border-radius: 0;
+    
+            &:hover {
+                background-color: transparent;
+    
+                i {
+                    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color)); // Hover color for icons
+                }
+            }
+        }
+    }
+
+    .sidebar_filter_menu {
+        font-size: 12px; // Font size for filter menu
+        padding: 2px 10px; // Padding for filter menu
+    }
+
+    #list_sidebar_measure_unit,
+    #list_sidebar_curr {
+        width: 100%; // Width 100%
+    }
+
+    .form-control {
+        height: 25px; // Height for form controls
+    }
+
+    .widget-title-topbar {
+        display: none; // Hide widget title
+    }
+}
+

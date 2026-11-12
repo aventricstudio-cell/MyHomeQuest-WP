@@ -1,0 +1,81 @@
+
+
+/*=shortcodes Tabs
+
+// not for shortcode - sems to be used in bakery
+--------------------------------------------------------------------*/
+.wpestate_tabs .ui-widget {
+    font-size: 13px;
+}
+
+.wpestate_tabs .wpb_content_element .wpestate_tabs .wpb_accordion_wrapper .wpestate_tabs .wpb_accordion_header,
+.wpestate_tabs .wpb_content_element.wpb_tabs .wpestate_tabs .wpb_tour_tabs_wrapper .wpb_tab {
+    background-color: #fff;
+}
+
+.wpestate_tabs .ui-widget-content {
+    border: 1px solid #f0f0f0;
+    background: none;
+    color: var(--wp-estate-font-color-option, var(--wp-estate-font-color));
+    border-top: 0px;
+    font-family: 'Roboto', sans-serif
+}
+
+.wpestate_tabs .ui-widget-header {
+    border: none;
+    background: #f0f0f0;
+    color: #fff;
+    font-weight: normal;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.wpestate_tabs .ui-tabs .ui-tabs-nav li {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+    border-right: 1px solid white;
+    padding: 3px 10px;
+}
+
+.wpestate_tabs .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: -3px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    border-top: 3px solid var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    border-radius: var(--wp-estate-border-radius-corner-option,var(--wp_estate_border_radius_corner));
+}
+
+.wpestate_tabs .ui-state-active,
+.wpestate_tabs .ui-widget-content .ui-state-active,
+.wpestate_tabs .ui-widget-header .ui-state-active {
+    border: none;
+    background: black;
+    font-weight: 500;
+    color: white;
+}
+
+.wpestate_tabs .wpb_accordion_wrapper .wpb_accordion_header,
+.wpestate_tabs.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab {
+    background-color: #ffffff;
+}
+
+.wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header,
+.wpb_content_element.wpb_tabs.wpestate_tabs .wpb_tour_tabs_wrapper .wpb_tab {
+    background-color: #fff;
+}
+
+.wpestate_tabs .ui-state-default a,
+.wpestate_tabs .ui-state-default a:link,
+.wpestate_tabs .ui-state-default a:visited {
+    color: #222;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.wpestate_tabs .ui-state-active a,
+.wpestate_tabs .ui-state-active a:link,
+.wpestate_tabs .ui-state-active a:visited {
+    color: var(--wp-estate-main-color-option, var(--wp-estate-main-color));
+    font-weight: normal;
+    font-size: 15px;
+}
